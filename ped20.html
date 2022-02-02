@@ -1,0 +1,915 @@
+
+<html>
+<head>
+<h2 id="titre"> PARTIE A GYNECOLOGIE <span> </span><a href="agyne.html ><button id="submit"></button></a></h2>
+
+ <meta http-equiv="Content-Type"content="text/html; charset=UTF-8" />
+
+	<title>QCM ENSCT</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body><d iv class="main"><div class="wrapper" onclick="showDropdown()">Question: <span></span>/20 <span style="padding-left:15px"></span> <span style="color:darkcyan;border:2px solid white;border-radius:5px;background-Color:"> Correct: </span> <span id="tr" ></span>/20 Temps: <span id="time"> </span> <style>#time{width: 70px; border: 1px dotted #333; text-align: center; margin-bottom: 1px;font-style:italic; font-size: 18px;}</style><script type="text/javascript"> var centi = 0; var mili = 0; var sec = 0;  var min;  var sec_; var afficher; var compteur; document.getElementById('time').innerHTML = "0" + sec + ":" + "0" + mili;  function chrono() { setInterval(function (){ mili++; if (mili > 9) { mili = 0; } }, 1); centi++; centi*10; if (centi > 540) { centi = 0; sec++; }  if (sec < 10) { sec_ = "0" + sec; } else { sec_ = sec; } var ok=centi/9.1; afficher = sec_ + ":<span id='z'>0</span>" + ok.toFixed(); document.getElementById("time").innerHTML = afficher;if(ok>9.499){ document.getElementById("z").style.display="none";}; reglage = window.setTimeout("chrono();",100); }  function debut() { document.parametre.lance.disabled = "disabled"; document.parametre.pause.disabled = ""; document.parametre.zero.disabled = ""; document.parametre.intermediaire.disabled = ""; document.parametre.rappel.disabled = ""; }chrono();debut; </script> <span style="padding-left:15px"></span> <br><span style="color:red">Incorrect:</span> <span id="rt" ></span>/20 <span style="padding-left:15px"></span><span style="color:blue"> Sans Reponse: </span><span id="sr" ></span>/20 <span style="border-radius:50%;background-Color:gray;color:white;" onclick="exp()"> &nbsp; i &nbsp;</span><br></div>
+		
+<p>
+<div class="alert success" id="xp" style="display:none">
+
+	<inp ut type="checkbox" id="alert1">
+    <label class="close" title="close" for="alert1">
+	<i class="icon-remove"><img onclick="cl()" src="cl.jpg" style="width:30px"></i>
+    </label>
+
+	
+		<p id="xpt" class="inner">
+			
+		</p>
+		</div>
+	</p>		
+		
+		
+		
+		<ul  class="dropdown"></ul>		
+		<p class="question"></p>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			
+		</ul>
+		<div id="ctrlb"><button onclick="goToNextQuestion2()"><img src="prev.jpg" height="30px" width="80px" style="border-radius:50%"></button><bu tton class="submit"></button></div><div id="ctrln"><button onclick="goToNextQuestion3()"><img src="next.jpg" height="30px" width="80px" style="border-radius:50%"></button>
+	</div>
+	</div>
+<table height="50px" width="100%" style="border-color:white"><tr><td></td></tr></table>
+	<audio src="cor.mp3" id="cor">
+	<audio/>
+	<audio src="inc.mp3" id="inc">
+	<audio/>
+	<script>
+	
+
+	var nq=19;
+	var sr=20;
+	var rt=0;
+	var tr=0;
+	function QuizItem(question, variants, answer, enabled, replied, selectionOfUser) {
+	this.question = question;
+	this.variants = variants;
+	this.answer = answer;
+	this.enabled = enabled;
+	this.replied = replied;
+	this.selectionOfUser = selectionOfUser;
+}
+
+var quizQuestions = [];
+
+
+
+
+
+quizQuestions[	0	] = new QuizItem("	41. Un nouveau-né à terme devient ictérique 14 heures après l'accouchement. Ses résultats Sanguins confirment la bilirubinémie indirecte et l'acidose métabolique. Ses parents sont tous les deux rhésus négatifs. Quel est le seul diagnostic le plus probable ?	",
+		["A-	 Incompatibilité ABO) 	",
+		"B-	 Ictère physiologique	",
+		"C-	  Syndrome de Gilbert	",
+		"D-	 Déficit en glucose 6-phosphate déshydrogénase (G6PD)	",
+		"E-	 Syndrome de Crigler-Najjar	"],
+			0	,false,false,undefined);
+quizQuestions[	1	] = new QuizItem("	42. Un enfant non-cyanosé de 2 jours a un souffle systolique le long du bord gauche du sternum ; l'examen sinon est normal. La radio de thorax et l'électrocardiogramme sont normaux. Ces résultats sont le plus probablement associés à laquelle des anomalies congénitales cardiaques suivantes ?	",
+		["A-	 Tétralogie de Fallot	",
+		"B-	 Communication interventriculaire	",
+		"C-	 Atrésie tricuspidienne	",
+		"D-	 Transposition des gros vaisseaux	",
+		"E-	 Canal artériel	"],
+			1	,false,false,undefined);
+quizQuestions[	2	] = new QuizItem("	43. Parmi les anomalies cardiovasculaires de nouveau-nés, la plus probable à se présenter avec cyanose est :	",
+		["A-	 Canal artériel persistant	",
+		"B-	 Coarctation de l'aorte	",
+		"C-	 Communication inter-auriculaire 	",
+		"D-	 Communication inter-ventriculaire	",
+		"E-	  Transposition des gros vaisseaux	"],
+			4	,false,false,undefined);
+quizQuestions[	3	] = new QuizItem("	44. Laquelle des étiologies suivantes n'entraîne pas une insuffisance cardiaque chez l'enfant 	",
+		["A-	 C.I.V.	",
+		"B-	 Coarctation de l'aorte	",
+		"C-	 Tétralogie de Fallot 	",
+		"D-	 Troubles du rythme	",
+		"E-	 CIAV	"],
+			2	,false,false,undefined);
+quizQuestions[	4	] = new QuizItem("	45. Un enfant asymptomatique de 2 ans est observé d'avoir un souffle systolique, l'hypertension artérielle et des pouls fémoraux affaiblis. Laquelle des affirmations suivantes est vraie concernant l’affection	",
+		["A-	 L'espérance de vie sans intervention chirurgicale est de 5 ans environ	",
+		"B-	 L'intervention chirurgicale immédiate est indiquée	",
+		"C-	 L'encochement des côtes est souvent observé à la radio 	",
+		"D-	 La claudication est fréquemment observée 	",
+		"E-	La mortalité opératoire approche les 10%	"],
+			2	,false,false,undefined);
+quizQuestions[	5	] = new QuizItem("	46. Un garçon de 16 ans est découvert d'être hypertendu lors d'un bilan de routine. A l'examen la pression artérielle au niveau de ses bras est plus élevée de qu'au niveau de ses jambes. Laquelle des propositions suivantes est le diagnostic le plus probable ?	",
+		["A-	Insuffisance aortique 	",
+		"B-	Coarctation de l'aorte	",
+		"C-	Variante normale	",
+		"D-	Anévrysme ventriculaire	",
+		"E-	Diabète juvénile sévère	"],
+			1	,false,false,undefined);
+quizQuestions[	6	] = new QuizItem("	47. Les signes suivants sont retrouvés en cas de diarrhée virale sauf un : Lequel ?	",
+		["A-	 Notion d'épidémie en crèche	",
+		"B-	 Association avec une symptomatologie respiratoire	",
+		"C-	  Eruption concomitante	",
+		"D-	Selles glairo-sanguinolentes	",
+		"E-	  Conservation de l'état général	"],
+			3	,false,false,undefined);
+quizQuestions[	7	] = new QuizItem("	48. L'examen du liquide céphalo-rachidien d'un enfant de 8 ans légèrement fébrile avec une raideur de la nuque et une stupeur intermittente montre ce qui suit : globules blancs 100/gL (tous les lymphocytes), coloration de Gram négative, protéine 150 mg/dl et glucose 15ml/dl. Le diagnostic le plus probable est :	",
+		["A-	Sclérose tubéreuse 	",
+		"B-	 Méningite tuberculeuse	",
+		"C-	  Attaque d'apoplexie	",
+		"D-	 Méningite bactérienne aigue	",
+		"E-	 Pseudotumeur cérébrale	"],
+			1	,false,false,undefined);
+quizQuestions[	8	] = new QuizItem("	49. Un enfant de 9 ans se présente avec une anémie et un accident vasculaire cérébral. Quelle est la trouvaille la plus probable à l'électrophorèse d'hémoglobine ?	",
+		["A-	HbS 45%	",
+		"B-	  HbA 65%	",
+		"C-	  HbA2 15%	",
+		"D-	 HbF 15 %	",
+		"E-	 HbC 45 %	"],
+			3	,false,false,undefined);
+quizQuestions[	9	] = new QuizItem("	50. Au cours d'un dépistage de routine du panel complet de globules blancs, un enfant de 1 an présente une hyperéosinophilie. Laquelle des propositions suivantes entraine la plus fréquemment l'augmentation du taux d'éosinophiles dans un frottis du sang périphérique ?	",
+		["A-	 Infection bactérienne 	",
+		"B-	 Rhinite allergique chronique	",
+		"C-	 Infections fongiques	",
+		"D-	 Infestation par des helminthiases 	",
+		"E-	 Tuberculose	"],
+			3	,false,false,undefined);
+quizQuestions[	10	] = new QuizItem("	51. Le score d'Apgar mesure les paramètres suivants à l'exception d'un, lequel ? 	",
+		["A-	Fréquence cardiaque du nouveau-né	",
+		"B-	 Coloration cutanée 	",
+		"C-	 Respiration	",
+		"D-	 Tirage intercostal	",
+		"E-	 Tonus	"],
+			3	,false,false,undefined);
+quizQuestions[	11	] = new QuizItem("	52. La prévention d'encéphalopathie due à la bilirubine ou ictère nucléaire est un des buts de diagnostic approprié et du traitement de l'hyperbilirubinémie. Lequel des mécanismes suivants a un rôle dans la prévention de ces issues adverses ?	",
+		["A-	 La bilirubine non-conjuguée n'est pas liposoluble 	",
+		"B-	 La bilirubine non-conjuguée est fortement liée à l'albumine	",
+		"C-	 La bilirubine non-conjuguée est fortement liée à l'hémoglobine	",
+		"D-	  La barrière sang-cerveau est imperméable à la bilirubine non-conjuguée	",
+		"E-	 La bilirubine non-conjuguée est rapidement métabolisée par le liquide céphalo-rachidien	"],
+			1	,false,false,undefined);
+quizQuestions[	12	] = new QuizItem("	53. Un enfant de 6 ans non-immunisé a de la fièvre à 40°C et des vésicules en grappes avec des lésions crouteuses dispersées sur le tronc Laquelle des infections suivantes est le diagnostic le plus probable ? 	",
+		["A-	 Rougeole	",
+		"B-	Variole	",
+		"C-	 HHV-6	",
+		"D-	 Virus Herpes simplex	",
+		"E-	 Varicelle	"],
+			4	,false,false,undefined);
+quizQuestions[	13	] = new QuizItem("	54. Un enfant de 7 ans, non vacciné à cause des croyances religieuses de ses parents développe un malaise, une toux, un rhume et une conjonctivite associés à une fièvre élevée. L'examen de sa bouche révèle des taches bleu-blanchâtres sur un fond rouge à côté de ses deuxièmes molaires. Le jour suivant il développe une éruption érythémateuse, non prurigineuse et maculopapuleuse au bord de ses cheveux et derrière les oreilles qui s'étend sur le corps. Quelle est parmi les propositions suivantes le diagnostic le plus probable ?	",
+		["A-	 Maladie main-pied-bouche (coxsackie virus)	",
+		"B-	 Rougeole	",
+		"C-	  Rubéole	",
+		"D-	 Oreillons	",
+		"E-	 Coqueluche 	"],
+			1	,false,false,undefined);
+quizQuestions[	14	] = new QuizItem("	 55. Un garçon de 3 ans présente une grosse masse abdominale du côté gauche. L'urographie intraveineuse montre une masse au sein du rein gauche qui empiète sur le système collecteur. La radiographie de thorax montre des nodules pulmonaires multiples.	",
+		["A-	 Tumeur de Wilms	",
+		"B-	 Lymphome non-hodgkinien	",
+		"C-	 Sarcome d'Ewing	",
+		"D-	 Lymphome lymphoblastique	",
+		"E-	 Rhabdomyosarcome	"],
+			0	,false,false,undefined);
+quizQuestions[	15	] = new QuizItem("	 56. Une fille 4 ans présente une diarrhée sanglante et de douleurs abdominales à type de crampes. Les tests sanguins montrent une anémie et une thrombocytopénie	",
+		["A-	 Diverticule de Meckel	",
+		"B-	 Invagination intestinale	",
+		"C-	 Syndrome urémique hémolytique	",
+		"D-	 Colite éosinophile	",
+		"E-	 Maladie d'Hirschsprung	"],
+			2	,false,false,undefined);
+quizQuestions[	16	] = new QuizItem(" 57	Une fille de 10 ans des brulures couvrant 15% de sa corporelle. Quelle est la seule prise en charge la plus appropriée?	",
+		["A-	 Administrer les solutés par voie intraveineuse, nettoyer et faire le pansement des plaies aux urgences et faire sortir de l'hopital	",
+		"B-	 Hospitalisation, notifier les services sociaux, ponctionner les phlyctènes et enlever les escarres selon les besoins	",
+		"C-	 Irriguer avec l'eau froide, raire le pansement des plaies et raire sortir de l'hôpital avec sulfadiazine d'argent et des compresses	",
+		"D-	 Nettoyer, utiliser le pansement occlusif sec et faire sortir de l'hôpital avec des antibiotiques à large spectre	",
+		"E-	 Référer au service spécialisé pour des brulés	"],
+			4	,false,false,undefined);
+quizQuestions[	17	] = new QuizItem("	58 un enfant de 5 ans est observé d'avoir une carence en fer. A l'interrogatoire sa famille rapporte plusieurs épisodes de selles grossièrement sanglantes (rouge foncé). Laquelle des propositions suivantes est l’explication la plus probable de son anémie	",
+		["A-	Augmentation des besoins en fer lié à la croissance accéléré	",
+		"B-	Diverticule de meckel	",
+		"C-	Infection par des ankylostomes	",
+		"D-	Ulcère peptique	",
+		"E-	Epistaxis récidivant	"],
+			1	,false,false,undefined);
+quizQuestions[	18	] = new QuizItem("	59 un garçon de 2 ans a eu un drainage purulent de la narine droite pendant une semaine. Il est fébrile et n'a pas eu de symptôme associé, comme la toux. Lequel des diagnostics suivants est le plus probable ?	",
+		["A-	Sinusite 	",
+		"B-	Polypes nasaux	",
+		"C-	Une infection des voies respiratoires supérieures	",
+		"D-	Un corps étranger dans la narine droite	",
+		"E-	Une rhinite allergique 	"],
+			3	,false,false,undefined);
+quizQuestions[	19	] = new QuizItem("	60 Une mère amene sa fille par ce qu’elle a senti une masse lisse sur le côté gauche de son ventre lorsqu’elle lui donnait un bain. Lequel des diagnostics suivants est la plus probable	",
+		["A-	Tumeur de Wilms	",
+		"B-	Neuroblastome	",
+		"C-	Leucémie lymphoblastique aiguë 	",
+		"D-	La maladie de Hodgkin 	",
+		"E-	Hépatoblastome	"],
+			0	,false,false,undefined);
+quizQuestions[	20	] = new QuizItem("	61 En  poursuivant votre examen physique, vous vous souvenez que les maladies cardiaques congénitales sont courantes dans ce syndrome particulier. Laquelle des affections. Suivantes est la plus probable chez les patients atteints de ce syndrome ? 	",
+		["A-	Sténose aortique supra valvulaire	",
+		"B-	 Défauts du canal AV	",
+		"C-	Coarctation de l'aorte 	",
+		"D-	Sténose valvulaire pulmonaire 	",
+		"E-	Prolapsus de la valve mitrale	"],
+			1	,false,false,undefined);
+quizQuestions[	21	] = new QuizItem("	62 concernant de developpement psychomoteur de l'enfant, il roule d'arrière en avant ou de côté à l'age de	",
+		["A-	2-5 mois 	",
+		"B-	4-7 mois	",
+		"C-	7-10 mois	",
+		"D-	 11-14 mois	",
+		"E-	14-18 mois 	"],
+			1	,false,false,undefined);
+quizQuestions[	22	] = new QuizItem("	63 Marche à quatre pattes 	",
+		["A-	 4-7 mois 	",
+		"B-	 2-5 mois	",
+		"C-	 7-10 mois	",
+		"D-	11-14 mois	",
+		"E-	 14-18 mois	"],
+			2	,false,false,undefined);
+quizQuestions[	23	] = new QuizItem("	64 Un enfant de 5 ans se présente avec oligurie, hématurie et œdème diffus. Elle a eu une angine de la gorge il y a 3 semaines. Quel est le diagnostic ?	",
+		["A-	Glomérulonéphrite aigue 	",
+		"B-	Cystite bactérienne	",
+		"C-	Syndrome urémique hémolytique	",
+		"D-	 Hématurie bénigne récidivante 	",
+		"E-	Tuberculose rénale	"],
+			0	,false,false,undefined);
+quizQuestions[	24	] = new QuizItem("	65. Une fille de 9 ans développe une méningite à Haemophilus influenza type B Quel est le seul meilleur conseil ?	",
+		["A-	 Traiter la fille seulement avec la benzyl pénicilline 	",
+		"B-	 Traiter la fille seulement avec Cefotaxime	",
+		"C-	 Traiter la fille ct offrir des antibiotiques à titre prophylactique à tous les membres de la famille.	",
+		"D-	 Traiter la fille ct vacciner tous les membres de la famille	",
+		"E-	 Traiter la fille et vacciner tous les membres de la ramille ct les contacts à l'école	"],
+			2	,false,false,undefined);
+quizQuestions[	25	] = new QuizItem("	66. Le chirurgien pédiatrique demande un échocardiogramme pour un nouveau-né hospitalisé avec une anomalie congénitale du tractus gastro-intestinal. Laquelle des anomalies suivantes a l'incidence la plus élevée d'anomalies cardiaques ?	",
+		["A-	 Omphalocèle	",
+		"B-	 Volvulus congénitaux	",
+		"C-	 Maladie de Hirschsprung	",
+		"D-	 Gastroschisie 	",
+		"E-	 Sténose du pylore	"],
+			0	,false,false,undefined);
+quizQuestions[	26	] = new QuizItem("	67. Vous êtes en train de formuler un diagnostic différentiel pour un nouveau-né avec détresse respiratoire. Lequel des facteurs suivants est le plus étroitement associé au développement du syndrome de détresse respiratoire néonatal (maladie de membrane hyaline) ?	",
+		["A-	L'âge gestationnel	",
+		"B-	  Poids de naissance	",
+		"C-	  Accouchement par césarienne	",
+		"D-	 Diabète maternel	",
+		"E-	 Méconium dans le liquide amniotique	"],
+			0	,false,false,undefined);
+quizQuestions[	27	] = new QuizItem("	68.La mère d'un enfant de 6 mois vous consultant pour un bilan de santé, demande la vaccination contre la rougeole parce qu'elle a appris que la rougeole sévit dans la communauté. A quel âge doit-on administrer de manière routinière la première dose du vaccin atténué vivant contre la rougeole en l'absence d'une épidémie	",
+		["A-	A l'âge de 6 mois 	",
+		"B-	A l'âge de 9 mois	",
+		"C-	  Entre 12-15 mois d'âge	",
+		"D-	 Entre 18-24 mois d'âge	",
+		"E-	RAS	"],
+			2	,false,false,undefined);
+quizQuestions[	28	] = new QuizItem("	69.Un enfant de 2 ans se présente avec une émission non douloureuse du sang gélatineux dans ses selles. La numération et formule sanguine une ferriprive. Quel est le seul diagnostic le plus probable ?	",
+		["A-	angiodysplasie 	",
+		"B-	 Invagination intestinale	",
+		"C-	 Diverticule de Meckel 	",
+		"D-	 Sténose du pylore	",
+		"E-	 Colite ulcérative	"],
+			2	,false,false,undefined);
+quizQuestions[	29	] = new QuizItem("	 70. Une mère son enfant de 15 mois pour une vaccination contre la rougeole, les oreillons et la rubéole. Elle vous informe 'elle et son bébé sont infectés par le VIH. Quelle est la seule conduite à tenir la	la plus approprié à tenir?",
+		["A-	 Administrer le vaccin de rougeole, oreillons et rubéole	",
+		"B-	 Administrer les vaccins de rougeole, oreillons et rubéole séparément	",
+		"C-	Retarder le vaccin de rougeole, oreillons et rubéole 	",
+		"D-	Administrer le vaccin inactif	",
+		"E-	Refuser d’administrer le vaccin de rougeole, oreillon et rubéole	"],
+			0	,false,false,undefined);
+quizQuestions[	30	] = new QuizItem("	71 un nouveau-né de 20 jours est amené dans la salle des urgences avec une température à 38.5° il est par ailleurs normal la seule meilleure étape suivante dans la conduite à tenir serait	",
+		["A-	Re assurance	",
+		"B-	Faire sortir avec un traitement antibiotique à large spectre 	",
+		"C-	Hospitaliser pour un bilan infectieux complet  	",
+		"D-	Hospitaliser pour un bilan infectieux complet  et débuter un traitement par antibiothérapie à large spectre	",
+		"E-	Hospitaliser et surveiller	"],
+			2	,false,false,undefined);
+quizQuestions[	31	] = new QuizItem("	72. Pendant la réanimation d'un nouveau-né vigoureux et à terme dans une salle d'accouchement, laquelle des propositions suivantes doit être réalisée en premier ?	",
+		["A-	Vérifier que la voie aérienne est libre, sèche et stimuler l'enfant 	",
+		"B-	 La fréquence cardiaque doit être auscultée 	",
+		"C-	 Les bruits respiratoires doivent être auscultés	",
+		"D-	 La bouche et la trachée doivent être aspirées	",
+		"E-	Evaluer la couleur et administrer l'oxygène si nécessaire	"],
+			0	,false,false,undefined);
+quizQuestions[	32	] = new QuizItem("	73. La prévention d'encéphalopathie due à la bilirubine ou ictère nucléaire est l'un des buts de diagnostic approprié et du traitement de l'hyperbilirubinémie. Lequel des mécanismes suivants a un rôle dans la prévention de ces issues adverses ?	",
+		["A-	 La bilirubine non-conjuguée n'est pas liposoluble	",
+		"B-	 La bilirubine non-conjuguée est fortement liée à l'albumine	",
+		"C-	La bilirubine non-conjuguée est fortement liée à l'hémoglobine	",
+		"D-	d. La barrière sang-cerveau est imperméable à la bilirubine non-conjuguée	",
+		"E-	La bilirubine non-conjuguée est rapidement métabolisée	"],
+			1	,false,false,undefined);
+quizQuestions[	33	] = new QuizItem("	74. Un enfant accouché à 29 semaines est en train d'être ressuscité dans la salle d'accouchement. Le surfactant est administré par une sonde endo-trachéale. Laquelle des substances suivantes est la composante de surfactant la plus physiologiquement active ?	",
+		["A-	 La protéine A de surfactant	",
+		"B-	 La protéine B de surfactant 	",
+		"C-	Le lipide neutre	",
+		"D-	L'eau	",
+		"E-	 Le phospholipide	"],
+			4	,false,false,undefined);
+quizQuestions[	34	] = new QuizItem("	75. Un enfant de 6 mois non immunisé a de la fièvre à 40°C et des vésicules groupées avec des lésions crouteuses dispersées sur le tronc Laquelle des infections suivantes est le diagnostic le plus probable ?	",
+		["A-	 La rougeole	",
+		"B-	 La variole	",
+		"C-	 Le HHV-6	",
+		"D-	 Le virus Herpès simplex	",
+		"E-	La varicelle	"],
+			4	,false,false,undefined);
+quizQuestions[	35	] = new QuizItem("	76. Un enfant de 15 ans a une amygdalite (angine) exsudative, des adénites cervicales et une splénomégalie. Son test au monospot est positif. Laquelle des propositions suivantes est la complication la plus fréquemment rencontrée ?	",
+		["A-	Une asthénie (fatigue) chronique durant plus de 6 mois	",
+		"B-	Une hémorragie 	",
+		"C-	 Une pneumonie	",
+		"D-	 Une encéphalite	",
+		"E-	 Obstruction des voies aériennes	"],
+			4	,false,false,undefined);
+quizQuestions[	36	] = new QuizItem("	77. Une mère a des soucis parce que son fils de 20 mois préfère manger avec ses doigts au lieu de se servir d'une petite cuillère. Laquelle parmi les propositions suivantes est correcte ?	",
+		["A-	A 18 mois d'âge, la plupart des enfants préfèrent se nourrir avec une cuillère	",
+		"B-	La plupart des enfants apprennent à se nourrir de manière indépendante au cours de la deuxième année de la vie	",
+		"C-	 Se nourrir soi-même avec une cuillère commence à 10 mois d'âge lorsque la rotation bien définie du poignet se développe	",
+		"D-	 La plupart des enfants peuvent se nourrir avec une tasse vers l'âge de 6 mois	",
+		"E-	La plupart des enfants peuvent se nourrir avec une cuillère vers l'âge de 12 mois	"],
+			1	,false,false,undefined);
+quizQuestions[	37	] = new QuizItem("	78 Un garçon de 2 ans présente une fièvre et une toux évoluant depuis 12 heures. En attendant dans la salle de consultation il développe un stridor	",
+		["A-	 Virus de la rougeole 	",
+		"B-	 Virus cosackie	",
+		"C-	 Virus de l'influenza	",
+		"D-	 Virus para influenza	",
+		"E-	 Virus de la rubéole	"],
+			3	,false,false,undefined);
+quizQuestions[	38	] = new QuizItem("	79. Un enfant de 5 ans développe une diarrhée sévère, nausée et vomissements un jour après le retour d'un voyage d'école.	",
+		["A-	 Virus de la rubéole	",
+		"B-	 Virus des oreillons	",
+		"C-	 Virus Cosackie	",
+		"D-	 Virus de l'hépatite B	",
+		"E-	 Virus rota (Rota virus)	"],
+			4	,false,false,undefined);
+quizQuestions[	39	] = new QuizItem("	80. Un enfant de sexe masculine, stérile avec gynécomastie et difficulté d'apprentissage. 	",
+		["A-	Syndrome d'Edward	",
+		"B-	Syndrome de Turner	",
+		"C-	Syndrome de Down	",
+		"D-	Syndrome de Klinefelter 	",
+		"E-	Syndrome de Patau	"],
+			3	,false,false,undefined);
+
+
+
+// pTag.innerHTML = test1.question;
+// console.log(quizQuestions[0]);
+var currentIndex = 0, numOfAnswered = 0;
+var currentQuestion = quizQuestions[currentIndex];
+//second ulTag 
+var ulTag = document.getElementsByTagName('ul')[1];
+var liTags = ulTag.getElementsByTagName('li');
+/*
+	this function inserts the current question into the layout
+	of the page: p tag which is a question and ul tag meaning
+	an options
+*/
+function showCurrentQuestion() {
+	var headerOfDropdow = document.getElementsByClassName('wrapper')[0];
+	//parse into integer, because it interpretes it as a string
+	var numQuestion = parseInt(currentIndex)+1;
+	headerOfDropdow.getElementsByTagName('span')[0].innerHTML = numQuestion;
+	var pTag = document.getElementsByTagName('p')[0];
+	// console.log(liTags);
+	var ulTag = document.getElementsByTagName('ul')[1];
+	var liTags = ulTag.getElementsByTagName('li');
+	pTag.innerHTML = currentQuestion.question;
+	for (var i=0; i < liTags.length; i++) {
+		//in case the number of variants is less than 4 (e.g. when it's
+		// undefined) disable li tag
+		if (currentQuestion.variants[i] == undefined) {
+			console.log(currentQuestion.variants[i]);
+			liTags[i].className = "doNotDisplay";
+		} else {
+			console.log(currentQuestion.variants[i]);
+			liTags[i].innerHTML = currentQuestion.variants[i];//assign question
+			liTags[i].className = "";
+		}
+	}
+};
+
+
+enableLiOnClickEvents();
+showCurrentQuestion();
+
+//when a variant is selected it becomes highlighted 
+function changeLiStyle() {
+	var selectedItem = document.getElementsByClassName('selected')[0];
+	//disable previously selected item and enable the clicked one
+	if (selectedItem) selectedItem.className = "";
+	this.className = "selected";
+}
+
+
+//self-invoking function to find all li tags 
+// and assing them text from the object 
+// and assign event listeners
+function enableLiOnClickEvents() {
+	for (var i=0; i < liTags.length; i++) {
+		console.log(liTags[i]);
+		liTags[i].onclick = changeLiStyle;
+	}
+};
+
+var button = document.getElementsByClassName('submit')[0];
+button.onclick = submitAndCheckAnswer;
+
+function submitAndCheckAnswer() {
+	var selectedItem = document.getElementsByClassName('selected')[0];
+/*	console.log(selectedItem.innerHTML);*/
+ if (selectedItem == undefined)
+   		;
+else {
+   currentQuestion.enabled = true;
+	if (selectedItem.innerHTML == currentQuestion.variants[currentQuestion.answer]) {
+		
+		console.log("Correct "+ currentQuestion.variants.indexOf(selectedItem.innerHTML));
+		changeTheLayoutAccordingTheResult(selectedItem,"correct", true);
+		checkIfTheLastQuestion(this);//sending button obj as a parameter
+		document.getElementById("cor").playbackRate=4;document.getElementById("cor").volume=0.2;document.getElementById("cor").volume=0.2;
+		document.getElementById("cor").play();
+		if (tr<20){tr++;};
+			document.getElementById("tr").innerHTML=tr;
+	document.getElementById("rt").innerHTML=rt;
+	if (sr>0){sr=20-rt-tr;};
+	document.getElementById("sr").innerHTML=sr;
+	} else {
+		
+		console.log("Wrong!");
+		changeTheLayoutAccordingTheResult(selectedItem,"wrong", false);
+		checkIfTheLastQuestion(this);
+		liTags[currentQuestion.answer].className = "correct";
+		document.getElementById("inc").playbackRate=2;document.getElementById("inc").volume=0.2;
+		document.getElementById("inc").play();
+		if (rt<20){rt++;};
+			document.getElementById("tr").innerHTML=tr;
+	document.getElementById("rt").innerHTML=rt;
+	if (sr>0){sr=20-rt-tr;};
+	document.getElementById("sr").innerHTML=sr;
+	}	
+}
+}
+
+function changeTheLayoutAccordingTheResult(selectedItem,result,replied) {
+	console.log(result);
+	currentQuestion.replied = replied;
+	//the index corresponding to the selection of user is selectiOfUser
+	currentQuestion.selectionOfUser = currentQuestion.variants.indexOf(selectedItem.innerHTML);
+	selectedItem.className=result;//changing color of selected item by changing className
+	disableLiOnClickEvents();//cannot click on the other litags anymore
+}
+
+//if the current question is the last one then change button style
+//and onclick event(function)
+//to finalize, otherwise continue to the next question 
+function checkIfTheLastQuestion(button) {
+}
+
+function disableLiOnClickEvents() {
+	for (var i=0; i < liTags.length; i++) {
+		;
+	}
+}
+
+function goToNextQuestion() {
+if (currentIndex<nq){currentIndex++;}
+	// if (currentIndex == quizQuestions.length) {
+	// 	finalize();
+	// 	return alert("Quiz is over. Your result: " + numOfAnswered);
+	// }
+	//changes the current question index before moving to the next one
+	currentQuestion = quizQuestions[currentIndex];
+	//change button's label and event handler
+	this.innerHTML = "";
+	this.onclick = submitAndCheckAnswer;
+	this.className = "submit";
+	showCurrentQuestion();
+	enableLiOnClickEvents();
+}
+
+function cleanUpTheLayout() {
+	var mainDiv = document.getElementsByClassName('main')[0];
+	// deleting all child nodes 
+	while (mainDiv.hasChildNodes()) {
+		mainDiv.removeChild(mainDiv.firstChild);
+	}
+	console.log("clean UPP!!");
+}
+
+function finalize() {
+	cleanUpTheLayout();
+	var mainDiv = document.getElementsByClassName('main')[0];
+	var tHeader = document.createElement("p");
+	tHeader.appendChild(document.createTextNode("Review your answers"));
+	tHeader.setAttribute("class","pAboveTable");
+	mainDiv.appendChild(tHeader);
+	var table = document.createElement("table");
+	// table.border='1px';
+	var tr = document.createElement("tr");
+	table.appendChild(tr);
+	var heading = ["Questions", "Your results", "Correct option"];
+	
+	for (var i = 0 ; i < heading.length ; i++) {
+		var th = document.createElement("th");
+		th.width = '200px';
+		th.appendChild(document.createTextNode(heading[i]));
+		tr.appendChild(th);
+		console.log(tr);
+	}
+
+	for (var i = 0 ; i < quizQuestions.length; i++) {
+			
+			var tr = document.createElement('tr');
+			var td = document.createElement('td');
+			td.appendChild(document.createTextNode("Question " + (i+1)));
+			td.setAttribute("class","questionCol");
+			tr.appendChild(td);
+			var td = document.createElement('td');
+			
+			var answer = quizQuestions[i].replied ? (
+				td.className = "correctCol",
+				"Correct"
+				) : (
+				td.className = "wrongCol",
+				"Incorrect"
+				);
+			
+			td.appendChild(document.createTextNode(answer));
+			tr.appendChild(td);
+			var td = document.createElement('td');
+			if (!quizQuestions[i].replied) {
+				var correctAns = quizQuestions[i].variants[quizQuestions[i].answer];
+				td.appendChild(document.createTextNode(correctAns));
+				td.setAttribute("class","correctCol");
+			}
+			tr.appendChild(td);
+			
+			table.appendChild(tr);
+
+	}
+	
+	mainDiv.appendChild(table);
+	var trAll = document.getElementsByTagName("tr");
+	console.log(trAll);
+	for (var i = 1; i < trAll.length; i++) {
+		trAll[i].onclick = returnToQuestion;
+		console.log("Assigned!");
+	}
+	// var head2 = document.createElement("th");
+	// head2.appendChild(document.createTextNode("Your Result"));
+	// tr.appendChild(head2);
+	// document.body.appendChild(table);
+}
+//dynamicaally creates the question layout when clicked on any of the questions in the result table
+function createQuestionLayout() {
+			var mainDiv = document.getElementsByClassName('main')[0];
+			var wrapperDiv = document.createElement('div');
+			wrapperDiv.className = "wrapper";
+			wrapperDiv.onclick = "showDropdown";
+			mainDiv.appendChild(wrapperDiv);
+			for (var j = 0 ; j < 2; j++) {
+				var span = document.createElement('span');
+				wrapperDiv.appendChild(span);
+			}
+			span.innerHTML = "/ "+quizQuestions.length;
+			var ulDdown = document.createElement('ul');
+			ulDdown.className = "dropdown";
+			mainDiv.appendChild(ulDdown);
+			var pTag = document.createElement('p');
+			pTag.className = "question";
+			var ulTag = document.createElement('ul');
+			mainDiv.appendChild(pTag);
+			mainDiv.appendChild(ulTag);
+			for (var i = 0 ; i < 4; i++) {
+				var liTag = document.createElement('li');
+				ulTag.appendChild(liTag);
+				var liTag1 = document.createElement('li');
+				ulDdown.appendChild(liTag1);
+			}
+			var button = document.createElement('button');
+			button.innerHTML = "Back";
+			button.className = "back";
+      //goes back to the table layout when clicked
+			button.onclick = finalize;
+			mainDiv.appendChild(button);
+}
+
+function returnToQuestion() {
+	console.log(this);
+	var questionTitle = this.getElementsByClassName("questionCol")[0].innerHTML;
+	var questionNum = questionTitle[questionTitle.length -1];
+	
+ 
+ 			cleanUpTheLayout();
+			createQuestionLayout();
+			currentQuestion = quizQuestions[questionNum -1];
+			// change currentIndex in orderto correctly display
+			// it on the new layout
+			currentIndex = questionNum-1;
+			showCurrentQuestion();
+			var correctLiNum = quizQuestions[questionNum-1].answer;
+  if (quizQuestions[questionNum-1].enabled) {
+	 	if (quizQuestions[questionNum-1].replied) {
+	 		
+			document.getElementsByTagName("li")[correctLiNum+4].className="correct";
+	
+		} else {
+			var selectedLiNum = quizQuestions[questionNum-1].selectionOfUser;
+			document.getElementsByTagName("li")[selectedLiNum+4].className="wrong";
+			document.getElementsByTagName("li")[correctLiNum+4].className="correct";
+		
+	 }
+}
+}
+
+function showDropdown() {
+	var dropdown = document.getElementsByClassName("dropdown")[0];
+	 var dropdownItems = dropdown.getElementsByTagName("li");
+	 console.log(dropdownItems);
+	 for (var i = 0 ; i < dropdownItems.length; i++)
+	 	dropdownItems[i].onclick = clickOnAnyQuestionFromDropdown;
+	var display = dropdown.style.display;
+	if (display=="") {
+		;
+	} 
+	else {
+		;
+	};
+}
+
+function hideDropdown() {
+	var dropdown = document.getElementsByClassName("dropdow")[0];
+	var dropdownItems = dropdown.getElementsByTagName("li");
+	var display = dropdown.style.display;
+	if (display=="") {
+		dropdown.style.display = "block";
+	} 
+	else {
+		dropdown.style.display ="";
+	};
+}
+
+/*
+the number of action taken when any of the ul items is clicked on:
+getting the number of question and show the current question
+*/
+function clickOnAnyQuestionFromDropdown() {
+	console.log(this);
+	var questionNum = this.getElementsByTagName('span')[0].innerHTML;
+	currentQuestion = quizQuestions[questionNum-1];
+	hideDropdown();
+	currentIndex = questionNum-1;
+	showCurrentQuestion();
+}
+// function enableLiOnClickEvents() {
+// 	for (var i=0; i < liTags.length; i++) {
+// 		// console.log(liTags[i]);
+// 		liTags[i].onclick = "";
+// 	}
+// }
+
+function goToNextQuestion2() {
+	document.getElementById("xp").style.display="none";
+if (currentIndex>0){currentIndex--;};
+	// if (currentIndex == quizQuestions.length) {
+	// 	finalize();
+	// 	return alert("Quiz is over. Your result: " + numOfAnswered);
+	// }
+	//changes the current question index before moving to the next one
+	currentQuestion = quizQuestions[currentIndex];
+	//change button's label and event handler
+	this.innerHTML = "";
+	this.onclick = submitAndCheckAnswer;
+	this.className = "submit";
+	showCurrentQuestion();
+	enableLiOnClickEvents();
+
+}
+	function goToNextQuestion3() {
+	document.getElementById("xp").style.display="none";
+if (currentIndex<nq){currentIndex++;}
+	// if (currentIndex == quizQuestions.length) {
+	// 	finalize();
+	// 	return alert("Quiz is over. Your result: " + numOfAnswered);
+	// }
+	//changes the current question index before moving to the next one
+	currentQuestion = quizQuestions[currentIndex];
+	//change button's label and event handler
+	this.innerHTML = "";
+	this.onclick = submitAndCheckAnswer;
+	this.className = "submit";
+	showCurrentQuestion();
+	enableLiOnClickEvents();
+	
+}
+this.onclick = submitAndCheckAnswer;
+function exp(){ document.getElementById("xp").style.display="block"; document.getElementById("xpt").innerHTML="Explication: "+ currentQuestion.variants[5];};
+
+function cl()	{ document.getElementById("xp").style.display="none";}
+	
+	</script>
+	
+	<style>
+	
+	
+
+/*googleapis*/
+body {
+	font-family: "Open Sans", Times, serif;
+	/*font-family:"Open Sans";*/
+}
+
+.main {
+	margin-left: 10px;
+	margin-top: 100px;
+}
+.question {
+	font-size: 1.5em;
+	height:auto;
+}
+
+ul {
+	list-style: none;
+	margin-left:-40px;
+}
+li {
+	text-decoration: none;
+	border: 1px solid lightgray;
+	margin:10px;
+	padding: 10px;
+	border-radius:10px;
+}
+
+.dropdown {
+	margin-right: 3px;
+	/*z-index: 999;*/
+	position: absolute;
+	top: 115px;
+	padding-left: 0;
+	box-shadow: 1px 1px 10px ;
+  /*dropdow is hidden by default*/
+	display: none; 
+	font-size: 2px;
+}
+
+.wrapper {
+	background: #d7ff99;
+	padding: 3px 15px;
+	border-radius: 4px;
+	width: 90%;
+}
+.dropdown li {
+	
+	border: 0px;
+	font-size: 0.9em;
+	width:100px;
+	margin: 0px;
+	background: white;
+}
+
+li:hover {
+	background: #ECEEF0;
+}
+/*disable hover effect when li tag is selected*/
+.selected, .selected:hover {
+	background: #FFDEAD;
+}
+
+.correct, .correct:hover {
+	background: #9ACD32;
+	color: white;
+}
+
+.wrong, .wrong:hover {
+	background: red;
+	color: white;
+}
+
+button {
+	padding:5px 14px;
+	font-size: 1.1em;
+	border:none;
+	border-radius: 5px;
+}
+.submit {
+	color: white;
+	background: #2DB82D;
+}
+.next {
+	background: #B0C4DE;
+}
+.finalize {
+	background: #1A1AFF;
+}
+.back {
+	background: #ffff33;
+}
+.doNotDisplay {
+	display: none;
+}
+
+td,th {
+	border:1px solid lightgray;
+	padding: 10px;
+	text-transform: uppercase;
+	font-weight: 700;
+	/*font-size:14px;*/
+}
+
+th {
+	border-bottom:3px solid gray;
+	background: #C2CCE0;
+}
+
+table {
+	border:2px solid gray;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+td {
+	cursor:pointer;
+}
+
+.questionCol {
+	color: #5b666f;
+}
+.correctCol {
+	color: #6a9d21;
+}
+.wrongCol {
+	color: #9d2138;
+}
+.pAboveTable {
+	font-size: 1.4em;
+}
+/*tr {
+	cursor:pointer;
+}*/
+
+#ctrlb{
+	position:fixed;
+	
+	
+	bottom:10px;
+	left:20px;
+
+	
+}
+
+#ctrln{
+	position:fixed;
+	
+
+	bottom:10px;
+right:20px;
+
+	
+}	
+
+
+
+.alert .inner {
+  display: block;
+  padding: 6px;
+  margin: 6px;
+  border-radius: 10px;
+    border: 2px solid green;
+  background-color: rgb(223,240,216);
+
+}
+
+.alert .close {
+  float: right;
+  margin: 3px 10px 0px 0px;
+  cursor: pointer;
+}
+
+
+.alert input {
+  display: none;
+}
+
+.alert input:checked ~ * {
+  animation-name: dismiss,hide;
+  animation-duration: 300ms;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0s,100ms;
+}
+
+@keyframes dismiss {
+  0% {
+    opacity: 1;
+  }
+  90%, 100% {
+    opacity: 0;
+    font-size: 0.1px;
+    transform: scale(0);
+  }
+}
+
+
+	</style>
+</body>
+</html>

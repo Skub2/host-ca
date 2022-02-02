@@ -1,0 +1,897 @@
+
+<html>
+<head>
+<h4 id="titre">  <span id="ttre"> PARTIE A GYNECOLOGIE </span><a href="agyne.html ><button id="submit"></button></a></h4>
+
+ <meta http-equiv="Content-Type"content="text/html; charset=UTF-8" />
+
+	<title>QCM ENSCT</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body><d iv class="main">
+
+	
+	
+	
+	
+
+<div class="wrapper" onclick="showDropdown()">
+<div style="background-Color:gray;border-radius:11px; margin:3px; height:11px"><div id="prog" style="background-Color:blue;border-radius:11px;width:0%;height:11px">.</div></div>
+
+Quest.: <span></span>/<span id="sur1">20ok</span> <span style="padding-left:5px"></span> <span style="color:darkcyan;padding:3px;border-left:3px solid white;border-right:3px solid white;border-radius:5px;background-Color:"><img style="border-radius:50%; width:25px" src="cor.jpg"> : <span id="tr" ></span>/<span id="sur2">20ok</span></span> <img style="border-radius:50%; width:18px" src="tp.jpg"> : <span id="time"> </span>&nbsp;&nbsp; <style>#time{width: 70px; border: 1px dotted #333; text-align: center; margin-bottom: 1px;font-style:italic; }</style><script type="text/javascript"> var centi = 0; var mili = 0; var sec = 0;  var min;  var sec_; var afficher; var compteur; document.getElementById('time').innerHTML = "0" + sec + ":" + "0" + mili;  function chrono() { setInterval(function (){ mili++; if (mili > 9) { mili = 0; } }, 1); centi++; centi*10; if (centi > 540) { centi = 0; sec++; }  if (sec < 10) { sec_ = "0" + sec; } else { sec_ = sec; } var ok=centi/9.1; afficher = sec_ + ":<span id='z'>0</span>" + ok.toFixed(); document.getElementById("time").innerHTML = afficher;if(ok>9.499){ document.getElementById("z").style.display="none";}; reglage = window.setTimeout("chrono();",100); }  function debut() { document.parametre.lance.disabled = "disabled"; document.parametre.pause.disabled = ""; document.parametre.zero.disabled = ""; document.parametre.intermediaire.disabled = ""; document.parametre.rappel.disabled = ""; }chrono();debut; </script> <span style="padding-left:15px"></span> <br><span style="color:red">Incorrect:</span> <span id="rt" ></span>/<span id="sur3">20ok</span> <span style="padding-left:15px"></span><span style="color:blue"> Sans Reponse: </span><span id="sr" ></span>/<span id="sur4">20ok</span> <span style="border-radius:50%;background-Color:gray;color:white;" onclick="exp()"> &nbsp; i &nbsp;</span><br></div>
+		
+<p style="font-size: 17px;">
+
+<div onc lick="this.style.display='none'" id="xpn" style="display:none">xpn</div>
+
+<div class="alert success" id="xp" style="display:none">
+
+	<inp ut type="checkbox" id="alert1">
+    <label class="close" title="close" for="alert1">
+	<i class="icon-remove"><img src="cl.jpg" style='width:30px;border-radius:5px'></i>
+    </label>
+
+	
+		<p id="xpt" class="inner">
+			
+		</p>
+		</div>
+	</p>		
+		
+		
+		
+		<ul style="font-size: 1px;" class="dropdown"></ul>		
+		<p class="question"></p>
+		<ul>
+			<label for="la1"><li id="lit1"><input id="la1" type="checkbox"><span id="las1">ok</span></li></label>
+			<label for="la2"><li id="lit2"><input id="la2" type="checkbox"><span id="las2">ok</span></label></li></label>
+			<label for="la3"><li id="lit3"><input id="la3" type="checkbox"><span id="las3">ok</span></label></li></label>
+			<label for="la4"><li id="lit4"><input id="la4" type="checkbox"><span id="las4">ok</span></label></li></label>
+			<label for="la5"><li id="lit5"><input id="la5" type="checkbox"><span id="las5">ok</span></label></li></label>
+			
+			
+		</ul>
+		<div id="tctr"><div id="ctrlb"><button style="border-radius: 20px 20px 20px 0px;b ox-shadow: 1px 1px 2px 2px gray ; background:linear-gradient(#6 a9d21,lightgray);border-radius: 0px 0px 30px 20px" onclick="goToNextQuestion2();cl()"><img src="prev.jpg" height="30px" width="80px" style="border-radius:50%"></button><bu tton class="submit"></button></div><div onclick = "submitAndCheckAnswer()" id="ctrlval"><img  id="valim" src="va.png"></div><div id="ctrln"><button style="border-radius: 20px 20px 0px 0px;bo x-shadow: 1px 1px 2px 2px gray ; background:linear-gradient(#6 a9d21,lightgray);border-radius: 0px 0px 20px 30px;float:right;" onclick="goToNextQuestion3();cl()"><img src="next.jpg" height="30px" width="80px" style="border-radius:50%"></button>
+	</div>
+	</div>
+<table height="50px" width="100%" style="border-color:white"><tr><td></td></tr></table>
+	<audio src="cor.mp3" id="cor">
+	<audio/>
+	<audio src="inc.mp3" id="inc">
+	<audio/>
+	<script>
+	
+	
+var kl=[];
+
+	function QuizItem(question, variants, answer, enabled, replied, selectionOfUser) {
+	this.question = question;
+	this.variants = variants;
+	this.answer = answer;
+	this.enabled = enabled;
+	this.replied = replied;
+	this.selectionOfUser = selectionOfUser;
+}
+
+
+
+
+
+
+var ep = localStorage.getItem("ep").split("$$***$$");
+
+
+document.getElementById("ttre").innerHTML=ep[0];
+var quizQuestions = [];
+
+//alert(ep);
+
+for(var i= 0; i<ep.length/8-1; i++) {
+
+quizQuestions[i] = new QuizItem(ep[8*i+1],
+		[ep[8*i+2],
+		ep[8*i+3],
+		ep[8*i+4],
+		ep[8*i+5],
+		ep[8*i+6],		
+		ep[8*i+7]],
+			parseInt(ep[8*i+8])	,false,false,undefined);
+
+ }
+
+switch(ep[0]){
+case "ENSCT Med Interne 2021":
+quizQuestions[0].variants[5]=" Toutes les manifestations suivantes sont des syndromes post streptococciques sauf une laquelle ?Toutes les manifestations suivantes sont des syndromes post streptococciques sauf une laquelle ?";
+quizQuestions[1].variants[5]="mon expl1";
+break;
+
+}
+
+
+
+document.getElementById('sur1').innerHTML=quizQuestions.length;
+document.getElementById('sur2').innerHTML=quizQuestions.length;
+document.getElementById('sur3').innerHTML=quizQuestions.length;
+document.getElementById('sur4').innerHTML=quizQuestions.length;
+	var nq=quizQuestions.length-1;
+	var sr=quizQuestions.length;
+	var rt=0;
+	var tr=0;
+	var prog=100/quizQuestions.length;
+	document.getElementById('prog').style.width=prog+'%';
+
+//alert(localStorage.getItem("ep"));
+
+// pTag.innerHTML = test1.question;
+// console.log(quizQuestions[0]);
+var currentIndex = 0, numOfAnswered = 0;
+var currentQuestion = quizQuestions[currentIndex];
+//second ulTag 
+var ulTag = document.getElementsByTagName('ul')[1];
+var liTags = ulTag.getElementsByTagName('input');
+/*
+	this function inserts the current question into the layout
+	of the page: p tag which is a question and ul tag meaning
+	an options
+*/
+function showCurrentQuestion() {
+document.getElementById("lit1").style.backgroundColor="white";
+document.getElementById("lit2").style.backgroundColor="white";
+document.getElementById("lit3").style.backgroundColor="white";
+document.getElementById("lit4").style.backgroundColor="white";
+document.getElementById("lit5").style.backgroundColor="white";
+//kl=true;
+	var headerOfDropdow = document.getElementsByClassName('wrapper')[0];
+	//parse into integer, because it interpretes it as a string
+	var numQuestion = parseInt(currentIndex)+1;
+	headerOfDropdow.getElementsByTagName('span')[0].innerHTML = numQuestion;
+	var pTag = document.getElementsByTagName('p')[0];
+	// console.log(liTags);
+	var ulTag = document.getElementsByTagName('ul')[1];
+	var liTags = ulTag.getElementsByTagName('input');
+	pTag.innerHTML = currentQuestion.question;
+	var lasi="";
+	var lasin=0;
+
+	
+	
+	for (var i=0; i < liTags.length; i++) {
+		//in case the number of variants is less than 4 (e.g. when it's
+		// undefined) disable li tag
+		if (currentQuestion.variants[i] == undefined) {
+			console.log(currentQuestion.variants[i]);
+			liTags[i].className = "doNotDisplay";
+		} else {
+		lasin=i+1;
+		lasi="las"+lasin;
+			console.log(currentQuestion.variants[i]);
+			document.getElementById(lasi).innerHTML = currentQuestion.variants[i];//assign question
+			liTags[i].className = "";
+		}
+	}
+	
+	
+	
+	
+	
+};
+
+
+enableLiOnClickEvents();
+showCurrentQuestion();
+
+//when a variant is selected it becomes highlighted 
+function changeLiStyle() {
+	var selectedItem = document.getElementsByClassName('selected')[0];
+	//disable previously selected item and enable the clicked one
+	if (selectedItem) selectedItem.className = "";
+	this.className = "selected";
+}
+
+
+//self-invoking function to find all li tags 
+// and assing them text from the object 
+// and assign event listeners
+function enableLiOnClickEvents() {
+	for (var i=0; i < liTags.length; i++) {
+		console.log(liTags[i]);
+		//liTags[i].onclick = changeLiStyle;
+	}
+};
+
+var button = document.getElementId('ctrlval');
+button.onclick = submitAndCheckAnswer;
+ var ca=document.getElementById("la1").checked;
+ var cb=document.getElementById("la2").checked;
+var cc=document.getElementById("la3").checked;
+ var  cd=document.getElementById("la4").checked;
+ var  ce=document.getElementById("la5").checked;
+
+
+
+function submitAndCheckAnswer() {
+ var ca=document.getElementById("la1").checked;
+ var cb=document.getElementById("la2").checked;
+var cc=document.getElementById("la3").checked;
+ var  cd=document.getElementById("la4").checked;
+ var  ce=document.getElementById("la5").checked;
+ var  urep=[];
+ var brep=[];
+ for (var i=0; i<(ABCen123("ABC")+"").length; i++){brep.push((ABCen123("ABC")+"")[i]);}
+if(ca){ urep.push("0");};
+if(cb){ urep.push("1");};
+if(cc){ urep.push("2");};
+if(cd){ urep.push("3");};
+if(ce){ urep.push("4");};
+
+
+
+
+//exp();
+	var selectedItem = document.getElementsByClassName('selected')[0];
+/*	console.log(selectedItem.innerHTML);selectedItem == undefined||*/
+ if (kl.includes(currentIndex)==true)
+   		//alert("deja")
+		{liTags[currentQuestion.answer].className = "correct";}
+else {
+
+   currentQuestion.enabled = true;
+   
+   
+   
+	if (urep.join()	== brep.join()) {
+	if(urep.includes("0")){document.getElementById("lit1").style.backgroundColor="red";}
+	if(urep.includes("1")){document.getElementById("lit2").style.backgroundColor="red";}
+		if(urep.includes("2")){document.getElementById("lit3").style.backgroundColor="red";}
+	if(urep.includes("3")){document.getElementById("lit4").style.backgroundColor="red";}
+	if(urep.includes("4")){document.getElementById("lit5").style.backgroundColor="red";}
+	
+	
+		if(brep.includes("0")){document.getElementById("lit1").style.backgroundColor="#9ACD32";}
+	if(brep.includes("1")){document.getElementById("lit2").style.backgroundColor="#9ACD32";}
+		if(brep.includes("2")){document.getElementById("lit3").style.backgroundColor="#9ACD32";}
+	if(brep.includes("3")){document.getElementById("lit4").style.backgroundColor="#9ACD32";}
+	if(brep.includes("4")){document.getElementById("lit5").style.backgroundColor="#9ACD32";}
+	
+		kl.push(currentIndex);
+		document.getElementById("cor").playbackRate=4;document.getElementById("cor").volume=0.2;document.getElementById("cor").volume=0.2;
+		document.getElementById("cor").play();exp();
+		if (tr<quizQuestions.length){tr++;};
+			document.getElementById("tr").innerHTML=tr;
+	document.getElementById("rt").innerHTML=rt;
+	if (sr>0){sr=quizQuestions.length-rt-tr;};
+	document.getElementById("sr").innerHTML=sr;
+		console.log("Correct "+ currentQuestion.variants.indexOf(selectedItem.innerHTML));
+		changeTheLayoutAccordingTheResult(selectedItem,"correct", true);
+		checkIfTheLastQuestion(this);//sending button obj as a parameter
+		document.getElementById("cor").playbackRate=4;document.getElementById("cor").volume=0.2;document.getElementById("cor").volume=0.2;
+		document.getElementById("cor").play();exp();
+		
+	} else {
+	
+	if(urep.includes("0")){document.getElementById("lit1").style.backgroundColor="red";}
+	if(urep.includes("1")){document.getElementById("lit2").style.backgroundColor="red";}
+		if(urep.includes("2")){document.getElementById("lit3").style.backgroundColor="red";}
+	if(urep.includes("3")){document.getElementById("lit4").style.backgroundColor="red";}
+	if(urep.includes("4")){document.getElementById("lit5").style.backgroundColor="red";}
+	
+	
+		if(brep.includes("0")){document.getElementById("lit1").style.backgroundColor="#9ACD32";}
+	if(brep.includes("1")){document.getElementById("lit2").style.backgroundColor="#9ACD32";}
+		if(brep.includes("2")){document.getElementById("lit3").style.backgroundColor="#9ACD32";}
+	if(brep.includes("3")){document.getElementById("lit4").style.backgroundColor="#9ACD32";}
+	if(brep.includes("4")){document.getElementById("lit5").style.backgroundColor="#9ACD32";}
+		kl.push(currentIndex);
+		
+				document.getElementById("inc").playbackRate=2;document.getElementById("inc").volume=0.2;
+		document.getElementById("inc").play();exp();
+		console.log("Wrong!");
+		if (rt<quizQuestions.length){rt++;};
+			document.getElementById("tr").innerHTML=tr;
+	document.getElementById("rt").innerHTML=rt;
+	if (sr>0){sr=quizQuestions.length-rt-tr;};
+	document.getElementById("sr").innerHTML=sr;
+		changeTheLayoutAccordingTheResult(selectedItem,"wrong", false);
+		checkIfTheLastQuestion(this);
+		liTags[currentQuestion.answer].className = "correct";
+		document.getElementById("inc").playbackRate=2;document.getElementById("inc").volume=0.2;
+		document.getElementById("inc").play();exp();
+		
+	}	
+}
+}
+
+function changeTheLayoutAccordingTheResult(selectedItem,result,replied) {
+	console.log(result);
+	currentQuestion.replied = replied;
+	//the index corresponding to the selection of user is selectiOfUser
+	currentQuestion.selectionOfUser = currentQuestion.variants.indexOf(selectedItem.innerHTML);
+	selectedItem.className=result;//changing color of selected item by changing className
+	disableLiOnClickEvents();//cannot click on the other litags anymore
+}
+
+//if the current question is the last one then change button style
+//and onclick event(function)
+//to finalize, otherwise continue to the next question 
+function checkIfTheLastQuestion(button) {
+}
+
+function disableLiOnClickEvents() {
+	for (var i=0; i < liTags.length; i++) {
+		;
+	}
+}
+
+function goToNextQuestion() {
+
+
+if (currentIndex<nq){currentIndex++;}
+	// if (currentIndex == quizQuestions.length) {
+	// 	finalize();
+	// 	return alert("Quiz is over. Your result: " + numOfAnswered);
+	// }
+	//changes the current question index before moving to the next one
+	currentQuestion = quizQuestions[currentIndex];
+	//alert(prog);
+	//change button's label and event handler
+	this.innerHTML = "";
+	//this.onclick = submitAndCheckAnswer;
+	this.className = "submit";
+	showCurrentQuestion();
+	enableLiOnClickEvents();
+	
+}
+
+function cleanUpTheLayout() {
+	var mainDiv = document.getElementsByClassName('main')[0];
+	// deleting all child nodes 
+	while (mainDiv.hasChildNodes()) {
+		mainDiv.removeChild(mainDiv.firstChild);
+	}
+	console.log("clean UPP!!");
+}
+
+function finalize() {
+	cleanUpTheLayout();
+	var mainDiv = document.getElementsByClassName('main')[0];
+	var tHeader = document.createElement("p");
+	tHeader.appendChild(document.createTextNode("Review your answers"));
+	tHeader.setAttribute("class","pAboveTable");
+	mainDiv.appendChild(tHeader);
+	var table = document.createElement("table");
+	// table.border='1px';
+	var tr = document.createElement("tr");
+	table.appendChild(tr);
+	var heading = ["Questions", "Your results", "Correct option"];
+	
+	for (var i = 0 ; i < heading.length ; i++) {
+		var th = document.createElement("th");
+		th.width = '200px';
+		th.appendChild(document.createTextNode(heading[i]));
+		tr.appendChild(th);
+		console.log(tr);
+	}
+
+	for (var i = 0 ; i < quizQuestions.length; i++) {
+			
+			var tr = document.createElement('tr');
+			var td = document.createElement('td');
+			td.appendChild(document.createTextNode("Question " + (i+1)));
+			td.setAttribute("class","questionCol");
+			tr.appendChild(td);
+			var td = document.createElement('td');
+			
+			var answer = quizQuestions[i].replied ? (
+				td.className = "correctCol",
+				"Correct"
+				) : (
+				td.className = "wrongCol",
+				"Incorrect"
+				);
+			
+			td.appendChild(document.createTextNode(answer));
+			tr.appendChild(td);
+			var td = document.createElement('td');
+			if (!quizQuestions[i].replied) {
+				var correctAns = quizQuestions[i].variants[quizQuestions[i].answer];
+				td.appendChild(document.createTextNode(correctAns));
+				td.setAttribute("class","correctCol");
+			}
+			tr.appendChild(td);
+			
+			table.appendChild(tr);
+
+	}
+	
+	mainDiv.appendChild(table);
+	var trAll = document.getElementsByTagName("tr");
+	console.log(trAll);
+	for (var i = 1; i < trAll.length; i++) {
+		//trAll[i].onclick = returnToQuestion;
+		console.log("Assigned!");
+	}
+	// var head2 = document.createElement("th");
+	// head2.appendChild(document.createTextNode("Your Result"));
+	// tr.appendChild(head2);
+	// document.body.appendChild(table);
+}
+//dynamicaally creates the question layout when clicked on any of the questions in the result table
+function createQuestionLayout() {
+			var mainDiv = document.getElementsByClassName('main')[0];
+			var wrapperDiv = document.createElement('div');
+			wrapperDiv.className = "wrapper";
+			wrapperDiv.onclick = "showDropdown";
+			mainDiv.appendChild(wrapperDiv);
+			for (var j = 0 ; j < 2; j++) {
+				var span = document.createElement('span');
+				wrapperDiv.appendChild(span);
+			}
+			span.innerHTML = "/ "+quizQuestions.length;
+			var ulDdown = document.createElement('ul');
+			ulDdown.className = "dropdown";
+			mainDiv.appendChild(ulDdown);
+			var pTag = document.createElement('p');
+			pTag.className = "question";
+			var ulTag = document.createElement('ul');
+			mainDiv.appendChild(pTag);
+			mainDiv.appendChild(ulTag);
+			for (var i = 0 ; i < 4; i++) {
+				var liTag = document.createElement('li');
+				ulTag.appendChild(liTag);
+				var liTag1 = document.createElement('li');
+				ulDdown.appendChild(liTag1);
+			}
+			var button = document.createElement('button');
+			button.innerHTML = "Back";
+			button.className = "back";
+      //goes back to the table layout when clicked
+			button.onclick = finalize;
+			mainDiv.appendChild(button);
+}
+
+function returnToQuestion() {
+	console.log(this);
+	var questionTitle = this.getElementsByClassName("questionCol")[0].innerHTML;
+	var questionNum = questionTitle[questionTitle.length -1];
+	
+ 
+ 			cleanUpTheLayout();
+			createQuestionLayout();
+			currentQuestion = quizQuestions[questionNum -1];
+			// change currentIndex in orderto correctly display
+			// it on the new layout
+			currentIndex = questionNum-1;
+			showCurrentQuestion();
+			var correctLiNum = quizQuestions[questionNum-1].answer;
+  if (quizQuestions[questionNum-1].enabled) {
+	 	if (quizQuestions[questionNum-1].replied) {
+	 		
+			document.getElementsByTagName("li")[correctLiNum+4].className="correct";
+	
+		} else {
+			var selectedLiNum = quizQuestions[questionNum-1].selectionOfUser;
+			document.getElementsByTagName("li")[selectedLiNum+4].className="wrong";
+			document.getElementsByTagName("li")[correctLiNum+4].className="correct";
+		
+	 }
+}
+}
+
+function showDropdown() {
+	var dropdown = document.getElementsByClassName("dropdown")[0];
+	 var dropdownItems = dropdown.getElementsByTagName("li");
+	 console.log(dropdownItems);
+	 for (var i = 0 ; i < dropdownItems.length; i++)
+	 	dropdownItems[i].onclick = clickOnAnyQuestionFromDropdown;
+	var display = dropdown.style.display;
+	if (display=="") {
+		;
+	} 
+	else {
+		;
+	};
+}
+
+function hideDropdown() {
+	var dropdown = document.getElementsByClassName("dropdow")[0];
+	var dropdownItems = dropdown.getElementsByTagName("li");
+	var display = dropdown.style.display;
+	if (display=="") {
+		dropdown.style.display = "block";
+	} 
+	else {
+		dropdown.style.display ="";
+	};
+}
+
+/*
+the number of action taken when any of the ul items is clicked on:
+getting the number of question and show the current question
+*/
+function clickOnAnyQuestionFromDropdown() {
+	console.log(this);
+	var questionNum = this.getElementsByTagName('span')[0].innerHTML;
+	currentQuestion = quizQuestions[questionNum-1];
+	hideDropdown();
+	currentIndex = questionNum-1;
+	showCurrentQuestion();
+}
+// function enableLiOnClickEvents() {
+// 	for (var i=0; i < liTags.length; i++) {
+// 		// console.log(liTags[i]);
+// 		liTags[i].onclick = "";
+// 	}
+// }
+
+function goToNextQuestion2() {
+
+	 document.getElementById("la1").checked=false;
+ document.getElementById("la2").checked=false;
+document.getElementById("la3").checked=false;
+document.getElementById("la4").checked=false;
+document.getElementById("la5").checked=false;
+	//document.getElementById("xp").style.display="none";
+if (currentIndex>0){currentIndex--;prog-=100/quizQuestions.length;document.getElementById('prog').style.width=prog+'%';};
+	// if (currentIndex == quizQuestions.length) {
+	// 	finalize();
+	// 	return alert("Quiz is over. Your result: " + numOfAnswered);
+	// }
+	//changes the current question index before moving to the next one
+	currentQuestion = quizQuestions[currentIndex];
+	//change button's label and event handler
+	this.innerHTML = "";
+	//this.onclick = submitAndCheckAnswer;
+	this.className = "submit";
+	showCurrentQuestion();
+	enableLiOnClickEvents();
+	
+
+
+}
+	function goToNextQuestion3() {
+	
+		 document.getElementById("la1").checked=false;
+ document.getElementById("la2").checked=false;
+document.getElementById("la3").checked=false;
+document.getElementById("la4").checked=false;
+document.getElementById("la5").checked=false;
+	//document.getElementById("xp").style.display="none";
+if (currentIndex<nq){currentIndex++;prog+=100/quizQuestions.length;document.getElementById('prog').style.width=prog+'%';}
+	// if (currentIndex == quizQuestions.length) {
+	// 	finalize();
+	// 	return alert("Quiz is over. Your result: " + numOfAnswered);
+	// }
+	//changes the current question index before moving to the next one
+	currentQuestion = quizQuestions[currentIndex];
+	
+	
+	
+	
+	//change button's label and event handler
+	this.innerHTML = "";
+	//this.onclick = submitAndCheckAnswer;
+	this.className = "submit";
+	showCurrentQuestion();
+	enableLiOnClickEvents();
+	
+}
+this.onclick = submitAndCheckAnswer;
+function exp(){ document.getElementById("xpn").style.display="block";document.getElementById("xpn").innerHTML="<table style='border: solid black 0px'><tr><td onclick='cl()'><img src='cl.jpg' onclick='cl()' style='width:30px;border-radius:5px;margin:1px;position:sticky;'></td><td style='text-transform:lowercase'><span  style='text-transform:uppercase;'><i>COMMENTAIRE : </i></span>"+ currentQuestion.variants[5]+"</td></tr></table>";};
+
+function cl()	{ document.getElementById("xpn").style.display="none";}
+	
+	
+//alert(localStorage.getItem("lastname2"));	
+
+
+
+	  
+	</script>
+	
+		<script>
+
+function ABCen123(abc){
+var abc123=("ABCDE").split("");
+var en123="";
+abc.split("");
+
+
+for (let i=0; i<abc.length; i++){
+en123+=""+abc123.indexOf(abc[i]);
+}
+return en123;
+
+
+}
+
+alert(ABCen123("ABC"));
+
+		</script>
+	
+	
+	<style>
+	
+	
+
+/*googleapis*/
+body {
+	font-family: "Open Sans", Times, serif;
+	/*font-family:"Open Sans";*/
+	font-size: 1em;
+}
+
+.main {
+	margin-left: 10px;
+	margin-top: 100px;
+}
+.question {
+	font-size:11px ;
+	height:auto;
+}
+
+ul {
+	list-style: none;
+	margin-left:-40px;
+}
+li {
+	text-decoration: none;
+	border: 1px solid lightgray;
+	margin:10px;
+	padding: 10px;
+	border-radius:15px 0px / 15px;
+	font-size:15px ;
+}
+
+.dropdown {
+	margin-right: 3px;
+	/*z-index: 999;*/
+	position: absolute;
+	top: 115px;
+	padding-left: 0;
+	box-shadow: 1px 1px 10px ;
+  /*dropdow is hidden by default*/
+	display: none; 
+	font-size: 2px;
+}
+
+.wrapper {
+	background: #d7ff99;
+	padding: 3px 15px;
+	border-radius: 4px;
+	width: 90%;
+}
+.dropdown li {
+	
+	border: 0px;
+	font-size: 0.9em;
+	width:100px;
+	margin: 0px;
+	background: white;
+}
+
+li:hover {
+	background: #ECEEF0;
+}
+/*disable hover effect when li tag is selected*/
+.selected, .selected:hover {
+	background: #FFDEAD;
+}
+
+.correct, .correct:hover {
+	background: #9ACD32;
+	color: white;
+}
+
+.wrong, .wrong:hover {
+	background: red;
+	color: white;
+}
+
+button {
+	padding:5px 14px;
+	font-size: 1.1em;
+	border:none;
+	border-radius: 5px;
+}
+.submit {
+	color: white;
+	background: #2DB82D;
+}
+.next {
+	background: #B0C4DE;
+}
+.finalize {
+	background: #1A1AFF;
+}
+.back {
+	background: #ffff33;
+}
+.doNotDisplay {
+	display: none;
+}
+
+td,th {
+	border:1px solid lightgray;
+	padding: 10px;
+	text-transform: uppercase;
+	font-weight: 700;
+	/*font-size:14px;*/
+}
+
+th {
+	border-bottom:3px solid gray;
+	background: #C2CCE0;
+}
+
+table {
+	border:2px solid gray;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+td {
+	cursor:pointer;
+}
+
+.questionCol {
+	color: #5b666f;
+}
+.correctCol {
+	color: #6a9d21;
+}
+.wrongCol {
+	color: #9d2138;
+}
+.pAboveTable {
+	font-size: 1.4em;
+}
+/*tr {
+	cursor:pointer;
+}*/
+
+#ctrlb{
+	
+	
+	
+	bottom:10px;
+	left:20px;
+
+	
+}
+
+#ctrln{
+	
+	float:right;
+
+	bottom:10px;
+right:20px;
+
+	
+}	
+#ctrlval{
+	
+	background-Color:#6a9d21;
+
+	
+width:100%;
+
+
+
+text-align:center;
+border-radius: 20px 20px 0px 0px;
+	
+}
+
+
+#ctrlval:active{
+	
+	
+	
+right:33%;
+	bottom:10px;
+width:100%;
+
+height:40px;
+
+text-align:center;
+border-radius: 20px 20px 0px 0px;
+}
+
+
+
+#valim{
+
+height:140% ;
+position:relative;
+bottom:8px;
+
+}
+
+
+#valim:active{
+
+height:120% ;
+position:relative;
+bottom:0px;
+
+}
+
+
+#tctr{
+height:40px;
+background:linear-gradient(#ececee 41%, #6a9d21 20%);
+width:95%;
+position:fixed;
+bottom:10px;
+display:flex;
+box-shadow: 1px 1px 2px 2px gray ; backg round:linear-gradient(#6a9d21,lightgray);
+border-radius: 0px 0px 20px 20px;
+jus tify-content:space-between;
+
+}
+
+
+#xpn {
+  display: block;
+  padding: 6px;
+  margin: 6px;
+  border-radius: 10px 10px 0px 0px;
+    border: 2px solid green;
+  background-color: rgb(223,240,216);
+ // position:fixed;
+  top:5px;
+  opacity:0.9;
+
+}
+
+
+.alert .inner {
+  
+  padding: 6px;
+  margin: 6px;
+  border-radius: 10px;
+    border: 2px solid green;
+  background-color: rgb(223,240,216);
+
+}
+
+.alert .close {
+  float: right;
+  margin: 3px 10px 0px 0px;
+  cursor: pointer;
+}
+
+/*
+.alert input {
+  display: none;
+}
+
+.alert input:checked ~ * {
+  animation-name: dismiss,hide;
+  animation-duration: 300ms;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0s,100ms;
+}
+*/
+@keyframes dismiss {
+  0% {
+    opacity: 1;
+  }
+  90%, 100% {
+    opacity: 0;
+    font-size: 0.1px;
+    transform: scale(0);
+  }
+}
+.question {
+	font-size:11px ;
+	height:auto;
+	
+}
+
+	</style>
+</body>
+</html>

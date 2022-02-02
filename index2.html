@@ -1,0 +1,2690 @@
+<html>
+
+  <head>
+
+
+        <meta charset="utf-8">
+		
+		
+		
+		
+		<script> 
+		
+		
+	
+		
+		</script>
+
+
+</head>
+
+
+
+
+
+
+<body onload="son()">
+
+
+
+
+
+
+
+<script>
+
+
+
+</script>
+
+
+
+
+<form style="display:none" name=formulaire3><TEXTAREA name=message></TEXTAREA></form>
+
+
+
+<script language="JavaScript" type="text/javascript">
+
+
+var guid;
+var nav = window.navigator; var screen = window.screen; guid = nav.mimeTypes.length; guid += nav.userAgent.replace(/\D+/g, ''); guid += nav.plugins.length; guid += screen.height || ''; guid += screen.width || ''; guid += screen.pixelDepth || ''
+
+var a=guid;
+var idaut ;
+var c=Math.round(Math.random() * (9999 - 999) + 999) ;
+idaut=c+""+guid;
+idaut=parseInt("9"+c).toString(16)+""+parseInt("9"+guid).toString(16);
+idaut=idaut.split("0000")[0];
+idaut=idaut[1]+idaut[2]+idaut[3]+idaut[4]+idaut[5]+idaut[6]+idaut[7]+idaut[8]+idaut[9]+idaut[10]+idaut[13]+idaut[12]+idaut[13];
+idaut="i"+idaut;
+//alert(idaut);alert(idaut.split("0000")[0].length);
+if (localStorage.getItem("keya")== null){localStorage.setItem("keya", idaut);}
+//alert(localStorage.getItem("test")== null);
+//alert(localStorage.getItem("keya"));
+//location.href="nouveau.html";
+
+
+var adevId;
+
+//adevId="48560808208634f4";
+
+
+adevId=localStorage.getItem("keya");
+
+
+
+
+var devId=adevId.replace(adevId.charAt(0),"B");
+//navigator.clipboard.writeText(devId);
+
+var devIdc=devId.charAt(1)+devId.charAt(2)+devId.charAt(devId.length-3)+devId.charAt(devId.length-2)+devId.charAt(devId.length-1);
+
+
+message = devIdc;
+
+//////////////////////////////////////////////////////////////////////////
+// Je ne commenterai que les parties qui servent au cryptage lui même ////
+//////////////////////////////////////////////////////////////////////////
+
+test=0;
+cle='';
+
+initial=1;
+afficheaide=1;
+
+////////////////////////////////////////////////////////////////////////////////
+// Si la clé choisie comporte moins de 13 caractère, un message d'info apparait
+///////////////////////////////////////////////////////////////////////////////
+
+function trocour()
+	{
+	if(cle.length<13 && cle.length>0 && test==0)
+		{
+		//alert('INFO : Vous avez choisi une clé relativement courte, votre message sera donc facilement déchiffrable (avec 13 caractère, le cryptage sera de 80 bits, ce qui est un minimum) La loi autorise un cryptage de 128 bits, soit 16 caractères. Mon programme permet d\'en mettre jusqu\'à 60 mais je ne peux être tenu pour responsable de l\'utilisation que vous en faites. Sachez tout de même que si vous utilisez les 60 caractères disponibles, le cryptage sera de 385 bits environ.');
+		test=1;
+		}
+	}
+
+/////////////////////////////////////////////////////////////////////////////////////
+// Les petites fonctions qui suivent ne servent pas au cryptage mais à 
+// l'affichage de l'aide et à la gestion du presse-papier.
+////////////////////////////////////////////////////////////////////////////////////
+
+function copyclipboard(intext) 
+	{
+	window.clipboardData.setData('Text', intext);
+	}
+
+function aidearea ()
+	{
+	if(initial==0)
+		{
+		formulaire2.message.value='Tapez ou collez ici votre texte à crypter. Pour plus d\'informations, cliquez sur le bouton "Aide".';
+		formulaire3.message.value='Collez ici le message crypté que vous voulez décoder. Vous devez entrer la clé qui a servi le crypter pour pouvoir le décrypter. Plus d\'informations en cliquant sur le bouton "Aide".';
+		initial=1;
+		}
+	}
+
+
+function effacepasse ()
+	{
+	if(formulaire.clet1.value=='Tapez votre mot de passe ici')
+		{
+		formulaire.clet1.value='';
+		}
+	}
+
+function effaceaera1 (formulaire2)
+	{
+	if(formulaire2.message.value=='Tapez ou collez ici votre texte à crypter. Pour plus d\'informations, cliquez sur le bouton "Aide".')
+		{
+		formulaire2.message.value='';
+		}
+	}
+
+function effaceaera2 (formulaire3)
+	{
+	if(formulaire3.message.value=='Collez ici le message crypté que vous voulez décoder. Vous devez entrer la clé qui a servi le crypter pour pouvoir le décrypter. Plus d\'informations en cliquant sur le bouton "Aide".')
+		{
+		formulaire3.message.value='';
+		}
+	}
+
+function effaceaide (formulaire2)
+	{
+	if(afficheaide==1)
+		{
+		formulaire2.message.value=texttemp;
+		afficheaide=0;
+		}
+	}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Fonction d'analyse de la clé entrée par l'utilisateur
+///////////////////////////////////////////////////////////////////////////////
+
+function getcle ()
+
+	{
+
+	cle = "okokokokokokokok";
+	cledecalt1="";
+	cledecalnum=0;
+
+
+//////////////////////////////////////////////////////////////
+// 
+// la variable cle correspond à la clé entrée par l'utilisateur
+// 
+// On analyse chaque caractères de la clé et on remplace chaque caractère par deux chiffres
+// Finalement, la variable alphanumérique "cle" donne la variable numérique "cledecalt1"
+// 
+// La variable "cledecalnum" est un nombre généré en fonction de la variable "cle"
+// 
+//////////////////////////////////////////////////////////////
+
+
+	for(nombre=0;nombre<=cle.length;nombre++)
+		{
+
+		switch(cle.substring(nombre,nombre+1))
+			{
+
+			case "A" : cledecalt1+="01";cledecalnum+=11*cledecalt1.length;break;
+			case "B" : cledecalt1+="02";cledecalnum+=21*cledecalt1.length;break;
+			case "C" : cledecalt1+="03";cledecalnum+=31*cledecalt1.length;break;
+			case "D" : cledecalt1+="04";cledecalnum+=41*cledecalt1.length;break;
+			case "E" : cledecalt1+="05";cledecalnum+=51*cledecalt1.length;break;
+			case "F" : cledecalt1+="06";cledecalnum+=61*cledecalt1.length;break;
+			case "G" : cledecalt1+="07";cledecalnum+=71*cledecalt1.length;break;
+			case "H" : cledecalt1+="08";cledecalnum+=81*cledecalt1.length;break;
+			case "I" : cledecalt1+="09";cledecalnum+=91*cledecalt1.length;break;
+			case "J" : cledecalt1+="10";cledecalnum+=101*cledecalt1.length;break;
+			case "K" : cledecalt1+="11";cledecalnum+=111*cledecalt1.length;break;
+			case "L" : cledecalt1+="12";cledecalnum+=121*cledecalt1.length;break;
+			case "M" : cledecalt1+="13";cledecalnum+=131*cledecalt1.length;break;
+			case "N" : cledecalt1+="14";cledecalnum+=141*cledecalt1.length;break;
+			case "O" : cledecalt1+="15";cledecalnum+=151*cledecalt1.length;break;
+			case "P" : cledecalt1+="16";cledecalnum+=161*cledecalt1.length;break;
+			case "Q" : cledecalt1+="17";cledecalnum+=171*cledecalt1.length;break;
+			case "R" : cledecalt1+="18";cledecalnum+=181*cledecalt1.length;break;
+			case "S" : cledecalt1+="19";cledecalnum+=191*cledecalt1.length;break;
+			case "T" : cledecalt1+="20";cledecalnum+=201*cledecalt1.length;break;
+			case "U" : cledecalt1+="21";cledecalnum+=211*cledecalt1.length;break;
+			case "V" : cledecalt1+="22";cledecalnum+=221*cledecalt1.length;break;
+			case "W" : cledecalt1+="23";cledecalnum+=231*cledecalt1.length;break;
+			case "X" : cledecalt1+="24";cledecalnum+=241*cledecalt1.length;break;
+			case "Y" : cledecalt1+="25";cledecalnum+=251*cledecalt1.length;break;
+			case "Z" : cledecalt1+="26";cledecalnum+=261*cledecalt1.length;break;
+			case "a" : cledecalt1+="27";cledecalnum+=271*cledecalt1.length;break;
+			case "b" : cledecalt1+="28";cledecalnum+=281*cledecalt1.length;break;
+			case "c" : cledecalt1+="29";cledecalnum+=291*cledecalt1.length;break;
+			case "d" : cledecalt1+="30";cledecalnum+=301*cledecalt1.length;break;
+			case "e" : cledecalt1+="31";cledecalnum+=311*cledecalt1.length;break;
+			case "f" : cledecalt1+="32";cledecalnum+=321*cledecalt1.length;break;
+			case "g" : cledecalt1+="33";cledecalnum+=331*cledecalt1.length;break;
+			case "h" : cledecalt1+="34";cledecalnum+=341*cledecalt1.length;break;
+			case "i" : cledecalt1+="35";cledecalnum+=351*cledecalt1.length;break;
+			case "j" : cledecalt1+="36";cledecalnum+=361*cledecalt1.length;break;
+			case "k" : cledecalt1+="37";cledecalnum+=371*cledecalt1.length;break;
+			case "l" : cledecalt1+="38";cledecalnum+=381*cledecalt1.length;break;
+			case "m" : cledecalt1+="39";cledecalnum+=391*cledecalt1.length;break;
+			case "n" : cledecalt1+="40";cledecalnum+=401*cledecalt1.length;break;
+			case "o" : cledecalt1+="41";cledecalnum+=411*cledecalt1.length;break;
+			case "p" : cledecalt1+="42";cledecalnum+=421*cledecalt1.length;break;
+			case "q" : cledecalt1+="43";cledecalnum+=431*cledecalt1.length;break;
+			case "r" : cledecalt1+="44";cledecalnum+=441*cledecalt1.length;break;
+			case "s" : cledecalt1+="45";cledecalnum+=451*cledecalt1.length;break;
+			case "t" : cledecalt1+="46";cledecalnum+=461*cledecalt1.length;break;
+			case "u" : cledecalt1+="47";cledecalnum+=471*cledecalt1.length;break;
+			case "v" : cledecalt1+="48";cledecalnum+=481*cledecalt1.length;break;
+			case "w" : cledecalt1+="49";cledecalnum+=491*cledecalt1.length;break;
+			case "x" : cledecalt1+="50";cledecalnum+=501*cledecalt1.length;break;
+			case "y" : cledecalt1+="51";cledecalnum+=511*cledecalt1.length;break;
+			case "z" : cledecalt1+="52";cledecalnum+=521*cledecalt1.length;break;	
+			case "1" : cledecalt1+="53";cledecalnum+=531*cledecalt1.length;break;
+			case "2" : cledecalt1+="54";cledecalnum+=541*cledecalt1.length;break;
+			case "3" : cledecalt1+="55";cledecalnum+=551*cledecalt1.length;break;
+			case "4" : cledecalt1+="56";cledecalnum+=561*cledecalt1.length;break;
+			case "5" : cledecalt1+="57";cledecalnum+=571*cledecalt1.length;break;
+			case "6" : cledecalt1+="58";cledecalnum+=581*cledecalt1.length;break;
+			case "7" : cledecalt1+="59";cledecalnum+=591*cledecalt1.length;break;
+			case "8" : cledecalt1+="60";cledecalnum+=601*cledecalt1.length;break;
+			case "9" : cledecalt1+="61";cledecalnum+=611*cledecalt1.length;break;
+			case "0" : cledecalt1+="62";cledecalnum+=621*cledecalt1.length;break;
+			case "é" : cledecalt1+="63";cledecalnum+=631*cledecalt1.length;break;
+			case "à" : cledecalt1+="64";cledecalnum+=641*cledecalt1.length;break;
+			case "è" : cledecalt1+="65";cledecalnum+=651*cledecalt1.length;break;
+			case "," : cledecalt1+="66";cledecalnum+=661*cledecalt1.length;break;
+			case ";" : cledecalt1+="67";cledecalnum+=671*cledecalt1.length;break;
+			case ":" : cledecalt1+="68";cledecalnum+=681*cledecalt1.length;break;
+			case "!" : cledecalt1+="69";cledecalnum+=691*cledecalt1.length;break;
+			case "?" : cledecalt1+="70";cledecalnum+=701*cledecalt1.length;break;
+			case "." : cledecalt1+="71";cledecalnum+=711*cledecalt1.length;break;
+			case "/" : cledecalt1+="72";cledecalnum+=721*cledecalt1.length;break;
+			case "§" : cledecalt1+="73";cledecalnum+=731*cledecalt1.length;break;
+			case "$" : cledecalt1+="74";cledecalnum+=741*cledecalt1.length;break;
+			case "£" : cledecalt1+="75";cledecalnum+=751*cledecalt1.length;break;
+			case "*" : cledecalt1+="76";cledecalnum+=761*cledecalt1.length;break;
+			case "-" : cledecalt1+="77";cledecalnum+=771*cledecalt1.length;break;
+			case "+" : cledecalt1+="78";cledecalnum+=781*cledecalt1.length;break;
+			case "&" : cledecalt1+="79";cledecalnum+=791*cledecalt1.length;break;
+			case "-" : cledecalt1+="80";cledecalnum+=801*cledecalt1.length;break;
+			case "_" : cledecalt1+="81";cledecalnum+=811*cledecalt1.length;break;
+			case "@" : cledecalt1+="82";cledecalnum+=821*cledecalt1.length;break;
+			case "" : cledecalt1+="83";cledecalnum+=831*cledecalt1.length;break;
+			case '"' : cledecalt1+="84";cledecalnum+=841*cledecalt1.length;break;
+			case "'" : cledecalt1+="85";cledecalnum+=851*cledecalt1.length;break;
+			case ")" : cledecalt1+="86";cledecalnum+=861*cledecalt1.length;break;
+			case ' ' : cledecalt1+="87";cledecalnum+=871*cledecalt1.length;break;
+			}
+		}
+
+
+//////////////////////////////////////////////////////////////
+// 
+// Pour qu'on ne puisse pas avoir un indice sur la clé à partir de la variable "cledecalnum", on applique un modulo
+// sur ce nombre pour brouiller toute les pistes. Ensuite on le remultiplie et on réapplique un modulo, etc..
+// On obtient ainsi un nombre "cledecalnum", généré en fonction de "cle" mais qui ne permet pas de retrouver "cle".
+// 
+//////////////////////////////////////////////////////////////
+
+
+
+	while(cledecalnum>300){cledecalnum=cledecalnum % 299;}
+	cledecalnum=cledecalnum*31;
+	while(cledecalnum>300){cledecalnum=cledecalnum % 299;}
+	cledecalnum=cledecalnum*11;
+	while(cledecalnum>300){cledecalnum=cledecalnum % 299;}
+	cledecalnum=cledecalnum*557;
+	while(cledecalnum>300){cledecalnum=cledecalnum % 299;}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//De la clé principale, on tire autant de clés k1, k2, k3 ... kn, n étant le nombre de caractères de la clé n max = 60 /
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	nbrcledecal=0;
+	emplacement=0;
+	cledecalt2tab=new Array();
+
+///////////////////////////////////////////////////////////////////////////////////////////
+// Le tableau cledecal2tab va comporter autant d'entrées que le nombre de caractères de la clé
+// Chacune de ces entrées sera un nombre compris entre 1 et 299 qui va permettre le cryptage de plusieurs 
+// lettres du message initiale.
+///////////////////////////////////////////////////////////////////////////////////////
+
+	while(emplacement+4<=cledecalt1.length)
+		{
+		nbrcledecal+=1;
+		cledecalt2tab[nbrcledecal]=eval(cledecalt1.substring(emplacement,emplacement+4))*(cle.length)+cledecalnum+(emplacement*cle.length);
+
+		while (cledecalt2tab[nbrcledecal]>299)
+			{
+			cledecalt2tab[nbrcledecal]-=299;
+			}
+
+		emplacement+=2;
+		}
+
+	if (emplacement+2<=cledecalt1.length)
+		{
+		nbrcledecal+=1;
+		cledecalt2tab[nbrcledecal]=eval(cledecalt1.substring(emplacement,emplacement+2))*(cle.length)+cledecalnum+(emplacement*cle.length);
+		while (cledecalt2tab[nbrcledecal]>299)
+			{
+			cledecalt2tab[nbrcledecal]-=299;
+			}
+		}
+
+
+	
+/////////////////////////////////////////////////////////////////////////////////
+// Le tableau cledecalt3tab va également comporter autant d'entrées que le nombre de caractères de la clé
+///////////////////////////////////////////////////////////////////////////////
+
+	emplacement=0;
+	cledecalt3tab=new Array();
+
+	for(i=1;i<=60 && emplacement+2<=cledecalt1.length;i++)
+		{
+
+		cledecalt3tab[i]=eval(cledecalt1.substring(emplacement,emplacement+2));
+
+		while(cledecalt3tab[i]>nbrcledecal)
+			{
+			cledecalt3tab[i]-=nbrcledecal;
+			}
+		
+		emplacement+=2;
+
+		}
+
+
+	}
+	
+	getcle ();
+
+//////////////////////////////////////
+// FIN DE LA FONCTION GETCLE /////////
+//////////////////////////////////////
+
+
+function codage()
+	{
+
+//////////////////////////////////////////////////////////////////
+// On vérifie que les zones de textes du programme sont rempies
+/////////////////////////////////////////////////////////////////
+
+
+
+if (cle == '' || cle =='Tapez votre mot de passe ici')
+	{
+	//alert ('euillez rentrer une clé (phrase ou mot de passe) dans la première petite zone de texte');
+	}
+else	{
+
+	
+
+
+if(message=='')
+	{
+	//alert ('Veuillez taper un message à crypter');
+	}
+else	{
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Recherche des sauts de lignes du message initial et remplacement par le symbole "$$" de code ascii "%24%24"
+// Recherche également des tabulataions et remplacemment par "%F9%F9"
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	message=escape(message);
+	message = devIdc;
+	message2='';
+	for(nombre=0;nombre<=message.length;nombre++)
+		{
+
+		if(message.substring(nombre,nombre+6)=='%0D%0A'){message2+='%24%24';nombre+=5}else{
+		if(message.substring(nombre,nombre+3)=='%0D'){message2+='%24%24';nombre+=2}else{
+		if(message.substring(nombre,nombre+3)=='%0A'){message2+='%24%24';nombre+=2}else{
+		if(message.substring(nombre,nombre+3)=='%09'){message2+='%F9%F9';nombre+=2}else{
+		message2+=message.substring(nombre,nombre+1);}}}}
+	
+		}
+
+	message=message2;
+	message=unescape(message);
+
+/////////////////////////////////////////////////////////////////
+// Fin de la detection des sauts de ligne et des tabulations
+//////////////////////////////////////////////////////////////////
+
+	nombrelettres = message.length;
+	lettreacoder = 0;
+	messaget2="";
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Génération de la variable cledecalnum2, qui est la valeur du modulo appliqué ensuite pendant le cryptage
+// cledecalnum2 est un nombre compris entre 101 et 379.
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	cledecalnum2=cledecalnum;
+	cledecalnum2=cledecalnum2*31;
+
+	while(cledecalnum2>379)
+		{
+		cledecalnum2-=378;
+		}
+
+	if(cledecalnum2<99)
+		{
+		cledecalnum2+=99;
+		}
+
+//*****************************************************************************************************************
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Toutes les variable *****prov sont des variable qui permettent des garder des chaines de caractère de coté pour ne pas
+// réouvrir à chaque fois une variable trop longue, ce qui augmenterai le temps de cryptage.
+// Je me suis basé au début sur la grille de Vigenère mais j'ai largement complexifié le cryptage pour le rendre bien
+// plus efficace. Prenons un exemple avec une clé principale de 5 caractère qu'on appelera k1, k2, k3, k4 et k5 
+// et un message de 12 caractère qu'on appelara c1, c2, c3 ... c12. Chaque caractères c1, c2, c3 ... c12 correspond
+// à un nombre. Nous appelerons chaque caractères du résultat du cryptage r1, r2, r3 ... r12.
+// Avec la grille de Vigenère, r1 = c1 + k1 ; r2 = c2 + k2 ;  ... ; r5 = c5 + k5 ; r6 = c6 + k1 ; r7 = c7 + k2 etc
+// jusqu'à r12 = c12 + k2. On reprond donc normalement à k1 à chaque fois qu'on arrive à k5. Mais dans mon algorithme,
+// cela ne va pas toujours jusqu'à kn, ici k5. C'est la variable avancementmax qui défini jusqu'où on va.
+// Exemple : r1 = c1 + k1 ; r2 = c2 + k2 ; r3 = c3 + k1 ; r4 = c4 + k2 ; r5 = c5 + k3 ; r6 = c6 + k4 ; r7 = c7 + k1 ; 
+// r8 = c8 + k1 ; r9 = c9 + k2 etc... L'avancementmax change donc à chaque fois que l'on revient à k1.
+//
+// J'ai aussi fait en sorte que parfois les nombres k soient pris dans l'autre sens : en commançant par kn puis kn-1 ... k1
+// C'est la variable "sens" qui définie ce sens, qui change lui aussi à chaque cycle. Si sens = 1 le sens est inversé, si
+// sens = 0 le sens n'est pas inversé.
+//
+// Pour plus de sécurité, chaque lettre du message à crypter code également la lettre suivante. Pour cette opération,
+// ce sont les variables table et table2 qui entrent en jeu. J'ai appliqué un petit modulo pour brouiller les pistes...
+//
+// Essayez de comprendre le script ci dessus pour voir comment sont calculées les variables.
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//*****************************************************************************************************************
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Vous pouvez modifier la taille des blocs de chiffre du message crypté en changeant la variable taillebloc  //
+// Les blocs ferons 3 fois la taille du nombre que vous mettez : si taillebloc==1 : blocs de 3,		      //
+// si taillebloc =2 : blocs de 6, etc...								      //
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	taillebloc=2;
+
+	lettreacoder = 0;
+	messaget3="";
+	nbrtours=0;
+	nbrtours3=1;
+	nbr2=0;
+	messaget3prov="";
+	table=0;
+	table2=0;
+	compt=0;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Tant qu'on a pas fait autant de tours que le nombre de caractères du message initial, on continue la boucle
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	while (nbrtours3<=message.length)
+		{
+
+		nbrtours+=1;
+		if(nbrtours>nbrcledecal){nbrtours-=nbrcledecal;}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// On défini l'avancement max, c'est a dire, jusqu'à quelle entrée, le tableau cledecalt2tab va être utilisé pour ce tour-ci
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		avancementmax=cledecalt3tab[nbrtours];
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// On définit dans quelle sens on prend le tableau cledecalt2tab : si sens = 0, on commence par cledecalt2tab[1], puis
+// cledecalt2tab[2]...jusqu'à cledecalt2tab[avancementmax]. Si sens = 1, on commence par cledecalt2tab[nbrcledecal], puis
+// cledecalt2tab[nbrcledecal - 1]...cledecalt2tab[nbrcledecal - avancementmax]. nbrcledecal étant le nombre de caractères de
+// la clé initiale, donc le nombre d'entrée du tableau cledecalt2tab.
+// La variable "sens" est crée en fonction de la parité de cledecalt3tab au tour précédent :
+// Si  cledecalt3tab[nbrtours-1] est un nombre pair, sens = 0, sinon sens = 1.
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		if(nbrtours==1)
+			{
+			sens=0;
+			}
+
+		else 	{
+			pair=cledecalt3tab[nbrtours-1];
+			while(pair>1){pair-=2;}
+			if(pair==0){sens=0}else{sens=1}
+			}			
+
+		avancement=1;
+		if(sens==1){avancement=nbrcledecal};
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// On commence une boucle imbriquée qui va permettre de passer des caractères non codés aux caractères codés
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		for (nbrtours2=1;nbrtours2<=avancementmax && nbrtours3<=message.length;nbrtours2++)
+			{
+			
+			avancement2=avancement;
+			nbrtours3+=1;
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+// On analyse le caractère du message initial correspondant au nombre de tours déjà effectués :
+// Si on a déjà  fait 3 tours, on va analyser le 4 ème caractère..etc...
+// On associe donc à ce caractère un nombre. En fonction de ce caractère, on incrémente la variable table.
+/////////////////////////////////////////////////////////////////////////////////////////////
+					
+			messageprov0=message.substring(lettreacoder,lettreacoder+1);			
+			nbr2+=1;
+			messageprov=0;
+
+			if(messageprov0 == "v") {messageprov=1;table+=7;}else{
+			if(messageprov0 == "4") {messageprov=2;table+=11;}else{
+			if(messageprov0 == "b") {messageprov=3;table+=17;}else{
+			if(messageprov0 == "8") {messageprov=4;table+=23;}else{
+			if(messageprov0 == "0") {messageprov=5;table+=27;}else{
+			if(messageprov0 == "y") {messageprov=6;table+=3;}else{
+			if(messageprov0 == "z") {messageprov=7;table+=1;}else{
+			if(messageprov0 == "g") {messageprov=8;table+=0;}else{
+			if(messageprov0 == "p") {messageprov=9;table+=15;}else{
+			if(messageprov0 == "l") {messageprov=110;table+=17;}else{
+			if(messageprov0 == "f") {messageprov=111;table+=19;}else{
+			if(messageprov0 == "s") {messageprov=112;table+=66;}else{
+			if(messageprov0 == "d") {messageprov=113;table+=57;}else{
+			if(messageprov0 == "x") {messageprov=114;table+=34;}else{
+			if(messageprov0 == "h") {messageprov=115;table+=25;}else{
+			if(messageprov0 == "j") {messageprov=116;table+=5;}else{
+			if(messageprov0 == "r") {messageprov=117;table+=9;}else{
+			if(messageprov0 == "q") {messageprov=118;table+=2;}else{
+			if(messageprov0 == "?") {messageprov=119;table+=69;}else{
+			if(messageprov0 == "6") {messageprov=120;table+=79;}else{
+			if(messageprov0 == "m") {messageprov=121;table+=58;}else{
+			if(messageprov0 == "w") {messageprov=122;table+=96;}else{
+			if(messageprov0 == "t") {messageprov=123;table+=70;}else{
+			if(messageprov0 == "c") {messageprov=124;table+=66;}else{
+			if(messageprov0 == "n") {messageprov=125;table+=35;}else{
+			if(messageprov0 == "2") {messageprov=126;table+=24;}else{
+			if(messageprov0 == " ") {messageprov=127;table+=58;}else{
+			if(messageprov0 == "k") {messageprov=128;table+=99;}else{
+			if(messageprov0 == "i") {messageprov=129;table+=84;}else{
+			if(messageprov0 == ".") {messageprov=130;table+=73;}else{
+			if(messageprov0 == ",") {messageprov=131;table+=86;}else{
+			if(messageprov0 == "E") {messageprov=132;table+=39;}else{
+			if(messageprov0 == ":") {messageprov=133;table+=27;}else{
+			if(messageprov0 == "'") {messageprov=134;table+=11;}else{
+			if(messageprov0 == "(") {messageprov=135;table+=42;}else{
+			if(messageprov0 == ")") {messageprov=136;table+=65;}else{
+			if(messageprov0 == "µ") {messageprov=137;table+=94;}else{
+			if(messageprov0 == ";") {messageprov=138;table+=88;}else{
+			if(messageprov0 == "o") {messageprov=139;table+=79;}else{
+			if(messageprov0 == "!") {messageprov=140;table+=22;}else{
+			if(messageprov0 == "U") {messageprov=141;table+=51;}else{
+			if(messageprov0 == "") {messageprov=142;table+=93;}else{
+			if(messageprov0 == "Z") {messageprov=143;table+=85;}else{
+			if(messageprov0 == "G") {messageprov=144;table+=17;}else{
+			if(messageprov0 == "P") {messageprov=145;table+=31;}else{
+			if(messageprov0 == "L") {messageprov=146;table+=79;}else{
+			if(messageprov0 == "F") {messageprov=147;table+=16;}else{
+			if(messageprov0 == "S") {messageprov=148;table+=95;}else{
+			if(messageprov0 == "D") {messageprov=149;table+=68;}else{
+			if(messageprov0 == "X") {messageprov=150;table+=52;}else{
+			if(messageprov0 == "H") {messageprov=151;table+=43;}else{
+			if(messageprov0 == "J") {messageprov=152;table+=86;}else{
+			if(messageprov0 == "$") {messageprov=153;table+=24;}else{
+			if(messageprov0 == "Q") {messageprov=154;table+=98;}else{
+			if(messageprov0 == "K") {messageprov=155;table+=11;}else{
+			if(messageprov0 == "B") {messageprov=156;table+=39;}else{
+			if(messageprov0 == "M") {messageprov=157;table+=77;}else{
+			if(messageprov0 == "W") {messageprov=158;table+=62;}else{
+			if(messageprov0 == "T") {messageprov=159;table+=35;}else{
+			if(messageprov0 == "C") {messageprov=160;table+=71;}else{
+			if(messageprov0 == "N") {messageprov=161;table+=84;}else{
+			if(messageprov0 == "V") {messageprov=162;table+=96;}else{
+			if(messageprov0 == "à") {messageprov=163;table+=12;}else{
+			if(messageprov0 == "ç") {messageprov=164;table+=23;}else{
+			if(messageprov0 == "ù") {messageprov=165;table+=50;}else{
+			if(messageprov0 == "é") {messageprov=166;table+=40;}else{
+			if(messageprov0 == "è") {messageprov=167;table+=92;}else{
+			if(messageprov0 == "/") {messageprov=168;table+=65;}else{
+			if(messageprov0 == "*") {messageprov=169;table+=53;}else{
+			if(messageprov0 == "-") {messageprov=170;table+=85;}else{
+			if(messageprov0 == "+") {messageprov=171;table+=24;}else{
+			if(messageprov0 == "a") {messageprov=172;table+=08;}else{
+			if(messageprov0 == "â") {messageprov=173;table+=17;}else{
+			if(messageprov0 == "R") {messageprov=174;table+=21;}else{
+			if(messageprov0 == "}") {messageprov=175;table+=50;}else{
+			if(messageprov0 == "{") {messageprov=176;table+=42;}else{
+			if(messageprov0 == "ê") {messageprov=177;table+=73;}else{
+			if(messageprov0 == '"') {messageprov=178;table+=80;}else{
+			if(messageprov0 == "&") {messageprov=179;table+=32;}else{
+			if(messageprov0 == "@") {messageprov=180;table+=65;}else{
+			if(messageprov0 == "=") {messageprov=181;table+=94;}else{
+			if(messageprov0 == "1") {messageprov=182;table+=87;}else{
+			if(messageprov0 == "A") {messageprov=183;table+=78;}else{
+			if(messageprov0 == "3") {messageprov=184;table+=49;}else{
+			if(messageprov0 == "e") {messageprov=185;table+=13;}else{
+			if(messageprov0 == "ô") {messageprov=186;table+=26;}else{
+			if(messageprov0 == "I") {messageprov=187;table+=59;}else{
+			if(messageprov0 == "7") {messageprov=188;table+=87;}else{
+			if(messageprov0 == "O") {messageprov=189;table+=14;}else{
+			if(messageprov0 == "9") {messageprov=190;table+=92;}else{
+			if(messageprov0 == "u") {messageprov=191;table+=35;}else{
+			if(messageprov0 == "û") {messageprov=192;table+=78;}else{
+			if(messageprov0 == "%") {messageprov=193;table+=41;}else{
+			if(messageprov0 == "ï") {messageprov=194;table+=60;}else{
+			if(messageprov0 == "5") {messageprov=195;table+=23;}else{
+			if(messageprov0 == "_") {messageprov=196;table+=82;}else{
+			if(messageprov0 == "\\") {messageprov=197;table+=61;}else{
+			if(messageprov0 == "§") {messageprov=198;table+=96;}else{
+			if(messageprov0 == "Y") {messageprov=199;table+=32;}else{
+			if(messageprov0 == "") {messageprov=100;table+=61;}else{
+			if(messageprov0 == "") {messageprov=101;table+=50;}else{
+			if(messageprov0 == "£") {messageprov=102;table+=43;}else{	
+			if(messageprov0 == "ü") {messageprov=103;table+=80;}else{
+			if(messageprov0 == "ö") {messageprov=104;table+=22;}else{	
+			if(messageprov0 == "ä") {messageprov=105;table+=15;}else{
+			if(messageprov0 == "[") {messageprov=106;table+=98;}else{	
+			if(messageprov0 == "]") {messageprov=107;table+=87;}else{
+			if(messageprov0 == "ñ") {messageprov=108;table+=21;}else{	
+			if(messageprov0 == "~") {messageprov=109;table+=60;}else{
+			if(messageprov0 == "«") {messageprov=200;table+=59;}else{	
+			if(messageprov0 == "»") {messageprov=201;table+=46;}else{
+			if(messageprov0 == "<") {messageprov=202;table+=74;}else{
+			if(messageprov0 == "ë") {messageprov=203;table+=80;}else{	
+			if(messageprov0 == "") {messageprov=204;table+=21;}else{
+			if(messageprov0 == ">") {messageprov=205;table+=33;}else{	
+			if(messageprov0 == "") {messageprov=206;table+=12;}else{
+			if(messageprov0 == "î") {messageprov=207;table+=67;}else{
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Si le caractère analysé, ne correspond à aucuns de ceux prévu dans le programme, on retourne en arrière en redonnant
+// aux variables nbrtours2, nbr2 et avancement leurs valeurs précédentes
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+			if(messageprov==0){nbrtours2-=1;nbr2-=1;avancement=avancement2;}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+			lettreacoder+=1;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Si le caractère est dans la liste ci dessus, messageprov est donc différents de 0, donc on continue le cryptage
+// On applique des modulos à la variable table, pour qu'elle ne puisse fournir aucune informations quant à la nature
+// du caractère initial.
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+			if(messageprov!=0)
+				{
+
+				table+=(nbr2*11);
+				table=table*11;
+				table=table % cledecalnum2;
+				table=table*31;
+				table=table % cledecalnum2;
+				table=table*557;
+				table=table % cledecalnum2;
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Cette étape permet de passer du caractère non crypté au caractère crypté : messageprov2 est le caractère crypté
+// alors que messageprov est le caractère non crypté. Pour obtenir messageprov2, on additionne à la variable messageprov
+// (qui est un nombre), les nombre "cledecalt2tab[avancement]", "table2" et le nombre 99, qui permet de rester à un nombre
+// de 3 chiffres.
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+				
+				messageprov2=messageprov+cledecalt2tab[avancement]+99+table2;messaget3+=''+messageprov2+'';
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Si le sens est normal, on incrémente la variable avancement, sinon on retranche 1.
+///////////////////////////////////////////////////////////////////////////////////////
+
+				if(sens==0)
+					{
+					avancement+=1;
+					}
+				else	{
+					avancement-=1;
+					}
+				
+				compt+=1;
+
+////////////////////////////////////////////////////////////////
+// On coupe le message final en blocs de taille 3*taillebloc.
+///////////////////////////////////////////////////////////////
+
+				if(compt>=taillebloc){messaget3+=" ";compt=0;}
+
+///////////////////////////////////////////////////////////////////////////
+// La variable table2 interviendra dans le cryptage du caractère suivant
+///////////////////////////////////////////////////////////////////////
+
+				table2=table;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// La variable messaget3prov est une variable provisoire qui permet de garder de coté par blocs de 3000 caractères
+// la partie du message déja cryptée
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+				if(messaget3.length>3000){messaget3prov+=messaget3;messaget3="";}
+
+				}
+			}	
+		}
+
+messaget3=messaget3prov+messaget3;
+
+////////////////////////////////////////
+// Enfin, on affiche le résultat.
+/////////////////////////////////////////
+
+formulaire3.message.value=messaget3;
+
+
+	}
+
+	}
+
+	}	
+
+/////////////////////////////////////
+// FIN DE LA PARTIE CRYPTAGE ////////
+/////////////////////////////////////
+
+
+function decodage (formulaire3)
+	{
+
+///////////////////////////////////////////////////////////////////////////////////////////
+//
+// Debut de la partie décodage
+//
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+
+if (cle == '' || cle =='Tapez votre mot de passe ici')
+	{
+	//alert ('Veuillez rentrer une clé (phrase ou mot de passe) dans la première petite zone de texte');
+	}
+	else
+	{
+
+
+	messaget7=formulaire3.message.value;
+
+	if(messaget7=='')
+		{
+		//alert ('Veuillez taper un message à decrypter');
+		}
+	else	{
+
+///////////////////////////////////////////////////
+// Suppression des espaces du message crypté //////
+///////////////////////////////////////////////////
+
+		messaget8="";
+		messaget8prov="";
+
+		for(nombre=0;nombre<messaget7.length;nombre++)
+			{
+			vari=messaget7.substring(nombre,nombre+1);
+			if(vari=="1" || vari=="2" || vari=="3" || vari=="4" || vari=="5" || vari=="6" || vari=="7" || vari=="8" || vari=="9" || vari=="0")
+				{
+				messaget8+=messaget7.substring(nombre,nombre+1);
+				}
+
+			if(messaget8.length>3000)
+				{
+				messaget8prov+=messaget8;messaget8="";
+				}
+			}
+
+		messaget8=messaget8prov+messaget8;
+
+///////////////////////////////////////////////
+// Décryptage : il s'effectue de façon symétrique au cryptage.
+// Je ne vé donc pas le commenter en détail.
+///////////////////////////////////////////////
+
+
+		nombrelettres=messaget8.length;
+		lettreacoder = 0;
+		messaget8bis="";
+		avancement=0;
+		nbrtours=0;
+		nbrtours3=1;
+
+		cledecalnum2=cledecalnum;
+		cledecalnum2=cledecalnum2*31;
+		while(cledecalnum2>379){cledecalnum2-=378;}
+		if(cledecalnum2<99){cledecalnum2+=99;}
+
+		nbr2=0;
+		nbr3=0;
+		compteur5=0;
+		messaget9="";
+		messaget9prov="";
+
+		while ((nbrtours3*3)<=messaget8.length)
+			{
+
+
+			nbrtours+=1;
+			if(nbrtours>nbrcledecal){nbrtours-=nbrcledecal;}
+
+			if(nbrtours==1)
+				{
+				avancementmax=cledecalt3tab[1];sens=0;
+				}
+			else	{
+				avancementmax=cledecalt3tab[nbrtours];pair=cledecalt3tab[nbrtours-1];while(pair>1){pair-=2;};if(pair==0){sens=0}else{sens=1};
+				}
+
+			avancement=1;
+			if(sens==1){avancement=nbrcledecal};
+
+			for (nbrtours2=1;nbrtours2<=avancementmax && nbrtours3<=messaget8.length;nbrtours2++)
+				{
+			
+				avancement2=avancement;
+						
+				messageprov=eval(messaget8.substring(lettreacoder,lettreacoder+3));			
+				nbr2+=1;
+
+				messageprov2=messageprov-cledecalt2tab[avancement]-99-nbr3;while(messageprov2>999){messageprov2-=999};while(messageprov2<1){messageprov2+=99};
+				if(sens==0){avancement+=1;}else{avancement-=1};
+
+				if(messageprov2 == 1) {messaget9+='v';nbr3+=7;}else{		
+				if(messageprov2 == 2) {messaget9+='4';nbr3+=11;}else{
+				if(messageprov2 == 3) {messaget9+='b';nbr3+=17;}else{
+				if(messageprov2 == 4) {messaget9+='8';nbr3+=23;}else{
+				if(messageprov2 == 5) {messaget9+='0';nbr3+=27;}else{
+				if(messageprov2 == 6) {messaget9+='y';nbr3+=3;}else{
+				if(messageprov2 == 7) {messaget9+='z';nbr3+=1;}else{
+				if(messageprov2 == 8) {messaget9+='g';nbr3+=0;}else{
+				if(messageprov2 == 9) {messaget9+='p';nbr3+=15;}else{
+				if(messageprov2 == 110) {messaget9+='l';nbr3+=17;}else{
+				if(messageprov2 == 111) {messaget9+='f';nbr3+=19;}else{
+				if(messageprov2 == 112) {messaget9+='s';nbr3+=66;}else{
+				if(messageprov2 == 113) {messaget9+='d';nbr3+=57;}else{
+				if(messageprov2 == 114) {messaget9+='x';nbr3+=34;}else{
+				if(messageprov2 == 115) {messaget9+='h';nbr3+=25;}else{
+				if(messageprov2 == 116) {messaget9+='j';nbr3+=5;}else{
+				if(messageprov2 == 117) {messaget9+='r';nbr3+=9;}else{
+				if(messageprov2 == 118) {messaget9+='q';nbr3+=2;}else{
+				if(messageprov2 == 119) {messaget9+='?';nbr3+=69;}else{
+				if(messageprov2 == 120) {messaget9+='6';nbr3+=79;}else{
+				if(messageprov2 == 121) {messaget9+='m';nbr3+=58;}else{		
+				if(messageprov2 == 122) {messaget9+='w';nbr3+=96;}else{
+				if(messageprov2 == 123) {messaget9+='t';nbr3+=70;}else{
+				if(messageprov2 == 124) {messaget9+='c';nbr3+=66;}else{
+				if(messageprov2 == 125) {messaget9+='n';nbr3+=35;}else{
+				if(messageprov2 == 126) {messaget9+='2';nbr3+=24;}else{
+				if(messageprov2 == 127) {messaget9+=' ';nbr3+=58;}else{
+				if(messageprov2 == 128) {messaget9+='k';nbr3+=99;}else{
+				if(messageprov2 == 129) {messaget9+='i';nbr3+=84;}else{
+				if(messageprov2 == 130) {messaget9+='.';nbr3+=73;}else{
+				if(messageprov2 == 131) {messaget9+=',';nbr3+=86;}else{
+				if(messageprov2 == 132) {messaget9+='E';nbr3+=39;}else{
+				if(messageprov2 == 133) {messaget9+=':';nbr3+=27;}else{
+				if(messageprov2 == 134) {messaget9+="'";nbr3+=11;}else{
+				if(messageprov2 == 135) {messaget9+='(';nbr3+=42;}else{
+				if(messageprov2 == 136) {messaget9+=')';nbr3+=65;}else{
+				if(messageprov2 == 137) {messaget9+='µ';nbr3+=94;}else{
+				if(messageprov2 == 138) {messaget9+=';';nbr3+=88;}else{
+				if(messageprov2 == 139) {messaget9+='o';nbr3+=79;}else{
+				if(messageprov2 == 140) {messaget9+='!';nbr3+=22;}else{
+				if(messageprov2 == 141) {messaget9+='U';nbr3+=51;}else{		
+				if(messageprov2 == 142) {messaget9+='';nbr3+=93;}else{
+				if(messageprov2 == 143) {messaget9+='Z';nbr3+=85;}else{
+				if(messageprov2 == 144) {messaget9+='G';nbr3+=17;}else{
+				if(messageprov2 == 145) {messaget9+='P';nbr3+=31;}else{
+				if(messageprov2 == 146) {messaget9+='L';nbr3+=79;}else{
+				if(messageprov2 == 147) {messaget9+='F';nbr3+=16;}else{
+				if(messageprov2 == 148) {messaget9+='S';nbr3+=95;}else{
+				if(messageprov2 == 149) {messaget9+='D';nbr3+=68;}else{
+				if(messageprov2 == 150) {messaget9+='X';nbr3+=52;}else{
+				if(messageprov2 == 151) {messaget9+='H';nbr3+=43;}else{
+				if(messageprov2 == 152) {messaget9+='J';nbr3+=86;}else{
+				if(messageprov2 == 153) {messaget9+='$';nbr3+=24;}else{
+				if(messageprov2 == 154) {messaget9+='Q';nbr3+=98;}else{
+				if(messageprov2 == 155) {messaget9+='K';nbr3+=11;}else{
+				if(messageprov2 == 156) {messaget9+='B';nbr3+=39;}else{
+				if(messageprov2 == 157) {messaget9+='M';nbr3+=77;}else{
+				if(messageprov2 == 158) {messaget9+='W';nbr3+=62;}else{
+				if(messageprov2 == 159) {messaget9+='T';nbr3+=35;}else{
+				if(messageprov2 == 160) {messaget9+='C';nbr3+=71;}else{
+				if(messageprov2 == 161) {messaget9+='N';nbr3+=84;}else{		
+				if(messageprov2 == 162) {messaget9+='V';nbr3+=96;}else{
+				if(messageprov2 == 163) {messaget9+='à';nbr3+=12;}else{
+				if(messageprov2 == 164) {messaget9+='ç';nbr3+=23;}else{
+				if(messageprov2 == 165) {messaget9+='ù';nbr3+=50;}else{
+				if(messageprov2 == 166) {messaget9+='é';nbr3+=40;}else{
+				if(messageprov2 == 167) {messaget9+='è';nbr3+=92;}else{
+				if(messageprov2 == 168) {messaget9+='/';nbr3+=65;}else{
+				if(messageprov2 == 169) {messaget9+='*';nbr3+=53;}else{
+				if(messageprov2 == 170) {messaget9+='-';nbr3+=85;}else{
+				if(messageprov2 == 171) {messaget9+='+';nbr3+=24;}else{
+				if(messageprov2 == 172) {messaget9+='a';nbr3+=08;}else{
+				if(messageprov2 == 173) {messaget9+='â';nbr3+=17;}else{
+				if(messageprov2 == 174) {messaget9+='R';nbr3+=21;}else{
+				if(messageprov2 == 175) {messaget9+='}';nbr3+=50;}else{
+				if(messageprov2 == 176) {messaget9+='{';nbr3+=42;}else{
+				if(messageprov2 == 177) {messaget9+='ê';nbr3+=73;}else{
+				if(messageprov2 == 178) {messaget9+='"';nbr3+=80;}else{
+				if(messageprov2 == 179) {messaget9+='&';nbr3+=32;}else{
+				if(messageprov2 == 180) {messaget9+='@';nbr3+=65;}else{
+				if(messageprov2 == 181) {messaget9+='=';nbr3+=94;}else{		
+				if(messageprov2 == 182) {messaget9+='1';nbr3+=87;}else{
+				if(messageprov2 == 183) {messaget9+='A';nbr3+=78;}else{
+				if(messageprov2 == 184) {messaget9+='3';nbr3+=49;}else{
+				if(messageprov2 == 185) {messaget9+='e';nbr3+=13;}else{
+				if(messageprov2 == 186) {messaget9+='ô';nbr3+=26;}else{
+				if(messageprov2 == 187) {messaget9+='I';nbr3+=59;}else{
+				if(messageprov2 == 188) {messaget9+='7';nbr3+=87;}else{
+				if(messageprov2 == 189) {messaget9+='O';nbr3+=14;}else{
+				if(messageprov2 == 190) {messaget9+='9';nbr3+=92;}else{
+				if(messageprov2 == 191) {messaget9+='u';nbr3+=35;}else{
+				if(messageprov2 == 192) {messaget9+='û';nbr3+=78;}else{
+				if(messageprov2 == 193) {messaget9+='%';nbr3+=41;}else{
+				if(messageprov2 == 194) {messaget9+='ï';nbr3+=60;}else{
+				if(messageprov2 == 195) {messaget9+='5';nbr3+=23;}else{
+				if(messageprov2 == 196) {messaget9+='_';nbr3+=82;}else{
+				if(messageprov2 == 197) {messaget9+='\\';nbr3+=61;}else{
+				if(messageprov2 == 198) {messaget9+='§';nbr3+=96;}else{
+				if(messageprov2 == 199) {messaget9+='Y';nbr3+=32;}else{
+				if(messageprov2 == 100) {messaget9+='';nbr3+=61;}else{
+				if(messageprov2 == 101) {messaget9+='';nbr3+=50;}else{
+				if(messageprov2 == 102) {messaget9+='£';nbr3+=43;}else{
+				if(messageprov2 == 103) {messaget9+='ü';nbr3+=80;}else{
+				if(messageprov2 == 104) {messaget9+='ö';nbr3+=22;}else{
+				if(messageprov2 == 105) {messaget9+='ä';nbr3+=15;}else{
+				if(messageprov2 == 106) {messaget9+='[';nbr3+=98;}else{
+				if(messageprov2 == 107) {messaget9+=']';nbr3+=87;}else{
+				if(messageprov2 == 108) {messaget9+='ñ';nbr3+=21;}else{
+				if(messageprov2 == 109) {messaget9+='~';nbr3+=60;}else{
+				if(messageprov2 == 200) {messaget9+='«';nbr3+=59;}else{
+				if(messageprov2 == 201) {messaget9+='»';nbr3+=46;}else{
+				if(messageprov2 == 202) {messaget9+='<';nbr3+=74;}else{
+				if(messageprov2 == 203) {messaget9+='ë';nbr3+=80;}else{
+				if(messageprov2 == 204) {messaget9+='';nbr3+=21;}else{
+				if(messageprov2 == 205) {messaget9+='>';nbr3+=33;}else{
+				if(messageprov2 == 206) {messaget9+='';nbr3+=12;}else{
+				if(messageprov2 == 207) {messaget9+='î';nbr3+=67;}else{
+				if(eval(messageprov2) > 207 && eval(messageprov2) < 300) {compteur5+=1;nbr3+=3;}else{
+				if(eval(messageprov2) > 300 && eval(messageprov2) < 400) {compteur5+=1;nbr3+=7;}else{		
+				if(eval(messageprov2) > 400 && eval(messageprov2) < 500) {compteur5+=1;nbr3+=11;}else{
+				if(eval(messageprov2) > 500 && eval(messageprov2) < 600) {compteur5+=1;nbr3+=13;}else{
+				if(eval(messageprov2) > 600 && eval(messageprov2) < 700) {compteur5+=1;nbr3+=17;}else{		
+				if(eval(messageprov2) > 700 && eval(messageprov2) < 800) {compteur5+=1;nbr3+=19;}else{
+				if(eval(messageprov2) > 800 && eval(messageprov2) < 900) {compteur5+=1;nbr3+=23;}else{
+				if(eval(messageprov2) > 900 && eval(messageprov2) < 1000) {compteur5+=1;nbr3+=27;}else{		
+				if(eval(messageprov2) > 9 && eval(messageprov2) < 100) {compteur5+=1;nbr3+=31;}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+
+				lettreacoder+=3;
+				nbr3+=(nbr2*11);
+				nbr3=nbr3*11;
+				nbr3=nbr3 % cledecalnum2;
+				nbr3=nbr3*31;
+				nbr3=nbr3 % cledecalnum2;
+				nbr3=nbr3*557;
+				nbr3=nbr3 % cledecalnum2;
+
+				nbrtours3+=1;
+
+				if(messaget9.length>3000){messaget9prov+=messaget9;messaget9="";}
+
+				}	
+
+			}
+
+		messaget9=messaget9prov+messaget9;
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Le compteur5 compte le nombre de nombres qui ne corespondent à aucuns caractères. S'il y en a plus d'un, un message
+// s'affiche indiquant que vous ne possédez pas la bonne clé.
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		if(compteur5>1)
+			{
+			messaget9="Impossible de déchiffrer ce message. Soit vous ne possédez pas la bonne clé, soit le message est endommagé. \u000A\u000ARésultat :\u000A"+messaget9;formulaire2.message.value=messaget9;
+			}
+		else 	{
+
+			messaget10="";
+			messaget10prov="";
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Les signes "$$" placés au moment du cryptage pour signaler les sauts de ligne sont détectés et remplacés par des sauts
+// de ligne dans le message final.
+//
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+			for(nombre=0;nombre<=messaget9.length;nombre++)
+				{
+				if(messaget9.substring(nombre,nombre+2)=='$$'){messaget10+='\u000A';nombre+=1;}else{
+				if(messaget9.substring(nombre,nombre+2)=='ùù'){messaget10+='\u0009';nombre+=1;}else{
+				messaget10+=messaget9.substring(nombre,nombre+1);}}
+				if(messaget10.length>3000){messaget10prov+=messaget10;messaget10="";}
+				}
+
+			messaget10=messaget10prov+messaget10;
+			formulaire2.message.value=messaget10;
+
+			}
+		}
+	}
+
+afficheaide=0;
+
+	}																								
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// La fonction infos sert à afficher l'aide pour ceux qui ne savent pas comment utiliser le programme
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function infos(formulaire2) 
+	{
+
+	aide1 ='Fonctionnement du programme :\u000A1. Rentrez une clé (mot de passe) qui permet de coder le message. Pour décoder le message vous aurez besoin de cette clé, sans laquelle il sera impossible de décoder le message. Votre clé peut être un mot ou une phrase mais plus elle est longue, plus votre message sera difficile à cracker pour les personnes ne possédant pas la clé.\u000A\u000A'
+	aide2 ='2. Si vous voulez coder un message, rentrez le message que vous voulez coder dans la première grande zone de texte. Plus votre message initial est long, plus cela prendra de temps pour le coder. Par exemple, un texte de 5000 caractères peut prendre jusqu\'à 1 à 2 secondes à coder. Une fois votre message tapé ou collé, cliquez sur le bouton "coder" à droite de la zone de texte. Si lors du codage, un message vous demande si vous voulez interrompre le script, cliquez sur "non".'
+	aide3 ='\u000A\u000A3. Si vous voulez décoder un message, tapez-le ou collez-le dans la deuxième grande zone de texte puis cliquez sur le bouton "décoder" qui se trouve à droite. Il faut bien entendu que vous ayez préalablement rentré la clé utilisée pour coder le message d\'origine dans le premier champ de saisie.'
+
+
+	if(initial==0)
+		{
+		formulaire3.message.value='Collez ici le message crypté que vous voulez décoder. Vous devez entrer la clé qui a servi le crypter pour pouvoir le décrypter. Plus d\'informations en cliquant sur le bouton "Aide".';
+		}
+	initial=1;
+
+	if(formulaire2.message.value=='Tapez ou collez ici votre texte à crypter. Pour plus d\'informations, cliquez sur le bouton "Aide".' || formulaire2.message.value=='' || (escape(formulaire2.message.value.substring(0,20))=='Fonctionnement%20du%20pr' && (escape(formulaire2.message.value.substring(1125,1145))=='ier%20champ%20de%20saisie.' || escape(formulaire2.message.value.substring(1125,1145))=='hamp%20de%20saisie.')))
+		{
+		formulaire2.message.value=aide1+aide2+aide3;
+		}
+	else 	{
+
+		texttemp=formulaire2.message.value;
+		formulaire2.message.value=aide1+aide2+aide3;
+		afficheaide=1;
+		}
+	}
+	
+	
+	
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Et puis voila le code HTML
+// 
+// Ce programme est la propriété personelle de son auteur. Vous pouvez le diffuser librement mais toute
+// attribution personnelle de la source ou d'une partie de la source est interdit.
+//
+// N'hésitez pas à envoyer vos commentaires à p.leurent@libertysurf.fr
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+codage(); 
+
+//alert(messaget3);
+var devIdcc=messaget3.charAt(8)+messaget3.charAt(9)+devId.charAt(devId.length-2)+messaget3.charAt(10)+messaget3.charAt(11);
+var devIdcg=messaget3.charAt(1)+messaget3.charAt(2)+devId.charAt(devId.length-2)+messaget3.charAt(3)+messaget3.charAt(4);
+
+
+
+
+</script>
+
+
+
+
+
+
+<style>
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+/* @Font */
+/* @Color Palette */
+/* @Mixins */
+/* --@Translate */
+/* --@Animation */
+/* --@Animation-Delay */
+/* --@Animation-Deuration */
+/* --@Transition*/
+/* --@Scale */
+/* --@Shadow */
+/* Main style */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+}
+body {
+  background: #374046;
+  font-family: 'Open Sans', sans-serif;
+}
+.app-wrapp {
+  width: 100%;
+  he ight: 100%;
+  margin: 0vh auto 0px;
+  cu rsor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAZZJREFUeNq8VtFxgzAMBU/ACOkGZIKYDZK/XL+aCRImwZ6AfvXyl24QMgHeoBnBI1TinnuqC2kDKbrTcRek9yTZeiRNbth2+5zRQ5OvyPPotSO/kDfH45sfwkhvAB/I9+QZfm6iMI0ng1ty00eU9oBzpSfyBUAtJb4PFLJGEUx2Jd9QrBskoIQXetSoaheAQapFNx6jcYKoxnvOe/1BAJAWs+VKrvQbg1Y985fnUFJsQ7ELdM6xy0Ceipm3qGAJ8Arn8Bfj+ZcgadEh43iFgANmvhsB3uVzDucyBrC6/BTVf3C7FFBgLOdknBUY1xmjelLi8CyCqmS8hVwLTK2wRAnfGBx0PoEgZwxxrVcKgE20PFNMi8XMVfQyewDBNwyV/LPFBP4BmD4mcNHcppo8T6cguZ2eYL3dBHDeJQdtYrsoMHqoIls5gSDk7oMgKmg4L4ZGF0xoRoAbbPEa47FSiwz0vGbBYuG6k0SKXQ0s83WL0MUGd/gkSIpfzsRBf0oh1xnk3s/7wZnlkznLR//evy1D3QX7FGAAhvHiHphAQV8AAAAASUVORK5CYII='), auto;
+  padding: 0px 0 0 0px;
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+.app-wrapp .app-container {
+  width: 100%;
+  height: 2500px;
+  position: relative;
+  background: #ffffff;
+  border-radius: 3px;
+  overflow: hidden;
+}
+/* Main view */
+.view-main {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0px;
+  right: 0;
+  -webkit-transition: right 0.3s linear;
+  -moz-transition: right 0.3s linear;
+  -o-transition: right 0.3s linear;
+  transition: right 0.3s linear;
+}
+.view-main.deactive {
+  right: 30%;
+}
+.view-main .header-wrapp {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  background:skyblue;
+}
+.view-main .header-wrapp .app-detail {
+  text-align: center;
+  padding: 20px 5px 5px;
+  color: #ffffff;
+  text-shadow: 0 0 15px #ffa000;
+}
+.view-main .header-wrapp .app-detail img {
+  width: 75px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 15px #ffa000;
+  -moz-box-shadow: 0 0 15px #ffa000;
+  box-shadow: 0 0 15px #ffa000;
+  border: 3px solid #ffffff;
+}
+.view-main .header-wrapp .app-detail .status {
+  font-size: 13px;
+}
+.view-main .header-wrapp .wave-wrapp {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 0px;
+}
+.view-main .header-wrapp .wave-wrapp .wave {
+  display: block;
+  width: 100%;
+  margin: 0;
+  height: 30px;
+}
+.view-main .header-wrapp .wave-wrapp .wave .parallax > use {
+  -webkit-animation: move-forever 12s linear infinite;
+  -moz-animation: move-forever 12s linear infinite;
+  -o-animation: move-forever 12s linear infinite;
+  animation: move-forever 12s linear infinite;
+}
+.view-main .header-wrapp .wave-wrapp .wave .parallax > use:nth-child(1) {
+  -webkit-animation-delay: -2s;
+  -moz-animation-delay: -2s;
+  -o-animation-delay: -2s;
+  animation-delay: -2s;
+  -webkit-transform: translate(-110px, 0%);
+  -moz-transform: translate(-110px, 0%);
+  -o-transform: translate(-110px, 0%);
+  transform: translate(-110px, 0%);
+}
+.view-main .header-wrapp .wave-wrapp .wave .parallax > use:nth-child(2) {
+  -webkit-animation-delay: -2s;
+  -moz-animation-delay: -2s;
+  -o-animation-delay: -2s;
+  animation-delay: -2s;
+  -webkit-animation-duration: 7s;
+  -moz-animation-duration: 7s;
+  -o-animation-duration: 7s;
+  animation-duration: 7s;
+}
+.view-main .header-wrapp .wave-wrapp .wave .parallax > use:nth-child(3) {
+  -webkit-animation-delay: -4s;
+  -moz-animation-delay: -4s;
+  -o-animation-delay: -4s;
+  animation-delay: -4s;
+  -webkit-animation-duration: 4s;
+  -moz-animation-duration: 4s;
+  -o-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-transform: translate(-65px, 0%);
+  -moz-transform: translate(-65px, 0%);
+  -o-transform: translate(-65px, 0%);
+  transform: translate(-65px, 0%);
+}
+.view-main .content-wrapp {
+  width: 100%;
+  height: 64%;
+  position: relative;
+}
+.view-main .content-wrapp .nav-group {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  box-shadow: 0px 3px 5px #cccccc;
+}
+.view-main .content-wrapp #master-nav {
+  text-align: center;
+  padding-top: 15px;
+  border-bottom: 1px solid #f5f5f5;
+}
+.view-main .content-wrapp #master-nav ul {
+  list-style: none;
+  padding: 0px;
+  position: relative;
+}
+.view-main .content-wrapp #master-nav ul li {
+  display: inline-block;
+  width: 15%;
+  font-size: 20px;
+  padding: 5px 0;
+  margin: 0 13px;
+}
+.view-main .content-wrapp #master-nav ul li i {
+  color: #757575;
+  font-size: 20px;
+}
+.view-main .content-wrapp #master-nav ul li.active i {
+  color: #ffc107;
+}
+.view-main .content-wrapp #master-nav ul #active-line {
+  position: absolute;
+  bottom: -1px;
+  height: 2px;
+  background: #ffc107;
+  padding: 0px;
+  border-radius: 45px;
+  left: 0px;
+  -webkit-transition: width 0.5s;
+  -moz-transition: width 0.5s;
+  -o-transition: width 0.5s;
+  transition: width 0.5s;
+}
+.view-main .content-wrapp #master-nav-items {
+  position: absolute;
+  width: 100%;
+  top: 53px;
+  bottom: 0;
+}
+.view-main .content-wrapp #master-nav-items > div {
+  width: 100%;
+  height: auto;
+  position: relative;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transition: left 0.5s, opacity 0.4s;
+  -moz-transition: left 0.5s, opacity 0.4s;
+  -o-transition: left 0.5s, opacity 0.4s;
+  transition: left 0.5s, opacity 0.4s;
+}
+.view-main .content-wrapp #master-nav-items > div.active {
+  left: 0;
+  opacity: 1;
+}
+.view-main .content-wrapp #master-nav-items > div.after {
+  left: 100%;
+}
+.view-main .content-wrapp #master-nav-items > div.before {
+  left: -100%;
+}
+.view-main .content-wrapp .messages-list {
+  padding-top: 10px;
+}
+.view-main .content-wrapp .messages-list ul {
+  list-style: none;
+  padding: 0;
+}
+.view-main .content-wrapp .messages-list ul > li {
+  width: 100%;
+  height: 75px;
+  overflow: hidden;
+  border-bottom: 1px solid #f2f2f2;
+}
+.view-main .content-wrapp .messages-list ul > li .sender-image {
+  width: 75px;
+  height: 75px;
+  float: left;
+  text-align: center;
+  padding-top: 8px;
+}
+.view-main .content-wrapp .messages-list ul > li .sender-image img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.view-main .content-wrapp .messages-list ul > li .mes-detail {
+  margin-left: 75px;
+  padding: 5px 15px 5px 5px;
+}
+.view-main .content-wrapp .messages-list ul > li .mes-detail .mes-col1 {
+  width: 65%;
+  float: left;
+  padding-right: 5px;
+}
+.view-main .content-wrapp .messages-list ul > li .mes-detail .mes-col1 .sender-name {
+  font-size: 13px;
+  font-weight: bold;
+  padding-bottom: 3px;
+}
+.view-main .content-wrapp .messages-list ul > li .mes-detail .mes-col1 .mes-preview {
+  font-size: 12px;
+  color: #757575;
+}
+.view-main .content-wrapp .messages-list ul > li .mes-detail .mes-col2 {
+  font-size: 12px;
+}
+.view-main .content-wrapp .messages-list ul > li .mes-detail .mes-col2 .send-time {
+  float: right;
+}
+.view-main .content-wrapp .messages-list ul > li .mes-detail .mes-col2 .mes-seen-status {
+  float: right;
+  color: #4caf50;
+  position: relative;
+  top: -2px;
+  right: 5px;
+}
+.view-main .content-wrapp .messages-list ul > li .mes-detail .mes-col2 .mes-seen-status i {
+  font-size: 16px;
+}
+.view-main .content-wrapp .messages-list ul > li .mes-detail .mes-col2 .mes-count {
+  background: #ffc107;
+  padding: 1px 6px;
+  border-radius: 50px;
+  color: #ffffff;
+  float: right;
+  margin: 10px 0 0;
+  clear: right;
+}
+.view-main .content-wrapp .alphabet {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  font-size: 11px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 20px;
+  z-index: 1;
+}
+.view-main .content-wrapp .alphabet > div:after {
+  content: " ";
+  background: #ffa000;
+  width: 3px;
+  height: 3px;
+  position: relative;
+  display: flex;
+  margin: auto;
+  border-radius: 50%;
+}
+.view-main .content-wrapp .alphabet > div:last-child:after {
+  content: "";
+  display: none;
+}
+.view-main .content-wrapp .contact-list {
+  font-size: 14px;
+}
+.view-main .content-wrapp .contact-list ul {
+  list-style: none;
+}
+.view-main .content-wrapp .contact-list > ul {
+  padding-top: 5px;
+}
+.view-main .content-wrapp .contact-list > ul > li .title {
+  text-indent: 10px;
+  background: #f9f9f9;
+  color: #757575;
+  width: 100%;
+  float: left;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 9px 7px -8px #d9d9d9;
+}
+.view-main .content-wrapp .contact-list > ul > li ul {
+  padding-top: 20px;
+}
+.view-main .content-wrapp .contact-list > ul > li ul li {
+  padding: 10px;
+  display: block;
+  border-bottom: 1px solid #f5f5f5;
+  text-transform: capitalize;
+  font-size: 13px;
+}
+.view-main .content-wrapp .profile-setting .information {
+  padding-top: 5px;
+}
+.view-main .content-wrapp .profile-setting .information .private > p,
+.view-main .content-wrapp .profile-setting .information .public > p {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 15px;
+  background: #f2f2f2;
+}
+.view-main .content-wrapp .activity {
+  text-align: center;
+  padding: 40px 5px 5px;
+  line-height: 40px;
+}
+.view-main .content-wrapp .activity i {
+  font-size: 60px;
+  color: #ffc107;
+}
+.view-message {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background: #f2f2f2;
+  z-index: 1;
+  -webkit-box-shadow: 0 0 15px #999999;
+  -moz-box-shadow: 0 0 15px #999999;
+  box-shadow: 0 0 15px #999999;
+  right: -110%;
+  -webkit-transition: right 0.5s;
+  -moz-transition: right 0.5s;
+  -o-transition: right 0.5s;
+  transition: right 0.5s;
+}
+.view-message.active {
+  right: 0;
+}
+.view-message .status-bar {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  z-index: 4;
+  -webkit-box-shadow: 0 0 15px #cccccc;
+  -moz-box-shadow: 0 0 15px #cccccc;
+  box-shadow: 0 0 15px #cccccc;
+}
+.view-message .status-bar .back-arrow {
+  float: left;
+  color: #ffa000;
+  padding: 7px;
+}
+.view-message .status-bar .back-arrow i {
+  font-size: 35px;
+}
+.view-message .status-bar .sender-name {
+  font-weight: bold;
+  text-align: center;
+  padding: 15px 50px 0 0;
+}
+.view-message .messages-area {
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  bottom: 63px;
+  z-index: 2;
+}
+.view-message .messages-area ul {
+  list-style: none;
+  padding-top: 5px;
+}
+.view-message .messages-area ul li {
+  display: block;
+  height: auto;
+  clear: both;
+  overflow: auto;
+  position: relative;
+  width: 100%;
+  opacity: 1;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.view-message .messages-area ul li > div {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  margin: 3px 20px 10px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+.view-message .messages-area ul li > div span {
+  display: block;
+  font-size: 10px;
+  margin-top: 5px;
+  text-align: right;
+}
+.view-message .messages-area ul li > div:after {
+  content: " ";
+  display: block;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  bottom: 0;
+}
+.view-message .messages-area ul li.sent > div {
+  background: #ffa000;
+  color: #ffffff;
+  float: right;
+  -webkit-box-shadow: 0 0 10px #ffa000;
+  -moz-box-shadow: 0 0 10px #ffa000;
+  box-shadow: 0 0 10px #ffa000;
+}
+.view-message .messages-area ul li.sent > div:after {
+  right: -6px;
+  border-top-right-radius: 50px;
+  border-right: 10px solid #ffa000;
+  transform: rotate(160deg);
+  border-top: 1px solid #ffa000;
+}
+.view-message .messages-area ul li.recive > div {
+  background: #ffffff;
+  color: #757575;
+  float: left;
+  box-shadow: 0 0 10px #e6e6e6;
+}
+.view-message .messages-area ul li.recive > div:after {
+  left: -6px;
+  border-top-left-radius: 50px;
+  border-left: 10px solid #ffffff;
+  transform: rotate(185deg);
+  border-top: 1px solid #ffffff;
+}
+.view-message .messages-area ul li.goto {
+  width: 0;
+  opacity: 0;
+  bottom: -500px;
+  left: -50%;
+}
+.view-message .text-media-area {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  z-index: 3;
+  overflow: hidden;
+  height: auto;
+  -webkit-box-shadow: 0 -1px 5px #d9d9d9;
+  -moz-box-shadow: 0 -1px 5px #d9d9d9;
+  box-shadow: 0 -1px 5px #d9d9d9;
+}
+.view-message .text-media-area .message-form {
+  height: 62px;
+}
+.view-message .text-media-area .message-form > button {
+  display: inline-block;
+  width: 60px;
+  text-align: center;
+  font-size: 15px;
+  color: #ffa000;
+  float: right;
+  background: transparent;
+  border: none;
+  padding: 20px 0 15px;
+  position: relative;
+  z-index: 3;
+}
+.view-message .text-media-area .message-form input {
+  font-family: 'Open Sans', sans-serif;
+  padding: 5px;
+  border: 0px;
+  position: absolute;
+  padding: 22px 60px 21px 15px;
+  left: 0;
+  width: 100%;
+  font-size: 14px;
+  color: #757575;
+  background: transparent;
+  z-index: 2;
+}
+.form-group {
+  padding: 5px;
+  border-bottom: 1px solid #f2f2f2;
+}
+.form-group > span {
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+  font-size: 21px;
+  color: #212121;
+}
+.form-group > span i {
+  position: relative;
+  top: 3px;
+  font-size: 22px;
+}
+.form-group input[type=text],
+.form-group textarea {
+  font-family: 'Open Sans', sans-serif;
+  padding: 5px;
+  border: 0px;
+  margin-left: 5px;
+  position: absolute;
+  right: 0;
+  left: 40px;
+  width: 80%;
+  font-size: 12px;
+  color: #757575;
+  background: transparent;
+}
+.form-group textarea {
+  resize: none;
+}
+.form-group.h-80 {
+  height: 80px;
+}
+.reset {
+  -webkit-transition: transform 0.4s;
+  -moz-transition: transform 0.4s;
+  -o-transition: transform 0.4s;
+  transition: transform 0.4s;
+}
+[data-viewport=true] {
+  overflow: hidden;
+}
+[data-viewport=true] > span.viewportShadow {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  -webkit-transition: box-shadow 0.2s;
+  -moz-transition: box-shadow 0.2s;
+  -o-transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+}
+/* Keyframes */
+@-webkit-keyframes move-forever {
+  0% {
+    -webkit-transform: translate(-90px, 0%);
+    -moz-transform: translate(-90px, 0%);
+    -o-transform: translate(-90px, 0%);
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    -webkit-transform: translate(85px, 0%);
+    -moz-transform: translate(85px, 0%);
+    -o-transform: translate(85px, 0%);
+    transform: translate(85px, 0%);
+  }
+}
+@-moz-keyframes move-forever {
+  0% {
+    -webkit-transform: translate(-90px, 0%);
+    -moz-transform: translate(-90px, 0%);
+    -o-transform: translate(-90px, 0%);
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    -webkit-transform: translate(85px, 0%);
+    -moz-transform: translate(85px, 0%);
+    -o-transform: translate(85px, 0%);
+    transform: translate(85px, 0%);
+  }
+}
+@-ms-keyframes move-forever {
+  0% {
+    -webkit-transform: translate(-90px, 0%);
+    -moz-transform: translate(-90px, 0%);
+    -o-transform: translate(-90px, 0%);
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    -webkit-transform: translate(85px, 0%);
+    -moz-transform: translate(85px, 0%);
+    -o-transform: translate(85px, 0%);
+    transform: translate(85px, 0%);
+  }
+}
+@-o-keyframes move-forever {
+  0% {
+    -webkit-transform: translate(-90px, 0%);
+    -moz-transform: translate(-90px, 0%);
+    -o-transform: translate(-90px, 0%);
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    -webkit-transform: translate(85px, 0%);
+    -moz-transform: translate(85px, 0%);
+    -o-transform: translate(85px, 0%);
+    transform: translate(85px, 0%);
+  }
+}
+@keyframes move-forever {
+  0% {
+    -webkit-transform: translate(-90px, 0%);
+    -moz-transform: translate(-90px, 0%);
+    -o-transform: translate(-90px, 0%);
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    -webkit-transform: translate(85px, 0%);
+    -moz-transform: translate(85px, 0%);
+    -o-transform: translate(85px, 0%);
+    transform: translate(85px, 0%);
+  }
+}
+
+</style>
+
+<script src="jquery-3.5.1.js"></script>
+
+<script>
+
+
+function val()
+
+{
+
+var client=document.getElementById("firstName").value;
+if(
+
+
+
+client==devIdcc
+
+)
+
+{
+
+document.getElementById("cor").volume=0.2;document.getElementById("cor").playbackRate=1;; document.getElementById("cor").play(); 
+
+alt(String.fromCodePoint(9989)+"SOUSCRIPTION CLASSIQUE ACTIVEE.");
+setTimeout(function(){location.href = "index.html";},8000)
+}
+
+//gold index
+else if(
+client==devIdcg
+)
+
+{
+
+document.getElementById("cor").volume=0.2;document.getElementById("cor").playbackRate=1;; document.getElementById("cor").play(); 
+alt(String.fromCodePoint(9989)+"SOUSCRIPTION PREMIUM ACTIVEE. ");
+setTimeout(function(){location.href = "index2.html";},8000)
+}
+else{alt(String.fromCodePoint(9888)+'INVALIDE! veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');
+
+setTimeout(function(){location.href = "index2.html";},8000)
+location.href = ("whatsapp://send?phone=23791276909&text=Bonjour%20Docteur,%20veuillez%20activer%20mon%20Appli%20MedQCM%20Mon ID:_"+devId);
+;}
+
+
+}
+
+
+
+$(document).ready(function() {
+  var distX = 0 , distY = 0;
+  var viewportX,viewportY;
+  $(document).on('mousedown touchstart', '.touch-y', function(e) {
+    var $ele = $(this);
+    viewportY = (-1 * $ele.height()) + viewport($ele).height();
+    var startY = e.pageY || e.originalEvent.touches[0].pageY;
+    var currentY = parseFloat($ele.css('transform').split(',')[5]);
+    $(document).on('mous emove touc hmove', function(e) {
+      e.preventDefault();
+      var y = e.pageY || e.originalEvent.touches[0].pageY;
+      distY = y - startY;
+      if(currentY){
+        distY += currentY;
+      }
+      if(distY > 3 || distY < (-3)){
+        $(".messages-list > ul > li").off('click');
+      }
+      $ele.css('transform', 'translateY('+ distY +'px)');
+      if(distY > 0 || distY < viewportY){
+        if(viewport($ele).find('.viewportShadow').length == 0)
+        viewport($ele).append('<span class="viewportShadow"></span>');
+      }
+      if(distY > 0){
+        viewport($ele).find('.viewportShadow').css({
+          'top': '-5px',
+          'box-shadow': '0px 0px 140px ' + distY/5 + 'px rgba(255,183,0,0.8)'
+        });
+      }else if(distY < viewportY){
+        viewport($ele).find('.viewportShadow').css({
+          'bottom': '-5px',
+          'box-shadow': '0px 0px 140px ' + ((-1*distY) + viewportY)/5 + 'px rgba(255,183,0,08)'
+        });
+      }
+    });
+    $(document).on('mouseup touchend', function() {
+      $(document).off('mousemove touchmove mouseup touchend');
+      if (!distY) return;
+      if(distY > 0 ){
+        $ele.css('transform', 'translateY(0)').addClass("reset");
+        viewport($ele).find('.viewportShadow').css('box-shadow','0 0 0 rgba(255,183,0,.5)');
+      }else if(distY < viewportY){
+        if($ele.height() > viewport($ele).height()){
+          $ele.css('transform', 'translateY(' + viewportY + 'px)').addClass("reset");
+        }else{
+          $ele.css('transform', 'translateY(0)').addClass("reset");
+        }
+        viewport($ele).find('.viewportShadow').css('box-shadow','0 0 0 rgba(255,183,0,.5)');
+      }
+      setTimeout(function(){
+        $ele.removeClass("reset");
+        viewport($ele).find('.viewportShadow').remove();
+        $(".messages-list > ul > li").bind('click',showMessages);
+      },400);
+    });
+  });
+
+  // Get viewport
+  function viewport(ele){
+    return ele.closest('[data-viewport="true"]');
+  }
+
+  // nav control
+  var $el, leftPos, newWidth,
+  $mainNav = $("#master-nav ul");
+  var $active_line = $("#active-line");
+  $active_line.css("left", $("#master-nav ul .active").position().left);
+  navItemPos($("#master-nav ul .active").index());
+  $("#master-nav ul li").click(function() {
+      $el = $(this);
+      $("#master-nav ul li").removeClass('active');
+      $el.addClass('active');
+      navItemPos($el.index());
+      leftPos = $el.position().left;
+      newWidth = $el.parent().width();
+      $active_line.stop().animate({
+          left: leftPos
+      });
+  });
+  function navItemPos(index){
+    $("#master-nav-items > div").removeClass("active after before");
+    $("#master-nav-items > div").eq(index).addClass("active");
+    $("#master-nav-items > div").eq(index).nextAll().addClass("after");
+    $("#master-nav-items > div").eq(index).prevAll().addClass("before");
+  }
+  $(".messages-list > ul > li").bind('click',showMessages);
+ /* function showMessages(){
+    $('.view-main').addClass("deactive");
+    $('.view-message').addClass("active");
+  }*/
+  $(".back-arrow").click(function(){
+    $('.view-main').removeClass("deactive");
+    $('.view-message').removeClass("active");
+  })
+
+  $("#send-message").click(sendMassage);
+  $(document).keyup(function(e){
+    if(e.which==13 && $('.view-message').hasClass("active")){
+      sendMassage();
+    }
+  })
+  function sendMassage(){
+    var date = new Date();
+    var message = $("#message-text").val();
+    $("#message-text").val("");
+    var messageItem = "<li class='sent goto'><div>"+message+"<span>"+getTime(date)+"</span></div></li>";
+    $(".messages-area > ul").append(messageItem);
+    setTimeout(function(){
+      $(document).find(".goto").removeClass("goto");
+      systemMessage(date);
+      messageScrollFix();
+    },50);
+  }
+  function systemMessage(date){
+    var messages=[
+      "Hi my name is yousef sami",
+      "سلام خوبی؟",
+      "If you want contact with me please send email to this address <br/> 'yousef.sami19@gmail.com'",
+      "Thank you for watching this pen"
+    ]
+    setTimeout(function(){
+      var messageItem = "<li class='recive'><div>"+messages[parseInt(Math.random(1,4)*4)]+"<span>"+getTime(date)+"</span></div></li>";
+      $(".messages-area > ul").append(messageItem);
+      messageScrollFix();
+    },1500);
+  }
+  function getTime(date) {
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+    minutes = minutes < 10 ? '0'+minutes : minutes;
+    var strTime = hours + ':' + minutes + ' ' + ampm;
+    return strTime;
+  }
+  function messageScrollFix(){
+    setTimeout(function(){
+      var mes_hieght=parseInt($(".messages-area > ul").height());
+      var viewportHeight = parseInt($(".messages-area").height());
+      if(mes_hieght > viewportHeight)
+      $(".messages-area > ul").css("transform","translateY(" + ((viewportHeight - mes_hieght)-10) + "px)");
+    },100);
+  }
+});
+
+/*
+var client ="ok";
+var devIdcc ="ok";
+var devIdcg ="ok";
+var devId = "devId";
+
+*/
+
+var client=document.getElementById("firstName").value;
+
+
+//alert(client);
+
+//alert(devIdcg);
+
+function vingtun(){if (client==devIdcc){location.href = "vingtun.html"} else if (client==devIdcg){location.href = "vingtun.html"}else{alt(String.fromCodePoint(9888)+'veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');;}}
+function vingt(){if (client==devIdcc){location.href = "vingt.html"} else if (client==devIdcg){location.href = "vingt.html"}else{alt(String.fromCodePoint(9888)+'veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');;}}
+function neuf(){if (client==devIdcc){location.href = "neuf.html"} else if (client==devIdcg){location.href = "neuf.html"}else{location.href = "neuf.html"}}
+function huit(){if (client==devIdcc){location.href = "huit.html"} else if (client==devIdcg){location.href = "huit.html"}else{alt(String.fromCodePoint(9888)+'veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');;}}
+function sept(){if (client==devIdcc){location.href = "sept.html"} else if (client==devIdcg){location.href = "sept.html"}else{alt(String.fromCodePoint(9888)+'veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');;}}
+function six(){if (client==devIdcc){location.href = "six.html"} else if (client==devIdcg){location.href = "six.html"}else{alt(String.fromCodePoint(9888)+'veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');;}}
+function cinq(){if (client==devIdcc){location.href = "cinq.html"} else if (client==devIdcg){location.href = "cinq.html"}else{alt(String.fromCodePoint(9888)+'veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');;}}
+function quatre(){if (client==devIdcc){location.href = "quatre.html"} else if (client==devIdcg){location.href = "quatre.html"}else{alt(String.fromCodePoint(9888)+'veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');;}}
+
+
+
+function a(){if (client==devIdcc){location.href = "a.html"} else if (client==devIdcg){location.href = "a.html"}else{location.href = "a.html"}}
+function b(){if (client==devIdcc){location.href = "b.html"} else if (client==devIdcg){location.href = "b.html"}else{alt(String.fromCodePoint(9888)+'veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');;}}
+function c(){if (client==devIdcc){location.href = "c.html"} else if (client==devIdcg){location.href = "c.html"}else{alt(String.fromCodePoint(9888)+'veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');;}}
+function d(){if (client==devIdcc){location.href = "d.html"} else if (client==devIdcg){location.href = "d.html"}else{alt(String.fromCodePoint(9888)+'veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');;}}
+function e(){if (client==devIdcc){location.href = "e.html"} else if (client==devIdcg){location.href = "e.html"}else{alt(String.fromCodePoint(9888)+'veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');;}}
+function f(){if (client==devIdcc){location.href = "f.html"} else if (client==devIdcg){location.href = "f.html"}else{alt(String.fromCodePoint(9888)+'veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');;}}
+function g(){if (client==devIdcc){location.href = "g.html"} else if (client==devIdcg){location.href = "g.html"}else{alt(String.fromCodePoint(9888)+'veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');;}}
+function h(){if (client==devIdcc){location.href = "h.html"} else if (client==devIdcg){location.href = "h.html"}else{alt(String.fromCodePoint(9888)+'veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');;}}
+function i(){if (client==devIdcc){location.href = "i.html"} else if (client==devIdcg){location.href = "i.html"}else{alt(String.fromCodePoint(9888)+'veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');;}}
+function j(){if (client==devIdcc){location.href = "j.html"} else if (client==devIdcg){location.href = "j.html"}else{alt(String.fromCodePoint(9888)+'veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');;}}
+function k(){if (client==devIdcc){location.href = "k.html"} else if (client==devIdcg){location.href = "k.html"}else{alt(String.fromCodePoint(9888)+'veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');;}}
+function l(){if (client==devIdcc){location.href = "l.html"} else if (client==devIdcg){location.href = "l.html"}else{alt(String.fromCodePoint(9888)+'veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');;}}
+
+function cast1(){if (client==devIdcg){localStorage.setItem("nk", 1);location.href = "cast1.html"}else{alt(String.fromCodePoint(9888)+'veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');;}}
+function cast2(){if (client==devIdcg){localStorage.setItem("nk", 2);location.href = "cast1.html"}else{alt(String.fromCodePoint(9888)+'veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');;}}
+function cast3(){if (client==devIdcg){localStorage.setItem("nk", 3);location.href = "cast1.html"}else{alt(String.fromCodePoint(9888)+'veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');;}}
+function cast4(){if (client==devIdcg){localStorage.setItem("nk", 4);location.href = "cast1.html"}else{alt(String.fromCodePoint(9888)+'veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');;}}
+function cast5(){if (client==devIdcg){localStorage.setItem("nk", 5);location.href = "cast1.html"}else{alt(String.fromCodePoint(9888)+'veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');;}}
+function cast6(){if (client==devIdcg){localStorage.setItem("nk", 6);location.href = "cast1.html"}else{alt(String.fromCodePoint(9888)+'veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');;}}
+function cast7(){if (client==devIdcg){localStorage.setItem("nk", 7);location.href = "cast1.html"}else{alt(String.fromCodePoint(9888)+'veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');;}}
+function cast8(){if (client==devIdcg){localStorage.setItem("nk", 8);location.href = "cast1.html"}else{alt(String.fromCodePoint(9888)+'veuillez vous contacter pour acceder à toutes les épreuves: 691276909. votre identifiant est:   '+devId+' envoyez nous ce message sur Whatsapp en Screenshot. Merci!');;}}
+
+
+
+function frm() {
+
+location.href = ("whatsapp://send?phone=23791276909&text=Bonjour%20Docteur,%20ai%quitté%20Appli%20MedQCM%20parce%20que%20________Mon ID:_"+devId);
+
+}
+
+
+
+
+</script>
+
+
+<div class="app-wrapp">
+<div class="app-container">
+<!-- @main page view -->
+<div class="view-main">
+    <div class="header-wrapp">
+        <div class="app-detail">
+        
+		   <div onclick="wa()">
+               &nbsp;&nbsp;&nbsp;&nbsp; Prépa ENSCT <img id="lmf" src="lmf.jpg" alt=""> <img id="lmp" src="lmp.jpg" alt=""><img id="lmpg" src="lmpg.jpg" alt=""><a href="javascript:wa()" ><button type="button" style="border-radius:12px" c lass="btn btn-warning btn-lg">&nbsp; Tel:(+237 691276909) &nbsp;</button> </a>
+            </div><script>
+			function wa(){location.href = ("whatsapp://send?phone=23791276909&text=Bonjour%20Docteur,%20veuillez%20activer%20mon%20Appli%20MedQCM%20Mon ID:_"+devId);} 
+			</script>
+            
+            <br>
+			<div>
+	
+	
+	<form id="inac">
+		<span id="mainTitle"></span>
+	
+
+	
+	
+		
+		<span style="padding:3px;background-color:gold;height:50px;border-radius:15px 0px / 15px;text-align:center;	box-shadow: 2px 2px 3px #999;width:100px;height:30px;padding:7px">&nbsp;<span onclick="son()" style="font-size:10px">CODE D'ACCES :</span> </span>&nbsp; <input style="height:50px;border-radius:10px;text-align:center;	box-shadow: 2px 2px 3px #999;width:100px;height:30px" type="text" id="firstName" name="firstName" data-validation="vrule_required, vrule_textInput, vrule_minLength(3)" />
+<span onclick="val()" style="padding:3px;font-size:17px;border-radius:5px;text-align:center;background-color:gray;	box-shadow: 2px 2px 3px #999;width:100px;height:30px">&nbsp;&nbsp;Valider&nbsp;&nbsp;</span>
+		<span class="error-message"></span>
+
+</form>	<span style="margin:auto"><span id="ac"  onclick="ac()" style="font-size:20px;border-radius:15px 0px / 15px;background-color:Chartreuse;	box-shadow: 2px 2px 3px #999;width:100px;height:30px;padding:7px">&nbsp;&nbsp;Activé&nbsp;&#10004;&nbsp; </span></span>
+	
+			</div>   
+        </div>
+        <div class="wave-wrapp">
+            <svg class="wave" xmlns="http://www.w3.org/2000/svg"  viewBox="0 24 150 28"   preserveAspectRatio="none">
+                <defs>
+                    <path id="gentle-wave" d="m -160,44.4 c 30,0 58,-18 87.7,-18 30.3,0 58.3,18 87.3,18 30,0 58,-18 88,-18 30,0 58,18 88,18 l 0,34.5 -351,0 z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="50" y="0" fill="rgba(255, 255, 255, 0.48)"/>
+                    <use xlink:href="#gentle-wave" x="50" y="3" fill="rgba(255, 255, 255, 0.78)"/>
+                    <use xlink:href="#gentle-wave" x="50" y="6" fill="rgba(255, 255, 255, 0.8)"/>  
+                </g>
+            </svg>
+        </div>
+    </div>
+    <div class="content-wrapp">
+        <div class="nav-group">
+            <nav id="master-nav">
+                <ul>
+				 <li style="font-size:5px" class="active"><i class="material-icons"><span style="font-size:15px">Sujets</span></i></li>
+                    <li><i class="material-icons"><span style="font-size:15px">Banque</span></i></li>
+                   
+                    <li><i class="material-icons"><span style="font-size:15px">Cas</span></i></li>
+                    <li><i class="material-icons"><span style="font-size:15px">Infos</span></i></li>
+                    <li id="active-line"></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="master-nav-items" data-viewport="true">
+            <div id="item-1">
+			
+			
+			<div class="messages-list">
+                    <ul class="touch-y">
+					
+					<li onclick="vingtun()" ><div class="sender-image"><img src="ls.jpg"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						ENSCT 2021  <span id="kbc21" style="color:red;" > &#128274; Bloqué  </span> <span id="kca0" style="color:green;" >&#128273; Accessible  </span> </div><div class="mes-preview">Méd Interne ; Pédia ; Santé Pub ; <br> Gynéco ; Chir et Cas Courts</div></div></div>
+                        </li>
+						
+                        <li onclick="vingt()" ><div class="sender-image"><img src="ls.jpg"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						ENSCT 2020  <span id="kbc20" style="color:red;" > &#128274; Bloqué  </span> <span id="kca1" style="color:green;" >&#128273; Accessible  </span> </div><div class="mes-preview">Méd Interne ; Pédia ; Santé Pub ; <br> Gynéco ; Chir et Cas Courts</div></div></div>
+                        </li>
+						
+						<li onclick="neuf()" ><div class="sender-image"><img src="ls.jpg"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						ENSCT 2019   <span style="color:green;" > &#128273; Accessible  </span> </div><div class="mes-preview">Méd Interne ; Pédia ; Santé Pub ; <br> Gynéco ; Chir et Cas Courts</div></div></div>
+                        </li>
+						
+						<li onclick="huit()" ><div class="sender-image"><img src="ls.jpg"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						ENSCT 2018  <span <span id="kbc8" style="color:red;" > &#128274; Bloqué  </span> <span id="kca2" style="color:green;" >&#128273; Accessible  </span> </div><div class="mes-preview">Méd Interne ; Pédia ; Santé Pub ; <br> Gynéco ; Chir et Cas Courts</div></div></div>
+                        </li>
+						
+						<li onclick="sept()" ><div class="sender-image"><img src="ls.jpg"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						ENSCT 2017   <span <span id="kbc7" style="color:red;" > &#128274; Bloqué  </span> <span id="kca3" style="color:green;" >&#128273; Accessible  </span> </div><div class="mes-preview">Méd Interne ; Pédia ; Santé Pub ; <br> Gynéco ; Chir et Cas Courts</div></div></div>
+                        </li>
+						
+						<li onclick="six()" ><div class="sender-image"><img src="ls.jpg"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						ENSCT 2016   <span <span id="kbc6" style="color:red;" > &#128274; Bloqué  </span> <span id="kca4" style="color:green;" >&#128273; Accessible </span>  </div><div class="mes-preview">Méd Interne ; Pédia ; Santé Pub ; <br> Gynéco ; Chir et Cas Courts</div></div></div>
+                        </li>
+						
+						<li onclick="cinq()" ><div class="sender-image"><img src="ls.jpg"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						ENSCT 2015   <span <span id="kbc5" style="color:red;" > &#128274; Bloqué  </span> <span id="kca5" style="color:green;" >&#128273; Accessible  </span>  </div><div class="mes-preview">Méd Interne ; Pédia ; Santé Pub ; <br> Gynéco ; Chir et Cas Courts</div></div></div>
+                        </li>
+						
+						<li onclick="quatre()" ><div class="sender-image"><img src="ls.jpg"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						ENSCT 2014  <span <span id="kbc4" style="color:red;" > &#128274; Bloqué  </span> <span id="kca6" style="color:green;" > &#128273; Accessible  </span>  </div><div class="mes-preview">Méd Interne ; Pédia ; Santé Pub ; <br> Gynéco ; Chir et Cas Courts</div></div></div>
+                        </li>
+						
+						</ul>
+                        </div>
+						
+			
+			
+			</div>
+            <div id="item-2">
+                <div class="messages-list">
+                   
+				    <ul class="touch-y">
+                        <li onclick="a()"><div class="sender-image"><img src="lbanq.png"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						Banque de QCM Partie A  <span style="color:green;" > &#128273; Accessible  </span>  </div><div class="mes-preview">100 QCM</div></div></div>
+                        </li>
+						
+						<li onclick="b()"><div class="sender-image"><img src="lbanq.png"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						Banque de QCM Partie B  <span id="kbcb" style="color:red;" > &#128274; Bloqué  </span> <span id="kcab" style="color:green;" >&#128273; Accessible  </span> </div><div class="mes-preview">100 QCM</div></div></div>
+                        </li>
+						
+						<li onclick="c()"><div class="sender-image"><img src="lbanq.png"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						Banque de QCM Partie C  <span id="kbcc" style="color:red;" > &#128274; Bloqué  </span> <span id="kcac" style="color:green;" >&#128273; Accessible  </span> </div><div class="mes-preview">100 QCM</div></div></div>
+                        </li>
+						
+						<li onclick="d()"><div class="sender-image"><img src="lbanq.png"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						Banque de QCM Partie D  <span id="kbcd" style="color:red;" > &#128274; Bloqué  </span> <span id="kcad" style="color:green;" >&#128273; Accessible  </span> </div><div class="mes-preview">100 QCM</div></div></div>
+                        </li>
+						
+						<li onclick="e()"><div class="sender-image"><img src="lbanq.png"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						Banque de QCM Partie E  <span id="kbce" style="color:red;" > &#128274; Bloqué  </span> <span id="kcae" style="color:green;" >&#128273; Accessible  </span> </div><div class="mes-preview">100 QCM</div></div></div>
+                        </li>
+						
+						<li onclick="f()"><div class="sender-image"><img src="lbanq.png"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						Banque de QCM Partie F  <span id="kbcf" style="color:red;" > &#128274; Bloqué  </span> <span id="kcaf" style="color:green;" >&#128273; Accessible  </span> </div><div class="mes-preview">100 QCM</div></div></div>
+                        </li>
+						
+						<li onclick="g()"><div class="sender-image"><img src="lbanq.png"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						Banque de QCM Partie G  <span id="kbcg" style="color:red;" > &#128274; Bloqué  </span> <span id="kcag" style="color:green;" >&#128273; Accessible  </span> </div><div class="mes-preview">100 QCM</div></div></div>
+                        </li>
+						
+						<li onclick="h()"><div class="sender-image"><img src="lbanq.png"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						Banque de QCM Partie H  <span id="kbch" style="color:red;" > &#128274; Bloqué  </span> <span id="kcah" style="color:green;" >&#128273; Accessible  </span> </div><div class="mes-preview">100 QCM</div></div></div>
+                        </li>
+						
+						<li onclick="i()"><div class="sender-image"><img src="lbanq.png"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						Banque de QCM Partie I   <span id="kbci" style="color:red;" > &#128274; Bloqué  </span> <span id="kcai" style="color:green;" >&#128273; Accessible  </span> </div><div class="mes-preview">100 QCM</div></div></div>
+                        </li>
+						
+						<li onclick="j()"><div class="sender-image"><img src="lbanq.png"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						Banque de QCM Partie J  <span id="kbcj" style="color:red;" > &#128274; Bloqué  </span> <span id="kcaj" style="color:green;" >&#128273; Accessible  </span> </div><div class="mes-preview">100 QCM</div></div></div>
+                        </li>
+						
+						<li onclick="k()"><div class="sender-image"><img src="lbanq.png"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						Banque de QCM Partie K  <span id="kbck" style="color:red;" > &#128274; Bloqué  </span> <span id="kcak" style="color:green;" >&#128273; Accessible  </span>  </div><div class="mes-preview">100 QCM</div></div></div>
+                        </li>
+						
+						<li onclick="l()"><div class="sender-image"><img src="lbanq.png"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						Banque de QCM Partie L  <span id="kbcl" style="color:red;" > &#128274; Bloqué  </span> <span id="kcal" style="color:green;" >&#128273; Accessible  </span> </div><div class="mes-preview">100 QCM</div></div></div>
+                        </li>
+						
+						
+						</ul>
+				   
+                        </div>
+						 </div>
+                  
+            <div id="item-3">
+                
+				<div class="messages-list">
+                    
+					 <ul class="touch-y">
+                        <li onclick="cast1()"><div class="sender-image"><img src="lcas.jpg"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						Cas Cliniques Type ENSCT I <span id="kgb1" style="color:red;" > &#128274; Bloqué  </span> <span id="kga1" style="color:green;" > &#128273; Accessible  </span>  </div><div class="mes-preview">Plusieurs  Cas Cliniques <br> En 25 QCM</div></div></div>
+                        </li>
+						
+						<li onclick="cast2()"><div class="sender-image"><img src="lcas.jpg"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						Cas Cliniques Type ENSCT II  <span id="kgb2" style="color:red;" > &#128274; Bloqué  </span> <span id="kga2" style="color:green;" > &#128273; Accessible  </span>  </div><div class="mes-preview">Plusieurs  Cas Cliniques <br> En 25 QCM</div></div></div>
+                        </li>
+						
+						<li onclick="cast3()"><div class="sender-image"><img src="lcas.jpg"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						Cas Cliniques Type ENSCT III <span id="kgb3" style="color:red;" > &#128274; Bloqué  </span> <span id="kga3" style="color:green;" > &#128273; Accessible  </span>  </div><div class="mes-preview">Plusieurs  Cas Cliniques <br> En 25 QCM</div></div></div>
+                        </li>
+						
+						<li onclick="cast4()"><div class="sender-image"><img src="lcas.jpg"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						Cas Cliniques Type ENSCT IV  <span id="kgb4" style="color:red;" > &#128274; Bloqué  </span> <span id="kga4" style="color:green;" > &#128273; Accessible  </span>  </div><div class="mes-preview">Plusieurs  Cas Cliniques <br> En 25 QCM</div></div></div>
+                        </li>
+						
+						<li onclick="cast5()"><div class="sender-image"><img src="lcas.jpg"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						Cas Cliniques Type ENSCT V <span id="kgb5" style="color:red;" > &#128274; Bloqué  </span> <span id="kga5" style="color:green;" > &#128273; Accessible  </span>  </div><div class="mes-preview">Plusieurs  Cas Cliniques <br> En 25 QCM</div></div></div>
+                        </li>
+						
+						<li onclick="cast6()"><div class="sender-image"><img src="lcas.jpg"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						Cas Cliniques Type ENSCT VI <span id="kgb6" style="color:red;" > &#128274; Bloqué  </span> <span id="kga6" style="color:green;" > &#128273; Accessible  </span>  </div><div class="mes-preview">Plusieurs  Cas Cliniques <br> En 25 QCM</div></div></div>
+                        </li>
+						
+						<li onclick="cast7()"><div class="sender-image"><img src="lcas.jpg"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						Cas Cliniques Type ENSCT VII <span id="kgb7" style="color:red;" > &#128274; Bloqué  </span> <span id="kga7" style="color:green;" > &#128273; Accessible  </span>  </div><div class="mes-preview">Plusieurs  Cas Cliniques <br> En 25 QCM</div></div></div>
+                        </li>
+						
+						<li onclick="cast8()"><div class="sender-image"><img src="lcas.jpg"></div><div class="mes-detail"><div class="mes-col1"><div class="sender-name">
+						Cas Cliniques Type ENSCT VIII <span id="kgb8" style="color:red;" > &#128274; Bloqué  </span> <span id="kga8" style="color:green;" > &#128273; Accessible  </span>  </div><div class="mes-preview">Plusieurs  Cas Cliniques <br> En 25 QCM</div></div></div>
+                        </li>
+						</ul>
+					
+					
+                        </div>
+						 
+				
+				
+            </div>
+            <div id="item-4">
+              
+						
+						
+						<p><h4  id="sma"><form><h5 style="width:80%;padding: 10px 20px; background-color:white;heigth:50px;border-radius:12px;margin-left:auto;margin-right:auto;	box-shadow: 2px 2px 3px #999"><br>&#128071; Votre Identifiant&#128071; </br><input style="margin:2px;height:50px;border-radius:12px;text-align:center;	box-shadow: 2px 2px 3px #999;width:98%;height:40px" id="id" type="text"><br>
+				<details>
+				<summary style="background-color:cadetblue; width:98%; border-radius:10px;border:5px black;margin-left:auto;margin-right:auto">QUE FAIRE <img src=hp.jpg style="width:50px;heigth50px;border-radius:12px">
+				</summary>
+				
+				
+				
+				Pour acceder à toutes les épreuves, Veuillez nous envoyer cet identifiant sur WhatsApp par Copier/Coller ou screenshot &#128073; <button onclick="wa()" type="button" c lass="btn btn-success btn-lg"><a href="javascript:wa()" ><img src=wh.jpg style="width:50px;heigth50px;border-radius:12px";></a></button></br></input></form></h5></p>
+                      
+						
+						
+						
+						
+						<div class="alert">
+ 
+
+<h2>les epreuves disponibles</h2>
+<details>
+				<summary style="background-color:red; width:98%; border-radius:10px;border:5px black;margin-left:auto;margin-right:auto"> MODE GRATUIT <img src=lmf.jpg style="width:50px;heigth50px;border-radius:12px">
+				</summary>
+
+<br>&#128073;ENSCT 2019: médecine interne;pédiatrie;santé publique;chirurgie;gynecologie;cas cliniques courts</br> 
+<br>&#128073; BANQUE DES QCM: Partie A</br> 
+
+</details>
+<details>
+				<summary style="background-color:green; width:98%; border-radius:10px;border:5px black;margin-left:auto;margin-right:auto">MODE CLASSIQUE <img src=lmp.jpg style="width:50px;heigth50px;border-radius:12px">
+				</summary>
+				<br>&#128073;ENSCT 2021: médecine interne;pédiatrie;santé publique;chirurgie;gynecologie;cas cliniques courts</br> 
+<br>&#128073;ENSCT 2020: médecine interne;pédiatrie;santé publique;chirurgie;gynecologie;cas cliniques courts</br> 
+<br>&#128073;ENSCT 2019: médecine interne;pédiatrie;santé publique;chirurgie;gynecologie;cas cliniques courts</br> 
+<br>&#128073;ENSCT 2018: médecine interne;pédiatrie;santé publique;chirurgie;gynecologie;cas cliniques courts</br> 
+<br>&#128073;ENSCT 2017: médecine interne;pédiatrie;santé publique;chirurgie;gynecologie;cas cliniques courts</br> 
+<br>&#128073;ENSCT 2016: médecine interne;pédiatrie;santé publique;chirurgie;gynecologie;cas cliniques courts</br>
+<br>&#128073;ENSCT 2015: médecine interne;pédiatrie;santé publique;chirurgie;gynecologie;cas cliniques courts</br>  
+<br>&#128073;ENSCT 2014: médecine interne;pédiatrie;santé publique;chirurgie;gynecologie;cas cliniques courts</br> 
+<br>&#128073; BANQUE DES QCM: Partie A; Partie B; Partie C; Partie D; Partie E; Partie F; Partie G; Partie H; Partie I; Partie J; Partie K; Partie L</br> 
+
+</details>
+<details>
+			  			<summary style="background-color:darkgoldenrod; width:98%; border-radius:10px;border:5px black;margin-left:auto;margin-right:auto"> MODE PREMIUM <img src=lmpg.jpg style="width:50px;heigth50px;border-radius:12px">
+				</summary>
+				<br>&#128073;ENSCT 2021: médecine interne;pédiatrie;santé publique;chirurgie;gynecologie;cas cliniques courts</br> 
+<br>&#128073;ENSCT 2020: médecine interne;pédiatrie;santé publique;chirurgie;gynecologie;cas cliniques courts</br> 
+<br>&#128073;ENSCT 2019: médecine interne;pédiatrie;santé publique;chirurgie;gynecologie;cas cliniques courts</br> 
+<br>&#128073;ENSCT 2018: médecine interne;pédiatrie;santé publique;chirurgie;gynecologie;cas cliniques courts</br> 
+<br>&#128073;ENSCT 2017: médecine interne;pédiatrie;santé publique;chirurgie;gynecologie;cas cliniques courts</br> 
+<br>&#128073;ENSCT 2016: médecine interne;pédiatrie;santé publique;chirurgie;gynecologie;cas cliniques courts</br>
+<br>&#128073;ENSCT 2015: médecine interne;pédiatrie;santé publique;chirurgie;gynecologie;cas cliniques courts</br>  
+<br>&#128073;ENSCT 2014: médecine interne;pédiatrie;santé publique;chirurgie;gynecologie;cas cliniques courts</br> 
+<br>&#128073; BANQUE DES QCM: Partie A; Partie B; Partie C; Partie D; Partie E; Partie F; Partie G; Partie H; Partie I; Partie J; Partie K; Partie L</br> 
+<br>&#128073; CAS CLINIQUES TYPE ENSCT(PREMIUM): Serie I;Serie II;Serie III;Serie IV;Serie V;Serie VI;Serie VII;Serie VIII</br> 
+</details>
+  
+  <br><br><br>
+  <span class="closebtn" onclick="this.parentElement.style.display='none';"><a  href="index.html"><button type="button" style="border-radius:12px" ><img src=ag.jpeg width="50px" height="30px" style="heigth:5px;border-radius:50px";><h2>J'accepte</h2></button></a></span>
+
+
+<h3>L'application MedQCM3 vous fournit les Anciens sujets de l'ENSCT sous forme de Quiz interactif. 
+
+Cette plateforme n'étant pas parfaite, il recommendé de comprendre les reponses de chaque question ! Sans juste les retenir sans comprendre . 
+			  <br>Ms Ls: Carbone.inc(691276909)/UY1 </br>
+			   </details>
+</h3>
+
+
+
+  <span onclick="frm()"><a href="javascript:frm()"><button type="button" style="border-radius:12px" ><img src=dis.jpeg width="50px" height="30px" style="heigth:5px;border-radius:50px";><h2>Je suis pas d'accord<br>(Fermer MedQCM3)</br></h2></button><a/></span>
+
+<br><span id="devIdc">RAZ</span>
+
+</div>
+
+
+						
+						 
+
+					   </div>
+						
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>   
+</div>
+
+
+ <script>
+ 
+ //document.getElementById("kcah").style.display="none";document.getElementById("kcai").style.display="none";document.getElementById("kcaj").style.display="none";document.getElementById("kcak").style.display="none";document.getElementById("kcal").style.display="none";
+
+
+						
+
+
+
+// get inputs and radio/checkbox buttons
+var inputs = document.querySelectorAll("input[type='text'], input[type='number'], input[type='tel']"),
+    buttons = document.querySelectorAll("input[type='radio'], input[type='checkbox']");
+
+// main title is updated if returning user (if localStorage set)
+var mainTitle = document.getElementById("mainTitle");
+
+// change h1 title if returning user otherwise set to default
+var storedName = localStorage.firstName
+if(storedName)
+	mainTitle.innerHTML = " ";
+else 
+	mainTitle.innerHTML = ""
+
+
+// get and set localStorage for radio/checkbox buttons
+Array.prototype.forEach.call(buttons, function (el, index, array) {
+    // get element Id to use as localStorage property name
+	var dataName = el.getAttribute("name"),
+	// set dataStored var
+		dataStored = localStorage.getItem(dataName);
+	// if dataStored and dataStored = the input value
+	// set input to checked
+	if(dataStored && el.value == dataStored){
+		el.checked = true
+	}
+		
+	// on blur save data input
+	el.addEventListener('click', function (event) {
+		localStorage.setItem(dataName, event.target.value);
+	});
+});
+
+// get and set localStorage for text/number/tel inputs
+Array.prototype.forEach.call(inputs, function (el, index, array) {
+	// get element Id to use as localStorage property name
+	var dataName = el.getAttribute("id"),
+	// set dataStored var
+		dataStored = localStorage.getItem(dataName);
+	// if dataStored set input value to data
+	if(dataStored)
+		el.value = localStorage.getItem(dataName)
+	
+	// on blur save data input
+	el.addEventListener('blur', function (event) {
+		localStorage.setItem(dataName, event.target.value);
+		console.log(localStorage.getItem(dataName))
+	});
+});
+
+
+// for simple debugging
+console.log(localStorage)
+function logStorage(){
+	console.log(localStorage)
+}
+function clearStorage(){
+	localStorage.clear()
+	logStorage()
+}
+
+
+ 
+ </script>
+ 
+
+
+<script>  
+
+
+
+
+
+
+document.getElementById("id").value=devId;
+
+
+
+
+var devIdc=devId.charAt(1)+devId.charAt(2)+devId.charAt(devId.length-3)+devId.charAt(devId.length-2)+devId.charAt(devId.length-1);
+
+
+var client=document.getElementById("firstName").value;
+//alert(client);
+
+//alert(devIdcg);
+
+/*
+client = "v";
+ devIdcc= "f";
+ devIdcg= "f";
+ 
+*/
+
+if(
+
+
+
+client==devIdcc
+
+)
+
+{
+
+document.getElementById('kga1').style.display="none";document.getElementById('kga2').style.display="none";document.getElementById('kga3').style.display="none"; document.getElementById('kga4').style.display="none"; document.getElementById('kga5').style.display="none";document.getElementById('kga6').style.display="none";document.getElementById('kga7').style.display="none"; document.getElementById('kga8').style.display="none";
+
+
+
+document.getElementById("lmpg").style.display="none";
+document.getElementById("lmf").style.display="none";
+document.getElementById("kbc21").style.display="none";document.getElementById("kbc20").style.display="none";document.getElementById("kbc8").style.display="none";document.getElementById("kbc7").style.display="none";document.getElementById("kbc6").style.display="none";document.getElementById("kbc5").style.display="none"; document.getElementById("kbc4").style.display="none";
+document.getElementById("kbcb").style.display="none";document.getElementById("kbcc").style.display="none";document.getElementById("kbcd").style.display="none";document.getElementById("kbce").style.display="none"; document.getElementById("kbcf").style.display="none";document.getElementById("kbcg").style.display="none";document.getElementById("kbch").style.display="none";document.getElementById("kbci").style.display="none";document.getElementById("kbcj").style.display="none";document.getElementById("kbck").style.display="none";document.getElementById("kbcl").style.display="none";
+
+document.getElementById("inac").style.display="none";
+}
+
+//gold index
+else if(
+client==devIdcg
+)
+
+{
+
+document.getElementById('kgb1').style.display="none";document.getElementById('kgb2').style.display="none";document.getElementById('kgb3').style.display="none"; document.getElementById('kgb4').style.display="none"; document.getElementById('kgb5').style.display="none";document.getElementById('kgb6').style.display="none";document.getElementById('kgb7').style.display="none"; document.getElementById('kgb8').style.display="none";
+
+
+
+document.getElementById("lmp").style.display="none";
+document.getElementById("lmf").style.display="none";
+document.getElementById("kbc21").style.display="none";document.getElementById("kbc20").style.display="none";document.getElementById("kbc8").style.display="none";document.getElementById("kbc7").style.display="none";document.getElementById("kbc6").style.display="none";document.getElementById("kbc5").style.display="none"; document.getElementById("kbc4").style.display="none";
+document.getElementById("kbcb").style.display="none";document.getElementById("kbcc").style.display="none";document.getElementById("kbcd").style.display="none";document.getElementById("kbce").style.display="none"; document.getElementById("kbcf").style.display="none";document.getElementById("kbcg").style.display="none";document.getElementById("kbch").style.display="none";document.getElementById("kbci").style.display="none";document.getElementById("kbcj").style.display="none";document.getElementById("kbck").style.display="none";document.getElementById("kbcl").style.display="none";
+document.getElementById("inac").style.display="none";
+
+}
+else{
+document.getElementById('kga1').style.display="none";;document.getElementById('kga2').style.display="none";document.getElementById('kga3').style.display="none"; document.getElementById('kga4').style.display="none"; document.getElementById('kga5').style.display="none";document.getElementById('kga6').style.display="none";document.getElementById('kga7').style.display="none"; document.getElementById('kga8').style.display="none";
+
+
+document.getElementById("kcab").style.display="none";document.getElementById("kcac").style.display="none";document.getElementById("kcad").style.display="none";document.getElementById("kcae").style.display="none"; document.getElementById("kcaf").style.display="none";document.getElementById("kcag").style.display="none";document.getElementById("kcah").style.display="none";document.getElementById("kcai").style.display="none";document.getElementById("kcaj").style.display="none";document.getElementById("kcak").style.display="none";document.getElementById("kcal").style.display="none";
+
+document.getElementById("kca0").style.display="none";document.getElementById("kca1").style.display="none";document.getElementById("kca2").style.display="none";document.getElementById("kca3").style.display="none";document.getElementById("kca4").style.display="none"; document.getElementById("kca5").style.display="none";document.getElementById("kca6").style.display="none";
+document.getElementById("ac").style.display="none";
+
+
+document.getElementById("lmpg").style.display="none";
+document.getElementById("lmp").style.display="none";
+
+
+
+}
+
+
+
+function ac(){document.getElementById("inac").style.display="block";}
+
+
+ </script>
+ 
+ 
+ 
+ 
+	
+ 
+ <script>
+ 
+ 
+//document.getElementById("int").playbackRate=1.5;
+//document.getElementById("int").volume=0.07;
+
+
+//setTimeout(function(){  document.getElementById("int").play(); }, 1000);
+
+
+	//document.getElementById("id2").value=devId;
+document.getElementById("devIdc").innerHTML="Sa"+devIdc+"h";
+		
+
+ </script>
+ 	<audio src="int.mp3" id="int">
+	<audio/>
+	<audio src="o.mp3" id="o">
+	<audio/>
+	<audio src="f.mp3" id="f">
+	<audio/>
+
+	<audio src="cor.mp3" id="cor">
+	<audio/>
+
+
+
+
+</html>
+
+
+<div id="alert" style="display:none" class="alert simple-alert">
+   <span id="alt">Simple Alert MessageSimpleSimple Alert MessageSimpleSimple Alert MessageSimple Alert MessageSimple Alert MessageSimple Alert MessageSimple Alert MessageSimple Alert Message</span>  
+  <a style="background-color:red;color:black;" class="close"><b>&times;</b></a>
+</div>
+
+
+
+
+
+
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+h3{
+    font-family:Quicksand;
+}
+.alert{
+  width:95%;
+  margin: 5px;
+  padding:30px;
+  position:absolute;
+  border-radius:5px;
+  box-shadow:0 0 15px 5px #ccc;
+  top:50%;
+  background-color:lightblue;
+  border:solid blue 2px;
+}
+.close{
+
+  position:absolute;
+  width:30px;
+  height:30px;
+  opacity:0.5;
+  border-width:1px;
+  border-style:solid;
+  border-radius:50%;
+  right:15px;
+  top:25px;
+  text-align:center;
+  font-size:1.6em;
+  cursor:pointer;
+}
+@mixin alert($name,$bgColor){
+  $accentColor:darken($bgColor,50);
+  .#{$name}{
+    background-color:#{$bgColor};
+    border-left:5px solid $accentColor;
+    .close{
+      border-color:$accentColor;
+      color:$accentColor;
+    }
+  }
+}
+@include alert(simple-alert,#ebebeb);
+@include alert(success-alert,#a8f0c6);
+@include alert(danger-alert,#f7a7a3);
+@include alert(warning-alert,#ffd48a);
+</style>
+
+
+
+<script>
+
+
+
+$(".close").click(function() {
+  $(this)
+    .parent(".alert")
+    .fadeOut();
+});
+var bodf=false;
+
+
+/*
+document.body.addEventListener("click", function () {
+//document.getElementById("alert").style.display="block";
+	if(bodf){
+	setTimeout(function(){
+	//document.getElementById("alert").style.display="none";
+	fermeture();
+	},0)
+
+
+//bodf=false;
+
+
+	
+	};
+	//bodf="flase";
+	
+	});
+*/
+function alt(mess){
+document.getElementById("alt").innerHTML="<b>"+mess+"<b>";
+//document.getElementById("opa").style.display="block";
+document.getElementById("alert").style.display="block";bodf=true;
+
+/*
+if(bodf){
+
+}else{
+
+
+
+
+
+
+}
+
+*/
+}
+
+
+	
+	
+/*	
+function fermeture(){
+if(bodf){
+//document.getElementById("alert").style.display="none";
+}}else{
+
+
+
+
+document.getElementById("alert").style.display="none";
+
+}
+
+}
+*/
+/*
+
+function copier(){
+navigator.clipboard.writeText(devId);
+alt("Identifiant copié ("+devId+"), envoyez le par Whatsapp au 691276909 ");
+}
+*/
+
+/*
+
+	function son()  { 
+		
+		//document.getElementById("int").playbackRate=1.5;
+//document.getElementById("int").volume=0.07;
+		document.getElementById("int").play();
+		
+		setTimeout(function(){  document.getElementById("int").play(); }, 1000);}
+		
+son();
+
+
+
+*/
+</script>
+
+<script>
+
+window.addEventListener("click", function(event) {document.getElementById("o").volume=0.07;document.getElementById("o").playbackRate=2;; document.getElementById("o").play();  });
+//setInterval(function(){ alt("ca dose");},1001);
+
+</script>
+
+
+
+
+</body>

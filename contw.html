@@ -1,0 +1,1353 @@
+
+<html>
+<head>
+<h4 id="titre">  <span id="ttre"> PARTIE A GYNECOLOGIE </span><a href="agyne.html ><button id="submit"></button></a></h4>
+
+ <meta http-equiv="Content-Type"content="text/html; charset=UTF-8" />
+
+	<title>QCM ENSCT</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body><d iv class="main">
+
+	
+	
+	
+	
+
+<div class="wrapper" onclick="showDropdown()">
+<div style="background-Color:gray;border-radius:11px; margin:3px; height:11px"><div id="prog" style="background-Color:blue;border-radius:11px;width:0%;height:11px">.</div></div>
+
+Quest.: <span></span>/<span id="sur1">20ok</span> <span style="padding-left:5px"></span> <span style="color:darkcyan;padding:3px;border-left:3px solid white;border-right:3px solid white;border-radius:5px;background-Color:"><img style="border-radius:50%; width:25px" src="cor.jpg"> : <span id="tr" ></span>/<span id="sur2">20ok</span></span> <img style="border-radius:50%; width:18px" src="tp.jpg"> : <span id="time"> </span>&nbsp;&nbsp; <style>#time{width: 70px; border: 1px dotted #333; text-align: center; margin-bottom: 1px;font-style:italic; }</style><script type="text/javascript"> var centi = 0; var mili = 0; var sec = 0;  var min;  var sec_; var afficher; var compteur; document.getElementById('time').innerHTML = "0" + sec + ":" + "0" + mili;  function chrono() { setInterval(function (){ mili++; if (mili > 9) { mili = 0; } }, 1); centi++; centi*10; if (centi > 540) { centi = 0; sec++; }  if (sec < 10) { sec_ = "0" + sec; } else { sec_ = sec; } var ok=centi/9.1; afficher = sec_ + ":<span id='z'>0</span>" + ok.toFixed(); document.getElementById("time").innerHTML = afficher;if(ok>9.499){ document.getElementById("z").style.display="none";}; reglage = window.setTimeout("chrono();",100); }  function debut() { document.parametre.lance.disabled = "disabled"; document.parametre.pause.disabled = ""; document.parametre.zero.disabled = ""; document.parametre.intermediaire.disabled = ""; document.parametre.rappel.disabled = ""; }chrono();debut; </script> <span style="padding-left:15px"></span> <br><span style="color:red">Incorrect:</span> <span id="rt" ></span>/<span id="sur3">20ok</span> <span style="padding-left:15px"></span><span style="color:blue"> Sans Reponse: </span><span id="sr" ></span>/<span id="sur4">20ok</span> <span style="border-radius:50%;background-Color:gray;color:white;" onclick="exp()"> &nbsp; i &nbsp;</span><br></div>
+		
+<p style="font-size: 17px;">
+
+<div onc lick="this.style.display='none'" id="xpn" style="display:none">xpn</div>
+
+<div class="alert success" id="xp" style="display:none">
+
+	<inp ut type="checkbox" id="alert1">
+    <label class="close" title="close" for="alert1">
+	<i class="icon-remove"><img src="cl.jpg" style='width:30px;border-radius:5px'></i>
+    </label>
+
+	
+		<p id="xpt" class="inner">
+			
+		</p>
+		</div>
+	</p>		
+		
+		
+		
+		<ul style="font-size: 1px;" class="dropdown"></ul>		
+		<p class="question"></p>
+		<ul>
+			<label for="la1"><li id="lit1"><input id="la1" type="checkbox"><span id="las1">ok</span></li></label>
+			<label for="la2"><li id="lit2"><input id="la2" type="checkbox"><span id="las2">ok</span></label></li></label>
+			<label for="la3"><li id="lit3"><input id="la3" type="checkbox"><span id="las3">ok</span></label></li></label>
+			<label for="la4"><li id="lit4"><input id="la4" type="checkbox"><span id="las4">ok</span></label></li></label>
+			<label for="la5"><li id="lit5"><input id="la5" type="checkbox"><span id="las5">ok</span></label></li></label>
+			
+			
+		</ul>
+		<div id="tctr"><div id="ctrlb"><button style="border-radius: 20px 20px 20px 0px;b ox-shadow: 1px 1px 2px 2px gray ; background:linear-gradient(#6 a9d21,lightgray);border-radius: 0px 0px 30px 20px" onclick="goToNextQuestion2();cl()"><img src="prev.jpg" height="30px" width="80px" style="border-radius:50%"></button><bu tton class="submit"></button></div><div onclick = "submitAndCheckAnswer()" id="ctrlval"><img  id="valim" src="va.png"></div><div id="ctrln"><button style="border-radius: 20px 20px 0px 0px;bo x-shadow: 1px 1px 2px 2px gray ; background:linear-gradient(#6 a9d21,lightgray);border-radius: 0px 0px 20px 30px;float:right;" onclick="goToNextQuestion3();cl()"><img src="next.jpg" height="30px" width="80px" style="border-radius:50%"></button>
+	</div>
+	</div>
+<table height="50px" width="100%" style="border-color:white"><tr><td></td></tr></table>
+	<audio src="cor.mp3" id="cor">
+	<audio/>
+	<audio src="inc.mp3" id="inc">
+	<audio/>
+	<script>
+	function ABCen123(abc){
+var abc123=("ABCDE").split("");
+var en123="";
+abc.split("");
+
+
+for (let i=0; i<abc.length; i++){
+en123+=""+abc123.indexOf(abc[i]);
+}
+return en123;
+
+
+}
+	
+var kl=[];
+
+	function QuizItem(question, variants, answer, enabled, replied, selectionOfUser) {
+	this.question = question;
+	this.variants = variants;
+	this.answer = answer;
+	this.enabled = enabled;
+	this.replied = replied;
+	this.selectionOfUser = selectionOfUser;
+}
+
+
+
+var SansCo="Sans commentaire";
+
+
+//var ep = localStorage.getItem("ep").split("$$***$$");
+
+
+document.getElementById("ttre").innerHTML="";//ep[0];
+var quizQuestions = [];
+
+//alert(ep);
+
+
+var quest=[
+
+
+
+
+"15 le nouveau né prématuré se définit par",
+"Toute naissance viable avant la 35e semaine d'aménorrhée",
+"Toute naissance viable avant la 37e semaine d'aménorrhée",
+"Poids de naissance inférieur à 2500 grammes",
+"Poids de naissance inférieur ou 10e percentile",
+"Aucune des propositions",
+SansCo,
+"B",
+"16 parmi les moyens thérapeutiques suivants, lesquels peuvent être utilisées pour le traitement symptomatique de l'ictère à bilirubine libre du nouveau né",
+"Vitamine K1",
+"Phénobarbital",
+"Paracétamol",
+"Photothérapie",
+"Aucune des propositions",
+SansCo,
+"BD",
+"17 parmi les signes suivant lesquels sont des signes de danger chez le nouveau né",
+"Incapacité de téter ou tété difficile",
+"Hypotonie",
+"Fièvre ou hypothermie",
+"Sourire aux angles",
+"Aucune des propositions",
+SansCo,
+"ABC",
+"18 les signes suivants sont les signes cliniques de gravité du paludisme",
+"Ictère",
+"Hypoglycémie",
+"Hépatomégalie",
+"Insuffisance rénale",
+"Aucune des propositions",
+SansCo,
+"ABD",
+
+
+"19 Les signes suivants sont les signes de danger chez l'enfant malade âgé de 2 à 59 ans ",
+"Vomissements incoercibles",
+"Toux et difficultés respiratoires",
+"Incapable de boire ou de téter ",
+"Antécédent de convulsions ou convulsions actuelles",
+"Aucune des propositions",
+SansCo,
+"ABCD",
+"20 Lesquels des trois catégories de signes suivant permettent de poser le diagnostic positif de rhumatisme articulaire",
+"Une douleur ostéo articulaire récurrente",
+"Un tableau clinique évident (polyarthrite, cardite) et un tableau clinique mineur (fièvre, arthralgie, trouble de rythme)",
+"Une douleur osseuse transfixiante dans un contexte fébrile",
+"Une preuve biologique d'infection streptococcique",
+"Aucune des propositions",
+SansCo,
+"C",
+"21 Lorsque du diagnostic du diabète sucré, quels arguments concourent à différencier le diabète de type 1 à Celui de type 2 ?",
+"La présence des complications micro vasculaires est un argument en faveur du diabète de type 1",
+"La présence des complications micro vasculaires est un argument en faveur du diabète de type 2",
+"Les signes fonctionnels bruyants sont des arguments en faveur d'un diabète de type 1",
+"La présence de corps cétoniques dans les urines est un argument en faveur du diabète de type 2",
+"Aucune des propositions",
+SansCo,
+"ABCD",
+"22 quels sont les examens recommandés du bilan de retentissement et de recherche des facteurs de risques cardiovasculaires d'un diabète de type 2 de découverte récente ?",
+"Examen cyto bactériologique de l'urine",
+"Dosage de la micro albuminurie / protéinurie de 24 heures",
+"Dosage plasmatique de la fraction lipidique",
+"Échographie Doppler des troncs supra aortiques",
+"Aucune des propositions",
+SansCo,
+"BC",
+"23 vous diagnostiquez un diabète de type 2 chez un adulte avec une glycémie à jeun de 9mmol/l . En raison des valeurs de la glycémie :",
+"Le traitement initial recommandé en première intention est la prescription des mesures hygièno diététiques ",
+"Le traitement initial recommandé en première intention associera la metformine aux mesures hygièno diététiques",
+"Le traitement initial recommandé en première intention associera les sulfamides hypoglycémiants aux mesures hygièno diététiques",
+"Le traitement initial recommandé en première intention associera l'insuline aux mesures hygièno diététiques",
+"Aucune des propositions",
+SansCo,
+"B",
+"24 Vous diagnostiquez uniquement devant les signes adrénergiques une hypoglycémie chez un patient diabétique sous traitement anti Diabétique",
+"Le traitement symptomatique de l'hypoglycémie consistera en l'ingestion de 15 grammes de glucose par voie orale",
+"Le traitement symptomatique de l'hypoglycémie consistera en un injection intraveineuse d'une ampoule de 20 mg de sérum Glucosé 30%",
+"Le symptomatique de l'hypoglycémie consistera en une injection intra musculaire d'une ampoule de glucagon",
+"Toutes les molécules anti Diabétique orale peuvent avoir comme effet indésirable une hypoglycémie",
+"Aucune des propositions",
+SansCo,
+"ABD",
+"25 Quels sont les critères pondéraux du diagnostic de la dénutrition chez les personnes de moins de 70 ans ?",
+"Une perte de poids de plus de 2% du poids corporel en moins d'une semaine",
+"Une perte de poids de plus de 2% du poids corporel en moins de 2 semaines",
+"Une perte de poids de plus de 5% du poids corporel en moins de 4 semaines",
+"Une perte de poids de plus de 5% du poids corporel en moins de 12 semaines",
+"Aucune des propositions",
+SansCo,
+"C",
+"26 lors d'un syndrome des anti phospho lipides, la prévention des évènements obstétricaux au cours de la grossesse repose sur les moyens thérapeutiques suivant sauf un ",
+"Fluindione",
+"Calciparine",
+"Exoxaparine sodique",
+"Acide acetyl salicylique",
+"Aucune des propositions",
+SansCo,
+"A",
+"27 Quelles sont les propositions justes concernant le lupus érythémateux disséminé",
+"Les articulaires sont semblables à ceux de la polyarthrite rhumatoïde",
+"Les manifestations dermatologiques sont photo sensibles",
+"L'hydroxy chloroquine est recommandée pour le traitement de fond",
+"L'évolution des formes bien traitées se fait habituellement vers la guérison",
+"Aucune des propositions",
+SansCo,
+"BCD",
+"28 Les anomalies radiographie des mains et poignets lors de la polyarthrite rhumatoïde comportent",
+"Des érosions osseuses marginales ",
+"Des images de condensation osseuse",
+"Un pincement des interlignes articulaires ",
+"Une déminéralisation epiphysaire en bande",
+"Aucune des propositions",
+SansCo,
+"ACD",
+"29 Quelles sont les manifestations cliniques du syndrome de thyréotoxicose",
+"Une fièvre au long cours",
+"Un syndrome d'excitation psychiques",
+"Un syndrome d'hyperphagie",
+"Un amaigrissement progressif",
+"Aucune des propositions",
+SansCo,
+"BD",
+"30 lors de l'examen de la force musculaire globale des membres",
+"Une force motrice a 3 au niveau de l'hémi corps correspond à une hémiplégie",
+"La manœuvre de Mingazzini permet de rechercher un déficit au membre inférieur",
+"La manœuvre de Mingazzini permet de rechercher un déficit au membre supérieur",
+"Une force motrice à 3 correspond à une contraction musculaire sans déplacement du membre",
+"Aucune des propositions",
+SansCo,
+"B",
+"31 la gastrite aiguë à hélico bacter pylori ",
+"Est généralement très symptomatique",
+"Se traduit toujours par des épigastralgies ",
+"Peut se traduire par des nausées ou des vomissements",
+"L'antre est nodulaire à l'endoscopie",
+"Aucune des propositions",
+SansCo,
+"AC",
+"32 concernant les manifestations de l’hémorragie digestive",
+"Le choc hémorragique sans extériorisation doit faire évoquer une hémorragie  digestive basse",
+"Une hémorragie digestive occulte se traduit par une carence martiale",
+"En cas de méléna, le lésions est en aval de l'angle de tretz",
+"L'hematemese est une hémorragie digestive haute",
+"Aucune des propositions",
+SansCo,
+"BD",
+"33 concernant la cirrhose",
+"Une greffe hépatique est indiqué en cas d'ascite réfractaire et ou une insuffisance hépatique grave",
+"La créatinine est un marqueur biologique du score de child pug",
+"En pratique clinique, la certitude d'une cirrhose est histologique et la biopsie est indispensable au diagnostic",
+"En cas hypertension Portale, le flux sanguin est mesuré à l'échographie Doppler hépatique",
+"Aucune des propositions",
+SansCo,
+"ACD",
+"34 concernant le refus gastro œsophagien",
+"Les régurgitations sont toujours présentes ",
+"L'association pyrosis épigastralgies est très spécifique et suffit pour poser le diagnostic",
+"Il peut avoir des signes digestifs atypiques",
+"Les signes digestifs sont toujours typiques",
+"Aucune des propositions",
+SansCo,
+"ABC",
+"36 la fièvre thyroïde peut se compliquer de ",
+"Encéphalite",
+"Cholécystite",
+"Perforation digestive",
+"Hémorragie digestive",
+"Aucune des propositions",
+SansCo,
+"ACD",
+"37 Parmi les signes suivant, Cochez les signes cliniques qui permettent de classer une déshydratation au plan C . (Déshydratation sévère)",
+"Coma",
+"Pli s'effaçant en moins de 3 secondes ",
+"Yeux très enfoncés dans les globes oculaires",
+"Perte de poids de plus de 10 % du poids corporel",
+"Aucune des propositions",
+SansCo,
+"ACD",
+"38 Parmi les zoonoses bactériennes suivantes, lesquelles peuvent être traitées par la doxycycline",
+"Le Charbon",
+"La peste",
+"La leptospirose",
+"La Borréliose",
+"Aucune des propositions",
+SansCo,
+"ABCD",
+"39 Les formes cliniques de choléra sont",
+"Forme asymptomatique",
+"Forme dysentérique",
+"Le choléra sec ou sidérant",
+"Toutes les réponses sus citées",
+"Aucune des propositions",
+SansCo,
+"ABCD",
+"40 La Covid-19 se manifeste par les signes suivants",
+"Une fièvre",
+"Une toux sèche",
+"Des difficultés respiratoires",
+"Des troubles de l'odorat",
+"Aucune des propositions",
+SansCo,
+"A",
+"41 Qui est le premier responsable de la fonction publique ?",
+"Le ministre en charge de la fonction publique",
+"Le président du Faso",
+"Le chef du gouvernement",
+"Le président du Faso qui délègue ses pouvoirs au chef du gouvernement",
+"Aucune des propositions",
+SansCo,
+"CD",
+"42 le président du Faso peut ",
+"Adopter une loi ",
+"Promulguer une loi",
+"Signer un arrêté",
+"Signer un décret",
+"Aucune des propositions",
+SansCo,
+"B",
+"43 quelle est la juridiction supérieure de l'ordre judiciaire",
+"La cour d'appel",
+"La cour de cassation",
+"Le conseil d'État",
+"La cour des comptes",
+"Aucune des propositions",
+SansCo,
+"B",
+"44 lesquels des monuments ne font pas partie des sept merveilles du monde antique",
+"La statue de la liberté",
+"La grande muraille de Chine",
+"La statue de Zeus a Olympie",
+"Le phare d'Alexandrie",
+"Aucune des propositions",
+SansCo,
+"AB",
+"45 quel est le premier président de l'Union européenne ? ",
+"Mouammar Kadhafi",
+"Jacob Zuma",
+"Alpha Oumar Konare",
+"Thabo Mbeki",
+"Aucune des propositions",
+SansCo,
+"D",
+"46 Le seul passage maritime l'océan Atlantique et la mer méditerranée se situe entre",
+"L'Italie et l'Algérie",
+"l'Espagne et la Maroc",
+"L’Italie et le Maroc",
+"l'Espagne et l'Algérie",
+"Aucune des propositions",
+SansCo,
+"B",
+"47 quel est le nom actuel du secrétaire général des nations unies",
+"Ban Ki Moon",
+"Javier Perez de Guelar",
+"Antonio Guterre",
+"Kofi Annan",
+"Aucune des propositions",
+SansCo,
+"C",
+"48 les fonctionnaires de la fonction publique hospitalière...",
+"Les hospitalo universitaire",
+"Les enseignants chercheurs",
+"Les agents permanents titularisés des établissements publics de santé",
+"Les agents contractuels des établissements publics de santé",
+"Aucune des propositions",
+SansCo,
+"C",
+"50 la ville de Ouagadougou compte combien d'arrondissement",
+"12",
+"13",
+"5",
+"30",
+"Aucune des propositions",
+SansCo,
+"B",
+"51 le président du conseil supérieur de la communication du Burkina Faso se nomme",
+"Mathieu Timbinda",
+"Christophe Dabiré",
+"Charlemagne Ouedraogo",
+"Mathias Tonkoano",
+"Aucune des propositions",
+SansCo,
+"D",
+"52 quel est le nom officiel du terrain de tennis",
+"Terrain de tennis",
+"Le Playground",
+"La pelouse",
+"Le court",
+"Aucune des propositions",
+SansCo,
+"D",
+"53 La satisfaction du patient est",
+"Indicateur de la qualité des soins",
+"N'est pas indicateur de la qualité des soins",
+"N'est pas une recommandation de l'OMS",
+"Ne justifie en rien la qualité des soins",
+"Aucune des propositions",
+SansCo,
+"A",
+"54 la perte de connaissance lors d'une syncope est dû : ",
+"Au déséquilibre électronique",
+"Au choc neurogène",
+"À l’hyperhémie du cerveau",
+"À l’hypoxémie du cerveau",
+"Aucune des propositions",
+SansCo,
+"D",
+"55 le premier cas de décès du à Covid-19 déclaré au Burkina Faso avait pour fonction",
+"Un ministre",
+"Un député",
+"Un maire",
+"Le président",
+"Aucune des propositions",
+SansCo,
+"B",
+"56 les élections couplées présidentielles de législatives ont eu lieu le .... Au Burkina Faso",
+"22/09/20",
+"22/11/20",
+"22/12/20",
+"22/10/20",
+"Aucune des propositions",
+SansCo,
+"B",
+"57 Selon les critères de convergence de l'UEMOA le ratio masse salariale sur recette propre des états membres doit être inférieure ou égale à",
+"0,3",
+"0,45",
+"0,35",
+"0,5",
+"Aucune des propositions",
+SansCo,
+"A",
+"58 quel chef d'état est actuellement le président en exercice de l'UEMOA",
+"Roch M. C. Kabore",
+"Alassane Ouatara",
+"Bab N'Diaw",
+"Macky Sall",
+"Aucune des propositions",
+SansCo,
+"A",
+"59 Qui est l'auteur de l'œuvre à quand l'Afrique",
+"Nazi Boni",
+"Ki Zero",
+"Francois Hollande",
+"Laurent Bado",
+"Aucune des propositions",
+SansCo,
+"B",
+"60 en 2020, combien d'ordres professionnels de santé existaient au Burkina",
+"3",
+"4",
+"5",
+"6",
+"Aucune des propositions",
+SansCo,
+"C"
+];
+
+/*
+
+"1. La ou les maladies suivantes sont la cause de diarrhée fébrile : (0,5pt)",
+"a) Choléra",
+"b) Toxi-infection alimentaire à Salmonella typhi murium",
+"c)Toxi-infection alimentaire à Staphylococcus aureus",
+"d) Shigellose",
+"e)RAS",
+"La TIAC à Staphylococcus aureus ne donne pas de fièvre ",
+"BD",
+"2. Une tamponnade cardiaque s'accompagne de : (0,5pt)",
+"a) Chute de la pression veineuse",
+"b) Pouls paradoxal",
+"c)Turgescence des veines jugulaires",
+"d) Etat de choc",
+"e)RAS",
+"Pouls paradoxal: une diminution de la pression artérielle systolique pendant l'inspiration de > 10 mmHg,",
+"BCD",
+"3. Facteur(s) de risque d'endométrite du post-partum : (0,5pt)",
+"a) Rupture prématurée des membranes.",
+"b) Administration d'ocytociques pendant le travail.",
+"c) Délivrance artificielle",
+"d) Rétention de membranes amniotiques.",
+"e)RAS",
+"Infection ascendante",
+"ACD",
+" 4. Une mauvaise tolérance à une transfusion peut se traduire par : (0,5pt)",
+"a) une hyperthermie",
+"b) des douleurs thoraciques",
+"c) une hémorragie",
+"d) un collapsus",
+"e)RAS",
+"Les signes possibles traduisant la mauvaise tolérance d'une transfusion sont extrêmement variés : hyperthermie avec ou sans frissons, agitation, sensation de chaleur, douleurs lombaires ou thoraciques, hypotension voire collapsus, plus rarement hypertension, dyspnée, toux, expectoration, nausées ou vomissements, ...",
+"AD",
+"5. Parmi les signes suivants, lequel (lesquels) évoque(nt) une hyperhydratation extracellulaire ? (0,5pt)",
+"a) oedèmes",
+"b) hypotension orthostatique",
+"c) confusion",
+"d) prise de poids",
+"e)RAS",
+"La confusion est un signe d'hyperhydratation intra cellulaire",
+"AD",
+"6. La grossesse normale entraîne les modifications biologiques suivantes : (0,5pt)",
+"a) Hémodilution",
+"b) Hyperleucocytose ‹ 15 000 leucocytes / mm3",
+"c) Augmentation de la créatinine",
+"d) Augmentation des plaquettes",
+"e)RAS",
+"Hyperleucocytose physiologique à partir du 2ème trimestre",
+"AB",
+"7. L'examen complémentaire de reférence pour le diagnostic d'invagination intestinale aigue du nourisson est: (0,5pt)",
+"a) l'ASP",
+"b) L'échographie abdominale",
+"c) Le lavement opaque",
+"d) Le scanner",
+"e)RAS",
+"Image en cocade",
+"B",
+"8. Chez l'adulte, les affections suivantes sont habituellement des diagostics différentiels du paludisme simple: (0,5pt)",
+"a) Otite moyenne aigue",
+"b) COVID 19",
+"c) Septicémie",
+"d) Gastrite aigue",
+"e)RAS",
+"Gastrite aigue : douleur épigastrique; Otite moyenne aigue : otalgie ",
+"CD",
+"9. La torsion du cordon spermatique doit conduire à proposer:",
+"a) simple mise en observation de 24h",
+"b) Des anti inflammatoires et des antibiotiques",
+"c) L'exploration chirurgicale urgente de la bourse",
+"d) Doit être explorée en urgence par Doppler en urgence",
+"e)RAS",
+"Urgence chirurgicale",
+"C",
+" 10. Concernant l'appendicite aigui (0,5pn)",
+"a. L'appendicite mésocoeliaque pout simuler une salingite aigué",
+"b. L'appendicite pelvienne peut être révélée par des signes urinaires",
+"c. Le toucher rectal est toujours douloureux",
+"d. Il existe souvent une hyperleucocytose à PNN",
+"e)RAS",
+"a) oclusion fébrile",
+"BD"
+
+*/
+//];
+
+
+var quizQuestions = [];
+var ep="";
+for(var i = 0; i<quest.length/8; i++){
+quizQuestions[i] = new QuizItem(quest[i*8],
+		[quest[i*8+1],
+		quest[i*8+2],
+		quest[i*8+3],
+		quest[i*8+4],
+		quest[i*8+5],		
+		quest[i*8+6]],
+		parseInt(ABCen123(quest[i*8+7])),false,false,undefined);
+}
+
+			//parseInt(quest[i+8])	,false,false,undefined);alert("ok");
+
+ 
+//alert(quest[1*8+7]);
+
+
+
+switch(ep[0]){
+case "ENSCT Med Interne 2021":
+quizQuestions[0].variants[5]=" Toutes les manifestations suivantes sont des syndromes post streptococciques sauf une laquelle ?Toutes les manifestations suivantes sont des syndromes post streptococciques sauf une laquelle ?";
+quizQuestions[1].variants[5]="mon expl1";
+break;
+
+}
+
+
+
+document.getElementById('sur1').innerHTML=quizQuestions.length;
+document.getElementById('sur2').innerHTML=quizQuestions.length;
+document.getElementById('sur3').innerHTML=quizQuestions.length;
+document.getElementById('sur4').innerHTML=quizQuestions.length;
+	var nq=quizQuestions.length-1;
+	var sr=quizQuestions.length;
+	var rt=0;
+	var tr=0;
+	var prog=100/quizQuestions.length;
+	document.getElementById('prog').style.width=prog+'%';
+
+//alert(localStorage.getItem("ep"));
+
+// pTag.innerHTML = test1.question;
+// console.log(quizQuestions[0]);
+var currentIndex = 0, numOfAnswered = 0;
+var currentQuestion = quizQuestions[currentIndex];
+//second ulTag 
+var ulTag = document.getElementsByTagName('ul')[1];
+var liTags = ulTag.getElementsByTagName('input');
+/*
+	this function inserts the current question into the layout
+	of the page: p tag which is a question and ul tag meaning
+	an options
+*/
+function showCurrentQuestion() {
+document.getElementById("lit1").style.backgroundColor="white";
+document.getElementById("lit2").style.backgroundColor="white";
+document.getElementById("lit3").style.backgroundColor="white";
+document.getElementById("lit4").style.backgroundColor="white";
+document.getElementById("lit5").style.backgroundColor="white";
+//kl=true;
+	var headerOfDropdow = document.getElementsByClassName('wrapper')[0];
+	//parse into integer, because it interpretes it as a string
+	var numQuestion = parseInt(currentIndex)+1;
+	headerOfDropdow.getElementsByTagName('span')[0].innerHTML = numQuestion;
+	var pTag = document.getElementsByTagName('p')[0];
+	// console.log(liTags);
+	var ulTag = document.getElementsByTagName('ul')[1];
+	var liTags = ulTag.getElementsByTagName('input');
+	pTag.innerHTML = currentQuestion.question;
+	var lasi="";
+	var lasin=0;
+
+	
+	
+	for (var i=0; i < liTags.length; i++) {
+		//in case the number of variants is less than 4 (e.g. when it's
+		// undefined) disable li tag
+		if (currentQuestion.variants[i] == undefined) {
+			console.log(currentQuestion.variants[i]);
+			liTags[i].className = "doNotDisplay";
+		} else {
+		lasin=i+1;
+		lasi="las"+lasin;
+			console.log(currentQuestion.variants[i]);
+			document.getElementById(lasi).innerHTML = currentQuestion.variants[i];//assign question
+			liTags[i].className = "";
+		}
+	}
+	
+	
+	
+	
+	
+};
+
+
+enableLiOnClickEvents();
+showCurrentQuestion();
+
+//when a variant is selected it becomes highlighted 
+function changeLiStyle() {
+	var selectedItem = document.getElementsByClassName('selected')[0];
+	//disable previously selected item and enable the clicked one
+	if (selectedItem) selectedItem.className = "";
+	this.className = "selected";
+}
+
+
+//self-invoking function to find all li tags 
+// and assing them text from the object 
+// and assign event listeners
+function enableLiOnClickEvents() {
+	for (var i=0; i < liTags.length; i++) {
+		console.log(liTags[i]);
+		//liTags[i].onclick = changeLiStyle;
+	}
+};
+
+var button = document.getElementId('ctrlval');
+button.onclick = submitAndCheckAnswer;
+ var ca=document.getElementById("la1").checked;
+ var cb=document.getElementById("la2").checked;
+var cc=document.getElementById("la3").checked;
+ var  cd=document.getElementById("la4").checked;
+ var  ce=document.getElementById("la5").checked;
+
+
+
+function submitAndCheckAnswer() {
+ var ca=document.getElementById("la1").checked;
+ var cb=document.getElementById("la2").checked;
+var cc=document.getElementById("la3").checked;
+ var  cd=document.getElementById("la4").checked;
+ var  ce=document.getElementById("la5").checked;
+ var  urep=[];
+ var brep=[];
+ for (var i=0; i<(currentQuestion.answer+"").length; i++){brep.push((currentQuestion.answer+"")[i]);}
+if(ca){ urep.push("0");};
+if(cb){ urep.push("1");};
+if(cc){ urep.push("2");};
+if(cd){ urep.push("3");};
+if(ce){ urep.push("4");};
+
+
+
+
+//exp();
+	var selectedItem = document.getElementsByClassName('selected')[0];
+/*	console.log(selectedItem.innerHTML);selectedItem == undefined||*/
+ if (kl.includes(currentIndex)==true)
+   		//alert("deja")
+		{liTags[currentQuestion.answer].className = "correct";}
+else {
+
+   currentQuestion.enabled = true;
+   
+   
+   
+	if (urep.join()	== brep.join()) {
+	if(urep.includes("0")){document.getElementById("lit1").style.backgroundColor="red";}
+	if(urep.includes("1")){document.getElementById("lit2").style.backgroundColor="red";}
+		if(urep.includes("2")){document.getElementById("lit3").style.backgroundColor="red";}
+	if(urep.includes("3")){document.getElementById("lit4").style.backgroundColor="red";}
+	if(urep.includes("4")){document.getElementById("lit5").style.backgroundColor="red";}
+	
+	
+		if(brep.includes("0")){document.getElementById("lit1").style.backgroundColor="#9ACD32";}
+	if(brep.includes("1")){document.getElementById("lit2").style.backgroundColor="#9ACD32";}
+		if(brep.includes("2")){document.getElementById("lit3").style.backgroundColor="#9ACD32";}
+	if(brep.includes("3")){document.getElementById("lit4").style.backgroundColor="#9ACD32";}
+	if(brep.includes("4")){document.getElementById("lit5").style.backgroundColor="#9ACD32";}
+	
+		kl.push(currentIndex);
+		document.getElementById("cor").playbackRate=4;document.getElementById("cor").volume=0.2;document.getElementById("cor").volume=0.2;
+		document.getElementById("cor").play();exp();
+		if (tr<quizQuestions.length){tr++;};
+			document.getElementById("tr").innerHTML=tr;
+	document.getElementById("rt").innerHTML=rt;
+	if (sr>0){sr=quizQuestions.length-rt-tr;};
+	document.getElementById("sr").innerHTML=sr;
+		console.log("Correct "+ currentQuestion.variants.indexOf(selectedItem.innerHTML));
+		changeTheLayoutAccordingTheResult(selectedItem,"correct", true);
+		checkIfTheLastQuestion(this);//sending button obj as a parameter
+		document.getElementById("cor").playbackRate=4;document.getElementById("cor").volume=0.2;document.getElementById("cor").volume=0.2;
+		document.getElementById("cor").play();exp();
+		
+	} else {
+	
+	if(urep.includes("0")){document.getElementById("lit1").style.backgroundColor="red";}
+	if(urep.includes("1")){document.getElementById("lit2").style.backgroundColor="red";}
+		if(urep.includes("2")){document.getElementById("lit3").style.backgroundColor="red";}
+	if(urep.includes("3")){document.getElementById("lit4").style.backgroundColor="red";}
+	if(urep.includes("4")){document.getElementById("lit5").style.backgroundColor="red";}
+	
+	
+		if(brep.includes("0")){document.getElementById("lit1").style.backgroundColor="#9ACD32";}
+	if(brep.includes("1")){document.getElementById("lit2").style.backgroundColor="#9ACD32";}
+		if(brep.includes("2")){document.getElementById("lit3").style.backgroundColor="#9ACD32";}
+	if(brep.includes("3")){document.getElementById("lit4").style.backgroundColor="#9ACD32";}
+	if(brep.includes("4")){document.getElementById("lit5").style.backgroundColor="#9ACD32";}
+		kl.push(currentIndex);
+		
+				document.getElementById("inc").playbackRate=2;document.getElementById("inc").volume=0.2;
+		document.getElementById("inc").play();exp();
+		console.log("Wrong!");
+		if (rt<quizQuestions.length){rt++;};
+			document.getElementById("tr").innerHTML=tr;
+	document.getElementById("rt").innerHTML=rt;
+	if (sr>0){sr=quizQuestions.length-rt-tr;};
+	document.getElementById("sr").innerHTML=sr;
+		changeTheLayoutAccordingTheResult(selectedItem,"wrong", false);
+		checkIfTheLastQuestion(this);
+		liTags[currentQuestion.answer].className = "correct";
+		document.getElementById("inc").playbackRate=2;document.getElementById("inc").volume=0.2;
+		document.getElementById("inc").play();exp();
+		
+	}	
+}
+}
+
+function changeTheLayoutAccordingTheResult(selectedItem,result,replied) {
+	console.log(result);
+	currentQuestion.replied = replied;
+	//the index corresponding to the selection of user is selectiOfUser
+	currentQuestion.selectionOfUser = currentQuestion.variants.indexOf(selectedItem.innerHTML);
+	selectedItem.className=result;//changing color of selected item by changing className
+	disableLiOnClickEvents();//cannot click on the other litags anymore
+}
+
+//if the current question is the last one then change button style
+//and onclick event(function)
+//to finalize, otherwise continue to the next question 
+function checkIfTheLastQuestion(button) {
+}
+
+function disableLiOnClickEvents() {
+	for (var i=0; i < liTags.length; i++) {
+		;
+	}
+}
+
+function goToNextQuestion() {
+
+
+if (currentIndex<nq){currentIndex++;}
+	// if (currentIndex == quizQuestions.length) {
+	// 	finalize();
+	// 	return alert("Quiz is over. Your result: " + numOfAnswered);
+	// }
+	//changes the current question index before moving to the next one
+	currentQuestion = quizQuestions[currentIndex];
+	//alert(prog);
+	//change button's label and event handler
+	this.innerHTML = "";
+	//this.onclick = submitAndCheckAnswer;
+	this.className = "submit";
+	showCurrentQuestion();
+	enableLiOnClickEvents();
+	
+}
+
+function cleanUpTheLayout() {
+	var mainDiv = document.getElementsByClassName('main')[0];
+	// deleting all child nodes 
+	while (mainDiv.hasChildNodes()) {
+		mainDiv.removeChild(mainDiv.firstChild);
+	}
+	console.log("clean UPP!!");
+}
+
+function finalize() {
+	cleanUpTheLayout();
+	var mainDiv = document.getElementsByClassName('main')[0];
+	var tHeader = document.createElement("p");
+	tHeader.appendChild(document.createTextNode("Review your answers"));
+	tHeader.setAttribute("class","pAboveTable");
+	mainDiv.appendChild(tHeader);
+	var table = document.createElement("table");
+	// table.border='1px';
+	var tr = document.createElement("tr");
+	table.appendChild(tr);
+	var heading = ["Questions", "Your results", "Correct option"];
+	
+	for (var i = 0 ; i < heading.length ; i++) {
+		var th = document.createElement("th");
+		th.width = '200px';
+		th.appendChild(document.createTextNode(heading[i]));
+		tr.appendChild(th);
+		console.log(tr);
+	}
+
+	for (var i = 0 ; i < quizQuestions.length; i++) {
+			
+			var tr = document.createElement('tr');
+			var td = document.createElement('td');
+			td.appendChild(document.createTextNode("Question " + (i+1)));
+			td.setAttribute("class","questionCol");
+			tr.appendChild(td);
+			var td = document.createElement('td');
+			
+			var answer = quizQuestions[i].replied ? (
+				td.className = "correctCol",
+				"Correct"
+				) : (
+				td.className = "wrongCol",
+				"Incorrect"
+				);
+			
+			td.appendChild(document.createTextNode(answer));
+			tr.appendChild(td);
+			var td = document.createElement('td');
+			if (!quizQuestions[i].replied) {
+				var correctAns = quizQuestions[i].variants[quizQuestions[i].answer];
+				td.appendChild(document.createTextNode(correctAns));
+				td.setAttribute("class","correctCol");
+			}
+			tr.appendChild(td);
+			
+			table.appendChild(tr);
+
+	}
+	
+	mainDiv.appendChild(table);
+	var trAll = document.getElementsByTagName("tr");
+	console.log(trAll);
+	for (var i = 1; i < trAll.length; i++) {
+		//trAll[i].onclick = returnToQuestion;
+		console.log("Assigned!");
+	}
+	// var head2 = document.createElement("th");
+	// head2.appendChild(document.createTextNode("Your Result"));
+	// tr.appendChild(head2);
+	// document.body.appendChild(table);
+}
+//dynamicaally creates the question layout when clicked on any of the questions in the result table
+function createQuestionLayout() {
+			var mainDiv = document.getElementsByClassName('main')[0];
+			var wrapperDiv = document.createElement('div');
+			wrapperDiv.className = "wrapper";
+			wrapperDiv.onclick = "showDropdown";
+			mainDiv.appendChild(wrapperDiv);
+			for (var j = 0 ; j < 2; j++) {
+				var span = document.createElement('span');
+				wrapperDiv.appendChild(span);
+			}
+			span.innerHTML = "/ "+quizQuestions.length;
+			var ulDdown = document.createElement('ul');
+			ulDdown.className = "dropdown";
+			mainDiv.appendChild(ulDdown);
+			var pTag = document.createElement('p');
+			pTag.className = "question";
+			var ulTag = document.createElement('ul');
+			mainDiv.appendChild(pTag);
+			mainDiv.appendChild(ulTag);
+			for (var i = 0 ; i < 4; i++) {
+				var liTag = document.createElement('li');
+				ulTag.appendChild(liTag);
+				var liTag1 = document.createElement('li');
+				ulDdown.appendChild(liTag1);
+			}
+			var button = document.createElement('button');
+			button.innerHTML = "Back";
+			button.className = "back";
+      //goes back to the table layout when clicked
+			button.onclick = finalize;
+			mainDiv.appendChild(button);
+}
+
+function returnToQuestion() {
+	console.log(this);
+	var questionTitle = this.getElementsByClassName("questionCol")[0].innerHTML;
+	var questionNum = questionTitle[questionTitle.length -1];
+	
+ 
+ 			cleanUpTheLayout();
+			createQuestionLayout();
+			currentQuestion = quizQuestions[questionNum -1];
+			// change currentIndex in orderto correctly display
+			// it on the new layout
+			currentIndex = questionNum-1;
+			showCurrentQuestion();
+			var correctLiNum = quizQuestions[questionNum-1].answer;
+  if (quizQuestions[questionNum-1].enabled) {
+	 	if (quizQuestions[questionNum-1].replied) {
+	 		
+			document.getElementsByTagName("li")[correctLiNum+4].className="correct";
+	
+		} else {
+			var selectedLiNum = quizQuestions[questionNum-1].selectionOfUser;
+			document.getElementsByTagName("li")[selectedLiNum+4].className="wrong";
+			document.getElementsByTagName("li")[correctLiNum+4].className="correct";
+		
+	 }
+}
+}
+
+function showDropdown() {
+	var dropdown = document.getElementsByClassName("dropdown")[0];
+	 var dropdownItems = dropdown.getElementsByTagName("li");
+	 console.log(dropdownItems);
+	 for (var i = 0 ; i < dropdownItems.length; i++)
+	 	dropdownItems[i].onclick = clickOnAnyQuestionFromDropdown;
+	var display = dropdown.style.display;
+	if (display=="") {
+		;
+	} 
+	else {
+		;
+	};
+}
+
+function hideDropdown() {
+	var dropdown = document.getElementsByClassName("dropdow")[0];
+	var dropdownItems = dropdown.getElementsByTagName("li");
+	var display = dropdown.style.display;
+	if (display=="") {
+		dropdown.style.display = "block";
+	} 
+	else {
+		dropdown.style.display ="";
+	};
+}
+
+/*
+the number of action taken when any of the ul items is clicked on:
+getting the number of question and show the current question
+*/
+function clickOnAnyQuestionFromDropdown() {
+	console.log(this);
+	var questionNum = this.getElementsByTagName('span')[0].innerHTML;
+	currentQuestion = quizQuestions[questionNum-1];
+	hideDropdown();
+	currentIndex = questionNum-1;
+	showCurrentQuestion();
+}
+// function enableLiOnClickEvents() {
+// 	for (var i=0; i < liTags.length; i++) {
+// 		// console.log(liTags[i]);
+// 		liTags[i].onclick = "";
+// 	}
+// }
+
+function goToNextQuestion2() {
+
+	 document.getElementById("la1").checked=false;
+ document.getElementById("la2").checked=false;
+document.getElementById("la3").checked=false;
+document.getElementById("la4").checked=false;
+document.getElementById("la5").checked=false;
+	//document.getElementById("xp").style.display="none";
+if (currentIndex>0){currentIndex--;prog-=100/quizQuestions.length;document.getElementById('prog').style.width=prog+'%';};
+	// if (currentIndex == quizQuestions.length) {
+	// 	finalize();
+	// 	return alert("Quiz is over. Your result: " + numOfAnswered);
+	// }
+	//changes the current question index before moving to the next one
+	currentQuestion = quizQuestions[currentIndex];
+	//change button's label and event handler
+	this.innerHTML = "";
+	//this.onclick = submitAndCheckAnswer;
+	this.className = "submit";
+	showCurrentQuestion();
+	enableLiOnClickEvents();
+	
+
+
+}
+	function goToNextQuestion3() {
+	
+		 document.getElementById("la1").checked=false;
+ document.getElementById("la2").checked=false;
+document.getElementById("la3").checked=false;
+document.getElementById("la4").checked=false;
+document.getElementById("la5").checked=false;
+	//document.getElementById("xp").style.display="none";
+if (currentIndex<nq){currentIndex++;prog+=100/quizQuestions.length;document.getElementById('prog').style.width=prog+'%';}
+	// if (currentIndex == quizQuestions.length) {
+	// 	finalize();
+	// 	return alert("Quiz is over. Your result: " + numOfAnswered);
+	// }
+	//changes the current question index before moving to the next one
+	currentQuestion = quizQuestions[currentIndex];
+	
+	
+	
+	
+	//change button's label and event handler
+	this.innerHTML = "";
+	//this.onclick = submitAndCheckAnswer;
+	this.className = "submit";
+	showCurrentQuestion();
+	enableLiOnClickEvents();
+	
+}
+this.onclick = submitAndCheckAnswer;
+function exp(){ document.getElementById("xpn").style.display="block";document.getElementById("xpn").innerHTML="<table style='border: solid black 0px'><tr><td onclick='cl()'><img src='cl.jpg' onclick='cl()' style='width:30px;border-radius:5px;margin:1px;position:sticky;'></td><td style='text-transform:lowercase'><span  style='text-transform:uppercase;'><i>COMMENTAIRE : </i></span>"+ currentQuestion.variants[5]+"</td></tr></table>";};
+
+function cl()	{ document.getElementById("xpn").style.display="none";}
+	
+	
+//alert(localStorage.getItem("lastname2"));	
+
+
+
+	  
+	</script>
+	
+		<script>
+
+
+
+//alert(ABCen123("ABC"));
+
+		</script>
+	
+	
+	<style>
+	
+	
+
+/*googleapis*/
+body {
+	font-family: "Open Sans", Times, serif;
+	/*font-family:"Open Sans";*/
+	font-size: 1em;
+}
+
+.main {
+	margin-left: 10px;
+	margin-top: 100px;
+}
+.question {
+	font-size:11px ;
+	height:auto;
+}
+
+ul {
+	list-style: none;
+	margin-left:-40px;
+}
+li {
+	text-decoration: none;
+	border: 1px solid lightgray;
+	margin:10px;
+	padding: 10px;
+	border-radius:15px 0px / 15px;
+	font-size:15px ;
+}
+
+.dropdown {
+	margin-right: 3px;
+	/*z-index: 999;*/
+	position: absolute;
+	top: 115px;
+	padding-left: 0;
+	box-shadow: 1px 1px 10px ;
+  /*dropdow is hidden by default*/
+	display: none; 
+	font-size: 2px;
+}
+
+.wrapper {
+	background: #d7ff99;
+	padding: 3px 15px;
+	border-radius: 4px;
+	width: 90%;
+}
+.dropdown li {
+	
+	border: 0px;
+	font-size: 0.9em;
+	width:100px;
+	margin: 0px;
+	background: white;
+}
+
+li:hover {
+	background: #ECEEF0;
+}
+/*disable hover effect when li tag is selected*/
+.selected, .selected:hover {
+	background: #FFDEAD;
+}
+
+.correct, .correct:hover {
+	background: #9ACD32;
+	color: white;
+}
+
+.wrong, .wrong:hover {
+	background: red;
+	color: white;
+}
+
+button {
+	padding:5px 14px;
+	font-size: 1.1em;
+	border:none;
+	border-radius: 5px;
+}
+.submit {
+	color: white;
+	background: #2DB82D;
+}
+.next {
+	background: #B0C4DE;
+}
+.finalize {
+	background: #1A1AFF;
+}
+.back {
+	background: #ffff33;
+}
+.doNotDisplay {
+	display: none;
+}
+
+td,th {
+	border:1px solid lightgray;
+	padding: 10px;
+	text-transform: uppercase;
+	font-weight: 700;
+	/*font-size:14px;*/
+}
+
+th {
+	border-bottom:3px solid gray;
+	background: #C2CCE0;
+}
+
+table {
+	border:2px solid gray;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+td {
+	cursor:pointer;
+}
+
+.questionCol {
+	color: #5b666f;
+}
+.correctCol {
+	color: #6a9d21;
+}
+.wrongCol {
+	color: #9d2138;
+}
+.pAboveTable {
+	font-size: 1.4em;
+}
+/*tr {
+	cursor:pointer;
+}*/
+
+#ctrlb{
+	
+	
+	
+	bottom:10px;
+	left:20px;
+
+	
+}
+
+#ctrln{
+	
+	float:right;
+
+	bottom:10px;
+right:20px;
+
+	
+}	
+#ctrlval{
+	
+	background-Color:#6a9d21;
+
+	
+width:100%;
+
+
+
+text-align:center;
+border-radius: 20px 20px 0px 0px;
+	
+}
+
+
+#ctrlval:active{
+	
+	
+	
+right:33%;
+	bottom:10px;
+width:100%;
+
+height:40px;
+
+text-align:center;
+border-radius: 20px 20px 0px 0px;
+}
+
+
+
+#valim{
+
+height:140% ;
+position:relative;
+bottom:8px;
+
+}
+
+
+#valim:active{
+
+height:120% ;
+position:relative;
+bottom:0px;
+
+}
+
+
+#tctr{
+height:40px;
+background:linear-gradient(#ececee 41%, #6a9d21 20%);
+width:95%;
+position:fixed;
+bottom:10px;
+display:flex;
+box-shadow: 1px 1px 2px 2px gray ; backg round:linear-gradient(#6a9d21,lightgray);
+border-radius: 0px 0px 20px 20px;
+jus tify-content:space-between;
+
+}
+
+
+#xpn {
+  display: block;
+  padding: 6px;
+  margin: 6px;
+  border-radius: 10px 10px 0px 0px;
+    border: 2px solid green;
+  background-color: rgb(223,240,216);
+ // position:fixed;
+  top:5px;
+  opacity:0.9;
+
+}
+
+
+.alert .inner {
+  
+  padding: 6px;
+  margin: 6px;
+  border-radius: 10px;
+    border: 2px solid green;
+  background-color: rgb(223,240,216);
+
+}
+
+.alert .close {
+  float: right;
+  margin: 3px 10px 0px 0px;
+  cursor: pointer;
+}
+
+/*
+.alert input {
+  display: none;
+}
+
+.alert input:checked ~ * {
+  animation-name: dismiss,hide;
+  animation-duration: 300ms;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0s,100ms;
+}
+*/
+@keyframes dismiss {
+  0% {
+    opacity: 1;
+  }
+  90%, 100% {
+    opacity: 0;
+    font-size: 0.1px;
+    transform: scale(0);
+  }
+}
+.question {
+	font-size:11px ;
+	height:auto;
+	
+}
+
+	</style>
+</body>
+</html>

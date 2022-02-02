@@ -1,0 +1,2056 @@
+<html>
+
+  <head>
+
+
+        <meta charset="utf-8">
+
+
+</head>
+
+
+<audio id="o" src="o.mp3"></audio><script>document.getElementById("o").volume=0.07; document.getElementById("o").play();</script><div class="container">
+  
+  <a hr ef="mis20.html" ><div onclick="mis19();"  class="box">
+    
+      <img src="ex.jpg" class="iconbound word">
+      <div class="label">ENSCT 2019</div>
+     Médecine Interne
+    </div>
+  </a>
+
+  <a hr ef="mis20.html" ><div onclick="ped19();"  class="box">
+    
+       <img src="ex.jpg" class="iconbound word">
+      <div class="label">ENSCT 2019</div>
+      Pédiatrie
+    </div>
+  </a>
+  
+  <a hr ef="mis20.html" ><div onclick="sap19();"  class="box">
+    
+      <img src="ex.jpg" class="iconbound word">
+      <div class="label">ENSCT 2019</div>
+     Santé Publique
+    </div>
+  </a>
+  
+  <a hr ef="mis20.html" ><div onclick="chi19();"  class="box">
+    
+    <img src="ex.jpg" class="iconbound word">
+      <div class="label">ENSCT 2019</div>
+     Chirurgie
+    </div>
+  </a>
+  
+   <a hr ef="mis20.html" ><div onclick="gyn19();"  class="box">
+     
+    <img src="ex.jpg" class="iconbound word">
+      <div class="label">ENSCT 2019</div>
+      Gynécologie
+    </div>
+  </a>
+  
+  <a hr ef="mis20.html" ><div onclick="cas19();"  class="box">
+    
+     <img src="ex.jpg" class="iconbound word">
+      <div class="label">ENSCT 2019</div>
+     Cas Cliniques Courts
+    </div>
+  </a>
+  
+ 
+
+</div>
+
+
+
+
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", Futura, Trebuchet MS, Arial, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+   background-color:#d3d3d3 ;
+  
+  ba ckground: linear-gradient(to bottom right, #F06966, #FAD6A6) no-repeat;
+  bac kground: -moz-linear-gradient(to bottom right, #F06966, #FAD6A6) no-repeat;
+  back ground: -ms-linear-gradient(to bottom right, #F06966, #FAD6A6) no-repeat;
+  backg round: -webkit-linear-gradient(to bottom right, #F06966, #FAD6A6) no-repeat;
+  backgr ound: -o-linear-gradient(to bottom right, #F06966, #FAD6A6) no-repeat;
+}
+
+.container{
+  text-align: center;
+  padding-top: 10px;
+}
+
+.box {
+  display: inline-block;
+  text-align: center;
+  padding-top: 7px;
+  width: 100px;
+  height: 150px;
+  margin: 1em;
+  background-color: white;
+  -webkit-box-shadow: 5px 5px 0px 0px #353535; 
+  box-shadow: 5px 5px 0px 0px #353535;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.box:hover{
+  cursor: pointer;
+  -webkit-box-shadow: 14px 25px 0px 0px #353535; 
+  box-shadow: 14px 25px 0px 0px #353535;
+}
+
+.iconbound{
+  width: 80px;
+  height: 70px;
+  margin: 1px;
+  margin-bottom: 5px;
+  padding: 1px;
+  border-radius: 14px;
+  background-color: #F14658;
+  color: white;
+}
+
+.label{
+  text-align: center;
+  color: white;
+  background-color: #353535;
+  padding: 4px;
+  margin-bottom: 6px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.word{
+  background-color: #31578f;
+}
+.excel{
+  background-color: #209e63;
+}
+.power{
+  background-color: #cd4f2e;
+}
+.zip{
+  background-color: #f4be2e;
+}
+.video{
+  background-color: #8e44ad;
+}
+.image{
+  background-color: #16a085;
+}
+.csv{
+  background-color: #27ae60;
+}
+
+.link{
+  display: block;
+  cursor: pointer;
+  border-radius: 20px;
+  margin: 10px 40px;
+  padding: 17px;
+  color: #3498db;
+  font-size: 200%;
+  font-weight: 900;
+  text-align: center;
+  background-color: white;
+  transition: all 0.3s ease;
+  -webkit-box-shadow: 14px 14px 0px 0px #353535; 
+  box-shadow: 14px 14px 0px 0px #353535;
+}
+
+.link:hover{
+  cursor: pointer;
+  -webkit-box-shadow: 20px 20px 0px 0px #353535; 
+  box-shadow: 20px 20px 0px 0px #353535;
+  color: #2980b9;
+}
+
+a:visited {color:#353535;} 
+a:hover {color:#353535;}  
+a:active {color:#353535;}
+
+</style>
+
+
+<script>
+
+	function QuizItem(question, variants, answer, enabled, replied, selectionOfUser) {
+	this.question = question;
+	this.variants = variants;
+	this.answer = answer;
+	this.enabled = enabled;
+	this.replied = replied;
+	this.selectionOfUser = selectionOfUser;
+}
+
+var quizQuestions = [];
+var ep;
+
+</script>
+
+<script>
+
+
+
+function mis19(){
+ep = "ENSCT Med Interne 2019";
+ep+="$$***$$";
+ //alert(ep);
+
+quizQuestions[	0	] = new QuizItem("	1 Parmi les causes habituelles suivantes d'insuffisances mitrale aigue, l'une est incorrecte, laquelle	",
+		["A-	  Rupture de cordage	",
+		"B-	  La myocardiopathie hypertrophique et obstructive	",
+		"C-	  Le traumatisme	",
+		"D-	  L'endocardite bactérienne	",
+		"E-	  L'infarctus du myocarde	"],
+			1	,false,false,undefined);
+quizQuestions[	1	] = new QuizItem("	2 L'endocardite d'Osler sur prolapsus mitral est responsable des complications suivantes sauf une laquelle	",
+		["A-	  Embolies septiques pulmonaires multiples	",
+		"B-	  Hémiplégie droite avec aphasie	",
+		"C-	  Hématurie microscopique	",
+		"D-	  Spondylite lombaire	",
+		"E-	  Ischémie aigue d'un membre	"],
+			0	,false,false,undefined);
+quizQuestions[	2	] = new QuizItem("	3 Tous les signes suivants sont très évocateurs de tamponnade cardiaque sauf un lequel ?	",
+		["A-	  Turgescence des veines jugulaires	",
+		"B-	  Silhouette cardiaque peu mobiles en scopie	",
+		"C-	  Signes d'œdème pulmonaire	",
+		"D-	  Diminution inspiratoire de la pression artérielle systolique	",
+		"E-	  Pouls paradoxal	"],
+			2	,false,false,undefined);
+quizQuestions[	3	] = new QuizItem("	4 Parmi les médicaments suivants utilisable dans l’insuffisance cardiaque congestive quel est celui qui est formellement contre indiqué ?	",
+		["A-	  Digitaliques	",
+		"B-	  Dérivés nitrés	",
+		"C-	  Bêtabloqueurs	",
+		"D-	  Diurétiques	",
+		"E-	  Prazosine	"],
+			2	,false,false,undefined);
+quizQuestions[	4	] = new QuizItem("	5 Parmi les propositions suivantes caractérisant l'hypertension artérielle maligne, l'une est Inexacte laquelle ?	",
+		["A-	  Fond d'œil au stade 2	",
+		"B-	  Pression artérielle diastolique supérieure à 130mmHg	",
+		"C-	  Présence de signes d'insuffisance ventriculaire gauche	",
+		"D-	  Présence de signes fonctionnels neurosensoriels importants	",
+		"E-	  Présence de signes d'insuffisance rénale.	"],
+			0	,false,false,undefined);
+quizQuestions[	5	] = new QuizItem("	6 Toutes les circonstances suivantes peuvent augmenter le risque de toxicité de la digoxine, sauf une laquelle ?	",
+		["A-	  Insuffisance rénale	",
+		"B-	  Insuffisance cardiaque très évoluée	",
+		"C-	  Hyperthyroïdie	",
+		"D-	  Hyperkaliémie	",
+		"E-	  Hypercalcémie	"],
+			2	,false,false,undefined);
+quizQuestions[	6	] = new QuizItem("	7 Les conditions suivantes sont les syndromes paranéoplasiques susceptibles d'être observés au cours des cancers bronchiques sauf une, laquelle ?	",
+		["A-	  Le syndrome de Schwartz Bartter	",
+		"B-	  L'hippocratisme digital	",
+		"C-	  Le syndrome de Cushing	",
+		"D-	  L'hypercalcémie	",
+		"E-	  L'enophtalmie	"],
+			4	,false,false,undefined);
+quizQuestions[	7	] = new QuizItem("	8 Comment fait-on un diagnostic de bronchite chronique ?	",
+		["A-	  Par l’interrogatoire	",
+		"B-	  Par l'exploration fonctionnelle respiratoire	",
+		"C-	  Par la radiographie pulmonaire	",
+		"D-	  Par la fibroscopie bronchique	",
+		"E-	  Par le dosage de l'alpha I antitrypsine sérique	"],
+			0	,false,false,undefined);
+quizQuestions[	8	] = new QuizItem("	9 Les conditions suivantes sont toutes les complications possibles des dilatations des bronches sauf une laquelle	",
+		["A-	  Abcès du poumon	",
+		"B-	  Hémoptysies	",
+		"C-	  Pleurésie purulente	",
+		"D-	  Mucoviscidose	",
+		"E-	  Cœur pulmonaire chronique	"],
+			3	,false,false,undefined);
+quizQuestions[	9	] = new QuizItem("	10 L'hypertension artérielle pulmonaire de type pré capillaire d'une insuffisance respiratoire chronique est liée à	",
+		["A-	  a) La vasoconstriction due à l'hypoxie	",
+		"B-	  b) Une vasodilatation due à l'hypercapnie	",
+		"C-	  c) La polyglobulie	",
+		"D-	  d) Une augmentation de la pression capillaire et veineuse pulmonaire	",
+		"E-	  e) Un abaissement du débit cardiaque	"],
+			0	,false,false,undefined);
+quizQuestions[	10	] = new QuizItem("	11 Lequel parmi les signes cliniques suivants n'appartient pas au tableau clinque d'une fibrose pulmonaire interstitielle diffuse	",
+		["A-	  a) Hippocratisme digital	",
+		"B-	  b) Dyspnée	",
+		"C-	  c) Galop gauche	",
+		"D-	  d) Amaigrissement	",
+		"E-	  e) Râles crépitants	"],
+			2	,false,false,undefined);
+quizQuestions[	11	] = new QuizItem("	12 Chez un homme de 44 ans, ancien tuberculeux, la survenue d'une hémoptysie de sang rouge doit faire évoquer toutes les conditions suivantes sauf une laquelle ?	",
+		["A-	  a) Un cancer bronchique	",
+		"B-	  b) Une récidive de la tuberculose pulmonaire	",
+		"C-	  c) Une dilatation des bronches para cicatricielle	",
+		"D-	  d) Un aspergillose sur séquelles de tuberculose	",
+		"E-	  e) Une candidose bronchique	"],
+			4	,false,false,undefined);
+quizQuestions[	12	] = new QuizItem("	13 Toutes les propositions suivantes concernant le reflux gastro œsophagien sont exactes sauf une laquelle ?	",
+		["A-	  a) Il est secondaire a des contractions œsophagiennes rétrogrades	",
+		"B-	  b) Il peut s'observer en l'absence de hernie hiatale	",
+		"C-	  c) Il est souvent marqué par un pyrosis	",
+		"D-	  d) Il peut évoluer sous le masque de douleurs pseudo angineuses	",
+		"E-	  e) Il est lié à l'incontinence du sphincter inférieur de l'œsophage	"],
+			0	,false,false,undefined);
+quizQuestions[	13	] = new QuizItem("	14 Chez l'adulte jeune, la cause la plus fréquente de syndrome clinique de sténose du pylore est	",
+		["A-	  a) Le cancer gastrique	",
+		"B-	  b) L'ulcère duodénal	",
+		"C-	  c) L'hypertrophie du pylore	",
+		"D-	  d) L'ulcère gastrique	",
+		"E-	  e) Les complications gastriques	"],
+			1	,false,false,undefined);
+quizQuestions[	14	] = new QuizItem("	15. Quel est le critère le plus précis pour apprécier l'importance d'une hémorragie digestive haute algue ?	",
+		["A-	  a) Hématocrite	",
+		"B-	  b) Le volume de sang aspiré par la sonde nasogastrique	",
+		"C-	  c) Le nombre d'unités de sang et de solutés perfusés pour le maintien hémodynamique	",
+		"D-	  d) La baisse de la pression artérielle	",
+		"E-	  e) La pression veineuse centrale initiale	"],
+			2	,false,false,undefined);
+quizQuestions[	15	] = new QuizItem("	16 Une douleur épigastrique sans irradiation post prandiale tardive, à type de crampe rythmé dans la journée, évoque avant tout	",
+		["A-	  a) Une douleur ulcéreuse	",
+		"B-	  b) Une gastrite	",
+		"C-	  c) Un reflux gastro œsophagien	",
+		"D-	  d) Une pancréatite aigüe hémorragique	",
+		"E-	  e) Une colique hépatique	"],
+			0	,false,false,undefined);
+quizQuestions[	16	] = new QuizItem("	17 Parmi les signes cliniques et biologiques suivants, lequel est en faveur d'une diarrhée par malabsorption	",
+		["A-	  Amaigrissement important	",
+		"B-	  Diarrhée glaireuse	",
+		"C-	  Diarrhée sanglante	",
+		"D-	  Poids de selles à 150g/J	",
+		"E-	  Stéatorrhée à 2g/J	"],
+			0	,false,false,undefined);
+quizQuestions[	17	] = new QuizItem("	18 Parmi les signes suivants, un seul n'est pas compatible avec le diagnostic de colopathie fonctionnelle isolée	",
+		["A-	  Douleur abdominale	",
+		"B-	  Amaigrissement	",
+		"C-	  Constipation	",
+		"D-	  Diarrhée	",
+		"E-	  Ballonnement post prandial	"],
+			1	,false,false,undefined);
+quizQuestions[	18	] = new QuizItem("	19 Parmi les propositions suivantes, quelle est celle qui est e plus souvent responsable d'une pancréatite aigüe	",
+		["A-	  Alcool	",
+		"B-	  Lithiase biliaire	",
+		"C-	  Obésité	",
+		"D-	  Clofibrate	",
+		"E-	  Hyperparathyroïdie	"],
+			1	,false,false,undefined);
+quizQuestions[	19	] = new QuizItem("	20 Il y a toujours dans un syndrome néphrotique tous les éléments suivants sauf	",
+		["A-	  Une hypo albuminémie inférieure à 30g/l	",
+		"B-	  Une augmentation du cholestérol plasmatique	",
+		"C-	  Une augmentation des gammaglobulines sériques	",
+		"D-	  Une concentration basse du sodium urinaire	",
+		"E-	  Un risque de thrombose des vaisseaux	"],
+			2	,false,false,undefined);
+quizQuestions[	20	] = new QuizItem("	21 Le syndrome néphritique est caractérisé par tous les éléments suivants sauf	",
+		["A-	  HTA	",
+		"B-	  Hypo protidémie inférieure à 60g par litre	",
+		"C-	  Hématurie avec cylindrurie	",
+		"D-	  Œdèmes des membres inférieurs	",
+		"E-	  Protéinurie permanente	"],
+		    1  ,false,false,undefined);
+quizQuestions[	21	] = new QuizItem("	22 La dissolution d'un calcul d'acide urique nécessite	",
+		["A-	  Un pH urinaire acide	",
+		"B-	  Un pH urinaire alcalin	",
+		"C-	  Un pH urinaire neutre	",
+		"D-	  Une densité urinaire élevée	",
+		"E-	  Une concentration urinaire élevée	"],
+			1	,false,false,undefined);
+quizQuestions[	22	] = new QuizItem("	23 Les propositions suivantes concernent la prostatite aigue sauf une laquelle ?	",
+		["A-	  Une prostatite douloureuse	",
+		"B-	  Une rétention aigue d'urine	",
+		"C-	  Brûlures mictionnelles	",
+		"D-	  Une prostatite dure et pierreuse	",
+		"E-	  Une fièvre élevée	"],
+			3	,false,false,undefined);
+quizQuestions[	23	] = new QuizItem("	24 La présence de pus dans les urines invite à rechercher toutes les causes suivantes sauf une laquelle ?	",
+		["A-	  La lithiase rénale	",
+		"B-	  Un reflux vésico rénal	",
+		"C-	  Une glomérulonéphrite	",
+		"D-	  Une rétention vésicale	",
+		"E-	  Une cystite	"],
+			2	,false,false,undefined);
+quizQuestions[	24	] = new QuizItem("	25 Parmi les syndromes suivants, lequel contre indique formellement la prescription de biguanides au cours du diabète sucré	",
+		["A-	  a) L'obésité	",
+		"B-	  b) L'insuffisance rénale	",
+		"C-	  c) Le diabète insulino dépendant	",
+		"D-	  d) L’angor	",
+		"E-	  e) Une neuropathie périphérique	"],
+			1	,false,false,undefined);
+quizQuestions[	25	] = new QuizItem("	26 L'hypertriglycéridémie de type 4 peut se compliquer de	",
+		["A-	  a) Athérome	",
+		"B-	  b) Pancréatite aigue	",
+		"C-	  c) HTA	",
+		"D-	  d) Obésité	",
+		"E-	  e) Goutte	"],
+			1	,false,false,undefined);
+quizQuestions[	26	] = new QuizItem("	27 Quel est le signe clinique le plus évocateur d'acromégalie ?	",
+		["A-	  a) Gonflement des doigts	",
+		"B-	  b) Prise de poids	",
+		"C-	  c) Chute des poils	",
+		"D-	  d) Prognathisme de la mâchoire inférieure	",
+		"E-	  e) Exophtalmie	"],
+			3	,false,false,undefined);
+quizQuestions[	27	] = new QuizItem("	28 Indiquez parmi les paramètres biochimiques suivants celui qui évoque l'existence d’un adénome de Conn chez un hypertendu	",
+		["A-	  a) Hyper natrémie	",
+		"B-	  b) Hypokaliémie	",
+		"C-	  c) Acidose métabolique	",
+		"D-	  d) Hyperglycémie	",
+		"E-	  e) Activité rénine normale dans les veines périphériques	"],
+			1	,false,false,undefined);
+quizQuestions[	28	] = new QuizItem("	29 Toutes les affirmations suivantes concernant l'érysipèle sont exactes sauf une laquelle ?	",
+		["A-	  a) Elle est habituellement située à proximité de la porte d'entrée du germe	",
+		"B-	  b) Elle est due au streptocoques béta hémolytique A	",
+		"C-	  c) Elle est récidivante	",
+		"D-	  d) Elle est plus fréquente aux membres Inférieurs qu'au visage actuellement	",
+		"E-	  e) Elle a un début progressif, non douloureux	"],
+			4	,false,false,undefined);
+quizQuestions[	29	] = new QuizItem("	30 Les levures du genre candida peuvent être responsable de toutes les affections suivantes sauf une laquelle ‘ ?	",
+		["A-	  a) Vaginite	",
+		"B-	  b) Muguet	",
+		"C-	  c) Teigne du cuir chevelu	",
+		"D-	  d) Langue noir villeuse	",
+		"E-	  e) Intertrigo	"],
+			2	,false,false,undefined);
+quizQuestions[	30	] = new QuizItem("	31 La maladie de Paget entraine les modifications suivantes sauf une ; laquelle ?	",
+		["A-	  a) Surdité	",
+		"B-	  b) Insuffisance cardiaque	",
+		"C-	  c) Céphalées	",
+		"D-	  d) Coxopathie	",
+		"E-	  e) Ostéonécrose	"],
+			4	,false,false,undefined);
+quizQuestions[	31	] = new QuizItem("	32 Pour une crise de goutte aigue chez un insuffisant rénal chronique le traitement à Initier d'emblée est	",
+		["A-	  a) L'aspirine	",
+		"B-	  b) La phénylbutazone	",
+		"C-	  c) La colchicine	",
+		"D-	  d) Le benzobromarone (Desuric)	",
+		"E-	  e) L'allopurinol (Zyloric)	"],
+			2	,false,false,undefined);
+quizQuestions[	32	] = new QuizItem("	33 Pour le diagnostic d'un chancre syphilitique un seul des examens suivants est inutile lequel ?	",
+		["A-	  a) L'examen à l'ultramicroscope	",
+		"B-	  b) Le VDRL	",
+		"C-	  c) Le TPHA	",
+		"D-	  d) L'immunofluorescence	",
+		"E-	  e) Le test de Nelson	"],
+			4	,false,false,undefined);
+quizQuestions[	33	] = new QuizItem("	34 Après traitement correct d'une fièvre typhoïde un sujet reste porteur de Salmonelle. Que doit ton rechercher	",
+		["A-	  a) Un abcès splénique	",
+		"B-	  b) Une lithiase biliaire	",
+		"C-	  c) Un ulcère de l'estomac	",
+		"D-	  d) Un diverticule de Meckel	",
+		"E-	  e) Un abcès appendiculaire	"],
+			1	,false,false,undefined);
+quizQuestions[	34	] = new QuizItem("	35. Un agriculteur de 45 ans a une plaie minime de la main. Il a été correctement vacciné contre le tétanos à l'âge de 19 ans avec un rappel à 20 ans. Que faites-vous pour prévenir le tétanos ?	",
+		["A-	  a) Rien	",
+		"B-	  b) Un rappel d'anatoxine et une injection d'immunoglobulines humaines antitétaniques	",
+		"C-	  c) Deux injections d'anatoxine à un mois d'intervalle	",
+		"D-	  d) Un rappel d'anatoxine	",
+		"E-	  e) Une injection d'immunoglobulines humaines antitétaniques	"],
+			3	,false,false,undefined);
+quizQuestions[	35	] = new QuizItem("	36 Quel est l'antibiotique actif sur les germes responsables d'une gangrène gazeuse ?	",
+		["A-	  a) Gentamycine	",
+		"B-	  b) Colistine	",
+		"C-	  c) Pénicilline G	",
+		"D-	  d) Cotrimoxazole	",
+		"E-	  e) Acide nalidixique	"],
+			2	,false,false,undefined);
+quizQuestions[	36	] = new QuizItem("	37 Le diagnostic de toxoplasmose cérébrale chez un patient infecté par le VIH doit être envisagé devant la présence des conditions suivantes sauf une laquelle ?	",
+		["A-	  a) Une crise convulsive	",
+		"B-	  b) Une fièvre	",
+		"C-	  c) Une hémiparésie	",
+		"D-	  d) Une raideur méningée	",
+		"E-	  e) Des troubles de conscience	"],
+			3	,false,false,undefined);
+quizQuestions[	37	] = new QuizItem("	38 Dans la forme typique du myélome ou maladie de Kahler, on observe dans le sang	",
+		["A-	  a) Un plasmocyte	",
+		"B-	  b) Une éosinophilie	",
+		"C-	  c) Une hyper lymphocytose	",
+		"D-	  d) Une polynucléose neutrophile	",
+		"E-	  e) Aucune des réponses ci-dessus	"],
+			4	,false,false,undefined);
+quizQuestions[	38	] = new QuizItem("	39 Laquelle des hémopathies suivantes vous évoque la constatation d'une Splénomégalie lors de l'examen clinque.	",
+		["A-	  a) Maladie de Biermer	",
+		"B-	  b) Leucémie myéloïde chronique	",
+		"C-	  c) Maladie de Kahler	",
+		"D-	  d) Hémophilie	",
+		"E-	  e) Agranulocytose iatrogène	"],
+			1	,false,false,undefined);
+quizQuestions[	39	] = new QuizItem("	40 Chez un patient de 48 ans on découvre une cirrhose hépatique révélée par des signes d'hypertension portale. Les examens biologiques montrent un taux de plaquettes à 50000/ml et des D'dimères Inférieurs à 0.5 mcg/l. Quelle est l'origine probable de la thrombopenie	",
+		["A-	  a) Une insuffisance médullaire	",
+		"B-	  b) Une CIVD	",
+		"C-	  c) Une destruction immunologique	",
+		"D-	  d) Un hypersplénisme	",
+		"E-	  e) Une consommation au niveau des varices œsophagiennes	"],
+			3	,false,false,undefined);
+
+
+//alert(quizQuestions.length);
+
+
+for(var i= 0; i<quizQuestions.length; i++) {
+ep+=quizQuestions[i].question+"$$***$$";
+ep+=quizQuestions[i].variants[0]+"$$***$$";
+ep+=quizQuestions[i].variants[1]+"$$***$$";
+ep+=quizQuestions[i].variants[2]+"$$***$$";
+ep+=quizQuestions[i].variants[3]+"$$***$$";
+ep+=quizQuestions[i].variants[4]+"$$***$$";
+ep+=quizQuestions[i].variants[5]+"$$***$$";
+ep+=quizQuestions[i].answer+"$$***$$";
+ //alert(quizQuestions[0].answer+"$$***$$");
+ }
+ 
+  //document.write(ep);
+  
+   localStorage.setItem("ep", ep);
+   location.href="cont.html";
+ }
+ 
+ 
+ 
+</script>
+
+
+
+<script>
+
+
+
+function ped19(){
+ep = "ENSCT Pédiatrie 2019";
+ep+="$$***$$";
+ //alert(ep);
+quizQuestions[	0	] = new QuizItem("	41 Chez un enfant en cours de traitement d'un RAA vous retenez en faveur de décision de diminution de la corticothérapie	",
+		["A-	  a) La hausse de la VS	",
+		"B-	  b) La hausse de la leucocytose	",
+		"C-	  c) La baisse des antistreptokinases	",
+		"D-	  d) La baisse des antistreptolysines	",
+		"E-	  e) Le résultat du prélèvement de gorge	"],
+			3	,false,false,undefined);
+quizQuestions[	1	] = new QuizItem("	42 Parmi les cardiopathies congénitales suivantes l'une d'elles échappe au risque d’endocardite d'Osler Laquelle ?	",
+		["A-	  a) Tétralogie de Fallot	",
+		"B-	  b) Canal artériel persistant	",
+		"C-	  c) Communication inter auriculaire	",
+		"D-	  d) Communication inter-ventriculaire	",
+		"E-	  e) Coarctation de l'aorte	"],
+			2	,false,false,undefined);
+quizQuestions[	2	] = new QuizItem("	43. Une cyanose généralisée traduit	",
+		["A-	  a) Une hypoventilation alvéolaire	",
+		"B-	  b) Une hypercapnie supérieure à 45 mm hg	",
+		"C-	  c) Une hypoxie inférieure à 60 mm Hg	",
+		"D-	  d) Un excès d'hémoglobine réduite	",
+		"E-	  e) Une polyglobulie	"],
+			3	,false,false,undefined);
+quizQuestions[	3	] = new QuizItem("	44 Au cours d'une bronchopneumopathie virale que faut-il redouter en premier lieu Chez le nourrisson	",
+		["A-	  a) Surinfection bactérienne	",
+		"B-	  b) Insuffisance cardiaque	",
+		"C-	  c) Pneumothorax	",
+		"D-	  d) Insuffisance respiratoire aigue	",
+		"E-	  e) Emphysème interstitiel	"],
+			3	,false,false,undefined);
+quizQuestions[	4	] = new QuizItem("	45 Une primo-infection tuberculeuse doit être évoquée chez un enfant devant lequel se manifeste les signes suivants ?	",
+		["A-	  a) Un érythème noueux	",
+		"B-	  b) Une diarrhée	",
+		"C-	  c) Une angine avec hyper lymphocytose	",
+		"D-	  d) Une dyspnée sibilante	",
+		"E-	  e) Toutes les réponses ci-dessus	"],
+			0	,false,false,undefined);
+quizQuestions[	5	] = new QuizItem("	46 Le vaccin BCG correspond à	",
+		["A-	  a) Une souche de bacille tuberculeux humain atténué	",
+		"B-	  b) Des extraits de bacilles tuberculeux chauffés	",
+		"C-	  c) Une souche tuée de Mycobacterium bovis	",
+		"D-	  d) Une souche de Mycobacterium bovis vivante mais atténuée	",
+		"E-	  e) Un mélange de Mycobacterum bovis et Mycobacterium tuberculosis	"],
+			3	,false,false,undefined);
+quizQuestions[	6	] = new QuizItem("	47 Laquelle des propositions suivantes est fausse concernant l'asthme apparu chez l'enfant avant 5 ans ?	",
+		["A-	  a) Il est souvent d'origine allergique	",
+		"B-	  b) Il peut disparaitre à la puberté	",
+		"C-	  c) Il est couramment précédé ou accompagné d'autres manifestations atopiques	",
+		"D-	  d) Il peut entrainer des déformations thoraciques	",
+		"E-	  e) Il est très souvent corticodépendant	"],
+			4	,false,false,undefined);
+quizQuestions[	7	] = new QuizItem("	48. Tous les éléments suivants sont utiles au traitement du reflux gastro-oesophagien du nourrisson sauf un lequel ?	",
+		["A-	  a) L'administration d'anticholinergiques	",
+		"B-	  b) L'administration de métoclopramide (Primpéran)	",
+		"C-	  c) Le décubitus ventral en inclinaison à 45 degrés	",
+		"D-	  d) Le décubitus dorsal en Inclinaison à 45 degrés	",
+		"E-	  e) L'adjonction de produits épaississants dans le lait	"],
+			0	,false,false,undefined);
+quizQuestions[	8	] = new QuizItem("	49. Parmi les propositions suivantes quelle est la cause la plus fréquente d'hématémèse chez le nourrissons	",
+		["A-	  a) Ulcère gastrique	",
+		"B-	  b) Intolérance aux protéines du lait de vache	",
+		"C-	  c) Thrombopénie	",
+		"D-	  d) Œsophagite peptique	",
+		"E-	  e) Diverticule de Meckel	"],
+			3	,false,false,undefined);
+quizQuestions[	9	] = new QuizItem("	50 Un syndrome dysentérique dans les selles du nourrisson évoque une diarrhée aigue lié à	",
+		["A-	  a) rota virus	",
+		"B-	  b) Col bacille sécréteur d'une entérotoxine	",
+		"C-	  c) Salmonella	",
+		"D-	  d) Candida albicans	",
+		"E-	  e) Aucune des réponses ci-dessus	"],
+			2	,false,false,undefined);
+quizQuestions[	10	] = new QuizItem("	51 Quelles recommandations préconisez-vous à un nouveau-né de mère AgHBs et AgHBe positifs	",
+		["A-	  a) aucun traitement	",
+		"B-	  b) Immunoglobulines polyvalentes	",
+		"C-	  c) Vaccination seule	",
+		"D-	  d) Immunoglobulines spécifiques seules	",
+		"E-	  e) Sérovaccination	"],
+			4	,false,false,undefined);
+quizQuestions[	11	] = new QuizItem("	52 Sur lequel des résultats suivants faites-vous le diagnostic d'une infection urinaire chez l'enfant	",
+		["A-	  a) Uroculture 1 000 germes /ml quelques leucocytes /ml	",
+		"B-	  b) Uroculture 100000 germes/ml quelques leucocytes/ml	",
+		"C-	  c) Uroculture 1000 germes/ml 1500 leucocytes/ml	",
+		"D-	  d) Uroculture 1000000 germes/ ml 5000 leucocytes/ml	",
+		"E-	  e) Toutes les réponses ci-dessus	"],
+			3	,false,false,undefined);
+quizQuestions[	12	] = new QuizItem("	53 Un enfant de 9 ans a des poussées de pyélonéphrite aigue à répétition. L’urographie Ne ne montre pas d'obstacle sur la voie excrétrice mais des zones d'atrophie rénale avec des calices en regard. Quel est le seul examen pouvant aider au diagnostic	",
+		["A-	  a) Ponction biopsie du rein	",
+		"B-	  b) Cystographie rétrograde et mictionnelle	",
+		"C-	  c) Artériographie	",
+		"D-	  d) Lymphographie	",
+		"E-	  e) Echographie	"],
+			1	,false,false,undefined);
+quizQuestions[	13	] = new QuizItem("	54 La découverte d'une hématurie chez un enfant fait soupçonner à son origine toutes les conditions suivantes sauf une laquelle	",
+		["A-	  a) Une glomérulonéphrite	",
+		"B-	  b) Une maladie de Berger	",
+		"C-	  c) Une lithiase urinaire	",
+		"D-	  d) Des valves de l'urètre postérieur	",
+		"E-	  e) Aucune des réponses ci-dessus	"],
+			3	,false,false,undefined);
+quizQuestions[	14	] = new QuizItem("	55 Le syndrome néphrotique de l'enfant	",
+		["A-	  a) Est le plus souvent cortico-sensible	",
+		"B-	  b) Le plus souvent ne rechute pas	",
+		"C-	  c) Nécessite une ponction biopsie rénale avant toute corticothérapie	",
+		"D-	  d) Evolue fréquemment vers une insuffisance rénale chronique	",
+		"E-	  e) Nécessite un régime limité en sodium en dehors des poussées pour limiter les rechutes	"],
+			0	,false,false,undefined);
+quizQuestions[	15	] = new QuizItem("	56 Laquelle des affirmations suivantes concernant l'impétigo est fausse ?	",
+		["A-	  a) Elle est une maladie contagieuse de l'enfant	",
+		"B-	  b) Elle impose l'éviction scolaire	",
+		"C-	  c) Elle se manifeste par des lésions croûteuses péri-orificielles	",
+		"D-	  d) Elle est parfois bulleuse	",
+		"E-	  e) Elle nécessite un prélèvement bactériologique	"],
+			4	,false,false,undefined);
+quizQuestions[	16	] = new QuizItem("	57 La gale du nourrisson est caractérisée par tous les éléments suivants sauf un lequel	",
+		["A-	  a) Des lésions interdigitales	",
+		"B-	  b) Un prurit	",
+		"C-	  c) L'atteinte du visage	",
+		"D-	  d) l'atteinte de la plante des pieds	",
+		"E-	  e) Aucune des réponses ci-dessus	"],
+			4	,false,false,undefined);
+quizQuestions[	17	] = new QuizItem("	58 Toutes les affirmations suivantes concernant l'eczéma atopque du nourrisson sont exactes sauf une laquelle ?	",
+		["A-	  a) Il débute dans le 1er mois de vie	",
+		"B-	  b) Il évolue par poussée	",
+		"C-	  c) Il commence en règle au visage	",
+		"D-	  d) Il provoque des lésions érythémato-vésiculaires	",
+		"E-	  e) il comporte souvent des antécédents familiaux d'allergie	"],
+			0	,false,false,undefined);
+quizQuestions[	18	] = new QuizItem("	59 Pour protéger contre le tétanos un enfant de 7 ans vacciné correctement et qui s'est écorché le genou dans une cour de ferme quelle prophylaxie spécifique doit être adoptée	",
+		["A-	  a) Vaccination seule	",
+		"B-	  b) Séroprophylaxie seule	",
+		"C-	  c) Chimiothérapie seule	",
+		"D-	  d) Séroprophylaxie et vaccination	",
+		"E-	  e) Aucune des réponses ci-dessus	"],
+			4	,false,false,undefined);
+quizQuestions[	19	] = new QuizItem("	60 Les manifestations cliniques rencontrées au cours de la rougeole comportent les faits suivants sauf un lequel ‘ ?	",
+		["A-	  a) Dissociation du pouls et de la température	",
+		"B-	  b) Conjonctivite avec photophobie	",
+		"C-	  c) Fièvre régressant 2 à 3 jours après le début de l'éruption	",
+		"D-	  d) Rougeur et pétéchies du voile du palais	",
+		"E-	  e) Coryza et toux	"],
+			0	,false,false,undefined);
+quizQuestions[	20	] = new QuizItem("	61 Le signe de Koplick correspond à	",
+		["A-	  a) Ulcération des piliers des amygdales	",
+		"B-	  b) Aphtes sur la muqueuse gingivale	",
+		"C-	  c) Semis de taches blanchâtres sur la muqueuse buccale	",
+		"D-	  d) Purpura du voile du palais	",
+		"E-	  e) Petite vésicule sur la muqueuse du voile du palais	"],
+			2	,false,false,undefined);
+quizQuestions[	21	] = new QuizItem("	62 A la phase d’invasion des oreillons quel signe parmi les suivants pris isolement peut orienter vers le diagnostic ?	",
+		["A-	  a) Etat fébrile de 40° C avec céphalées	",
+		"B-	  b) Pharyngite érythémateuse	",
+		"C-	  c) Turgescence de l'orifice du canal de Stenon	",
+		"D-	  d) Adénopathie pre-tragienne	",
+		"E-	  e) Hyper salivation	"],
+			2	,false,false,undefined);
+quizQuestions[	22	] = new QuizItem("	63 Un enfant de 9 mois a une éruption du visage évoquant une pustulose varioliforme de Kaposi-Juliusberg Quelle est la cause de cette affection ?	",
+		["A-	  a) Virus varicelle zona	",
+		"B-	  b) Virus de la rougeole	",
+		"C-	  c) Herpes virus	",
+		"D-	  d) Staphylocoque	",
+		"E-	  e) Inconnue	"],
+			2	,false,false,undefined);
+quizQuestions[	23	] = new QuizItem("	64 Parmi les affirmations suivantes concernant la toxoplasmose congénitale laquelle est exacte ?	",
+		["A-	  a) Elle est plus fréquente au cours du 3 e trimestre de la grossesse	",
+		"B-	  b) Elle est exceptionnelle au cours du 1er trimestre de la grossesse	",
+		"C-	  c) Elle est plus grave si la concentration se fait lors du 3e trimestre de la grossesse	",
+		"D-	  d) La toxoplasmose de la femme enceinte doit être traitée par pyriméthamine	",
+		"E-	  e) La lésion oculaire caractéristique chez le nouveau-né est la fibroplasie	"],
+			0	,false,false,undefined);
+quizQuestions[	24	] = new QuizItem("	65 Parmi les leucémies aigues suivantes quel est le plus fréquent chez l'enfant ?	",
+		["A-	  a) Myeloblastique	",
+		"B-	  b) Lymphoblastique	",
+		"C-	  c) Monoblastique	",
+		"D-	  d) Promyelocytaire	",
+		"E-	  e) Erythro leucémie	"],
+			1	,false,false,undefined);
+quizQuestions[	25	] = new QuizItem("	66 Un purpura des membres inférieurs chez un enfant avec fébricule et un bon état général évoque en premier lieu.	",
+		["A-	  a) Leucémie aigue	",
+		"B-	  b) Macroglobulinémie de Waldenström	",
+		"C-	  c) Piqures de puce	",
+		"D-	  d) Angine à monocytes	",
+		"E-	  e) Purpura rhumatoïde	"],
+			4	,false,false,undefined);
+quizQuestions[	26	] = new QuizItem("	67 Quel examen de l’hémostase est anormal dans l'hémophilie A non traitée	",
+		["A-	  a) Le temps de saignement	",
+		"B-	  b) La numération des plaquettes	",
+		"C-	  c) Le temps de Quick	",
+		"D-	  d) Le temps de céphaline activé	",
+		"E-	  e) Le temps de thrombine	"],
+			3	,false,false,undefined);
+quizQuestions[	27	] = new QuizItem("	68 Les enfants en bonne santé sont systématiquement vaccinés contre les maladies suivantes sauf une laquelle	",
+		["A-	  a) La coqueluche	",
+		"B-	  b) Les infections pneumococciques	",
+		"C-	  c) Les oreillons	",
+		"D-	  d) Infection à Haemophilus influenzae type b	",
+		"E-	  e) Diphtérie	"],
+			2	,false,false,undefined);
+quizQuestions[	28	] = new QuizItem("	69 l’issue médicale la plus grave chez un enfant qui se noie est	",
+		["A-	  a) L’œdème pulmonaire	",
+		"B-	  b) Insuffisance rénale aigue	",
+		"C-	  c) Lésions cérébral hypoxique	",
+		"D-	  d) Perte de sang	",
+		"E-	  e) Arythmie cardiaque	"],
+			2	,false,false,undefined);
+quizQuestions[	29	] = new QuizItem("	70 Toutes les conditions suivantes peuvent entrainer une perte auditive sensorielle chez l’enfant sauf	",
+		["A-	  a) Rubéole	",
+		"B-	  b) Méningite	",
+		"C-	  c) Asphyxie péri natale	",
+		"D-	  d) Otite moyenne aigue	",
+		"E-	  e) Administration d'aminosides	"],
+			3	,false,false,undefined);
+quizQuestions[	30	] = new QuizItem("	71 Toutes les complications suivantes de la grossesse sont des complications de l’asphyxie péri natale sauf	",
+		["A-	  a) Abruption placenta	",
+		"B-	  b) Hyperemesis gravidarum	",
+		"C-	  c) Prématurité	",
+		"D-	  d) Pré éclampsie	",
+		"E-	  e) Liquide amniotique tinté de méconium	"],
+			1	,false,false,undefined);
+quizQuestions[	31	] = new QuizItem("	72 le syndrome de Marfan serait suspecté chez un enfant à cause des anomalies suivantes	",
+		["A-	  a) Dilatation aortique et articulations lâches évoquant un trouble de tissus conjonctif	",
+		"B-	  b) La longueur et la largeur excessive des os évoquant un trouble du métabolisme osseux	",
+		"C-	  c) Tendons et ligaments souples évoquant un trouble du métabolisme musculaire	",
+		"D-	  d) Grande taille et excès de tissus sous cutané évoquant un trouble du facteur de croissance	",
+		"E-	  e) Aucune des réponses ci-dessous	"],
+			0	,false,false,undefined);
+quizQuestions[	32	] = new QuizItem("	73 Un enfant de 18 mois présente de grandes quantités de selles méléniques. Il est anémique et en choc mais ne présente pas d’antécédent de diarrhée. Quel est le diagnostic le plus probable ?	",
+		["A-	  a) La colite à éosinophiles	",
+		"B-	  b) Le syndrome hémolytique et urémique	",
+		"C-	  c) La colite ulcéreuse	",
+		"D-	  d) Les polypes juvéniles	",
+		"E-	  e) Diverticule de Meckel	"],
+			4	,false,false,undefined);
+quizQuestions[	33	] = new QuizItem("	74 Tous les troubles suivants sont associés à un temps de saignement prolongé sauf un lequel	",
+		["A-	  a) Hémophilie A	",
+		"B-	  b) Maladie de Von Willebrand	",
+		"C-	  c) Thrombocytopathie induite par l'aspirine	",
+		"D-	  d) Syndrome de Bernard Soulier	",
+		"E-	  e) Purpura thrombocytopénique idiopathique	"],
+			0	,false,false,undefined);
+quizQuestions[	34	] = new QuizItem("	75 Les facteurs les plus susceptibles de contribuer au développement de la céto acidose diabétique chez un enfant atteint de diabète de type I sont les suivants sauf un lequel ?	",
+		["A-	  a) Suralimentation	",
+		"B-	  b) Vomissement	",
+		"C-	  c) Omission de doses d'insuline	",
+		"D-	  d) Infection	",
+		"E-	  e) Manque d'éducation du patient	"],
+			0	,false,false,undefined);
+quizQuestions[	35	] = new QuizItem("	76. Un enfant de 14 ans présentant un retard de maturation squelettique (âge osseux) peut présenter tous les troubles suivants sauf un lequel ?	",
+		["A-	  a) Déficit en hormone de croissance	",
+		"B-	  b) Privation psychosociale	",
+		"C-	  c) Hypothyroïdie	",
+		"D-	  d) Apparition tardive (non classique) du déficit en 21 hydroxylase	",
+		"E-	  e) Retard constitutionnel de la puberté	"],
+			1	,false,false,undefined);
+quizQuestions[	36	] = new QuizItem("	77. Tous les éléments suivants sont les objectifs du dépistage de l'hypothyroïdie chez le nouveau-né sauf un lequel ?	",
+		["A-	  a) Assurer une croissance linéaire normale	",
+		"B-	  b) Assurer une fonction intellectuelle normale	",
+		"C-	  c) Faciliter le conseil génétique	",
+		"D-	  d) Prévenir le syndrome de mort subite du nourrisson	",
+		"E-	  e) Aucune des réponses ci-dessus	"],
+			4	,false,false,undefined);
+quizQuestions[	37	] = new QuizItem("	78 Un enfant souffrant de phéochromocytome peut présenter tous les signes et symptômes suivants sauf un lequel ?	",
+		["A-	  a) Céphalée	",
+		"B-	  b) Perte de poids	",
+		"C-	  c) Convulsions	",
+		"D-	  d) Transpiration	",
+		"E-	  e) Suffusion	"],
+			4	,false,false,undefined);
+quizQuestions[	38	] = new QuizItem("	79 Toutes les manifestations suivantes sont caractéristiques du syndrome de Rett sauf une laquelle	",
+		["A-	  a) Comportement autiste	",
+		"B-	  b) Microcéphalie	",
+		"C-	  c) Mouvement de torsion particulier des mains	",
+		"D-	  d) Héritage autosomique récessif	",
+		"E-	  e) Démence	"],
+			3	,false,false,undefined);
+quizQuestions[	39	] = new QuizItem("	80 Toutes les affirmations suivantes concernant le spina bifida cytica sont exactes sauf une laquelle ?	",
+		["A-	  a) Il est souvent associé à une hydrocéphalie	",
+		"B-	  b) Il est fatal si non traité dans les 24 heures	",
+		"C-	  c) Il peut être diagnostiqué in utéro par l'échographie	",
+		"D-	  d) Il peut entrainer les problèmes urologiques	",
+		"E-	  e) Il nécessite une prise en charge orthopédique	"],
+			1	,false,false,undefined);
+
+//alert(quizQuestions.length);
+
+
+for(var i= 0; i<quizQuestions.length; i++) {
+ep+=quizQuestions[i].question+"$$***$$";
+ep+=quizQuestions[i].variants[0]+"$$***$$";
+ep+=quizQuestions[i].variants[1]+"$$***$$";
+ep+=quizQuestions[i].variants[2]+"$$***$$";
+ep+=quizQuestions[i].variants[3]+"$$***$$";
+ep+=quizQuestions[i].variants[4]+"$$***$$";
+ep+=quizQuestions[i].variants[5]+"$$***$$";
+ep+=quizQuestions[i].answer+"$$***$$";
+ //alert(quizQuestions[0].answer+"$$***$$");
+ }
+ 
+  //document.write(ep);
+  
+   localStorage.setItem("ep", ep);
+    location.href="cont.html";
+ }
+ 
+
+ 
+</script>
+
+
+
+<script>
+
+
+
+function sap19(){
+ep = "ENSCT Santé Pub. 2019";
+ep+="$$***$$";
+ //alert(ep);
+
+quizQuestions[	0	] = new QuizItem("	81 L'association entre le faible poids de naissance et le tabagisme maternel pendant la grossesse peut être en obtenant des antécédents de tabagisme chez les femmes au moment de la première visite prénatale puis tant et en attribuant le poids de la naissance en fonction des antécédents de tabagisme de quel type d'étude s'agit t-il ?	",
+		["A-	  a) Un essai clinique	",
+		"B-	  b) Une étude transversale	",
+		"C-	  c) Une cohorte prospective	",
+		"D-	  d) Une étude cas-témoin	",
+		"E-	  e) Une cohorte rétrospective	"],
+			2	,false,false,undefined);
+quizQuestions[	1	] = new QuizItem("	82 Un investigateur souhaite effectuer un essai clinique randomisé pour évaluer un nouveau bétabloquant comme traitement de l'hypertension artérielle. Pour pouvoir participer à l'étude les sujets doivent avoir une pression artérielle diastolique au repos d’au moins 90 mmHg une centaine de patients vus à la clinique de dépistage avec ce niveau d'hypertension sont recrutés pour l'étude en prenant rendez-vous avec l’infirmière de l'étude Deux semaines plus tard lorsque l'infirmière prend leur tension seulement 65 d'entre eux ont la même tension artérielle diastolique de 90 mmHg ou plus l'explication la plus probable de ceci est	",
+		["A-	  a) La résolution spontanée	",
+		"B-	  b) La régression vers la moyenne	",
+		"C-	  c) La dérive de base	",
+		"D-	  d) L'erreur de mesure	",
+		"E-	  e) L'effet Hawthorne	"],
+			1	,false,false,undefined);
+quizQuestions[	2	] = new QuizItem("	83 Laquelle des mesures suivantes est fréquemment utilisée comme dénominateur pour calculer l’incidence d'une maladie ?	",
+		["A-	  a) Le nombre de cas observés	",
+		"B-	  b) Nombre de nouveaux cas observés	",
+		"C-	  c) Nombre de cas asymptomatiques	",
+		"D-	  d) Personnes-année d’observation	",
+		"E-	  e) Personnes perdues de vue	"],
+			3	,false,false,undefined);
+quizQuestions[	3	] = new QuizItem("	84 Chez les femmes âgées de 18 à 34 ans dans une communauté le poids est normalement distribué avec une moyenne de 52 kg et un écart type de 7.5 kg. Quel pourcentage de femmes pèses plus de 59.5 kg ?	",
+		["A-	  a) 2%	",
+		"B-	  b) 5%	",
+		"C-	  c) 10%	",
+		"D-	  d) 16%	",
+		"E-	  e) 32%	"],
+			3	,false,false,undefined);
+quizQuestions[	4	] = new QuizItem("	85 Dans 9 familles enquêtées le nombre d'enfants par famille était de 4; 6; 2; 2; 4; 3; 2; 1; et 7. La moyenne la médiane et le mode de nombre d'enfants par famille sont respectivement	",
+		["A-	  a) 3.4; 2; 3	",
+		"B-	  b) 3; 3.4; 2	",
+		"C-	  c) 3; 3; 2	",
+		"D-	  d) 2; 3.5; 3	",
+		"E-	  e) 3.4; 3; 2	"],
+			4	,false,false,undefined);
+quizQuestions[	5	] = new QuizItem("	<img src=Cap86.jpg>	",
+		["A-	  a) Le test de Chi carré	",
+		"B-	  b) Le test de McNemar	",
+		"C-	  c) Le test exact de Fisher	",
+		"D-	  d) Le test t de Student	",
+		"E-	  e) l'analyse de variances	"],
+			2	,false,false,undefined);
+quizQuestions[	6	] = new QuizItem("	<img src=Capt87.jpg>	",
+		["A-	  a) 0.02	",
+		"B-	  b) 0.01	",
+		"C-	  c) 1.0	",
+		"D-	  d) 10	",
+		"E-	  e) 20	"],
+			3	,false,false,undefined);
+quizQuestions[	7	] = new QuizItem("	88 Quelle est l'incidence de nouveaux cas par 1000 personnes-années dans les foyers qui n'avaient pas de cas culture positive à la première enquête ?	",
+		["A-	  a) 0.001	",
+		"B-	  b) 0.1	",
+		"C-	  c) 0.5	",
+		"D-	  d) 1.0	",
+		"E-	  e) 5.0	"],
+			2	,false,false,undefined);
+quizQuestions[	8	] = new QuizItem("	89 Quel est le risque relatif de contracter la tuberculose dans les foyers avec des cas culture positive comparé aux foyers sans tuberculose ?	",
+		["A-	  a) 0.05	",
+		"B-	  b) 0.5	",
+		"C-	  c) 2.0	",
+		"D-	  d) 10	",
+		"E-	  e) 20	"],
+			4	,false,false,undefined);
+quizQuestions[	9	] = new QuizItem("	90 Dans l'étude pour la recherche de la cause d'une maladie la différence essentielle entre une étude expérimentale et une étude observationnelle est que dans une Investigation expérimentale	",
+		["A-	  a) L'étude est prospective	",
+		"B-	  b) L'étude est rétrospective	",
+		"C-	  c) Les groupes de cas et de témoins ont la même taille de l'échantillon	",
+		"D-	  d) Les groupes de cas et de témoins sont essentiellement en fonction d'antécédents d'exposition au facteur causal suspecté   	",
+		"E-	  e) Les Investigateurs déterminent qui sera ou non exposé au facteur causal suspecté	"],
+			4	,false,false,undefined);
+quizQuestions[	10	] = new QuizItem("	91- un enfant est emmené au service d'urgences dans la nuit de Vendredi par ses parents car ils sont inquiets au sujet de la rage. Une chauve-souris était présente dans la chambre de l'enfant lorsqu’ ils sont arrivés de leur maison de campagne ce soir-là Elle s'est mise à voler autour de la tête de la fille lorsqu’ elle est entrée dans sa chambre et a ébouriffer ses cheveux. Ses parents l'ont entendu pousser un cri aigu ont couru dans sa chambre et ont laissé la chauve-souris sortir -par la fenêtre. A l'examen il n'y a pas de griffes ou des égratignures visibles. Quel est donc l'intervention plus appropriée ?	",
+		["A-	  a) Rassurer les parents qu'il n'y a pas de risque de rage étant donné I histoire de l'examen 	",
+		"B-	  b) Consulter les autorités de santé publique pour déterminer l'épidémiologie de la rage dans cette région	",
+		"C-	  c) Administrer le vaccin antirabique et l’Immunoglobuline antirabique	",
+		"D-	  d) Administrer seulement l'immunoglobuline antirabique	",
+		"E-	  e) Administrer seulement le vaccin antirabique	"],
+			2	,false,false,undefined);
+quizQuestions[	11	] = new QuizItem("	92 Lequel des vaccins suivants est contre-indiqué pendant la grossesse ?	",
+		["A-	  a) Vaccin de l'hépatite B	",
+		"B-	  b) Vaccin contre la varicelle	",
+		"C-	  c) Vaccin antigrippal	",
+		"D-	  d) Vaccin antitétanique	",
+		"E-	  e) Vaccin antirabique	"],
+			1	,false,false,undefined);
+quizQuestions[	12	] = new QuizItem("	93 Un agriculteur de 32 ans se présente à la salle des urgences avec une blessure à l'index et au pouce alors il travaillait avec de la machinerie dans sa ferme. Le dossier montre qu'il a reçu 3 doses d'anatoxine par le passe que la dernière dose a été administré lorsqu’ il avait 25 ans en plus du pansement et de traitement approprié le moyen de prévention le plus approprié est	",
+		["A-	  a) Pas de prophylaxie supplémentaire	",
+		"B-	  b) Administration d'anatoxine tétanique	",
+		"C-	  c) Administration d’immunoglobulines antitétaniques uniquement	",
+		"D-	  d) Administration d'anatoxine tétanique et d'immunoglobuline antitétanique	",
+		"E-	  e) Administration d'anatoxine tétanique et diphtérique	"],
+			0	,false,false,undefined);
+quizQuestions[	13	] = new QuizItem("	94 Quel est l'intervalle recommandé en mois entre l'administration du sang total et le vaccin rougeole-oreillons rubéole	",
+		["A-	  a) 0	",
+		"B-	  b) 1	",
+		"C-	  c) 3	",
+		"D-	  d) 6	",
+		"E-	  e) 10	"],
+			3	,false,false,undefined);
+quizQuestions[	14	] = new QuizItem("	96 questions 95-96 Une collégienne sexuellement active de 18 ans se plaint des douleurs au bas-ventre et des saignements réguliers depuis cinq Jours. Elle n'a pas de fièvre. Elle prend la pilule comme moyen contraceptif. A l'examen le col utérin est friable il y a douleur à la mobilisation du col et douleur des annexes le test de grossesse est négatif quel est l'agent étiologique responsable de ces constats ?	",
+		["A-	  a) Neisseria gonorrhae	",
+		"B-	  b) Chlamydia trachomatis	",
+		"C-	  c) Treponema pallidum	",
+		"D-	  d) Virus Herpès simplex type 2	",
+		"E-	  e) Mycoplasma hominis	"],
+			1	,false,false,undefined);
+quizQuestions[	15	] = new QuizItem("	96 Elle vous dit qu'elle a eu un épisode similaire deux ans auparavant. Quel est son risque d'infertilité suite à ce Deuxième épisode de maladie inflammatoire pelvienne ?	",
+		["A-	  a) <1 %	",
+		"B-	  b) 5 %	",
+		"C-	  c) 10 %	",
+		"D-	  d) 20 %	",
+		"E-	  e) 40 %	"],
+			3	,false,false,undefined);
+quizQuestions[	16	] = new QuizItem("	97 Un homme de 22 ans se présente avec un ulcère unique induré et indolore sur le pénis apparu depuis 2 jours son contact sexuel non protégé le plus récent était-il Y a 21 jours. Un test immédiat par le RPR (rapid plasma reagin test) est négatif Le diagnostic le plus probable est ?	",
+		["A-	  a) La syphilis	",
+		"B-	  b) L'herpès	",
+		"C-	  c) Chancre mou	",
+		"D-	  d) Lymphogranuloma venereum	",
+		"E-	  e) Donovanose (granuloma inguinale)	"],
+			0	,false,false,undefined);
+quizQuestions[	17	] = new QuizItem("	98 Quels partenaires sexuels devraient être informés de l'exposition et référés pour évaluation ?	",
+		["A-	  a) Partenaires sexuels actuels seulement	",
+		"B-	  b) Partenaires de moins de 30 jours	",
+		"C-	  c) Partenaires de moins de 60 jours	",
+		"D-	  d) Partenaires de moins de 90 jours	",
+		"E-	  e) Partenaires de moins de 120 jours	"],
+			1	,false,false,undefined);
+quizQuestions[	18	] = new QuizItem("	99 A quel patient un ROR devrait-il être administré sans danger ?	",
+		["A-	  a) Un enfant âgé de 15 mois infecté par le VIH avec un taux de CD4 de 700	",
+		"B-	  b) Une femme enceinte âgée de 25 ans	",
+		"C-	  c) Un asthmatique âgé de 12 ans sous 20mg de prednisone par jour depuis les 20 derniers jours	",
+		"D-	  d) Un adolescent de 18 ans atteint d'une leucémie en rémission dont la chimiothérapie a été arrêté il y a 1 mois 	",
+		"E-	  e) Un adolescent de 17 ans avec une réaction anaphylactique menaçant le pronostic vital à l'ingestion d’œufs	"],
+			0	,false,false,undefined);
+quizQuestions[	19	] = new QuizItem("	100 Quel est le message de counseling (conseil) le plus approprié à donner aux femmes enceintes séropositives pour le VHC ?	",
+		["A-	  a) La césarienne doit être effectuée	",
+		"B-	  b) La probabilité de transmission au nouveau-né est de 5 %	",
+		"C-	  c) L'allaitement maternel doit être déconseillé	",
+		"D-	  d) Les nourrissons devraient recevoir des IgG à la naissance	",
+		"E-	  e) Les nourrissons vont souvent mal au cours des premières années de vie	"],
+			1	,false,false,undefined);
+				
+				
+//alert(quizQuestions.length);
+
+
+for(var i= 0; i<quizQuestions.length; i++) {
+ep+=quizQuestions[i].question+"$$***$$";
+ep+=quizQuestions[i].variants[0]+"$$***$$";
+ep+=quizQuestions[i].variants[1]+"$$***$$";
+ep+=quizQuestions[i].variants[2]+"$$***$$";
+ep+=quizQuestions[i].variants[3]+"$$***$$";
+ep+=quizQuestions[i].variants[4]+"$$***$$";
+ep+=quizQuestions[i].variants[5]+"$$***$$";
+ep+=quizQuestions[i].answer+"$$***$$";
+ //alert(quizQuestions[0].answer+"$$***$$");
+ }
+ 
+  //document.write(ep);
+  
+   localStorage.setItem("ep", ep);
+    location.href="cont.html";
+ }
+ 
+
+ 
+</script>
+
+
+
+
+<script>
+
+
+
+function chi19(){
+ep = "ENSCT Chirurgie 2019";
+ep+="$$***$$";
+ //alert(ep);
+
+quizQuestions[	0	] = new QuizItem("	1 Quel est le signe clinique fondamental d'une luxation traumatique postérieure de l'épaule ?	",
+		["A-	Attitude de bras en adduction	",
+		"B-	Attitude de bras en rotation interne	",
+		"C-	Attitude de bras en rotation externe	",
+		"D-	Déformation du moignon de l'épaule	",
+		"E-	Aucune des signes précédents	"],
+			1	,false,false,undefined);
+quizQuestions[	1	] = new QuizItem("	2. La luxation erecta de l'épaule est une luxation	",
+		["A-	 Supérieure	",
+		"B-	 Inférieure	",
+		"C-	 Postérieure	",
+		"D-	 Antéro interne sous coracoidienne	",
+		"E-	 Antéro interne coracoidienne	"],
+			1	,false,false,undefined);
+quizQuestions[	2	] = new QuizItem("	3 Un syndrome du canal carpien peut comporter	",
+		["A-	Une paralysie de l'adduction du pouce	",
+		"B-	Une paralysie de la flexion du pouce	",
+		"C-	Une paralysie de l'opposition du pouce	",
+		"D-	Une paralysie des interosseux 	",
+		"E-	Jamais de paralysie 	"],
+			2	,false,false,undefined);
+quizQuestions[	3	] = new QuizItem("	4 Toutes les propositions suivantes concernant l'ostéomyélite aigue de l'enfant sont exactes sauf une. Indiquez laquelle :	",
+		["A-	 L'ostéomyélite aigue est l'infection par voie hématogène de l'os	",
+		"B-	 Le germe responsable est le plus souvent le staphylocoque doré	",
+		"C-	 L'ostéomyélite aigue est généralement localisée près du genou et loin du coude	",
+		"D-	 L'ostéomyélite aigue de l'enfant est en général localisée à la région diaphysaire de l'os	",
+		"E-	 La radiographie simple est normale au moment des premiers signes cliniques	"],
+			3	,false,false,undefined);
+quizQuestions[	4	] = new QuizItem("	5 A propos d'une fracture ouverte, le qualificatif de stade III lui est attribué selon la présence d'un ou Plusieurs critères suivants :	",
+		["A-	 Il y'a une déchirure musculaire associée à la fracture	",
+		"B-	 Il y'a une rupture artérielle associée à la fracture	",
+		"C-	 La perte de substance des parties molles empêche toute fermeture	",
+		"D-	 Les troncs nerveux principaux sont également lésés	",
+		"E-	 Le foyer osseux est comminutif	"],
+			2	,false,false,undefined);
+quizQuestions[	5	] = new QuizItem("	6. parmi les exemples suivants d'analyses du liquide synovial, indiquez-le ou les résultats qui peuvent correspondre à un liquide articulaire prélevé au cours d'une crise aigüe de goutte :	",
+		["A-	 Liquide clair avec 100 cellules par mm3	",
+		"B-	 Liquide trouble avec 5000 cellules par mm3	",
+		"C-	 Liquide trouble avec 20 000 cellules par mm3 et des microcristaux à bouts pointus	",
+		"D-	 Liquide trouble avec 10 000 cellules par mm3 et microcristaux très biréfringents	",
+		"E-	 Aspect puriforme du liquide avec 50 000 cellules par mm3	"],
+			3	,false,false,undefined);
+quizQuestions[	6	] = new QuizItem("	 7. parmi les termes suivants, lequel correspond à une section totale d'un nerf ?	",
+		["A-	 Axonotmesis	",
+		"B-	 Neurotmesis	",
+		"C-	 Neurapraxie	",
+		"D-	 Neurolyse	",
+		"E-	 Epineurectomie	"],
+			1	,false,false,undefined);
+quizQuestions[	7	] = new QuizItem("	8. Dans la luxation postérieure de l'épaule, indiquez le signe très évocateur du diagnostic	",
+		["A-	 Comblement du sillon delto pectoral	",
+		"B-	 Impossibilité de rotation externe du bras	",
+		"C-	 Adduction du bras impossible	",
+		"D-	 Coup de hanche externe	",
+		"E-	 Signe de l'épaulette	"],
+			1	,false,false,undefined);
+quizQuestions[	8	] = new QuizItem("	9. Une fracture de la diaphyse fémorale au tiers moyen avant tout traitement :<br> A-Se présente avec une déformation en crosse de la cuisse</br><br> B-Se présente avec une rotation externe du membre inférieur</br><br> C-Peut entrainer par elle-même un choc hémorragique</br><br> D-Entrainera souvent une paralysie sciatique</br> <br>E-Peut se compliquer d'embolie graisseuse</br>	",
+		["A-	A B C D E	",
+		"B-	A B C E	",
+		"C-	A B D E	",
+		"D-	A B E	",
+		"E-	B C E	"],
+			1	,false,false,undefined);
+quizQuestions[	9	] = new QuizItem("	10. Parmi les signes suivants, un seul n'est pas compatible avec le diagnostic de colopathie fonctionnelle isolée. Lequel ?	",
+		["A-	 Douleur abdominale	",
+		"B-	 Amaigrissement	",
+		"C-	 Constipation	",
+		"D-	 Diarrhée	",
+		"E-	 Ballonnement post prandial	"],
+			1	,false,false,undefined);
+quizQuestions[	10	] = new QuizItem("	11 Au cours de l’évolution d'un abcès sous phrénique par perforation couverte d'un ulcère duodénal, il peut y avoir ; A- De la fièvre B- Un état sub occlusif C- Des vomissements D- Une défense localisée E- Une douleur au toucher rectal	",
+		["A-	A B C D E 	",
+		"B-	A B C D	",
+		"C-	A C D	",
+		"D-	A C D E	",
+		"E-	A C D 	"],
+			1	,false,false,undefined);
+quizQuestions[	11	] = new QuizItem("	12. Quelle est ou quelles sont l’ (ou les) artère (s) dont la rupture associée à un foyer de fracture crée (nt) un risque ischémique majeur ? A- L 'artère iliaque externe B- L'artère fémorale commune C- L’artère fémorale superficielle D- L ' artère poplitée E- L ' artère axillaire basse	",
+		["A-	A B C D E 	",
+		"B-	A B C D	",
+		"C-	A B D E	",
+		"D-	A B C	",
+		"E-	 B C D    	"],
+			2	,false,false,undefined);
+quizQuestions[	12	] = new QuizItem("	13. Les signes radiologiques suivants appartiennent à l'arthrite septique sauf un. Indiquez lequel :	",
+		["A-	 Ostéophytes	",
+		"B-	 Pincement articulaire	",
+		"C-	 Géodes en miroir	",
+		"D-	 Déminéralisation sous chondrale	",
+		"E-	Epaississement des parties molles	"],
+			0	,false,false,undefined);
+quizQuestions[	13	] = new QuizItem("	14. Parmi les lésions suivantes associées chez un même blessé, l'une doit être opérée la première. Laquelle ?	",
+		["A-	Plaie de l'estomac	",
+		"B-	 Fracture ouverte de jambe	",
+		"C-	 Hématome extra dural	",
+		"D-	 Rupture de l'urètre	",
+		"E-	 Fracture du cotyle	"],
+			2	,false,false,undefined);
+quizQuestions[	14	] = new QuizItem("	15. Indiquez, parmi les suivantes, la proposition exacte concernant les fractures de l'extrémité supérieure du radius de l'enfant ;	",
+		["A-	 Elles représentent la lésion la plus fréquente des traumatismes du coude de l'enfant	",
+		"B-	 Ce sont plus souvent des fractures de la tête que des fractures du col	",
+		"C-	 Elles s'accompagnent souvent d'une paralysie de la branche postérieure du nerf radial	",
+		"D-	 Elles peuvent accompagner une luxation du coude 	",
+		"E-	 Elles requièrent un traitement chirurgical 	"],
+			3	,false,false,undefined);
+quizQuestions[	15	] = new QuizItem("	16. L'ankylose se définit par :	",
+		["A-	 La sensation de manque de souplesse matinale	",
+		"B-	 La fusion osseuse entre deux surfaces articulaires	",
+		"C-	 La diminution d'amplitude des mouvements au niveau d'une articulation	",
+		"D-	 La disparition de tout mouvement d'une articulation donnée	",
+		"E-	 L'existence d'une raideur en fin de journée	"],
+			1	,false,false,undefined);
+quizQuestions[	16	] = new QuizItem("	17. Devant une paralysie du nerf crural la recherche de son siège et de sa nature est facilitée par la connaissance d'une ou de plusieurs des affirmations suivantes :choisir la proposition fausse 	",
+		["A Les racines d'origine du nerf crural sont L2 L3 L4 	",
+		"B Le nerf crural passe sous l'arcade crurale en dedans de la veine fémorale	",
+		"C Le nerf crural se divise dans le triangle de Scarpa en 4 branches	",
+		"D L'arc réflexe rotulien met en jeu des fibres du nerf crural	",
+		"E Un hématome du muscle psoas entraine souvent une paralysie du nerf crural 	"],
+			1	,false,false,undefined);
+quizQuestions[	17	] = new QuizItem("	18. Dans une lombo-sciatique discale de topographie S1 	",
+		["A L'hypoesthésie se prolonge à la face dorsale du gros orteil	",
+		"B Le reflexe achilléen est diminué ou aboli	",
+		"C Le patient ne peut pas marcher sur les talons 	",
+		"D Il existe toujours pincement radiologique du disque L5-S1	",
+		"E L’électromyogramme est constamment perturbé 	"],
+			1	,false,false,undefined);
+quizQuestions[	18	] = new QuizItem("	19 un homme de 78 ans avec antécédent de maladie coronarienne et d'une hernie inguinale asymptomatique réductible demande une réparation élective de la hernie. Vous lui expliquez que les raisons valides pour retarder l’intervention chirurgicale proposée comportent :	",
+		["A-	La chirurgie de dérivation de l'artère coronaire jugulaire trois mois auparavant	",
+		"B-	Un antécédent de tabagisme	",
+		"C-	La distension veineuse jugulaire	",
+		"D-	L’hypertension	",
+		"E-	L’hyperlipidémie	"],
+			2	,false,false,undefined);
+quizQuestions[	19	] = new QuizItem("	20 à la suite d’une coeliotomie la motilité normale des intestins peut ordinairement être présumée d'avoir retournée :	",
+		["A-	À l’estomac en 4 heures, l'intestin grêle en 24 heures et le colon après la première prise orale	",
+		"B-	À l’estomac en 24 heures, l'intestin grêle en 4 heures et le colon en 3 jours	",
+		"C-	À l’estomac en 3 jours, l'intestin grêle en 3 jours et le colon en 3 jours	",
+		"D-	À l’estomac en 24 heures, l'intestin grêle en 24 heures et le colon en 24 heures	",
+		"E-	À l’estomac en 4 heures, l'intestin grêle immédiatement et le colon en 24 heures	"],
+			1	,false,false,undefined);
+quizQuestions[	20	] = new QuizItem("	21 Les caractéristiques préopératoires des patients pouvant éprouver une ischémie post opératoire après une intervention non cardiaque comprennent : 	",
+		["A-	Angine de poitrine	",
+		"B-	Plus de 3 contractions ventriculaires prématurées par minute	",
+		"C-	Dyspnée à l'effort	",
+		"D-	Insuffisance tricuspidienne 	",
+		"E-	Age supérieure à 60 ans 	"],
+			2	,false,false,undefined);
+quizQuestions[	21	] = new QuizItem("	22 Pendant une la transfusion sanguine, la coagulation du sang transfusé est associée à :	",
+		["A-	 Incompatibilité ABO	",
+		"B-	Incompatibilité mineure du groupe sanguin	",
+		"C-	Incompatibilité Rh	",
+		"D-	Transfusion à travers la solution de Ringer lactate 	",
+		"E-	Transfusion à travers le glucosé à 5% et l'eau 	"],
+			3	,false,false,undefined);
+quizQuestions[	22	] = new QuizItem("	23 A propos de la cicatrisation d'une plaie, laquelle des phrases suivantes est juste ?	",
+		["A-	 Le contenu en collagène atteint le maximum à environ 1 semaine après la blessure 	",
+		"B-	Les monocytes sont indispensables pour une cicatrisation normale des blessures 	",
+		"C-	Les fibroblastes apparaissent dans la blessure dans les 24-36 heures après le préjudice	",
+		"D-	La fonction du monocyte dans la cicatrisation de la blessure est limitée à la phagocytose des bactéries et des débris	",
+		"E-	Plutôt dans la cicatrisation des blessures, le collagène de type 1 est prédominant.	"],
+			4	,false,false,undefined);
+quizQuestions[	23	] = new QuizItem("	24 Laquelle des affirmations suivantes est vraie à propos de la contraction d'une blessure ?	",
+		["A-	Le processus primaire affectant la fermeture d'une plaie chirurgicale suturée ou attachée avec des agrafes	",
+		"B-	La colonisation bactérienne ralentit de manière significative le processus de contraction 	",
+		"C-	Elle peut compter pour un maximum de 50% dans la diminution de la taille de la plaie (blessure)	",
+		"D-	Elle est basée sur les fibroblastes spécialisés qui contiennent des myofilaments d'actine	",
+		"E-	Le pourcentage de réduction de la taille d'une adhérence augmentée de la peau au tissu sous-jacent homme de 27 	"],
+			3	,false,false,undefined);
+quizQuestions[	24	] = new QuizItem("	25 Une homme 27 ans est blessé par balle sur la cuisse gauche. Dans la salle d'urgences il est observé d'avoir un hématome important dans la partie médiane de sa cuisse. Il se plaint des paresthésies au niveau de son pied. A l’examen, les pouls faibles sont palpés en aval de la blessure et le patient est incapable de bouger son pied. La prise en charge approprié initiale de ce patient serait :	",
+		["A-	Angiographie	",
+		"B-	Exploration et réparation immédiates	",
+		"C-	 Fasciotomie du compartiment antérieur	",
+		"D-	 Observation pour résolution des spasmes	",
+		"E-	Exploration locale de la blessure 	"],
+			1	,false,false,undefined);
+quizQuestions[	25	] = new QuizItem("	 26 Après la première année postopératoire de transplantation cardiaque, la cause la plus fréquente de décès est :	",
+		["A-	Infection 	",
+		"B-	Arythmie	",
+		"C-	Artériosclérose accélérée du greffon	",
+		"D-	Épisode de rejet aigu	",
+		"E-	Cancer	"],
+			2	,false,false,undefined);
+quizQuestions[	26	] = new QuizItem("	27 Laquelle des affirmations suivantes est vraie pour les protéines du (CMH) ?	",
+		["A-	Seules les cellules mononuclées portent les protéines de la classe I du complexe majeur d'histocompatibilité (CMH)	",
+		"B-	Les lymphocytes B, les cellules présentant les antigènes et l'endothélium vasculaire expriment protéines de classe II du CMH	",
+		"C-	 Protéines de classe I sont chiffrées par le locus HLA (DR, DP et DQ)	",
+		"D-	Les protéines de classe I du CMH agissent comme les cibles majeures pour les rejets d'allogreffe médiés par les anticorps et sont détectées par les techniques de cross matching	",
+		"E-	 Les cellules B reconnaissent les antigènes liés aux protéines de classe II du CMH	"],
+			3	,false,false,undefined);
+quizQuestions[	27	] = new QuizItem("	28 Un homme de 55 ans se plaint de douleur épigastrique intermittente chronique et la gastroscopie révèle ulcère de 2 cm de la partie distale de la petite courbure. Les biopsies par endoscopie ne donnent pas de tissu Après 6 semaines d'un traitement d'épreuve avec les inhibiteurs de H2 et le traitement antiacide, l'ulcère reste inchangé. Le traitement approprié à ce point est :	",
+		["A-	 Reprendre le traitement médical d'épreuve	",
+		"B-	 Excision locale de l'ulcère	",
+		"C-	 c. Gastrectomie partielle type Billroth I	",
+		"D-	 Gastrectomie partielle type Billroth I avec vagotomie 	",
+		"E-	 Vagotomie et pyloroplastie	"],
+			2	,false,false,undefined);
+quizQuestions[	28	] = new QuizItem("	29 Laquelle des affirmations suivantes est vraie à propos des effets de la résection du colon ?	",
+		["A-	 L'absorption nette de l'eau par le rectum a été démontré chez les humains	",
+		"B-	 Les patients qui subissent des résections importantes du colon éprouvent peu de changement dans leurs habitudes intestinales suite à l'opération	",
+		"C-	 c. Le colon gauche est mieux adapté pour l'absorption d'eau que le colon droit	",
+		"D-	 Le colon droit est mieux adapté pour l'absorption d'électrolyte que le colon gauche	",
+		"E-	Le rôle de la valve iléo-caecale dans l'homéostasie normale des liquides est bien établi. 	"],
+			1	,false,false,undefined);
+quizQuestions[	29	] = new QuizItem("	30. Une fille de 16 ans qui récemment a eu une angine se plaint maintenant d'une douleur sévère haute du côté gauche. A l'examen, il y a la pâleur, la TA est de lg et le pouls est à 130/min. l'abdomen est tendu et rigide sans bruits péristaltiques. Quel est le diagnostic le plus probable ?	",
+		["A-	 Pyélonéphrite aigue	",
+		"B-	 Syndrome de Fitz Hugh Curtis	",
+		"C-	 Ulcère peptique perfore	",
+		"D-	 Péritonite	",
+		"E-	 Rupture de la rate	"],
+			4	,false,false,undefined);
+quizQuestions[	30	] = new QuizItem("	31. Un nouveau-né a une grosse tuméfaction sur la ligne médiane du cou impliquant la langue. La masse et est mole trans illumine. Quel est le diagnostic le plus probable ?	",
+		["A-	 Kyste branchiale	",
+		"B-	 Adénopathie cervicale	",
+		"C-	Hygrome kystique	",
+		"D-	 Goitre 	",
+		"E-	Kyste thyroglosse	"],
+			2	,false,false,undefined);
+quizQuestions[	31	] = new QuizItem("	Lequel des aspects suivants est caractéristique des ulcères veineux ? 	",
+		["A-	 Ils ne sont jamais douloureux	",
+		"B-	 Ils sont habituellement trouvés sur la face interne de la jambe	",
+		"C-	 Ils sont mieux traités avec des bas à basse compression 	",
+		"D-	 Ils nécessitent habituellement une hospitalisation	",
+		"E-	 Ils sont 10 fois moins fréquents que les ulcères artériels	"],
+			1	,false,false,undefined);
+quizQuestions[	32	] = new QuizItem("	33 Une femme de 25 ans arrive dans la salle des urgences suite à un accident de voiture. Elle présente une dyspnée aigue avec une fréquence respiratoire à 60 cycles/min. les murmures vésiculaires sont nettement diminués du côté droit. La première étape de la prise en charge du patient doit être de :	",
+		["A-	Faire une radio de thorax	",
+		"B-	Prendre le sang artériel pour la gazométrie sanguine	",
+		"C-	 Décomprimer l'espace pleural droit	",
+		"D-	Réaliser une péricardiocentèse	",
+		"E-	Administrer des solutés intraveineux	"],
+			2	,false,false,undefined);
+quizQuestions[	33	] = new QuizItem("	34. Une augmentation aigüe de la pression intracrânienne est caractérisée par lequel des signes cliniques suivants ? 	",
+		["A-	Irrégularités respiratoires	",
+		"B-	 Baisse de la tension artérielle	",
+		"C-	 Tachycardie	",
+		"D-	 Hémorragie rétinienne	",
+		"E-	 Compression du cinquième nerf crânien	"],
+			0	,false,false,undefined);
+quizQuestions[	34	] = new QuizItem("	35. Laquelle des propositions suivantes est la cause la plus fréquente de l'ictère obstructif chez les patients avec pancréatite chronique ?	",
+		["A-	 Formation de pseudocyste du pancréas	",
+		"B-	 Calculs biliaires	",
+		"C-	 Tumeur de la tête du pancréas	",
+		"D-	 Rétrécissement du canal biliaire	",
+		"E-	 Cholangiocarcinome	"],
+			3	,false,false,undefined);
+quizQuestions[	35	] = new QuizItem("	36. Une femme de 55 ans se plaint de difficultés à avaler, vomissement, perte de poids et melaena. A l'examen, il y a une adénopathie supra claviculaire et une plaque veloutée hyper-pigmentée dans son aisselle. Quelle est la seule tumeur maligne la plus probable ?	",
+		["A-	 Carcinome gastrique	",
+		"B-	 Carcinome laryngé	",
+		"C-	 Carcinome œsophagien	",
+		"D-	Carcinome pancréatique	",
+		"E-	Carcinome thyroïdien	"],
+			0	,false,false,undefined);
+quizQuestions[	36	] = new QuizItem("	37. Une hernie inguinale par glissement 	",
+		["A-	 Peut-être diagnostiquée habituellement en post-opératoire	",
+		"B-	Donnera des récidives rarement	",
+		"C-	Ne peut jamais contenir la vessie 	",
+		"D-	 Peut entrainer une lésion intestinale si non-diagnostiquée	",
+		"E-	 Aucune de ces propositions n'est vraie 	"],
+			3	,false,false,undefined);
+quizQuestions[	37	] = new QuizItem("	38 Les splénectomisés sont exposés à des septicémies bactériennes gravissimes. Parmi les bactéries suivantes, quelle espèce menace particulièrement ces sujets ?	",
+		["A-	 Staphylocoque dore	",
+		"B-	 Colibacille	",
+		"C-	 Salmonelle	",
+		"D-	 Pneumocoque	",
+		"E-	 Listerie	"],
+			3	,false,false,undefined);
+quizQuestions[	38	] = new QuizItem("	8. Chez les patients présentant une hémorragie gastro-intestinale haute	",
+		["A-	 Le point de saignement est fréquemment situé au-delà du ligament de Treitz	",
+		"B-	 Les lésions angiodysplasiques sont la cause la plus fréquente	",
+		"C-	 Les patients se présentent toujours avec une hématémèse	",
+		"D-	 L’endoscopie diagnostique est mieux faite dans les 24 premières heures	",
+		"E-	 L’angiographie mésentérique sélective est l’étape clé du diagnostic	"],
+			3	,false,false,undefined);
+quizQuestions[	39	] = new QuizItem("	40. Laquelle des propositions suivantes n'est pas reconnue comme une complication à long terme d'une gastrectomie totale ou partiale ?	",
+		["A-	 Cancer gastrique	",
+		"B-	 Obstruction	",
+		"C-	 Carence en Folate(??)	",
+		"D-	 Carence en Fer	",
+		"E-	 Carence en Vitamine B 12(vitamine B1? 	"],
+			4	,false,false,undefined);
+quizQuestions[	40	] = new QuizItem("	41 Une mère obèse de 45 ans avec 4 enfants s’est servi des couches pour contrôler la fuite d’urines pendant 5 ans. Elle a une toux de fumeur. Elle a des difficultés actuellement pour s’offrir des couches et demande des soins. Laquelle des propositions suivantes est correcte ?	",
+		["A-	 La plupart des femmes avec une incontinence urinaire recherchent des soins médicaux	",
+		"B-	 Son incontinence est presque certainement le résultat d’une faiblesse du plancher pelvien	",
+		"C-	 Elle peut être aidée avec un traitement médicamenteux	",
+		"D-	 Si elle émet l’urine en petits volumes fréquemment et urgemment, l’instabilité vésicale peut ne pas être présent	",
+		"E-	 Si elle a une vraie incontinence de stress, elle doit subir une intervention chirurgicale sans retard.	"],
+			2	,false,false,undefined);
+quizQuestions[	41	] = new QuizItem("	42. Un homme de 50 ans avec des antécédents de consommation abusive d'alcool et de tabac s'est plaint de difficultés à avaler les aliments solides depuis 2 mois. Plus récemment, avaler les liquides est devenu aussi un problème. Il a observé à l'occasion des selles noires goudronneuses. Le patient a perdu 10kg. Laquelle des affirmations suivantes est juste ?	",
+		["A-	 Le pronostic du malade est bon	",
+		"B-	L'investigation par le transit baryté est indiquée	",
+		"C-	Le diagnostic le plus probable est la maladie peptique ulcéreuse	",
+		"D-	Le patient a une achalasie	",
+		"E-	Aucune des réponses ci-dessus	"],
+			1	,false,false,undefined);
+quizQuestions[	42	] = new QuizItem("	43 les symptômes ou signes de la maladie occlusive atherosclérotisique de la bifurcation de l’aorte abdominale (syndrome de Leriche) comprennent lequel des suivants ?	",
+		["A-	Claudication de la fesse et de la cuisse	",
+		"B-	Causalgie du membre inférieur	",
+		"C-	Ejaculation rétrograde	",
+		"D-	Gangrène des orteils 	",
+		"E-	Rougeur (dépendent) adonnée des pieds	"],
+			0	,false,false,undefined);
+quizQuestions[	43	] = new QuizItem("	44. Un homme de 36 ans se présente à la salle des urgences avec une colique rénale. Une radiographie révèle un calcul de 1,5 cm de diamètre. Laquelle des propositions suivantes concernant cette affection est correcte ? 	",
+		["A-	 Traitement conservateur comprenant l’hydratation et analgésiques ne donneront pas un résultat satisfaisant 	",
+		"B-	 La radiographie en série du rein, de l’uretère et de la vessie devrait être faite pour suivre ce patient. 	",
+		"C-	 L’analyse d’urine révélera presque toujours une micro hématurie 	",
+		"D-	 Lorsque l’épisode aigu est correctement traité, cette maladie récidive rarement 	",
+		"E-	 Un taux élevé d’urée sanguine et de la créatinémie sont attendus 	"],
+			0	,false,false,undefined);
+quizQuestions[	44	] = new QuizItem("	45. Un piéton est heurté par une voiture en vitesse. Les études radiologiques obtenues dans la salle des urgences y compris l’uréthrographie rétrograde sont compatibles avec une fracture du bassin et une rupture de l’urèthre situé au-dessus du diaphragme urogénital. La prise en charge consisterait à laquelle des propositions suivantes ? 	",
+		["A-	 Nephrostomie percutanée immédiate 	",
+		"B-	 Placement immédiat d’une sonde de Foley à travers l’urèthre dans la vessie pour aligner et comprimer les zones lésées 	",
+		"C-	 Reconstruction immédiate de l’urèthre rompu après la stabilisation initiale du patient 	",
+		"D-	 Exploration immédiate du bassin pour contrôler l’hémorragie provenant de la fracture pelvienne avec drainage de l’hématome pelvien 	",
+		"E-	 Placement immédiat d’une sonde de cystostomie sus-pubienne 	"],
+			4	,false,false,undefined);
+quizQuestions[	45	] = new QuizItem("	46. Laquelle des propositions suivantes concernant les contusions cérébrales est vraie ? 	",
+		["A-	 Elles surviennent le plus fréquemment au niveau des lobes occipitaux 	",
+		"B-	 Elles peuvent survenir du côté opposé du point de l’impact crânien 	",
+		"C-	 Elles sont rarement accompagnées par un saignement du parenchyme 	",
+		"D-	 Elles peuvent survenir de manière spontanée chez les patients sous anticoagulants 	",
+		"E-	 Les médicaments anticonvulsivants n’ont aucun rôle dans la prise en charge précoce de ce trouble 	"],
+			1	,false,false,undefined);
+quizQuestions[	46	] = new QuizItem("	47 Il y a beaucoup de causes de douleurs abdominales aigues parmi lesquelles certaines sont prises en charge initialement par des moyens conservateurs. Laquelle des propositions suivantes nécessite toujours une intervention chirurgicale en urgence après le diagnostic ? 	",
+		["A-	 Pancréatite aiguë 	",
+		"B-	 Ischémie mésentérique aiguë 	",
+		"C-	 Diverticulite aiguë 	",
+		"D-	 Cholécystite aiguë 	",
+		"E-	 La maladie aiguë de Crohn 	"],
+			1	,false,false,undefined);
+quizQuestions[	47	] = new QuizItem("	48. Une femme de 20 ans se présente avec une masse au cou. A l’examen, la masse se trouve sous le bord antérieur du muscle sternomastoide. Quel est le diagnostic le plus probable ? 	",
+		["A-	 Kyste branchial 	",
+		"B-	 Adénopathie cervicale 	",
+		"C-	 Goitre 	",
+		"D-	 Adénopathie sous-maxillaire 	",
+		"E-	 Kyste thyroglosse 	"],
+			0	,false,false,undefined);
+quizQuestions[	48	] = new QuizItem("	49. Une analyse du liquide d'ascite est effectuée : quel résultat affirmerait la présence d’une infection du liquide	",
+		["A-	 Taux de protides supérieur à 30 g/l	",
+		"B-	 Taux de polynucléaires neutrophiles >100/mm3	",
+		"C-	 Présence d'un germe en culture	",
+		"D-	 Taux d'amylases supérieur à 10 fois la normale 	",
+		"E-	 PH inférieur à 7,34	"],
+			2	,false,false,undefined);
+quizQuestions[	49	] = new QuizItem("	50 Le diverticule de Zenker correspond à la caractéristique suivante :	",
+		["A-	 Très généralement associé à un reflux gastro-œsophagien	",
+		"B-	 Situé au niveau de l'espace crico-pharyngien	",
+		"C-	 Risque élevé de dégénérescence cancéreuse	",
+		"D-	 En rapport avec l'attraction de l'œsophage par des adénopathies 	",
+		"E-	 Fréquent chez l'adulte jeune	"],
+			1	,false,false,undefined);
+
+
+//alert(quizQuestions.length);
+
+
+for(var i= 0; i<quizQuestions.length; i++) {
+ep+=quizQuestions[i].question+"$$***$$";
+ep+=quizQuestions[i].variants[0]+"$$***$$";
+ep+=quizQuestions[i].variants[1]+"$$***$$";
+ep+=quizQuestions[i].variants[2]+"$$***$$";
+ep+=quizQuestions[i].variants[3]+"$$***$$";
+ep+=quizQuestions[i].variants[4]+"$$***$$";
+ep+=quizQuestions[i].variants[5]+"$$***$$";
+ep+=quizQuestions[i].answer+"$$***$$";
+ //alert(quizQuestions[0].answer+"$$***$$");
+ }
+ 
+  //document.write(ep);
+  
+   localStorage.setItem("ep", ep);
+    location.href="cont.html";
+ }
+ 
+
+ 
+</script>
+
+
+<script>
+
+
+
+function gyn19(){
+ep = "ENSCT Gynécologie 2019";
+ep+="$$***$$";
+ //alert(ep);
+
+
+
+
+quizQuestions[	0	] = new QuizItem("	51 Une plaquette de oestro progestative contient 21 pilule identique associant 30 microgrammes d’éthinyl œstradiol et un progestatif. Il s’agit :	",
+		["A-	D’une pilule classique	",
+		"B-	D’une minidosée combiné	",
+		"C-	D’une séquentielle	",
+		"D-	D’une micropilule	",
+		"E-	D’une minidosée biphasique	"],
+			1	,false,false,undefined);
+quizQuestions[	1	] = new QuizItem("	52 immunisation sanguine foeto maternelle. Dans quelle(s) association(s) faut-il faire une prévention de la maladie hémolytique par injection d’immunoglobuline anti-D Rh	",
+		["A-	Mère groupe O rhésus – test de Coombs indirect négatif enfant groupe A Rh-	",
+		"B-	Mère groupe O rhésus - test de Coombs indirect positif enfant groupe O Rh+	",
+		"C-	Mère groupe O rhésus- test de Coombs indirect négatif enfant groupe O Rh+	",
+		"D-	Mère groupe O rhésus positif test de Coombs indirect négatif enfant groupe A Rh-	",
+		"E-	Mère groupe O rhésus négatif test de Coombs indirect négatif enfant groupe O Rh-	"],
+			2	,false,false,undefined);
+quizQuestions[	2	] = new QuizItem("	53 Tumeur du sein. Une femme présente un nodule mammaire isolé du quadrant supéro- externe. Une mammographie est pratiquée. Un autre examen paraclinique est indispensable. Lequel	",
+		["A-	Echographie	",
+		"B-	Cytoponction	",
+		"C-	Galactographie	",
+		"D-	Thermographie	",
+		"E-	Xérographie	"],
+			1	,false,false,undefined);
+quizQuestions[	3	] = new QuizItem("	54 Maladie de Paget. Au cours de la maladie de Paget les complications suivantes sont possibles. (reponse fausse)	",
+		["A-	Dégénérescence sarcomateuse	",
+		"B-	Fracture spontanée	",
+		"C-	Néphropathie glomérulaire	",
+		"D-	Insuffisance cardiaque globale	",
+		"E-	Compression médullaire	"],
+			2	,false,false,undefined);
+quizQuestions[	4	] = new QuizItem("	55 Maladie infectieuse au cours de la grossesse. Quel traitement préventif préconisez-vous à un nouveau-né de mère Ag HBs et Ag HBe positifs ?	",
+		["A-	Aucun traitement	",
+		"B-	Immunoglobuline polyvalentes dite standard	",
+		"C-	Vaccination contre l’hépatite B seule 	",
+		"D-	Immunoglobulines spécifiques contre l’hépatite B seules	",
+		"E-	Immunoglobulines spécifiques et Vaccination contre l’hépatite B	"],
+			4	,false,false,undefined);
+quizQuestions[	5	] = new QuizItem("	56. Chez une femme habituellement réglée tous les 32 jours, le calcul du terme à partir de l'ovulation doit tenir compte d'une phase pré-ovulatoire de :	",
+		["A-	 14 jours	",
+		"B-	 16 jours	",
+		"C-	 18 jours	",
+		"D-	 Variable entre 14 et 18 jours	",
+		"E-	 Supérieure à 18 jours	"],
+			2	,false,false,undefined);
+quizQuestions[	6	] = new QuizItem("	57. Quelle manifestation ne fait pas habituellement partie de la ménopause ?	",
+		["A-	 Paresthésie des extrémités	",
+		"B-	 Insomnies	",
+		"C-	 Sécheresse vaginale	",
+		"D-	 Tension des seins	",
+		"E-	 Sudation	"],
+			3	,false,false,undefined);
+quizQuestions[	7	] = new QuizItem("	58 Madame R. 22 ans, consulte pour une lésion vulvaire douloureuse. Vous constatez des vésicules en bouquet sur la grande lèvre. Certaines sont rompues. Il existe des adénopathies inguinales homolatérales sensibles. Elle a 38°C Quel diagnostic envisager ?	",
+		["A-	 Une syphilis	",
+		"B-	 Des condylomes vulvaires	",
+		"C-	 Un herpès génital	",
+		"D-	 Un cancer	",
+		"E-	 Une mycose vulvaire	"],
+			2	,false,false,undefined);
+quizQuestions[	8	] = new QuizItem("	59. Une tumeur du quadrant supéro-externe du sein droit mesure 2 cm de diamètre clinique, présence d'une adénopathie axillaire homolatérale Immobile cliniquement non envahie. Pas de bilan d'extension à la recherche de métastases. Cette tumeur est classée :	",
+		["A-	 T1 N1 MO	",
+		"B-	 T1 N1 MX	",
+		"C-	 T2 N1 MO 	",
+		"D-	 T2 N1 MX 	",
+		"E-	T2 N1 MO	"],
+			1	,false,false,undefined);
+quizQuestions[	9	] = new QuizItem("	60. La trichomonase génitale de la femme. Désignez dans la liste suivante la proposition inexacte :	",
+		["A-	 Est une maladie vénérienne	",
+		"B-	 Se diagnostique aisément sur des frottis effectués au niveau du col de l'utérus	",
+		"C-	 Répond bien à un traitement par le Flagyl par voie orale et locale	",
+		"D-	 Nécessite de traiter simultanément le partenaire	",
+		"E-	 Peut être associé à une candidose vaginale 	"],
+			1	,false,false,undefined);
+quizQuestions[	10	] = new QuizItem("	61, Une salpingite aigue peut entrainer à distance :  A-Une dyspareunie B-Des douleurs abdominales C-Une infection urinaire chronique D-Une grossesse extra-utérine E- Une stérilité tubaire	",
+		["A-	 A D E	",
+		"B-	 A B C D E	",
+		"C-	 A B D E	",
+		"D-	 B D E 	",
+		"E-	 B C D E	"],
+			2	,false,false,undefined);
+quizQuestions[	11	] = new QuizItem("	62. Le test de Kleihauer est utilisé pour :	",
+		["A-	 Apprécier la maturité pulmonaire du fœtus	",
+		"B-	 Diagnostiquer une immunisation foeto maternelle	",
+		"C-	 Rechercher la présence d'hématies fœtales dans le sang maternel	",
+		"D-	 Titrer les agglutinines immunes	",
+		"E-	 Préciser le sexe fœtal sur culture des cellules amniotiques	"],
+			2	,false,false,undefined);
+quizQuestions[	12	] = new QuizItem("	 63. Parmi les examens suivants, quel est celui qui permet avec le plus de certitude de porter le diagnostic de cancer l’endomètre 	",
+		["A-	Examen clinique	",
+		"B-	Frottis endométrial	",
+		"C-	 Echographie	",
+		"D-	Hystérographie	",
+		"E-	Curetage biopsique	"],
+			4	,false,false,undefined);
+quizQuestions[	13	] = new QuizItem("	64.le plus sensible pour le dépistage des cancers du seins ?	",
+		["A-	La thermographie	",
+		"B-	 La mammographie	",
+		"C-	 L’auto palpation 	",
+		"D-	Échographie	",
+		"E-	Dosage sérique de l’ACE	"],
+			1	,false,false,undefined);
+quizQuestions[	14	] = new QuizItem("	65 madame X présente après une aménorrhée de 2 mois et demi des métrorragies d’abondance modérée. Parmi les examens lequel permet d'affirmer l’évolutivité la grossesse d'abondance ? 	",
+		["A-	 Le dosage de l'HCG urinaire	",
+		"B-	 Le dosage de l'HCG béta plasmique	",
+		"C-	 Le dosage de la progestérone plasmique	",
+		"D-	 Le diagnostic immunologique de grossesse	",
+		"E-	 L’échographie	"],
+			4	,false,false,undefined);
+quizQuestions[	15	] = new QuizItem("	 66. parmi les agents infectieux suivants, lequel peut vraisemblablement intervenir dans la genèse du cancer du col utérin ?	",
+		["A-	 Trichomonas	",
+		"B-	 Gonocoque	",
+		"C-	 Chlamydia	",
+		"D-	 Papillomavirus	",
+		"E-	 Mycoplasme	"],
+			3	,false,false,undefined);
+quizQuestions[	16	] = new QuizItem("	 67. L'examen complémentaire utilise à faire systématiquement chez la femme ménopausée est :	",
+		["A-	 Le dosage de FSH	",
+		"B-	 Le dosage des œstrogènes	",
+		"C-	 Une radiographie du rachis lombaire face et profil pour déterminer la densité osseuse	",
+		"D-	 Une mammographie	",
+		"E-	 Une hystérographie	"],
+			3	,false,false,undefined);
+quizQuestions[	17	] = new QuizItem("	 68. Un cancer du col au stade IB peut correspondre à toutes les caractéristiques suivantes sauf une. Laquelle 	",
+		["A-	 Cancer épidermoïde du col utérin	",
+		"B-	 Adénocarcinome du col utérin	",
+		"C-	 Cancer micro invasif	",
+		"D-	 Cancer limité au col	",
+		"E-	 Cancer avec extension lymphatique	"],
+			2	,false,false,undefined);
+quizQuestions[	18	] = new QuizItem("	 69. Parmi ces propositions concernant le fibrome et la grossesse, laquelle est fausse ?	",
+		["A-	 Le fibrome peut gêner le diagnostic de grossesse jeune	",
+		"B-	 S’il existe un fibrome au 3ème trimestre d'une grossesse il faut faire une myomectomie	",
+		"C-	 La nécrobiose aseptique est la plus fréquente	",
+		"D-	 On observe plus souvent des présentations anormales	",
+		"E-	 Le fibrome peut constituer un obstacle à l'accouchement	"],
+			1	,false,false,undefined);
+quizQuestions[	19	] = new QuizItem("	 70. Quelle recommandation préconisez-vous à un nouveau-né de mère Ag HBS et Ag HBe positifs ?	",
+		["A-	 Aucun traitement	",
+		"B-	 Immunoglobuline polyvalente	",
+		"C-	 Vaccination seule	",
+		"D-	 Immunoglobulines spécifiques seules	",
+		"E-	 Sérovaccination	"],
+			4	,false,false,undefined);
+quizQuestions[	20	] = new QuizItem("	71 Toutes les propositions suivantes concernant les facteurs de risques d’une infection génitale haute sont exactes sauf une : 	",
+		["A-	Maximum de fréquence avant 30 ans 	",
+		"B-	Risque accru par la prise d'un progestatif	",
+		"C-	Risque accru chez la nullipare	",
+		"D-	Le D.I.U est un facteur de risque	",
+		"E-	Protection partielle par l'utilisation de contraceptifs locaux 	"],
+			1	,false,false,undefined);
+quizQuestions[	21	] = new QuizItem("	72 Quel est le symptôme le plus souvent révélateur des cancers de l'ovaire ?	",
+		["A-	Des métrorragies	",
+		"B-	Des signes de compression rectale	",
+		"C-	Une augmentation du volume de l'abdomen	",
+		"D-	Des signes de compression vésicale	",
+		"E-	Une adénopathie sus-claviculaire	"],
+			2	,false,false,undefined);
+quizQuestions[	22	] = new QuizItem("	 73. A propos des liens entre grossesse et pression artérielle, quelle est la proposition fausse ?	",
+		["A-	 Le volume plasmatique s'accroit au cours de la grossesse normale	",
+		"B-	La pression artérielle s'élève au cours de la grossesse normale	",
+		"C-	 Les résistances périphériques s'abaissent au cours de la grossesse normale	",
+		"D-	 Il y'a un lien statistique entre HTA de la grossesse et trouble de la croissance fœtale	",
+		"E-	 Le régime sans sel n'est pas indiqué dans I'HTA gravidique	"],
+			1	,false,false,undefined);
+quizQuestions[	23	] = new QuizItem("	74. Quel est l'élément le plus approprié pour surveiller un cancer du col de l'utérus traité ?	",
+		["A-	 Béta2- microglobuline	",
+		"B-	 Examen clinique répétés	",
+		"C-	 Scintigraphie osseuse	",
+		"D-	 Frottis de surveillance réguliers	",
+		"E-	 Alpha foeto protéine	"],
+			3	,false,false,undefined);
+quizQuestions[	24	] = new QuizItem("	75. parmi les complications que peut entrainer la carence oestrogénique de la ménopause, laquelle ou lesquelles retenez-vous ?	",
+		["A-	 Atrophie vaginale	",
+		"B-	 Hyperplasie de l’endomètre	",
+		"C-	 Involution mammaire	",
+		"D-	 Hyper-sécrétion de la glaire cervicale	",
+		"E-	 A C	"],
+		4		,false,false,undefined);
+quizQuestions[	25	] = new QuizItem("	76. Quelle hypothèse parmi les suivantes il faut évoquer une Hauteur utérine à 26 cm à 34 semaines d'aménorrhée chez une femme dont le terme est connu avec précision ?	",
+		["A-	 Une grossesse gémellaire	",
+		"B-	 Une hypotrophie fœtale	",
+		"C-	 Une hypertrophie du placenta	",
+		"D-	 Une grossesse normale	",
+		"E-	 Hydramnios	"],
+			1	,false,false,undefined);
+quizQuestions[	26	] = new QuizItem("	 77. Lorsque l'examen clinique semble normal lors d'une suspicion de grossesse extra-utérine, que faut-il faire :	",
+		["A-	 Reconvoquer la patiente quinze jours plus tard pour nouvel examen	",
+		"B-	Faire une coelioscopie	",
+		"C-	 Demander un dosage de beta HCG et une échographie	",
+		"D-	 L'opérer immédiatement	",
+		"E-	 Aucune de ces propositions n'est correcte	"],
+			2	,false,false,undefined);
+quizQuestions[	27	] = new QuizItem("	 78. On dit qu'une présentation est engagée lorsque son plus grand diamètre :	",
+		["A-	 Est au-dessus du détroit supérieur	",
+		"B-	 A franchi le détroit supérieur	",
+		"C-	 A franchi le détroit moyen	",
+		"D-	 A franchi le détroit inférieur	",
+		"E-	 A franchi la vulve	"],
+			1	,false,false,undefined);
+quizQuestions[	28	] = new QuizItem("	 79. Le diagnostic d'un prolapsus génital se fait :	",
+		["A-	 A l'examen clinique	",
+		"B-	 A l'échographie	",
+		"C-	 A l'hystérographie	",
+		"D-	 En per opératoire	",
+		"E-	 Aucune réponse n'est exacte	"],
+			0	,false,false,undefined);
+quizQuestions[	29	] = new QuizItem("	 80. Dans l'insertion basse du placenta	",
+		["A-	 Le placenta est toujours inséré sur le segment inférieur	",
+		"B-	 Il y'a toujours des hémorragies soit pendant la grossesse, soit pendant l'accouchement	",
+		"C-	 La rupture de la poche des eaux peut arrêter d'éventuelles hémorragies en cours de travail	",
+		"D-	 L'hémorragie liée à l'insertion basse du placenta peut entrainer une anémie fœtale sévère	",
+		"E-	 L'échographie peut faire le diagnostic à 35 semaines	"],
+			4	,false,false,undefined);
+quizQuestions[	30	] = new QuizItem("	81. Tous les médicaments suivants peuvent être utilisés dans le traitement d'une menace d'accouchement prématuré sauf un. Lequel ?	",
+		["A-	 Progestérone	",
+		"B-	 Aspirine	",
+		"C-	 Béta bloquant	",
+		"D-	 Indométacine	",
+		"E-	 Salbutamol	"],
+			2	,false,false,undefined);
+quizQuestions[	31	] = new QuizItem("	 82. Parmi les propositions suivantes concernant la grossesse extra-utérine, laquelle est fausse ?	",
+		["A-	 Elle survient plus souvent chez une femme traitée pour stérilité tubaire	",
+		"B-	 Elle est favorisée par la prise de pilules contraceptives oestro-progestatives	",
+		"C-	 Une échographie pelvienne normale ne suffit pas à éliminer le diagnostic	",
+		"D-	 Un taux plasmatique d'HCG béta inférieur à 5 UI suffit pour éliminer le diagnostic	",
+		"E-	 Les grossesses tubaires isthmiques exposent le plus au risque de ruptures cataclysmiques	"],
+			1	,false,false,undefined);
+quizQuestions[	32	] = new QuizItem("	83. La découverte d'une bactériurie significative à Proteus totalement asymptomatique chez une femme sans antécédents au 3ème mois de la grossesse	",
+		["A-	 Doit être traitée par anti-infectieux adaptés	",
+		"B-	 Doit faire pratiquer une urographie et une cystographie rapidement	",
+		"C-	 Impose le port d'une sonde à demeure	",
+		"D-	 Peut être négligée	",
+		"E-	 Impose le repos au lit trois semaines	"],
+			0	,false,false,undefined);
+quizQuestions[	33	] = new QuizItem("	 84. La complication fœtale la plus fréquente des infections urinaires au cours de la grossesse est :	",
+		["A-	 L'infection ovulaire	",
+		"B-	 La prématurité	",
+		"C-	 L'hématome rétro placentaire	",
+		"D-	 La macrosomie fœtale	",
+		"E-	 La mort du fœtus in utéro	"],
+			1	,false,false,undefined);
+quizQuestions[	34	] = new QuizItem("	85. Parmi les 5 propositions suivantes, toutes sont exactes, sauf une. Laquelle ? Une grossesse comportant un risque vasculo-rénal est surveillée sur :	",
+		["A-	 La créatininémie	",
+		"B-	 L'uricémie	",
+		"C-	 L'urémie	",
+		"D-	 La protéinurie des 24 heures	",
+		"E-	 La prise de tension artérielle	"],
+			2	,false,false,undefined);
+quizQuestions[	35	] = new QuizItem("	 86. L'apparition de crises à type comitial chez une gestante au 9ème mois hypertendu, évoque surtout 	",
+		["A-	 Un état comitial ancien	",
+		"B-	 Une hémorragie cérébrale	",
+		"C-	Un ramollissement cérébral 	",
+		"D-	Une éclampsie 	",
+		"E-	Une thrombose veineuse cérébrale	"],
+			3	,false,false,undefined);
+quizQuestions[	36	] = new QuizItem("	87 Quel est l'examen biologique le plus fiable pour évaluer le pronostic d'une toxémie gravidique	",
+		["A-	Glycémie 	",
+		"B-	Créatininémie 	",
+		"C-	Triglycéridémie 	",
+		"D-	Uricémie 	",
+		"E-	Natrémie 	"],
+			3	,false,false,undefined);
+quizQuestions[	37	] = new QuizItem("	88 Quelle est la cause la plus fréquente des avortements spontanés du 1er trimestre de la grossesse	",
+		["A-	Causes hormonales 	",
+		"B-	Malformations utérines	",
+		"C-	Fibromes	",
+		"D-	Béance de l'isthme 	",
+		"E-	Chromosomiques de l'œuf Anomalies 	"],
+			4	,false,false,undefined);
+quizQuestions[	38	] = new QuizItem("	89 Parmi les propositions suivantes, citez les facteurs de risque de grossesse extra-utérine : A- Pilule microprogestative  B- Antécédent de salpingite C- Antécédent de chirurgie pelvienne D- Kyste de l'ovaire E-  Dispositif intra utérin	",
+		["A-	A B C D E	",
+		"B-	A B C  E	",
+		"C-	A B C 	",
+		"D-	A B C D 	",
+		"E-	B C  E 	"],
+			1	,false,false,undefined);
+quizQuestions[	39	] = new QuizItem("	 90. parmi les causes de G.E.U. donnez les propositions exactes : A-  Séquelles de salpingite B- Endométriose tubaire C-  Endométriose ovarienne D-  Sténose tubaire unilatérale E-  Migration prolongée de l'œuf	",
+		["A-	A B D E	",
+		"B-	A B C D E	",
+		"C-	A B C E	",
+		"D-	A D E	",
+		"E-	 B C E	"],
+			0	,false,false,undefined);
+quizQuestions[	40	] = new QuizItem("	 91. Parmi les circonstances suivantes laquelle est une contre-indication à la contraception :	",
+		["A-	 Antécédent de kyste lutéinique	",
+		"B-	 Fibrome utérin	",
+		"C-	 Endométriose	",
+		"D-	 Hyperplasie de l'endomètre	",
+		"E-	 Toutes ces propositions sont vraies	"],
+			3	,false,false,undefined);
+quizQuestions[	41	] = new QuizItem("	92. Parmi les affections suivantes. Une seule n'est pas une contre-indication formelle des oestro progestatif Laquelle ?	",
+		["A-	 Tumeurs malignes du sein et de l'utérus	",
+		"B-	 Accidents thromboemboliques	",
+		"C-	 Fibrome utérin	",
+		"D-	 Hépatite cholestatique	",
+		"E-	 Adénome hypophysaire	"],
+			2	,false,false,undefined);
+quizQuestions[	42	] = new QuizItem("	93. La contraception orale par oestro progestatif est contre indiquée de manière absolue ou relative dans les cas suivants sauf un ; lequel ?	",
+		["A-	Multiparité	",
+		"B-	 Hypertension artérielle	",
+		"C-	 Phlébite profonde 	",
+		"D-	Hépatite cholestatique	",
+		"E-	 Fibrome utérin	"],
+			0	,false,false,undefined);
+quizQuestions[	43	] = new QuizItem("	94 Quel(s) est (sont) parmi les suivants le (les) facteur(s) de risque de cancer du sein  A-Age précoce de la première grossesse  B- Lésions mastosiques proliférantes C- Absence d'allaitement D-  Ménopause tardive E- Premières règles précoces	",
+		["A-	A B C D E	",
+		"B-	A B C  E	",
+		"C-	 B C D E	",
+		"D-	 C D E	",
+		"E-	 C D E	"],
+			2	,false,false,undefined);
+quizQuestions[	44	] = new QuizItem("	91 Parmi les facteurs suivants, lequel le plus important pour le pronostic de survie à 5 ans après un traitement approprié du cancer du col utérin ?	",
+		["A-	La présence de souches à haut risque du virus du papillome humain (VPH)	",
+		"B-	 Stade du cancer	",
+		"C-	 L’âge du patient	",
+		"D-	 Grade histologique de la tumeur	",
+		"E-	 Présence de ganglions régionaux (pelviens) positifs	"],
+			1	,false,false,undefined);
+quizQuestions[	45	] = new QuizItem("	 92 À la 24e semaine de gestation, où sont produits la plupart des globules rouges du fœtus ?	",
+		["A-	 Le sac vitellin	",
+		"B-	 Spleen 	",
+		"C-	 Moelle osseuse 	",
+		"D-	 Foie	",
+		"E-	Ganglions lymphatiques 	"],
+			3	,false,false,undefined);
+quizQuestions[	46	] = new QuizItem("	93. Une femme primipare de 22 ans est en travail prématuré à 30 semaines de gestation. Malgré l'administration d'agents tocolytiques, il semble qu'elle va bientôt accoucher. La maturité pulmonaire pourrait être renforcée par l'administration de quels médicaments parmi les suivants ?	",
+		["A-	 Sulfate de magnésium	",
+		"B-	 Bétaméthasone	",
+		"C-	 Hydroxy progestérone	",
+		"D-	 Chloroprocaïne	",
+		"E-	 Digitalis	"],
+			1	,false,false,undefined);
+quizQuestions[	47	] = new QuizItem("	94. Une femme enceinte de 37 ans, atteinte de diabète sucré de type 2 et d'hypertension chronique, est enceinte de 35 semaines. Parmi les tests suivants, lequel est le meilleur pour dépister le bien-être du fœtus ?	",
+		["A-	 Le test de stress (NST)	",
+		"B-	 Test de provocation à l'ocytocine	",
+		"C-	 Amniocentèse	",
+		"D-	 Comptage des mouvements du fœtus	",
+		"E-	 Profil biophysique du fœtus 	"],
+			4	,false,false,undefined);
+quizQuestions[	48	] = new QuizItem("	95. Parmi les facteurs suivants, lequel est associé au plus grand risque de développer un cancer du sein au cours la vie ? 	",
+		["A-	 L’obésité	",
+		"B-	 Ménarche précoce	",
+		"C-	 Ménopause tardive	",
+		"D-	 Age	",
+		"E-	 Avoir une mère ayant des antécédents de cancer du sein	"],
+			4	,false,false,undefined);
+quizQuestions[	49	] = new QuizItem("	96. Lequel des types suivants est le plus fréquent ?	",
+		["A-	 Le carcinome inflammatoire 	",
+		"B-	 Carcinome lobulaire in situ	",
+		"C-	 Carcinome infiltrant lobulaire	",
+		"D-	 Carcinome canalaire infiltrant 	",
+		"E-	 Carcinome canalaire in situ	"],
+			3	,false,false,undefined);
+quizQuestions[	50	] = new QuizItem("	97. Une femme de 26 ans se plaint d'un écoulement vaginal provoquant des brulures et des démangeaisons au niveau du périnée. Le PH de l'écoulement est de 4,5. Laquelle des causes suivantes est la plus probable ?	",
+		["A-	 Vaginite monilienne 	",
+		"B-	Vaginite à trichotnonas 	",
+		"C-	Cervicite chlamydiale 	",
+		"D-	Cervicite gonococcique	",
+		"E-	 vaginose bactérienne	"],
+			1	,false,false,undefined);
+quizQuestions[	51	] = new QuizItem("	98 Investigation d'une jeune femme présentant une dysurie, un écoulement vaginal et des douleurs pelviennes	",
+		["A-	 Frottis de la paroi vaginale 	",
+		"B-	 Étude du mucus cervical 	",
+		"C-	 Feuille de température	",
+		"D-	 Biopsie de l'endométrite	",
+		"E-	 Tests pour la recherche de chlamydia	"],
+			4	,false,false,undefined);
+quizQuestions[	52	] = new QuizItem("	99. Une nulli gravide de 23 ans a arrêté ses pilules contraceptives pour concevoir. Elle a eu ses règles après dernière boite des pilules et est devenu aménorrhéique pendant 7 mois. Elle est par ailleurs en très bonne santé.	",
+		["A-	 Dosage du taux sérique de prolactine	",
+		"B-	 Dosage du taux de gonadotrophines	",
+		"C-	 Dosage du taux de TSH	",
+		"D-	 Dosage du taux de progestérone 	",
+		"E-	 Dosage du taux de beta HCG	"],
+			0	,false,false,undefined);
+quizQuestions[	53	] = new QuizItem("	100 une femme de 37 ans présente une histoire de méno métrorragie. Elle a été sous pilule contraceptive orale	",
+		["A-	Biopsie de l’endomètre	",
+		"B-	Thérapie par fer oral	",
+		"C-	Laparoscopie	",
+		"D-	Dilatation et curetage	",
+		"E-	Acide tranexamique 	"],
+			3	,false,false,undefined);
+
+
+//alert(quizQuestions.length);
+
+
+for(var i= 0; i<quizQuestions.length; i++) {
+ep+=quizQuestions[i].question+"$$***$$";
+ep+=quizQuestions[i].variants[0]+"$$***$$";
+ep+=quizQuestions[i].variants[1]+"$$***$$";
+ep+=quizQuestions[i].variants[2]+"$$***$$";
+ep+=quizQuestions[i].variants[3]+"$$***$$";
+ep+=quizQuestions[i].variants[4]+"$$***$$";
+ep+=quizQuestions[i].variants[5]+"$$***$$";
+ep+=quizQuestions[i].answer+"$$***$$";
+ //alert(quizQuestions[0].answer+"$$***$$");
+ }
+ 
+  //document.write(ep);
+  
+   localStorage.setItem("ep", ep);
+    location.href="cont.html";
+ }
+ 
+
+ 
+</script>
+
+
+<script>
+
+
+
+function cas19(){
+ep = "ENSCT Cas Courts 2019";
+ep+="$$***$$";
+ //alert(ep);
+
+quizQuestions[	0	] = new QuizItem("	1 Un enfant de 12 ans Jamais vacciné par le BCG est adressé pour virage de son intra dermoréaction à la tuberculine à 10 unités. Sa radiographie thoracique met en évidence une adénopathie hilaire droite. Les recherches de BK sont négatives 15 jours plus tard cet enfant présente une dyspnée d'apparition brutale et quelques crachats hémoptoiques le nouveau cliché thoracique montre l'apparition d'une atélectasie du lobe moyen Quel diagnostic évoquez-vous ?	",
+		["A-	  Tuberculose primaire (maladie dite de réinfection)	",
+		"B-	  Staphylococcie pulmonaire	",
+		"C-	  Infection à VRS	",
+		"D-	  Primo-infection tuberculeuse	",
+		"E-	  Infection à chlamydia	"],
+			3	,false,false,undefined);
+quizQuestions[	1	] = new QuizItem("	2 Quel examen faut-il pratiquer chez tous les membres de la famille ?	",
+		["A-	 Radiographie thoracique	",
+		"B-	 NFS	",
+		"C-	 Recherche de BK par tubage gastrique	",
+		"D-	 VS	",
+		"E-	  Toutes les réponses ci-dessus	"],
+			0	,false,false,undefined);
+quizQuestions[	2	] = new QuizItem("	3 Toutes les propositions suivantes concernant l'épisode aigu récent sont justes sauf une laquelle ?	",
+		["A-	  Il correspond à une fistulisation ganglio-bronchique	",
+		"B-	  Il nécessite une corticothérapie immédiate	",
+		"C-	  Il impose une fibroscopie bronchique	",
+		"D-	  Il nécessite de nouvelles recherches de BK	",
+		"E-	  Aucune des réponses ci-dessus	"],
+			0	,false,false,undefined);
+quizQuestions[	3	] = new QuizItem("	4 Quel doit être le traitement à prescrire à cet enfant ?	",
+		["A-	  Isoniazide (INH) pendant 3 mois	",
+		"B-	  Isoniazide (INH) pendant 6 mois	",
+		"C-	  Isoniazide (INH) et rifampicine pendant 6 mois	",
+		"D-	  Isoniazide rifampicine pyrazinamide et ethambutol	",
+		"E-	  Surveillance simple	"],
+			3	,false,false,undefined);
+quizQuestions[	4	] = new QuizItem("	5 La « maladie du hile » peut se compliquer habituellement par	",
+		["A-	  Cancer bronchique	",
+		"B-	 Bronchectasies	",
+		"C-	 Broncho-pneumonie	",
+		"D-	 Abcès pulmonaire	",
+		"E-	 Toutes les réponses ci-dessus	"],
+			4	,false,false,undefined);
+quizQuestions[	5	] = new QuizItem("	6 Un sujet de 48 ans présente une hypertension artérielle traitée depuis 10 ans par un diurétique thiazide (hydrochlorothiazide). Le taux de potassium est trouvé à 3.4 mmol/l celui de la créatinine à 208 μmol/l. Chaque année en médecine du travail et ce depuis 18 ans on lui signale la présence d'une hématurie microscopique isolée a aucune autre symptomatologie. Une hypokaliémie dans ce contexte clinique peut s'expliquer par laquelle des situations suivantes ?	",
+		["A-	   Une fuite intestinale de potassium	",
+		"B-	  La prise de diurétiques et l'hyperaldostéronisme	",
+		"C-	  Une insuffisance rénale	",
+		"D-	  L’existence d'une glomérulonéphrite	",
+		"E-	  Toutes les réponses ci-dessus	"],
+			1	,false,false,undefined);
+quizQuestions[	6	] = new QuizItem("	7 L'élévation de la créatinine plasmatique traduit une altération fonctionnelle rénale dont l'importance ne Peut être déduite qu'en tenant compte de paramètres suivants sauf un lequel ?	",
+		["A-	   L'apport alimentaire en glucides	",
+		"B-	   L'importance de la masse corporelle	",
+		"C-	    les variations de la volémie	",
+		"D-	    L’absence d'anomalie importante du volume	",
+		"E-	   Aucune des réponses ci-dessus	"],
+			0	,false,false,undefined);
+quizQuestions[	7	] = new QuizItem("	8 L’insuffisance rénale en l'absence d'examen complémentaire peut être due à toutes les conditions suivantes sauf une laquelle ?	",
+		["A-	  a glomerulopathie	",
+		"B-	  b Une pathologie des gros vaisseaux rénaux	",
+		"C-	  c Une tubulopathie	",
+		"D-	  d Une néphroangiosclérose	",
+		"E-	  e Aucune des réponses ci-dessus	"],
+			1	,false,false,undefined);
+quizQuestions[	8	] = new QuizItem("	9 Dans ce contexte clinque l'hypothèse diagnostique la plus probable est	",
+		["A-	  a pathologie congénitale des gros vaisseaux (anévrismes) avec micro emboles	",
+		"B-	  b Atteintes athéromateuses des vaisseaux rénaux avec emboles de cholestérol	",
+		"C-	  c Néphrotoxicité à long terme des diurétiques thiazides	",
+		"D-	  d Hypertension primitive avec néphro-angiosclérose	",
+		"E-	  e Glomérulonéphrite hématurique avec hypertension	"],
+			4	,false,false,undefined);
+quizQuestions[	9	] = new QuizItem("	10 compte tenu du contexte un des éléments suivants peut être particulièrement considéré comme de mauvais pronostic lequel ?	",
+		["A-	  a Survenue d'une protéinurie de taux important	",
+		"B-	  b Elévation de la créatinine à l'introduction d'inhibiteur d'enzyme de conversion d'angiotensine dans le traitement	",
+		"C-	  c Survenu d'un épisode d'hématurie macroscopique	",
+		"D-	  d Survenue d'une crise de goutte	",
+		"E-	  e Apparition d'une hyperglycémie sous traitement aux diurétiques	"],
+			4	,false,false,undefined);
+quizQuestions[	10	] = new QuizItem("	11 Mme B 25 ans à 2 enfants. Elle vous demande une contraception par « pilule » vraiment efficace. Elle demande la qu'à déjà sa Sœur le Minidril (Lévonorgestrel 0.15mg et ethinylestradiol 0.03mg). 11 Quel est l'antécédent à rechercher qui vous ferait renoncer à la prescrire ?	",
+		["A-	   Elle a déjà 2 enfants	",
+		"B-	   Elle fume 5 cigarettes par jour	",
+		"C-	  Elle a eu une poussée ulcéreuse il y a 6 mois	",
+		"D-	  Elle présente une difficulté d'endormissement	",
+		"E-	  Elle a présenté un ictère lors de sa seconde grossesse	"],
+			4	,false,false,undefined);
+quizQuestions[	11	] = new QuizItem("	12 Elle vous demande pourquoi la pilule n'est pas faite d'hormones naturelles une des explications suivantes est exacte. Laquelle ?	",
+		["A-	   Les hormones naturelles n'ont pas d'effet contraceptif	",
+		"B-	   Ma progestérone a un effet androgène plus important que les progestatifs de synthèse de type non stéroïdes	",
+		"C-	    Les hormones naturelles subissent une inactivation hépatique importante	",
+		"D-	    Les doses d'œstrogène naturelles augmentent le risque d'hirsutisme	",
+		"E-	   Aucune des réponses ci-dessus	"],
+			2	,false,false,undefined);
+quizQuestions[	12	] = new QuizItem("	13 Après un accident de la voie publique elle a présenté plusieurs crises convulsives. Sa contraception au minidril n'est pas remise en cause. Quel traitement anticonvulsivant ne peut pas interférer avec celle-ci en l’inactivant ?	",
+		["A-	  Valproate de sodium (Depakine)	",
+		"B-	  b Phénobarbital (Gardenal)	",
+		"C-	  Phénytoïne (Di-Hydan)	",
+		"D-	  Carbamazépine (Tegnetol)	",
+		"E-	  Aucune des réponses ci-dessus	"],
+			0	,false,false,undefined);
+quizQuestions[	13	] = new QuizItem("	14 Mme B n'a finalement reçu aucun anticonvulsivant. Elle a continué le Minidril. Elle vient vous voir car elle est enceinte. Quelle hypothèse l'expliquerait ?	",
+		["A-	   Elle a présenté des vomissements	",
+		"B-	   Elle a oublié un comprimé en début de cycle 2 jours de suite	",
+		"C-	    L ’indice de Pearl n'est pas nul	",
+		"D-	  Toutes les réponses ci-dessus	",
+		"E-	  Aucune des réponses ci-dessus	"],
+			3	,false,false,undefined);
+quizQuestions[	14	] = new QuizItem("	15 Un malade ayant subi une intervention chirurgicale sur les voies urinaires présente dans les suites opératoires un tableau septicémique. Trois hémocultures sont positives en 48h à Enterobacter cloacae. Un traitement antibiotique est adapté selon la sensibilité du germe à l'antibiogramme et associe Cefotaxime (Claforan) et amikacine (Amikin). 15 Enterobacter cloacae est	",
+		["A-	  Une corynebacterie commensale	",
+		"B-	  Un Cocci à Gram positif	",
+		"C-	  Un bacille à Gram négatif appartenant à la famille des entérobactéries	",
+		"D-	  Un bacille à Gram négatif appartient à la famille des pseudomonadaceae	",
+		"E-	  Une mycobactérie	"],
+			2	,false,false,undefined);
+quizQuestions[	15	] = new QuizItem("	16 Parmi les bactéries suivantes laquelle est habituellement responsable d'infections du tractus Urinaire après manœuvre instrumentale ?	",
+		["A-	   Serratla marcescens	",
+		"B-	   Pseudomonas aeruginosa	",
+		"C-	  Acinetobacter calcoaceticus	",
+		"D-	  Toutes les réponses ci-dessus	",
+		"E-	   Streptococcus pneumoniae	"],
+			0	,false,false,undefined);
+quizQuestions[	16	] = new QuizItem("	17 Le céfotaxime (Claforan) est	",
+		["A-	   Une ampicilline	",
+		"B-	   Une uréido-pénicilline	",
+		"C-	  Une céphalosporine de 1 ère génération	",
+		"D-	  Une céphalosporine de 3e génération	",
+		"E-	  Une céphalosporine de 2e génération	"],
+			3	,false,false,undefined);
+quizQuestions[	17	] = new QuizItem("	18 L'amikacine (Amikin) est	",
+		["A-	  Une betalactamine	",
+		"B-	  Un aminoside	",
+		"C-	  Une cycline	",
+		"D-	  Un macrolide	",
+		"E-	  Une quinolone	"],
+			1	,false,false,undefined);
+quizQuestions[	18	] = new QuizItem("	19 La concentration minimale inhibitrice (CM1)	",
+		["A-	   Est la plus forte concentration d'antibiotique capable d'inhiber toute culture visible en milieu liquide	",
+		"B-	   Est la plus faible concentration d'antibiotique capable d'inhiber toute culture visible en milieu liquide	",
+		"C-	 Est la concentration qui laisse subsister moins de 0.01 % de survivants	",
+		"D-	  Est la plus faible concentration d'antibiotique assurant une bonne tolérance	",
+		"E-	   Aucune des réponses ci-dessus	"],
+			1	,false,false,undefined);
+quizQuestions[	19	] = new QuizItem("	20 Un pouvoir bactéricide des antibiotiques et associations donne les résultats suivants amikacine 0.01% de survivants cefotaxime 1% de survivants cefotaxime+amiacine 0.01% de survivants. Vous pouvez conclure	",
+		["A-	   Que l'amikacine utilisée seule ou en association est bactéricide	",
+		"B-	   Que le cefotaxime seul est bactéricide	",
+		"C-	  Que l'association est bactériostatique	",
+		"D-	   Que le cefotaxime est totalement inefficace	",
+		"E-	   Aucune des réponses ci-dessus	"],
+			0	,false,false,undefined);
+quizQuestions[	20	] = new QuizItem("	21 Monsieur X est un homosexuel de 42 ans dont la séropositivité pour le VIH est connue depuis 8 ans. Il n'est pas suivi ne dispose d'aucun bilan immunologique ne reçoit aucun traitement. Il consulte pour une toux non productive persistante depuis une dizaine de jours. Depuis 2 jours il est dyspnéique et présente de la fièvre entre 38.5 et 39.5 °C. Le reste de l'examen clinique est normal. 21 quel est le diagnostic le plus probable chez ce malade ?	",
+		["A-	  Pneumonie à pneumocoque	",
+		"B-	  Pneumonie à cryptosporidium	",
+		"C-	  Pneumonie à pneumocystis jeroveci	",
+		"D-	  Pneumonie due au virus vancelle-zona	",
+		"E-	   Pneumonie à cytomégalovirus	"],
+			2	,false,false,undefined);
+quizQuestions[	21	] = new QuizItem("	22 Relevez l'examen complémentaire qui devrait permettre d'affirmer le diagnostic étiologique	",
+		["A-	   Recherche d'une antigénénurie circulante	",
+		"B-	   Hémocultures	",
+		"C-	  Examen direct après coloration sur le liquide de lavage broncho alvéolaire	",
+		"D-	  Examen tomodensitométrique thoracique	",
+		"E-	  myéloculture	"],
+			2	,false,false,undefined);
+quizQuestions[	22	] = new QuizItem("	23 quel est le traitement anti-infectieux qui parait adapté au diagnostic de pneumocystose si c'était le cas chez ce malade ?	",
+		["A-	  cefotaxime	",
+		"B-	  trimetoprome - sulfamethoxazole	",
+		"C-	  ganciclovir	",
+		"D-	  Acyclovir	",
+		"E-	  mefloquine par voie intraveineuse	"],
+			1	,false,false,undefined);
+quizQuestions[	23	] = new QuizItem("	24 quelques jours après le début du traitement le patient présente des signes d'intolérance au produit administré quels est le traitement de remplacement ?	",
+		["A-	  Quinine par voie intraveineuse	",
+		"B-	  Ofloxacine par voie orale	",
+		"C-	  pentamidine par voie intraveineuse	",
+		"D-	  Erythromycine par voie intraveineuse	",
+		"E-	 Aucune des réponses ci-dessus	"],
+			2	,false,false,undefined);
+quizQuestions[	24	] = new QuizItem("	25 L'évolution étant satisfaisante quelle est la durée de traitement habituellement recommandée ?	",
+		["A-	   7 jours	",
+		"B-	   15 jours	",
+		"C-	  21 jours	",
+		"D-	  30 jours	",
+		"E-	  Entre 2 et 3 mois	"],
+			1	,false,false,undefined);
+				
+
+//alert(quizQuestions.length);
+
+
+for(var i= 0; i<quizQuestions.length; i++) {
+ep+=quizQuestions[i].question+"$$***$$";
+ep+=quizQuestions[i].variants[0]+"$$***$$";
+ep+=quizQuestions[i].variants[1]+"$$***$$";
+ep+=quizQuestions[i].variants[2]+"$$***$$";
+ep+=quizQuestions[i].variants[3]+"$$***$$";
+ep+=quizQuestions[i].variants[4]+"$$***$$";
+ep+=quizQuestions[i].variants[5]+"$$***$$";
+ep+=quizQuestions[i].answer+"$$***$$";
+ //alert(quizQuestions[0].answer+"$$***$$");
+ }
+ 
+  //document.write(ep);
+  
+   localStorage.setItem("ep", ep);
+    location.href="cont.html";
+ }
+ 
+
+ 
+</script>
+
+
+
+<script>
+
+localStorage.removeItem("key");
+
+ ts="ok2";
+ //alert(ts);
+ localStorage.setItem("lastname2", ts+"21");
+ 
+ 
+</script>
+
+
+
+
+
+</html>

@@ -1,0 +1,1026 @@
+
+<html>
+<head>
+<h2 id="titre"> PARTIE A GYNECOLOGIE <span> </span><a href="agyne.html ><button id="submit"></button></a></h2>
+
+ <meta http-equiv="Content-Type"content="text/html; charset=UTF-8" />
+
+	<title>QCM ENSCT</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+
+ <form style="display:none" id="inac">
+
+	<span id="mainTitle"></span>
+
+		 <span id="qid"></span> /5000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="niv"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="ni"></span><span style="border-radius:50%;background-Color:gray;color:white;" id="i" onclick="exp()"> &nbsp; i &nbsp;</span>  <span style="background-color:gold;height:50px;border-radius:5px;text-align:center;	box-shadow: 2px 2px 3px #999;width:100px;height:30px"> </span>&nbsp;<br> <input style="height:50px;border-radius:10px;text-align:center;	box-shadow: 2px 2px 3px #999;width:100px;height:30px" type="text" id="firstName" name="firstName" data-validation="vrule_required, vrule_textInput, vrule_minLength(3)" /> 
+<span onclick="val()" style="font-size:20px;border-radius:5px;text-align:center;background-color:white;	box-shadow: 2px 2px 3px #999;width:100px;height:30px">&nbsp;&nbsp;Valider&nbsp;&nbsp;</span>
+</form>
+
+
+
+<body><d iv class="main"><div class="wrapper" onclick="showDropdown()">Question: <span></span>/20 <span style="padding-left:15px"></span> <span style="color:darkcyan;border:2px solid white;border-radius:5px;background-Color:"> Correct: </span> <span id="tr" ></span>/20 Temps: <span id="time"> </span> <style>#time{width: 70px; border: 1px dotted #333; text-align: center; margin-bottom: 1px;font-style:italic; font-size: 18px;}</style><script type="text/javascript"> var centi = 0; var mili = 0; var sec = 0;  var min;  var sec_; var afficher; var compteur; document.getElementById('time').innerHTML = "0" + sec + ":" + "0" + mili;  function chrono() { setInterval(function (){ mili++; if (mili > 9) { mili = 0; } }, 1); centi++; centi*10; if (centi > 540) { centi = 0; sec++; }  if (sec < 10) { sec_ = "0" + sec; } else { sec_ = sec; } var ok=centi/9.1; afficher = sec_ + ":<span id='z'>0</span>" + ok.toFixed(); document.getElementById("time").innerHTML = afficher;if(ok>9.499){ document.getElementById("z").style.display="none";}; reglage = window.setTimeout("chrono();",100); }  function debut() { document.parametre.lance.disabled = "disabled"; document.parametre.pause.disabled = ""; document.parametre.zero.disabled = ""; document.parametre.intermediaire.disabled = ""; document.parametre.rappel.disabled = ""; }chrono();debut; </script> <span style="padding-left:15px"></span> <br><span style="color:red">Incorrect:</span> <span id="rt" ></span>/20 <span style="padding-left:15px"></span><span style="color:blue"> Sans Reponse: </span><span id="sr" ></span>/20 <span style="border-radius:50%;background-Color:gray;color:white;" onclick="exp()"> &nbsp; i &nbsp;</span><br></div>
+		
+<p>
+<div class="alert success" id="xp" style="display:none">
+
+	<inp ut type="checkbox" id="alert1">
+    <label class="close" title="close" for="alert1">
+	<i class="icon-remove"><img onclick="cl()" src="cl.jpg" style="width:30px"></i>
+    </label>
+
+	
+		<p id="xpt" class="inner">
+			
+		</p>
+		</div>
+	</p>		
+		
+		
+		
+		<ul  class="dropdown"></ul>		
+		<p class="question"></p>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			
+		</ul>
+		<div id="ctrlb"><button onclick="goToNextQuestion2()"><img src="prev.jpg" height="30px" width="80px" style="border-radius:50%"></button><bu tton class="submit"></button></div><div id="ctrln"><button onclick="goToNextQuestion3()"><img src="next.jpg" height="30px" width="80px" style="border-radius:50%"></button>
+	</div>
+	</div>
+<table height="50px" width="100%" style="border-color:white"><tr><td></td></tr></table>
+	<audio src="cor.mp3" id="cor">
+	<audio/>
+	<audio src="inc.mp3" id="inc">
+	<audio/>
+	<script>
+	
+
+	var nq=19;
+	var sr=20;
+	var rt=0;
+	var tr=0;
+	function QuizItem(question, variants, answer, enabled, replied, selectionOfUser) {
+	this.question = question;
+	this.variants = variants;
+	this.answer = answer;
+	this.enabled = enabled;
+	this.replied = replied;
+	this.selectionOfUser = selectionOfUser;
+}
+
+var quizQuestions = [];
+
+
+
+quizQuestions[	0	] = new QuizItem("	1 Une fille de 12 ans se présente avec des œdèmes importants. Les tests sanguins révèlent une hypo albuminémie. L'analyse d'urine montre une protéinurie massive. Quel est le diagnostic le plus probable ?	",
+		["A-	 Sténose de l'artère rénale	",
+		"B-	  Syndrome de Fanconi	",
+		"C-	  Syndrome d'Alport	",
+		"D-	  Thrombose de la veine rénale	",
+		"E-	 Syndrome néphrotique	"],
+			4	,false,false,undefined);
+quizQuestions[	1	] = new QuizItem("	2 A propos de la cryptococcose neuroméningée une seule des assertions suivantes est vraie, laquelle ?	",
+		["A-	Est surtout rencontrée chez des patients avec CD4>100/m3	",
+		"B-	  La mortalité est très élevée (20 à 37%) malgré un traitement bien conduit,	",
+		"C-	  Concerne uniquement les patients infectés par le VIH, quel que soit le stade clinique	",
+		"D-	 Le diagnostic se fait par le scanner cérébral avec injection de produit de contraste,	",
+		"E-	 Le traitement comprend une dose de charge de Fluconazole et une dose d'entretien (200 mg/jour).	"],
+			1	,false,false,undefined);
+quizQuestions[	2	] = new QuizItem("	3. Un homme de 45 ans présente une fièvre. Perte de poids, fatigue et la goute. A l'examen. Il y a la splénomégalie. Le taux de leucocytes est de 112x10exposant9/l. Le chromosome Philadelphie est détecté.	",
+		["A-	Myélome multiple	",
+		"B-	Leucémie lymphocytaire chronique	",
+		"C-	Leucémie lymphoblastique aigue	",
+		"D-	Leucémie myéloïde chronique 	",
+		"E-	Aucune des propositions ci-dessus n'est vrai	"],
+			3	,false,false,undefined);
+quizQuestions[	3	] = new QuizItem("	4 Un homme de 62 ans ayant une maladie coronarienne se présente avec une pré-syncope. Son examen physique est normal sauf une bradycardie (pouls à 56 battements par minute) et un pouls irrégulier. L’électrocardiogramme (ECG) montre un bloc auriculo-ventriculaire de Wenckebach. Laquelle des anomalies suivantes allez-vous très probablement voir sur l’ECG ?	",
+		["A-	 Raccourcissement progressif du PR 	",
+		"B-	Allongement progressif de l ' intervalle PR 	",
+		"C-	Une tachycardie	",
+		"D-	 Battement manqué Après allongement de l’onde PR	",
+		"E-	Un bloc fixe 2 :1	"],
+			3	,false,false,undefined);
+quizQuestions[	4	] = new QuizItem("	5 un homme de 74 ans a subi une intervention chirurgicale quelconque pour l'ulcère peptique depuis des années. Il présente des symptômes incluant douleur et ballonnement abdominaux environ 30-40 minutes après avoir mangé, associé à des nausées. Les symptômes sont soulagés s'il vomit. Laquelle des propositions suivantes est cause la plus probable de ses symptômes ? 	",
+		["A-	Syndrome de dumping précoce	",
+		"B-	Syndrome dumping tardif	",
+		"C-	Gastropathie due à un reflux biliaire 	",
+		"D-	Rétention de l'antre gastrique	",
+		"E-	Syndrome de boucle afférent	"],
+			4	,false,false,undefined);
+quizQuestions[	5	] = new QuizItem("	6 Une femme de 75 ans se présente avec des symptômes de modification de la vision et une faiblesse faciale. A l’examen, les pupilles sont de diamètre égal et réagissent à la lumière, les fonds d'œil apparaissent normaux et il y a un déficit homonyme du champ visuel droit. Laquelle des propositions suivantes est la cause la plus probable de l'hémianopie homonyme droite ?	",
+		["A-	Le nerf optique droit	",
+		"B-	Chiasma	",
+		"C-	Les radiations optiques droites 	",
+		"D-	Le lobe occipital droit	",
+		"E-	Les radiations optiques gauches	"],
+			4	,false,false,undefined);
+quizQuestions[	6	] = new QuizItem("	7 un immigrant récent au Cameroun de 22 ans n'a jamais été vacciné contre le tétanos. Il est légèrement blessé et la blessure est contaminée par la terre. Laquelle des propositions suivantes est correcte ?	",
+		["A-	Le tétanos se développe habituellement dans les deux semaines qui suivent l’exposition	",
+		"B-	Le tétanos se développe toujours dans les 3 heures suivant l'exposition chez les patients qui n'avaient pas été antérieurement immunisés	",
+		"C-	Le tétanos peut se développer plusieurs mois ou années suivant l'exposition chez les individus susceptibles	",
+		"D-	La période d'incubation habituelle pour le tétanos est de 48 heures 	",
+		"E-	Le tétanos peut être prévenu par la pénicilline.	"],
+			0	,false,false,undefined);
+quizQuestions[	7	] = new QuizItem("	8 Un homme de 20 ans développe des symptômes de faiblesse avec engourdissement et picotements de ses mains L'examen physique est normal mais sa calcémie est de 7,4mg/dl (N : 8,4 — 10,2g/dl). Laquelle des valeurs sériques additionnelles suivantes est le plus compatible avec le diagnostic d'une carence en vitamine D	",
+		["A-	 Vitamine D basse, phosphate bas, PTH élevée	",
+		"B-	Vitamine D basse, phosphate bas, PTH basse	",
+		"C-	Vitamine D basse, phosphate élevé, PTH basse	",
+		"D-	Vitamine D normale, phosphate bas, PTH élevée	",
+		"E-	Vitamine D normale, phosphate élevé, PTII élevée	"],
+			0	,false,false,undefined);
+quizQuestions[	8	] = new QuizItem("	9. laquelle des propositions suivantes concernant une insuffisance surrénalienne est vraie ?	",
+		["A-	Le traitement par les corticoïdes exogènes est habituellement efficace	",
+		"B-	  Elle est fréquemment observée comme une conséquence des métastases dans les glandes surrénaliennes des cancers distants tels que le cancer du poumon ou du sein	",
+		"C-	 Insuffisance surrénalienne chronique (la maladie d'Addison) chez un patient en préopératoire doit être reconnue par une constellation de signes y compris l'hyperkaliémie	",
+		"D-	 Le décès dû à une insuffisance surrénalienne chronique peut survenir dans les heures suivant l’intervention chirurgicale.	",
+		"E-	 La cause sous-jacente la plus fréquemment responsable aujourd'hui est l'infection par la tuberculose résistante.	"],
+			3	,false,false,undefined);
+quizQuestions[	9	] = new QuizItem("	10. L'oméprazole a été ajouté aux antagonistes de H2 comme une approche thérapeutique de la prise en charge des ulcères aigus gastrique et duodénal. Il agit par :	",
+		["A-	 Le blocage de la dégradation des métabolites des AINS préjudiciables aux muqueuses	",
+		"B-	 La fourniture d'un effet cryoprotecteur direct	",
+		"C-	 L'effet tampon sur les acides gastriques	",
+		"D-	L'inhibition de l'hydrogène de cellule pariétale-potassium-ATPase	",
+		"E-	 L'inhibition de la sécrétion de gastrine et de la production de l'acide par les cellules pariétales	"],
+			3	,false,false,undefined);
+quizQuestions[	10	] = new QuizItem("	11 La complication des bêtamimétiques comprend un de ces symptômes. Lequel ?	",
+		["A-	 Œdème bilatéral des pieds	",
+		"B-	 L’hypertension	",
+		"C-	 Palpitations	",
+		"D-	 Diminution du champ visuel bitemporal	",
+		"E-	 Bloc de branche	"],
+			2	,false,false,undefined);
+quizQuestions[	11	] = new QuizItem("	 12 Les lignes de Kerley B, opacité en aile de papillon, revascularisation des sommets et cardiomégalie	",
+		["A-	 Insuffisance ventriculaire droite	",
+		"B-	 Rétrécissement aortique	",
+		"C-	 Rétrécissement mitral	",
+		"D-	 Insuffisance ventriculaire gauche	",
+		"E-	 Embolie graisseuse Suite à une fracture	"],
+			3	,false,false,undefined);
+quizQuestions[	12	] = new QuizItem("	13. Le syndrome de la veine cave supérieure se rencontre le plus fréquemment en association avec laquelle des affections suivantes ?	",
+		["A-	 L’histoplasmose (médiastinite sclérosante) 	",
+		"B-	 Glande thyroïde sous-sternale 	",
+		"C-	 Anévrysme de l'aorte thoracique	",
+		"D-	 Péricardite constrictive	",
+		"E-	 Carcinome broncho génique	"],
+			4	,false,false,undefined);
+quizQuestions[	13	] = new QuizItem("	14. Une anémie est dite régénérative lorsque le taux de réticulocytes est :	",
+		["A-	 Supérieur à 25 000/mm3	",
+		"B-	 Supérieur à 75 000/mm3	",
+		"C-	 Supérieur à 120 000/mm3 	",
+		"D-	Inférieur à 25 000/mm3	",
+		"E-	 Compris entre 25 000/mm3 et 75 000/mm3	"],
+			2	,false,false,undefined);
+quizQuestions[	14	] = new QuizItem("	15 Un homme de 56 ans est impliqué dans un accident grave de la circulation. Il développe une insuffisance rénale aigue (IRA) après être admis à l'hôpital. Une des possibilités pour son IRA est la thrombose de la veine rénale post traumatique. Laquelle des propositions suivantes suggère plus la thrombose de la veine rénale ?	",
+		["A-	Cylindres leucocytaires	",
+		"B-	Cylindres granulaires de l'hème	",
+		"C-	Protéinurie massive	",
+		"D-	Surnageant urinaire de couleur violette et testant positif pour l'hème	",
+		"E-	Gravite spécifique > 1.020	"],
+			2	,false,false,undefined);
+quizQuestions[	15	] = new QuizItem("	16- Pouls paradoxal, augmentation de la pression veineuse jugulaire à l'inspiration, bruits du cœur assourdis.	",
+		["A-	Coarctation de l'aorte	",
+		"B-	  Tamponnade cardiaque	",
+		"C-	 Maladie de Gaucher	",
+		"D-	 Maladie mixte de la valve mitrale	",
+		"E-	E Maladie mixte de la valve aortique	"],
+			1	,false,false,undefined);
+quizQuestions[	16	] = new QuizItem("	17 Un homme de 33 ans n'a jamais été vacciné contre l’hépatite les tests sérologiques révèlent un résultat négatif pour antigène de surface de l'hépatite B (AgHbs) et un résultat positif pour l'anticorps antigène de surface. Laquelle des conditions suivantes s'accorde le mieux avec ce profil sérologique ?	",
+		["A-	Infection antérieure par l'hépatite B	",
+		"B-	Hépatite chronique active	",
+		"C-	Infection aiguë d'hépatite B	",
+		"D-	Pronostic médiocre	",
+		"E-	Besoin de vaccin contre l'hépatite	"],
+			0	,false,false,undefined);
+quizQuestions[	17	] = new QuizItem("	18 Une femme de 59 ans a un engourdissement et des picotements au niveau de ses pieds. A l'examen, des signes impliquant les nerfs périphériques sous forme de diminution de la sensibilité, une faiblesse motrice et perte de reflexes distaux. Les trouvailles sont asymétriques. Laquelle des conditions médicales suivantes peut expliquer le mieux sa neuropathie périphérique ?	",
+		["A-	Maladie cardiaque	",
+		"B-	Dermatomyosite	",
+		"C-	Hypothyroïdisme	",
+		"D-	Diabète sucré	",
+		"E-	Insuffisance surrénalienne	"],
+			3	,false,false,undefined);
+quizQuestions[	18	] = new QuizItem("	19. Un homme de 63 ans se présente aux urgences avec perte de poids, toux, hémoptysie et essoufflement. A l'examen il est anémique, présente un hippocratisme digital et est apyrétique.	",
+		["A-	 Carcinome broncho génique 	",
+		"B-	 Alvéolite fibrosante 	",
+		"C-	Alvéolite allergique extrinsèque 	",
+		"D-	 Mucoviscidose	",
+		"E-	 Œdème pulmonaire	"],
+			0	,false,false,undefined);
+quizQuestions[	19	] = new QuizItem("	 20 Une femme de 45 ans se présente avec gain de poids, faiblesse musculaire et hirsutisme. A l'examen, elle est hypertensive et présente des œdèmes des pieds.	",
+		["A-	 Syndrome de Cushing 	",
+		"B-	 Phéochromocytome	",
+		"C-	  Hyperparathyroidisme	",
+		"D-	  Syndrome de Conn	",
+		"E-	 Sténose de l’artère rénal. 	"],
+			0	,false,false,undefined);
+quizQuestions[	20	] = new QuizItem("	21 Pouls paradoxal, augmentation de la pression veineuse jugulaire à l’inspiration, bruit du cœur assourdit	",
+		["A-	Coarctation de l’aorte	",
+		"B-	Tamponnade cardiaque	",
+		"C-	 Maladie de gauche	",
+		"D-	Maladie mitrale	",
+		"E-	Maladie aortique	"],
+			1	,false,false,undefined);
+quizQuestions[	21	] = new QuizItem("	22 Une femme de 49 ans présente une polyurie, hématurie, douleur abdominale et osseuse. A l’examen sa tension artérielle est de 170/100mmHg. 	",
+		["A-	 Calculs de vésicule biliaire 	",
+		"B-	 Polyarthrite noueuse 	",
+		"C-	 Carcinome du pancréas 	",
+		"D-	 Pancréatite chronique 	",
+		"E-	 Hypercalcémie 	"],
+			4	,false,false,undefined);
+quizQuestions[	22	] = new QuizItem("	23. Les patients avec une thrombose veineuse profonde du mollet confirmé par phlébographie : 	",
+		["A-	 Peuvent espérer avoir une guérison sans symptômes s’ils sont traités rapidement avec les anticoagulants 	",
+		"B-	 Peuvent être traités efficacement avec l’héparine à faible dose 	",
+		"C-	 Peuvent être traités efficacement avec des bas de contention pneumatique 	",
+		"D-	 Peuvent être traités efficacement avec l’acide acétyle salicylique 	",
+		"E-	 Sont à risque d’une embolie pulmonaire majeure 	"],
+			4	,false,false,undefined);
+quizQuestions[	23	] = new QuizItem("	24 Laquelle des affirmations suivantes concernent le choc cardiogénique ? 	",
+		["A-	 Il peut être distingué du choc hypovolémique par la prise de mesures de la pression veineuse centrale 	",
+		"B-	 Il peut être distingué du choc hypovolémique par l’enregistrement de la pression artérielle systémique 	",
+		"C-	 Il répond à l’administration des solutés 	",
+		"D-	 Il ne répond pas à un soutien ionotrope 	",
+		"E-	 Il n’est pas une cause d’oligurie post-chirurgicale	"],
+			0	,false,false,undefined);
+quizQuestions[	24	] = new QuizItem("	25 Un sauteur en hauteur de 21 ans se présente avec une dyspnée d’installation aigue et une douleur thoracique droite de type pleural. L’examen révèle un hyper-tympanisme et une diminution de l’ampliation thoracique droite. 	",
+		["A-	 Embolie pulmonaire 	",
+		"B-	 Pneumothorax 	",
+		"C-	 Pneumonie lobaire 	",
+		"D-	 Dissection aortique 	",
+		"E-	 Angine de poitrine	"],
+			1	,false,false,undefined);
+quizQuestions[	25	] = new QuizItem("	26. Un homme de 19 ans se présente avec malaise, nausée et un débit urinaire diminué. Il était antérieurement sain et son examen physique est normal sauf pour une élévation de la pression veineuse jugulaire et une friction péricardique. Ses électrolytes révèlent une insuffisance rénale aiguë. Lequel des résultats suivants sur l’analyse d’urine est le plus probablement compatible avec une glomérulonéphrite aiguë ? 	",
+		["A-	 Protéinurie 	",
+		"B-	 Cylindres leucocytaires 	",
+		"C-	 Cylindres granulaires 	",
+		"D-	 Cylindres érythrocytaires 	",
+		"E-	 Cylindres hyalins 	"],
+			3	,false,false,undefined);
+quizQuestions[	26	] = new QuizItem("	27 Un homme de 78 ans est essoufflé depuis quelques semaines. Sa radiographie de thorax montre une opacité basale droite s’élevant vers l’aisselle. Quel est le seul diagnostique le plus approprié ? 	",
+		["A-	 Œdème pulmonaire 	",
+		"B-	 Pneumothorax 	",
+		"C-	 Pneumonie 	",
+		"D-	 Épanchement pleural 	",
+		"E-	 Embolie pulmonaire	"],
+			3	,false,false,undefined);
+quizQuestions[	27	] = new QuizItem("	28 Un sapeur-pompier de 55 ans a éraflé sa main contre une échelle de ferme rouillé et se présente maintenant avec une plaie ouverte depuis 24 heures. Il a reçu la vaccination contre le tétanos il y a 10 ans. Quelle est la seule prise en charge la plus appropriée ? 	",
+		["A-	 Administrer l’immunoglobine humaine antitétanique, la pénicilline et la métronidazole 	",
+		"B-	 Administrer une seule dose boaster de vaccin antitétanique, la pénicilline et la métronidazole 	",
+		"C-	 Administrer l’immunoglobuline humaine et une seule dose boaster de vaccin antitétanique. 	",
+		"D-	 Administrer l’immunoglobuline humaine antitétanique, la pénicilline, la métronidazole et une unique dose boaster de vaccin antitétanique. 	",
+		"E-	 Administrer la pénicilline et la métronidazole uniquement puisque le patient ne présente pas symptômes de tétanos.	"],
+			3	,false,false,undefined);
+quizQuestions[	28	] = new QuizItem("	29 Un homme de 71 ans développe une perte progressive de poids et une dysphagie sur une période de 3 mois. L’endoscopie haute et la biopsie de la lésion confirment le cancer de l’œsophage. Laquelle des affirmations suivantes à propos de ce cancer est le plus probablement correcte ? 	",
+		["A-	 Est très sensible à la chimiothérapie 	",
+		"B-	 Est plus fréquente chez les femmes 	",
+		"C-	 A un taux de guérison à 5 ans de 20% 	",
+		"D-	 Peut-être soit un adénocarcinome, soit un carcinome épidermoïde 	",
+		"E-	 Est caractérisé par des complications importantes liées à l’hémorragie 	"],
+			3	,false,false,undefined);
+quizQuestions[	29	] = new QuizItem("	30 Dans la pneumopathie communautaire il existe toujours les signes suivants sauf un. Lequel ? 	",
+		["A-	 Un syndrome infectieux 	",
+		"B-	 Un syndrome clinique de condensation pulmonaire 	",
+		"C-	 Une opacité parenchymateuse 	",
+		"D-	 Une matité des flancs 	",
+		"E-	 Une hyperleucocytose 	"],
+			3	,false,false,undefined);
+quizQuestions[	30	] = new QuizItem("	31 un homme de 22ans se plaint de douleurs lombaires et des raideurs qui s’aggravent au lever et s’améliorent avec l’exercice. A l’examen on constate qu’il a une mobilité limitée des articulation sacro iliaques et de la colonne lombaire. Un test sérique pour l’histocompatibilité HL B27 est positif. Quel est la manifestation extra articulaire la plus courante de cette pathologie ?	",
+		["A-	Cataracte prématurée	",
+		"B-	Splénomégalie	",
+		"C-	Iritis aigue	",
+		"D-	Insuffisance aortique	",
+		"E-	Fibrose pulmonaire	"],
+			2	,false,false,undefined);
+quizQuestions[	31	] = new QuizItem("	32 Un homme de 57 ans est sous hémodialyse d’entretien pour une insuffisance rénale chronique. Parmi les troubles métaboliques suivants lesquels sont ceux que l’on peut prévoir ?	",
+		["A-	Hypercalcémie	",
+		"B-	Hypo phosphorémie	",
+		"C-	Ostéomalacie	",
+		"D-	Excès de vitamine D	",
+		"E-	Hypoparathyroïdie	"],
+			2	,false,false,undefined);
+quizQuestions[	32	] = new QuizItem("	33. Un homme de 55 ans ayant fumé pendant 50 ans se présente avec une hémoptysie. La RX montre une masse du lobe supérieur gauche et l'évaluation en laboratoire révèle une hypercalcémie. Lequel des diagnostics suivants est le plus probable ?	",
+		["A-	 Cancer du poumon à petites cellules	",
+		"B-	 Tuberculose	",
+		"C-	 Cancer du poumon à cellules squameuses	",
+		"D-	 Adénocarcinome du poumon 	",
+		"E-	 Cancer métastatique des testicules	"],
+			2	,false,false,undefined);
+quizQuestions[	33	] = new QuizItem("	34. parmi les causes habituelles suivantes d'insuffisances mitrale aigue, l'une est incorrecte, laquelle ?	",
+		["A-	 Rupture de cordage	",
+		"B-	 La myocardiopathie hypertrophique et obstructive Le traumatisme	",
+		"C-	le traumatisme	",
+		"D-	 L'endocardite bactérienne	",
+		"E-	 L'infarctus du myocarde	"],
+			1	,false,false,undefined);
+quizQuestions[	34	] = new QuizItem("	35. L'endocardite d'Osler sur prolapsus mitral est responsable des complications suivantes sauf une laquelle ?	",
+		["A-	 Embolies septiques pulmonaires multiples	",
+		"B-	 Hémiplégie droite avec aphasie	",
+		"C-	 Hématurie microscopique	",
+		"D-	 Spondylite lombaire	",
+		"E-	 Ischémie aigue d'un membre	"],
+			0	,false,false,undefined);
+quizQuestions[	35	] = new QuizItem("	36. Tous les signes suivants sont très évocateurs de tamponnade cardiaque sauf un : lequel ?	",
+		["A-	 Turgescence des veines jugulaires	",
+		"B-	 Silhouette cardiaque peu mobiles en scopie 	",
+		"C-	 Signes d'œdème pulmonaire	",
+		"D-	 Diminution inspiratoire de la pression artérielle systolique	",
+		"E-	 Pouls paradoxal	"],
+			2	,false,false,undefined);
+quizQuestions[	36	] = new QuizItem("	37. Parmi les traitements suivants utilisables dans l'insuffisance cardiaque congestive, quel est celui qui est formellement contre-indiqué ?	",
+		["A-	 Digitaliques	",
+		"B-	 Dérivés nitrés	",
+		"C-	 Bêtabloqueurs	",
+		"D-	 Diurétiques	",
+		"E-	 Prazosine	"],
+			2	,false,false,undefined);
+quizQuestions[	37	] = new QuizItem("	38. Parmi les propositions suivantes caractérisant l'hypertension artérielle maligne, l'une est inexacte laquelle ?	",
+		["A-	 Fond d'œil au stade 2	",
+		"B-	 Pression artérielle diastolique supérieure à 130mmHg	",
+		"C-	 Présence de signes d'insuffisance ventriculaire gauche	",
+		"D-	 Présence de signes fonctionnels neurosensoriels importants	",
+		"E-	 Présence de signes d'insuffisance rénale.	"],
+			0	,false,false,undefined);
+quizQuestions[	38	] = new QuizItem("	39. Toutes les circonstances suivantes peuvent augmenter le risque de toxicité de la digoxine, sauf une, laquelle ?	",
+		["A-	 Insuffisance rénale	",
+		"B-	 Insuffisance cardiaque très évoluée	",
+		"C-	 Hyperthyroïdie	",
+		"D-	 Hyperkaliémie	",
+		"E-	 Hypercalcémie	"],
+			3	,false,false,undefined);
+quizQuestions[	39	] = new QuizItem("	40. Les conditions suivantes sont les syndromes paranéoplasiques susceptibles d'être observés au cours des cancers bronchiques sauf une, laquelle ?	",
+		["A-	 Le syndrome de Schwartz-Bartter	",
+		"B-	 L'hippocratisme digital	",
+		"C-	 Le syndrome de Cushing	",
+		"D-	 L'hypercalcémie	",
+		"E-	 L'enophtalmie	"],
+			4	,false,false,undefined);
+
+
+
+
+
+
+
+
+
+// get inputs and radio/checkbox buttons
+var inputs = document.querySelectorAll("input[type='text'], input[type='number'], input[type='tel']"),
+    buttons = document.querySelectorAll("input[type='radio'], input[type='checkbox']");
+
+// main title is updated if returning user (if localStorage set)
+var mainTitle = document.getElementById("mainTitle");
+
+// change h1 title if returning user otherwise set to default
+var storedName = localStorage.firstName
+if(storedName)
+	mainTitle.innerHTML = " ";
+else 
+	mainTitle.innerHTML = ""
+
+
+// get and set localStorage for radio/checkbox buttons
+Array.prototype.forEach.call(buttons, function (el, index, array) {
+    // get element Id to use as localStorage property name
+	var dataName = el.getAttribute("name"),
+	// set dataStored var
+		dataStored = localStorage.getItem(dataName);
+	// if dataStored and dataStored = the input value
+	// set input to checked
+	if(dataStored && el.value == dataStored){
+		el.checked = true
+	}
+		
+	// on blur save data input
+	el.addEventListener('click', function (event) {
+		localStorage.setItem(dataName, event.target.value);
+	});
+});
+
+// get and set localStorage for text/number/tel inputs
+Array.prototype.forEach.call(inputs, function (el, index, array) {
+	// get element Id to use as localStorage property name
+	var dataName = el.getAttribute("id"),
+	// set dataStored var
+		dataStored = localStorage.getItem(dataName);
+	// if dataStored set input value to data
+	if(dataStored)
+		el.value = localStorage.getItem(dataName)
+	
+	// on blur save data input
+	el.addEventListener('blur', function (event) {
+		localStorage.setItem(dataName, event.target.value);
+		console.log(localStorage.getItem(dataName))
+		
+		});
+		/*
+		document.getElementById("A").addEventListener('click', function (event) {
+		localStorage.setItem(dataName, document.getElementById("firstName").value);
+		console.log(localStorage.getItem(dataName))
+	});
+	document.getElementById("B").addEventListener('click', function (event) {
+		localStorage.setItem(dataName, document.getElementById("firstName").value);
+		console.log(localStorage.getItem(dataName))
+	});
+	document.getElementById("C").addEventListener('click', function (event) {
+		localStorage.setItem(dataName, document.getElementById("firstName").value);
+		console.log(localStorage.getItem(dataName))
+	});
+	document.getElementById("D").addEventListener('click', function (event) {
+		localStorage.setItem(dataName, document.getElementById("firstName").value);
+		console.log(localStorage.getItem(dataName))
+	});
+	document.getElementById("E").addEventListener('click', function (event) {
+		localStorage.setItem(dataName, document.getElementById("firstName").value);
+		console.log(localStorage.getItem(dataName))
+	});
+	document.getElementById("ns").addEventListener('click', function (event) {
+		localStorage.setItem(dataName, document.getElementById("firstName").value);
+		console.log(localStorage.getItem(dataName))
+	});
+		
+		*/
+	
+});
+
+
+// for simple debugging
+console.log(localStorage)
+function logStorage(){
+	console.log(localStorage)
+}
+function clearStorage(){
+	localStorage.clear()
+	logStorage()
+}
+
+
+alert(document.getElementById("firstName").value);
+
+
+
+
+// pTag.innerHTML = test1.question;
+// console.log(quizQuestions[0]);
+var currentIndex = 0, numOfAnswered = 0;
+var currentQuestion = quizQuestions[currentIndex];
+//second ulTag 
+var ulTag = document.getElementsByTagName('ul')[1];
+var liTags = ulTag.getElementsByTagName('li');
+/*
+	this function inserts the current question into the layout
+	of the page: p tag which is a question and ul tag meaning
+	an options
+*/
+function showCurrentQuestion() {
+	var headerOfDropdow = document.getElementsByClassName('wrapper')[0];
+	//parse into integer, because it interpretes it as a string
+	var numQuestion = parseInt(currentIndex)+1;
+	headerOfDropdow.getElementsByTagName('span')[0].innerHTML = numQuestion;
+	var pTag = document.getElementsByTagName('p')[0];
+	// console.log(liTags);
+	var ulTag = document.getElementsByTagName('ul')[1];
+	var liTags = ulTag.getElementsByTagName('li');
+	pTag.innerHTML = currentQuestion.question;
+	for (var i=0; i < liTags.length; i++) {
+		//in case the number of variants is less than 4 (e.g. when it's
+		// undefined) disable li tag
+		if (currentQuestion.variants[i] == undefined) {
+			console.log(currentQuestion.variants[i]);
+			liTags[i].className = "doNotDisplay";
+		} else {
+			console.log(currentQuestion.variants[i]);
+			liTags[i].innerHTML = currentQuestion.variants[i];//assign question
+			liTags[i].className = "";
+		}
+	}
+};
+
+
+enableLiOnClickEvents();
+showCurrentQuestion();
+
+//when a variant is selected it becomes highlighted 
+function changeLiStyle() {
+	var selectedItem = document.getElementsByClassName('selected')[0];
+	//disable previously selected item and enable the clicked one
+	if (selectedItem) selectedItem.className = "";
+	this.className = "selected";
+}
+
+
+//self-invoking function to find all li tags 
+// and assing them text from the object 
+// and assign event listeners
+function enableLiOnClickEvents() {
+	for (var i=0; i < liTags.length; i++) {
+		console.log(liTags[i]);
+		liTags[i].onclick = changeLiStyle;
+	}
+};
+
+var button = document.getElementsByClassName('submit')[0];
+button.onclick = submitAndCheckAnswer;
+
+function submitAndCheckAnswer() {
+	var selectedItem = document.getElementsByClassName('selected')[0];
+/*	console.log(selectedItem.innerHTML);*/
+ if (selectedItem == undefined)
+   		;
+else {
+   currentQuestion.enabled = true;
+	if (selectedItem.innerHTML == currentQuestion.variants[currentQuestion.answer]) {
+		
+		console.log("Correct "+ currentQuestion.variants.indexOf(selectedItem.innerHTML));
+		changeTheLayoutAccordingTheResult(selectedItem,"correct", true);
+		checkIfTheLastQuestion(this);//sending button obj as a parameter
+		document.getElementById("cor").playbackRate=4;document.getElementById("cor").volume=0.2;document.getElementById("cor").volume=0.2;
+		document.getElementById("cor").play();
+		if (tr<20){tr++;};
+			document.getElementById("tr").innerHTML=tr;
+	document.getElementById("rt").innerHTML=rt;
+	if (sr>0){sr=20-rt-tr;};
+	document.getElementById("sr").innerHTML=sr;
+	} else {
+		
+		console.log("Wrong!");
+		changeTheLayoutAccordingTheResult(selectedItem,"wrong", false);
+		checkIfTheLastQuestion(this);
+		liTags[currentQuestion.answer].className = "correct";
+		document.getElementById("inc").playbackRate=2;document.getElementById("inc").volume=0.2;
+		document.getElementById("inc").play();
+		if (rt<20){rt++;};
+			document.getElementById("tr").innerHTML=tr;
+	document.getElementById("rt").innerHTML=rt;
+	if (sr>0){sr=20-rt-tr;};
+	document.getElementById("sr").innerHTML=sr;
+	}	
+}
+}
+
+function changeTheLayoutAccordingTheResult(selectedItem,result,replied) {
+	console.log(result);
+	currentQuestion.replied = replied;
+	//the index corresponding to the selection of user is selectiOfUser
+	currentQuestion.selectionOfUser = currentQuestion.variants.indexOf(selectedItem.innerHTML);
+	selectedItem.className=result;//changing color of selected item by changing className
+	disableLiOnClickEvents();//cannot click on the other litags anymore
+}
+
+//if the current question is the last one then change button style
+//and onclick event(function)
+//to finalize, otherwise continue to the next question 
+function checkIfTheLastQuestion(button) {
+}
+
+function disableLiOnClickEvents() {
+	for (var i=0; i < liTags.length; i++) {
+		;
+	}
+}
+
+function goToNextQuestion() {
+if (currentIndex<nq){currentIndex++;}
+	// if (currentIndex == quizQuestions.length) {
+	// 	finalize();
+	// 	return alert("Quiz is over. Your result: " + numOfAnswered);
+	// }
+	//changes the current question index before moving to the next one
+	currentQuestion = quizQuestions[currentIndex];
+	//change button's label and event handler
+	this.innerHTML = "";
+	this.onclick = submitAndCheckAnswer;
+	this.className = "submit";
+	showCurrentQuestion();
+	enableLiOnClickEvents();
+}
+
+function cleanUpTheLayout() {
+	var mainDiv = document.getElementsByClassName('main')[0];
+	// deleting all child nodes 
+	while (mainDiv.hasChildNodes()) {
+		mainDiv.removeChild(mainDiv.firstChild);
+	}
+	console.log("clean UPP!!");
+}
+
+function finalize() {
+	cleanUpTheLayout();
+	var mainDiv = document.getElementsByClassName('main')[0];
+	var tHeader = document.createElement("p");
+	tHeader.appendChild(document.createTextNode("Review your answers"));
+	tHeader.setAttribute("class","pAboveTable");
+	mainDiv.appendChild(tHeader);
+	var table = document.createElement("table");
+	// table.border='1px';
+	var tr = document.createElement("tr");
+	table.appendChild(tr);
+	var heading = ["Questions", "Your results", "Correct option"];
+	
+	for (var i = 0 ; i < heading.length ; i++) {
+		var th = document.createElement("th");
+		th.width = '200px';
+		th.appendChild(document.createTextNode(heading[i]));
+		tr.appendChild(th);
+		console.log(tr);
+	}
+
+	for (var i = 0 ; i < quizQuestions.length; i++) {
+			
+			var tr = document.createElement('tr');
+			var td = document.createElement('td');
+			td.appendChild(document.createTextNode("Question " + (i+1)));
+			td.setAttribute("class","questionCol");
+			tr.appendChild(td);
+			var td = document.createElement('td');
+			
+			var answer = quizQuestions[i].replied ? (
+				td.className = "correctCol",
+				"Correct"
+				) : (
+				td.className = "wrongCol",
+				"Incorrect"
+				);
+			
+			td.appendChild(document.createTextNode(answer));
+			tr.appendChild(td);
+			var td = document.createElement('td');
+			if (!quizQuestions[i].replied) {
+				var correctAns = quizQuestions[i].variants[quizQuestions[i].answer];
+				td.appendChild(document.createTextNode(correctAns));
+				td.setAttribute("class","correctCol");
+			}
+			tr.appendChild(td);
+			
+			table.appendChild(tr);
+
+	}
+	
+	mainDiv.appendChild(table);
+	var trAll = document.getElementsByTagName("tr");
+	console.log(trAll);
+	for (var i = 1; i < trAll.length; i++) {
+		trAll[i].onclick = returnToQuestion;
+		console.log("Assigned!");
+	}
+	// var head2 = document.createElement("th");
+	// head2.appendChild(document.createTextNode("Your Result"));
+	// tr.appendChild(head2);
+	// document.body.appendChild(table);
+}
+//dynamicaally creates the question layout when clicked on any of the questions in the result table
+function createQuestionLayout() {
+			var mainDiv = document.getElementsByClassName('main')[0];
+			var wrapperDiv = document.createElement('div');
+			wrapperDiv.className = "wrapper";
+			wrapperDiv.onclick = "showDropdown";
+			mainDiv.appendChild(wrapperDiv);
+			for (var j = 0 ; j < 2; j++) {
+				var span = document.createElement('span');
+				wrapperDiv.appendChild(span);
+			}
+			span.innerHTML = "/ "+quizQuestions.length;
+			var ulDdown = document.createElement('ul');
+			ulDdown.className = "dropdown";
+			mainDiv.appendChild(ulDdown);
+			var pTag = document.createElement('p');
+			pTag.className = "question";
+			var ulTag = document.createElement('ul');
+			mainDiv.appendChild(pTag);
+			mainDiv.appendChild(ulTag);
+			for (var i = 0 ; i < 4; i++) {
+				var liTag = document.createElement('li');
+				ulTag.appendChild(liTag);
+				var liTag1 = document.createElement('li');
+				ulDdown.appendChild(liTag1);
+			}
+			var button = document.createElement('button');
+			button.innerHTML = "Back";
+			button.className = "back";
+      //goes back to the table layout when clicked
+			button.onclick = finalize;
+			mainDiv.appendChild(button);
+}
+
+function returnToQuestion() {
+	console.log(this);
+	var questionTitle = this.getElementsByClassName("questionCol")[0].innerHTML;
+	var questionNum = questionTitle[questionTitle.length -1];
+	
+ 
+ 			cleanUpTheLayout();
+			createQuestionLayout();
+			currentQuestion = quizQuestions[questionNum -1];
+			// change currentIndex in orderto correctly display
+			// it on the new layout
+			currentIndex = questionNum-1;
+			showCurrentQuestion();
+			var correctLiNum = quizQuestions[questionNum-1].answer;
+  if (quizQuestions[questionNum-1].enabled) {
+	 	if (quizQuestions[questionNum-1].replied) {
+	 		
+			document.getElementsByTagName("li")[correctLiNum+4].className="correct";
+	
+		} else {
+			var selectedLiNum = quizQuestions[questionNum-1].selectionOfUser;
+			document.getElementsByTagName("li")[selectedLiNum+4].className="wrong";
+			document.getElementsByTagName("li")[correctLiNum+4].className="correct";
+		
+	 }
+}
+}
+
+function showDropdown() {
+	var dropdown = document.getElementsByClassName("dropdown")[0];
+	 var dropdownItems = dropdown.getElementsByTagName("li");
+	 console.log(dropdownItems);
+	 for (var i = 0 ; i < dropdownItems.length; i++)
+	 	dropdownItems[i].onclick = clickOnAnyQuestionFromDropdown;
+	var display = dropdown.style.display;
+	if (display=="") {
+		;
+	} 
+	else {
+		;
+	};
+}
+
+function hideDropdown() {
+	var dropdown = document.getElementsByClassName("dropdow")[0];
+	var dropdownItems = dropdown.getElementsByTagName("li");
+	var display = dropdown.style.display;
+	if (display=="") {
+		dropdown.style.display = "block";
+	} 
+	else {
+		dropdown.style.display ="";
+	};
+}
+
+/*
+the number of action taken when any of the ul items is clicked on:
+getting the number of question and show the current question
+*/
+function clickOnAnyQuestionFromDropdown() {
+	console.log(this);
+	var questionNum = this.getElementsByTagName('span')[0].innerHTML;
+	currentQuestion = quizQuestions[questionNum-1];
+	hideDropdown();
+	currentIndex = questionNum-1;
+	showCurrentQuestion();
+}
+// function enableLiOnClickEvents() {
+// 	for (var i=0; i < liTags.length; i++) {
+// 		// console.log(liTags[i]);
+// 		liTags[i].onclick = "";
+// 	}
+// }
+
+function goToNextQuestion2() {
+	document.getElementById("xp").style.display="none";
+if (currentIndex>0){currentIndex--;};
+	// if (currentIndex == quizQuestions.length) {
+	// 	finalize();
+	// 	return alert("Quiz is over. Your result: " + numOfAnswered);
+	// }
+	//changes the current question index before moving to the next one
+	currentQuestion = quizQuestions[currentIndex];
+	//change button's label and event handler
+	this.innerHTML = "";
+	this.onclick = submitAndCheckAnswer;
+	this.className = "submit";
+	showCurrentQuestion();
+	enableLiOnClickEvents();
+
+}
+	function goToNextQuestion3() {
+	document.getElementById("xp").style.display="none";
+if (currentIndex<nq){currentIndex++;}
+	// if (currentIndex == quizQuestions.length) {
+	// 	finalize();
+	// 	return alert("Quiz is over. Your result: " + numOfAnswered);
+	// }
+	//changes the current question index before moving to the next one
+	currentQuestion = quizQuestions[currentIndex];
+	//change button's label and event handler
+	this.innerHTML = "";
+	this.onclick = submitAndCheckAnswer;
+	this.className = "submit";
+	showCurrentQuestion();
+	enableLiOnClickEvents();
+	
+}
+this.onclick = submitAndCheckAnswer;
+function exp(){ document.getElementById("xp").style.display="block"; document.getElementById("xpt").innerHTML="Explication: "+ currentQuestion.variants[5];};
+
+function cl()	{ document.getElementById("xp").style.display="none";}
+	
+	</script>
+	
+	<style>
+	
+	
+
+/*googleapis*/
+body {
+	font-family: "Open Sans", Times, serif;
+	/*font-family:"Open Sans";*/
+}
+
+.main {
+	margin-left: 10px;
+	margin-top: 100px;
+}
+.question {
+	font-size: 1.5em;
+	height:auto;
+}
+
+ul {
+	list-style: none;
+	margin-left:-40px;
+}
+li {
+	text-decoration: none;
+	border: 1px solid lightgray;
+	margin:10px;
+	padding: 10px;
+	border-radius:10px;
+}
+
+.dropdown {
+	margin-right: 3px;
+	/*z-index: 999;*/
+	position: absolute;
+	top: 115px;
+	padding-left: 0;
+	box-shadow: 1px 1px 10px ;
+  /*dropdow is hidden by default*/
+	display: none; 
+	font-size: 2px;
+}
+
+.wrapper {
+	background: #d7ff99;
+	padding: 3px 15px;
+	border-radius: 4px;
+	width: 90%;
+}
+.dropdown li {
+	
+	border: 0px;
+	font-size: 0.9em;
+	width:100px;
+	margin: 0px;
+	background: white;
+}
+
+li:hover {
+	background: #ECEEF0;
+}
+/*disable hover effect when li tag is selected*/
+.selected, .selected:hover {
+	background: #FFDEAD;
+}
+
+.correct, .correct:hover {
+	background: #9ACD32;
+	color: white;
+}
+
+.wrong, .wrong:hover {
+	background: red;
+	color: white;
+}
+
+button {
+	padding:5px 14px;
+	font-size: 1.1em;
+	border:none;
+	border-radius: 5px;
+}
+.submit {
+	color: white;
+	background: #2DB82D;
+}
+.next {
+	background: #B0C4DE;
+}
+.finalize {
+	background: #1A1AFF;
+}
+.back {
+	background: #ffff33;
+}
+.doNotDisplay {
+	display: none;
+}
+
+td,th {
+	border:1px solid lightgray;
+	padding: 10px;
+	text-transform: uppercase;
+	font-weight: 700;
+	/*font-size:14px;*/
+}
+
+th {
+	border-bottom:3px solid gray;
+	background: #C2CCE0;
+}
+
+table {
+	border:2px solid gray;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+td {
+	cursor:pointer;
+}
+
+.questionCol {
+	color: #5b666f;
+}
+.correctCol {
+	color: #6a9d21;
+}
+.wrongCol {
+	color: #9d2138;
+}
+.pAboveTable {
+	font-size: 1.4em;
+}
+/*tr {
+	cursor:pointer;
+}*/
+
+#ctrlb{
+	position:fixed;
+	
+	
+	bottom:10px;
+	left:20px;
+
+	
+}
+
+#ctrln{
+	position:fixed;
+	
+
+	bottom:10px;
+right:20px;
+
+	
+}	
+
+
+
+.alert .inner {
+  display: block;
+  padding: 6px;
+  margin: 6px;
+  border-radius: 10px;
+    border: 2px solid green;
+  background-color: rgb(223,240,216);
+
+}
+
+.alert .close {
+  float: right;
+  margin: 3px 10px 0px 0px;
+  cursor: pointer;
+}
+
+
+.alert input {
+  display: none;
+}
+
+.alert input:checked ~ * {
+  animation-name: dismiss,hide;
+  animation-duration: 300ms;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0s,100ms;
+}
+
+@keyframes dismiss {
+  0% {
+    opacity: 1;
+  }
+  90%, 100% {
+    opacity: 0;
+    font-size: 0.1px;
+    transform: scale(0);
+  }
+}
+
+
+	</style>
+</body>
+</html>

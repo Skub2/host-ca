@@ -1,0 +1,563 @@
+<html>
+
+
+
+<div id="tctr"><div id="ctrlb"><button style="border-radius: 20px 20px 20px 0px;b ox-shadow: 1px 1px 2px 2px gray ; background:linear-gradient(#6 a9d21,lightgray);border-radius: 0px 0px 30px 20px" onclick="goToNextQuestion2();cl()"><img src="cme.png" height="30px" width="80px" style="border-radius:10px"></button><bu tton class="submit"></button></div><div style="" onclick = "submitAndCheckAnswer()" id="ctrlval"><img src="cmep.png" height="100%" width="100%" style="border-radius:10px"></div><div id="ctrln"><button style="border-radius: 20px 20px 0px 0px;bo x-shadow: 1px 1px 2px 2px gray ; background:linear-gradient(#6 a9d21,lightgray);border-radius: 0px 0px 20px 30px;float:right;" onclick="goToNextQuestion3();cl()"><img src="cme.png" height="30px" width="80px" style="border-radius:10px"></button>
+	</div>
+	</div>
+	<br>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 2px solid green;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: aquamarine;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block;
+  overflow-wrap:break-word;
+  font-size:15px;
+
+}
+
+#myUL li a.header {
+  background-color: green;
+  cursor: default;
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: lightgreen;
+}
+
+
+</style>
+
+
+
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Rechercher..." title="Type in a name">
+
+<ul id="myUL">
+
+
+
+<li><a href="#">	A HBS      -  Prix :  5000	 FCFA </a></li>
+<li><a href="#">	ACTAPULGITE 3G     -  Prix : 300	 FCFA </a></li>
+<li><a href="#">	AHCV      -  Prix :  5000	 FCFA </a></li>
+<li><a href="#">	ALBEN SP sirop    -  Prix : 1000	 FCFA </a></li>
+<li><a href="#">	ALBENDAZOLE 400     -  Prix : 500	 FCFA </a></li>
+<li><a href="#">	AMIFER     -  Prix : 3500	 FCFA </a></li>
+<li><a href="#">	AMOXI 250 sirop     -  Prix : 1500	 FCFA </a></li>
+<li><a href="#">	AMOXI 500     -  Prix : 500	 FCFA </a></li>
+<li><a href="#">	AMPI 50     -  Prix : 700	 FCFA </a></li>
+<li><a href="#">	AMPICLOXA 500     -  Prix : 500	 FCFA </a></li>
+<li><a href="#">	ANALGIN 500     -  Prix : 500	 FCFA </a></li>
+<li><a href="#">	ANALGIN PHILCO     -  Prix : 1500	 FCFA </a></li>
+<li><a href="#">	ARTEMETHER 8OMG inj     -  Prix : 1000	 FCFA </a></li>
+<li><a href="#">	ARTEMETHER+LUMEFANTRIM     -  Prix : 2500	 FCFA </a></li>
+<li><a href="#">	ARTESIUM 60     -  Prix : 3000	 FCFA </a></li>
+<li><a href="#">	Aslo      -  Prix :  3000	 FCFA </a></li>
+<li><a href="#">	Augmentin 3500	 FCFA </a></li>
+<li><a href="#">	AZYTRO 500     -  Prix : 3500	 FCFA </a></li>
+<li><a href="#">	Bande velpo pm     -  Prix : 700	 FCFA </a></li>
+<li><a href="#">	BENZANTINE 2 AM     -  Prix : 1500	 FCFA </a></li>
+<li><a href="#">	BHCG      -  Prix :  2000	 FCFA </a></li>
+<li><a href="#">	BURNCOOL     -  Prix : 500	 FCFA </a></li>
+<li><a href="#">	CALCIMAX sirop     -  Prix : 3500	 FCFA </a></li>
+<li><a href="#">	CALCIUM 10ML     -  Prix : 1000	 FCFA </a></li>
+<li><a href="#">	CALCIUM EFF     -  Prix : 2000	 FCFA </a></li>
+<li><a href="#">	CALCIUM+VIT DS sirop     -  Prix : 5000	 FCFA </a></li>
+<li><a href="#">	CALCU     -  Prix : 	 FCFA </a></li>
+<li><a href="#">	CANDID VO     -  Prix : 3500	 FCFA </a></li>
+<li><a href="#">	CANON     -  Prix : 	 FCFA </a></li>
+<li><a href="#">	CARBO 5% Sirop     -  Prix : 2000	 FCFA </a></li>
+<li><a href="#">	CARBOXISTEINE 2%     -  Prix : 1500	 FCFA </a></li>
+<li><a href="#">	cartether     -  Prix : 1000	 FCFA </a></li>
+<li><a href="#">	CEFIXIM Sirop     -  Prix : 3000	 FCFA </a></li>
+<li><a href="#">	CEFIXIME 200     -  Prix : 3500	 FCFA </a></li>
+<li><a href="#">	CEFTRIA 16     -  Prix : 1500	 FCFA </a></li>
+<li><a href="#">	Ceftriaxone philco – 2000	 FCFA </a></li>
+<li><a href="#">	CEMA     -  Prix : 	 FCFA </a></li>
+<li><a href="#">	Chlamydia sérologie 1, G-M      -  Prix :  6000	 FCFA </a></li>
+<li><a href="#">	CIMETIDINE 200MG inj     -  Prix : 500	 FCFA </a></li>
+<li><a href="#">	CIPRO 500     -  Prix : 1500	 FCFA </a></li>
+<li><a href="#">	CIPRO 750     -  Prix : 2000	 FCFA </a></li>
+<li><a href="#">	CIPRO PHILO     -  Prix : 1000	 FCFA </a></li>
+<li><a href="#">	CLOXA 250 Sirop     -  Prix : 1500	 FCFA </a></li>
+<li><a href="#">	CLOXA 500     -  Prix : 1000	 FCFA </a></li>
+
+<li><a href="#">	COTRIMOXAZOLE 480     -  Prix : 200	 FCFA </a></li>
+<li><a href="#">	Créatininémie      -  Prix :  5000	 FCFA </a></li>
+<li><a href="#">	CU     -  Prix : 2000	 FCFA </a></li>
+<li><a href="#">	CYNCLAMOX 1000     -  Prix : 4500	 FCFA </a></li>
+<li><a href="#">	DEPO PROVERRA     -  Prix : 2000	 FCFA </a></li>
+<li><a href="#">	DEXA     -  Prix : 100	 FCFA </a></li>
+<li><a href="#">	DEXA 4MG inj     -  Prix : 500	 FCFA </a></li>
+<li><a href="#">	DIAZIPAN     -  Prix : 500	 FCFA </a></li>
+<li><a href="#">	DIAZIPAN     -  Prix : 700	 FCFA </a></li>
+<li><a href="#">	DICLO 75 MG inj     -  Prix : 500	 FCFA </a></li>
+<li><a href="#">	DOXY 100     -  Prix : 500	 FCFA </a></li>
+<li><a href="#">	E.C.B.U      -  Prix :  	 FCFA </a></li>
+<li><a href="#">	EFFERALGAN SOO     -  Prix : 100	 FCFA </a></li>
+<li><a href="#">	Electrophorèse d'hémoglobine      -  Prix :  10000	 FCFA </a></li>
+<li><a href="#">	ENO SACHET     -  Prix : 500	 FCFA </a></li>
+<li><a href="#">	ESCODYNE     -  Prix : 2500	 FCFA </a></li>
+<li><a href="#">	Facteur Rhumatoïde (FR)      -  Prix :  3000	 FCFA </a></li>
+<li><a href="#">	FEFOL     -  Prix : 200	 FCFA </a></li>
+<li><a href="#">	FENA 500     -  Prix : 2000	 FCFA </a></li>
+<li><a href="#">	flemming 1g – 2000	 FCFA </a></li>
+<li><a href="#">	FLOCONAZOLE 200     -  Prix : 2000	 FCFA </a></li>
+<li><a href="#">	FLUCLOXACIN 100ML sirop     -  Prix : 3000	 FCFA </a></li>
+<li><a href="#">	FLUCONAZOLE sirop     -  Prix : 2000	 FCFA </a></li>
+<li><a href="#">	FRANCISCO     -  Prix : 	 FCFA </a></li>
+<li><a href="#">	FRANGID GEL     -  Prix : 1500	 FCFA </a></li>
+<li><a href="#">	FUROSEMIDE inj 20 – 700	 FCFA </a></li>
+<li><a href="#">	FUROSEMIDE 40     -  Prix : 500	 FCFA </a></li>
+<li><a href="#">	GENTA 20     -  Prix : 500	 FCFA </a></li>
+<li><a href="#">	Genta collyre     -  Prix : 700	 FCFA </a></li>
+<li><a href="#">	Glycémie à jeun      -  Prix :  1000	 FCFA </a></li>
+<li><a href="#">	GRIPPE WATER     -  Prix : 2500	 FCFA </a></li>
+<li><a href="#">	Groupe Sanguin/Rhesus      -  Prix :  2500	 FCFA </a></li>
+<li><a href="#">	HAMATINICJ GLOBING 200 Sirop     -  Prix : 3000	 FCFA </a></li>
+<li><a href="#">	Hémogramme (N.F.S)      -  Prix :  5000	 FCFA </a></li>
+<li><a href="#">	Hemoparasite/H.P/G.E/TDR      -  Prix :  2000	 FCFA </a></li>
+<li><a href="#">	IBU sirop    -  Prix : 1500	 FCFA </a></li>
+<li><a href="#">	IBU 400     -  Prix : 200	 FCFA </a></li>
+<li><a href="#">	Inticlin ovule – 2500	 FCFA </a></li>
+<li><a href="#">	Ionogramme Sanguin (na, k*, cl')      -  Prix :  15000	 FCFA </a></li>
+<li><a href="#">	KETOMIDAZOL GEL     -  Prix : 2200	 FCFA </a></li>
+<li><a href="#">	L.A.V      -  Prix :  1000	 FCFA </a></li>
+<li><a href="#">	LASILIX 40/320     -  Prix : 500	 FCFA </a></li>
+<li><a href="#">	littacold cp     -  Prix : 250	 FCFA </a></li>
+<li><a href="#">	lonogramme complet      -  Prix :  15000	 FCFA </a></li>
+<li><a href="#">	LOPRADE     -  Prix : 500	 FCFA </a></li>
+<li><a href="#">	LORIT 05/ML sirop     -  Prix : 2500	 FCFA </a></li>
+<li><a href="#">	LORIT CP     -  Prix : 2800	 FCFA </a></li>
+<li><a href="#">	MAGNESIUM EFF     -  Prix : 2000	 FCFA </a></li>
+<li><a href="#">	MALOX     -  Prix : 250	 FCFA </a></li>
+<li><a href="#">	METRO sirop    -  Prix : 1500	 FCFA </a></li>
+<li><a href="#">	METRO 100ML inj     -  Prix : 3000	 FCFA </a></li>
+<li><a href="#">	METRO 250     -  Prix : 250	 FCFA </a></li>
+<li><a href="#">	METRO 500     -  Prix : 500	 FCFA </a></li>
+<li><a href="#">	Myconidazole gel     -  Prix : 1500	 FCFA </a></li>
+<li><a href="#">	MYCOPIN Sirop     -  Prix : 2000	 FCFA </a></li>
+<li><a href="#">	MYCOZAL Sirop     -  Prix : 2000	 FCFA </a></li>
+<li><a href="#">	Nauselium Sirop – 3200	 FCFA </a></li>
+<li><a href="#">	neomycin     -  Prix : 1500	 FCFA </a></li>
+<li><a href="#">	NEOMYCINE     -  Prix : 1500	 FCFA </a></li>
+<li><a href="#">	NIFIDIPINE200     -  Prix : 500	 FCFA </a></li>
+<li><a href="#">	NYSTAINE     -  Prix : 750	 FCFA </a></li>
+<li><a href="#">	NYSTATINE sirop     -  Prix : 1500	 FCFA </a></li>
+<li><a href="#">	Omeprazole – 700	 FCFA </a></li>
+<li><a href="#">	OMEPRAZOLE inj 20 MG     -  Prix : 2500	 FCFA </a></li>
+<li><a href="#">	omeprazole philco – 3500	 FCFA </a></li>
+<li><a href="#">	OREX SP sirop     -  Prix : 2000	 FCFA </a></li>
+<li><a href="#">	ORS     -  Prix : 500	 FCFA </a></li>
+<li><a href="#">	P.C.V      -  Prix :  2500	 FCFA </a></li>
+<li><a href="#">	P.U      -  Prix :  2500	 FCFA </a></li>
+<li><a href="#">	PANALGIQUE 500     -  Prix : 1500	 FCFA </a></li>
+<li><a href="#">	PARACET     -  Prix : 1000	 FCFA </a></li>
+<li><a href="#">	PARACET500     -  Prix : 100	 FCFA </a></li>
+<li><a href="#">	PAREX 300 MG inj     -  Prix : 1000	 FCFA </a></li>
+<li><a href="#">	PENI 16     -  Prix : 500	 FCFA </a></li>
+<li><a href="#">	PERFAGAN 16     -  Prix : 3500	 FCFA </a></li>
+<li><a href="#">	PHILO DICLO 75     -  Prix : 300	 FCFA </a></li>
+<li><a href="#">	physiodose     -  Prix : 200	 FCFA </a></li>
+<li><a href="#">	PIAZIDAM     -  Prix : 	 FCFA </a></li>
+<li><a href="#">	PLASMOCUR 60 sirop     -  Prix : 2500	 FCFA </a></li>
+<li><a href="#">	PLASMOCUR 90 sirop     -  Prix : 3500	 FCFA </a></li>
+<li><a href="#">	PLASMOCURE 40/320 BTE 12     -  Prix : 3500	 FCFA </a></li>
+<li><a href="#">	PLASMOCURE 40/320 BTE 9     -  Prix : 2500	 FCFA </a></li>
+<li><a href="#">	Poche de collection     -  Prix : 2000	 FCFA </a></li>
+<li><a href="#">	PRESO     -  Prix : 200	 FCFA </a></li>
+<li><a href="#">	QUININE 300     -  Prix : 1000	 FCFA </a></li>
+<li><a href="#">	QUININE 600 MG inj     -  Prix : 1000	 FCFA </a></li>
+<li><a href="#">	RANFERON sirop     -  Prix : 1500	 FCFA </a></li>
+<li><a href="#">	RHINACOLD     -  Prix : 300	 FCFA </a></li>
+<li><a href="#">	Rubéole      -  Prix :  10000	 FCFA </a></li>
+<li><a href="#">	RUFENAC 50     -  Prix : 200	 FCFA </a></li>
+<li><a href="#">	S.G.O.T/A.S.A.T      -  Prix :  5000	 FCFA </a></li>
+<li><a href="#">	S.G.P.T / A.L.A.T      -  Prix :  5000	 FCFA </a></li>
+<li><a href="#">	SACAMOX 625     -  Prix : 3500	 FCFA </a></li>
+<li><a href="#">	SAT 1 UI     -  Prix : 2000	 FCFA </a></li>
+<li><a href="#">	Scotch Test      -  Prix :  3000	 FCFA </a></li>
+<li><a href="#">	SECKROLE SP sirop     -  Prix : 2500	 FCFA </a></li>
+<li><a href="#">	Selles / KOAP      -  Prix :  1000	 FCFA </a></li>
+<li><a href="#">	Snip test      -  Prix :  3000	 FCFA </a></li>
+<li><a href="#">	solutes     -  Prix : 2000	 FCFA </a></li>
+<li><a href="#">	Sondes urinaire     -  Prix : 3000	 FCFA </a></li>
+<li><a href="#">	SPASFON inj    -  Prix : 1000	 FCFA </a></li>
+<li><a href="#">	Spasfon suppo – 2000	 FCFA </a></li>
+<li><a href="#">	SPASMO APOTEL     -  Prix : 2500	 FCFA </a></li>
+<li><a href="#">	Spasmo appote suppo     -  Prix : 2000	 FCFA </a></li>
+<li><a href="#">	Spermogramme      -  Prix :  15000	 FCFA </a></li>
+<li><a href="#">	T.P.H.A/V.D.R.L      -  Prix :  5000	 FCFA </a></li>
+<li><a href="#">	Temps de Coagulation (T.C)      -  Prix :  2500	 FCFA </a></li>
+<li><a href="#">	Temps de Saignement(T.S)      -  Prix :  2500	 FCFA </a></li>
+<li><a href="#">	Test d'emmel      -  Prix :  3000	 FCFA </a></li>
+<li><a href="#">	Test d'ovulation      -  Prix :  25000	 FCFA </a></li>
+<li><a href="#">	TICASSE 200 Sirop     -  Prix : 3000	 FCFA </a></li>
+<li><a href="#">	Toxoplasmose IG      -  Prix :  6000	 FCFA </a></li>
+<li><a href="#">	TPI     -  Prix : 300	 FCFA </a></li>
+<li><a href="#">	TRAMADIS inj     -  Prix : 2000	 FCFA </a></li>
+<li><a href="#">	UNITE BACTERIOLOGIE      -  Prix :  2500	 FCFA </a></li>
+<li><a href="#">	UNITE DE PARASITOLOGIE      -  Prix :  	 FCFA </a></li>
+<li><a href="#">	UNITE DIMMUNO SEROLOGIE      -  Prix :  	 FCFA </a></li>
+<li><a href="#">	Urée      -  Prix :  5000	 FCFA </a></li>
+<li><a href="#">	VICOMBIL     -  Prix : 600	 FCFA </a></li>
+<li><a href="#">	VIT B CPL inj     -  Prix : 500	 FCFA </a></li>
+<li><a href="#">	VIT C inj     -  Prix : 500	 FCFA </a></li>
+<li><a href="#">	VITAMAX Sirop     -  Prix : 2500	 FCFA </a></li>
+<li><a href="#">	Vitesse de Sédimentation(V.S)      -  Prix :  3000	 FCFA </a></li>
+<li><a href="#">	VOGALENE inj     -  Prix : 1500	 FCFA </a></li>
+<li><a href="#">	VOGALENE suppo     -  Prix : 2500	 FCFA </a></li>
+<li><a href="#">	Vovgel gel     -  Prix : 2000	 FCFA </a></li>
+<li><a href="#">	Widal & Félix      -  Prix :  3000	 FCFA </a></li>
+<li><a href="#">	ZENIFER sirop     -  Prix : 3500	 FCFA </a></li>
+
+
+
+</ul>
+
+<script>
+
+
+
+
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+
+        }
+    }
+}
+
+</script>
+
+
+
+	
+	<style>
+	
+	
+	
+	
+
+/*googleapis*/
+body {
+	font-family: "Open Sans", Times, serif;
+	/*font-family:"Open Sans";*/
+	font-size: 1em;
+}
+
+.main {
+	margin-left: 10px;
+	margin-top: 100px;
+}
+.question {
+	font-size:11px ;
+	height:auto;
+}
+
+ul {
+	list-style: none;
+	margin-left:-40px;
+}
+li {
+	text-decoration: none;
+	border: 1px solid lightgray;
+	margin:10px;
+	padding: 10px;
+	border-radius:15px 0px / 15px;
+	font-size:15px ;
+}
+
+.dropdown {
+	margin-right: 3px;
+	/*z-index: 999;*/
+	position: absolute;
+	top: 115px;
+	padding-left: 0;
+	box-shadow: 1px 1px 10px ;
+  /*dropdow is hidden by default*/
+	display: none; 
+	font-size: 2px;
+}
+
+.wrapper {
+	background: #d7ff99;
+	padding: 3px 15px;
+	border-radius: 4px;
+	width: 90%;
+}
+.dropdown li {
+	
+	border: 0px;
+	font-size: 0.9em;
+	width:100px;
+	margin: 0px;
+	background: white;
+}
+
+li:hover {
+	background: #ECEEF0;
+}
+/*disable hover effect when li tag is selected*/
+.selected, .selected:hover {
+	background: #FFDEAD;
+}
+
+.correct, .correct:hover {
+	background: #9ACD32;
+	color: white;
+}
+
+.wrong, .wrong:hover {
+	background: red;
+	color: white;
+}
+
+button {
+	padding:5px 14px;
+	font-size: 1.1em;
+	border:none;
+	border-radius: 5px;
+}
+.submit {
+	color: white;
+	background: #2DB82D;
+}
+.next {
+	background: #B0C4DE;
+}
+.finalize {
+	background: #1A1AFF;
+}
+.back {
+	background: #ffff33;
+}
+.doNotDisplay {
+	display: none;
+}
+
+td,th {
+	border:1px solid lightgray;
+	padding: 10px;
+	text-transform: uppercase;
+	font-weight: 700;
+	/*font-size:14px;*/
+}
+
+th {
+	border-bottom:3px solid gray;
+	background: #C2CCE0;
+}
+
+table {
+	border:2px solid gray;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+td {
+	cursor:pointer;
+}
+
+.questionCol {
+	color: #5b666f;
+}
+.correctCol {
+	color: #6a9d21;
+}
+.wrongCol {
+	color: #9d2138;
+}
+.pAboveTable {
+	font-size: 1.4em;
+}
+/*tr {
+	cursor:pointer;
+}*/
+
+#ctrlb{
+	
+	
+	
+	bottom:10px;
+	left:20px;
+
+	
+}
+
+#ctrln{
+	
+	float:right;
+
+	bottom:10px;
+right:20px;
+
+	
+}	
+#ctrlval{
+	
+	background-Color:#6a9d21;
+
+	
+width:100%;
+
+
+
+text-align:center;
+border-radius: 20px 20px 0px 0px;
+	
+}
+
+
+#ctrlval:active{
+	
+	
+	
+right:33%;
+	bottom:10px;
+width:100%;
+
+height:40px;
+
+text-align:center;
+border-radius: 20px 20px 0px 0px;
+}
+
+
+
+#valim{
+
+height:140% ;
+pos ition:relative;
+top:5px;
+
+}
+
+
+#valim:active{
+
+height:120% ;
+position:relative;
+bottom:0px;
+
+}
+
+
+#tctr{
+height:40px;
+background:linear-gradient(#ececee 41%, #6a9d21 20%);
+width:95%;
+pos ition:fixed;
+to p:10px;
+display:flex;
+box-shadow: 1px 1px 2px 2px gray ; backg round:linear-gradient(#6a9d21,lightgray);
+border-radius: 0px 0px 20px 20px;
+jus tify-content:space-between;
+
+
+}
+
+
+#xpn {
+  display: block;
+  padding: 6px;
+  margin: 6px;
+  border-radius: 10px 10px 0px 0px;
+    border: 2px solid green;
+  background-color: rgb(223,240,216);
+ // position:fixed;
+  top:5px;
+  opacity:0.9;
+
+}
+
+
+.alert .inner {
+  
+  padding: 6px;
+  margin: 6px;
+  border-radius: 10px;
+    border: 2px solid green;
+  background-color: rgb(223,240,216);
+
+}
+
+.alert .close {
+  float: right;
+  margin: 3px 10px 0px 0px;
+  cursor: pointer;
+}
+
+/*
+.alert input {
+  display: none;
+}
+
+.alert input:checked ~ * {
+  animation-name: dismiss,hide;
+  animation-duration: 300ms;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0s,100ms;
+}
+*/
+@keyframes dismiss {
+  0% {
+    opacity: 1;
+  }
+  90%, 100% {
+    opacity: 0;
+    font-size: 0.1px;
+    transform: scale(0);
+  }
+}
+.question {
+	font-size:11px ;
+	height:auto;
+	
+}
+
+	</style>
+
+
+
+
+</html>
+
+
